@@ -2,7 +2,7 @@
 
 > React-components and design system for enterprise-level products
 
-[![NPM](https://img.shields.io/npm/v/qonsoll-react-design.svg)](https://www.npmjs.com/package/qonsoll-react-design) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
