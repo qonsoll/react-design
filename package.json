@@ -1,6 +1,6 @@
 {
   "name": "@qonsoll/react-design",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React-components and design system for enterprise-level products",
   "author": "qonsoll",
   "license": "MIT",
@@ -13,6 +13,9 @@
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
