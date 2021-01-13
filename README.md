@@ -7,15 +7,13 @@
 ## Install
 
 ```bash
-npm install --save qonsoll-react-design
+npm install --save @qonsoll/react-design
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'qonsoll-react-design'
+import MyComponent from '@qonsoll/react-design'
 import 'qonsoll-react-design/dist/index.css'
 
 class Example extends Component {
