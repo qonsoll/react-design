@@ -1,7 +1,7 @@
 {
-  "name": "@qonsoll/react-components-library-boilerplate",
-  "version": "1.0.0",
-  "description": "Production ready boilerplate for your next react components library",
+  "name": "@qonsoll/react-design",
+  "version": "1.0.4",
+  "description": "React-components and design system for enterprise-level products.",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/qonsoll/react-components-library-boilerplate.git"
+    "url": "git+ssh://git@github.com/qonsoll/react-design.git"
   },
   "keywords": [
     "react",
@@ -40,9 +40,9 @@
   "author": "qonsoll",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qonsoll/react-components-library-boilerplate/issues"
+    "url": "https://github.com/qonsoll/react-design/issues"
   },
-  "homepage": "https://github.com/qonsoll/react-components-library-boilerplate#readme",
+  "homepage": "https://github.com/qonsoll/react-design#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -90,6 +90,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "4.0.0",
+    "gh-pages": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "node-sass": "^5.0.0",
