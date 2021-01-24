@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from 'styled-components'
 
 const Theme: DefaultTheme = {
   fontSizes: {
@@ -64,7 +64,7 @@ const Theme: DefaultTheme = {
     lighten6: 'var(--lighten6)',
     lighten7: 'var(--lighten7)',
     lighten8: 'var(--lighten8)',
-    lighten9: 'var(--lighten9)',
+    lighten9: 'var(--lighten9)'
   },
   borderWidths: {
     xs: 'var(--border-width-xs)',
@@ -94,6 +94,6 @@ const Theme: DefaultTheme = {
     snackbar: 'var(--snackbar-z-index)',
     tooltip: 'var(--tooltip-z-index)'
   }
-};
+}
 
-export { Theme };
+export { Theme }
