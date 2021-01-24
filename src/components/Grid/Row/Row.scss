@@ -1,0 +1,33 @@
+@import '../../../scss/config/breakpoints';
+@import '../../../scss/config/gutters';
+
+.row {
+  /*
+    Look at .container description. There you can find
+    addition stylesheets for .row
+  */
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  /*
+    Style below will remove gutters from inner columns
+  */
+  &.no-gutters {
+    & > .col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  /*
+    Should be used only for one line layouts.
+    Removes paddings inside row columns
+  */
+  &.no-inner-gutters {
+    & > .col:not(:first-child) {
+      padding-left: 0;
+    }
+    & > .col:not(:last-child) {
+      padding-right: 0;
+    }
+  }
+}

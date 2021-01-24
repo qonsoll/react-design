@@ -1,0 +1,115 @@
+:root {
+  // HTML
+  --html-font-size: 16px;
+  --html-line-height: 24px;
+  --html-font-family: 'Arial';
+
+  // GRID
+  --grid-columns: 12;
+  // Gutters
+  --grid-gutter-default: 8px;
+  --grid-gutter-sm: 8px;
+  --grid-gutter-md: 12px;
+  --grid-gutter-lg: 16px;
+  --grid-gutter-xl: 16px;
+  --grid-gutter-xxl: 16px;
+  // Negative
+  --grid-negative-gutter-default: -8px;
+  --grid-negative-gutter-sm: -8px;
+  --grid-negative-gutter-md: -12px;
+  --grid-negative-gutter-lg: -16px;
+  --grid-negative-gutter-xl: -16px;
+  --grid-negative-gutter-xxl: -16px;
+  // Container
+  --grid-container-max-width-sm: 540px;
+  --grid-container-max-width-md: 720px;
+  --grid-container-max-width-lg: 960px;
+  --grid-container-max-width-xl: 1140px;
+  --grid-container-max-width-xxl: 1320px;
+
+  // COLOR SCHEME VARIABLES
+  // Blending
+  --darken1: 15%;
+  --lighten1: 75%;
+  --lighten2: 50%;
+  --lighten3: 25%;
+  --lighten4: 20%;
+  --lighten5: 15%;
+  --lighten6: 12%;
+  --lighten7: 10%;
+  --lighten8: 7%;
+  --lighten9: 4%;
+
+  // Colors
+  --color-accent: #FFC95D;
+  --color-theme: #9088E5;
+  --color-light: #FAFAFB;
+  --color-dark: #1F1F24;
+  --color-danger: #FF0000;
+  --color-warning: #FFAA00;
+  --color-success: #11A000;
+  --color-info: #88D2E5;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-linkedin: #0077B5;
+  --color-facebook: #3b5998;
+  --color-google: #DB4437;
+
+  // TYPOGRAPHY
+  // Font size
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.25rem;
+  --h5-font-size: 1rem;
+  --h6-font-size: 0.875rem;
+  --body1-font-size: 1rem;
+  --body2-font-size: 0.875rem;
+  --caption1-font-size: 0.75rem;
+  --caption2-font-size: 0.625rem;
+
+  // Line height
+  --h1-line-height: 3rem;
+  --h2-line-height: 2.5rem;
+  --h3-line-height: 2rem;
+  --h4-line-height: 1.75rem;
+  --h5-line-height: 1.5rem;
+  --h6-line-height: 1.25rem;
+  --body1-line-height: 1.5rem;
+  --body2-line-height: 1.25rem;
+  --caption1-line-height: 1rem;
+  --caption2-line-height: 0.75rem;
+
+  // Letter spacing
+  --caption1-letter-spacing: 0.6;
+  --caption2-letter-spacing: 0.6;
+
+  // Font families
+  --heading-font-family: Arial;
+  --body-font-family: Arial;
+
+  // UTILS
+  // Border widths
+  --border-width-xs: 1px;
+  --border-width-sm: 2px;
+  --border-width-md: 3px;
+  --border-width-lg: 4px;
+  --border-width-xl: 5px;
+  --border-width-xxl: 6px;
+
+  // Border radiuses
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 32px;
+  --border-radius-xxl: 64px;
+
+  // z-indexes
+  --mobile-stepper-z-index: 1000;
+  --app-bar-z-index: 1100;
+  --drawer-z-index: 1200;
+  --modal-z-index: 1300;
+  --snackbar-z-index: 1400;
+  --tooltip-z-index: 1500;
+}
