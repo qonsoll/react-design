@@ -33,13 +33,13 @@ const StyledBox = styled.div<BoxProps>`
   ${focus}
 `;
 
-const Box: React.FC<BoxProps> = (props) => {
+const Box = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
   const { children } = props;
   return (
-    <StyledBox data-testid="box" {...(props as unknown)}>
+    <StyledBox data-testid="box" ref={ref} {...(props as unknown)}>
       {children}
     </StyledBox>
   );
-};
+});
 
 export default Box;
