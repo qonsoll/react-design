@@ -62,11 +62,12 @@ const Box = styled.div<RowProps>(BoxStyleProps);
  * Creating Container which returns Box with className (css)
  */
 const Row: React.FC<RowProps> = (props) => {
-  const { noGutters, noInnerGutters, children } = props;
+  const { noGutters, noInnerGutters, noOuterGutters, children } = props;
   const className = classNames({
     row: true,
     "no-gutters": noGutters,
     "no-inner-gutters": noInnerGutters,
+    "no-outer-gutters": noOuterGutters,
   });
   return (
     <Box data-testid="row" className={className} {...(props as unknown)}>

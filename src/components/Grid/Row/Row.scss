@@ -30,4 +30,16 @@
       padding-right: 0;
     }
   }
+
+  &.no-outer-gutters {
+    margin-left: $negative-gutter-default;
+    margin-right: $negative-gutter-default;
+    @each $breakpoint, $value in $breakpoints {
+      @media (min-width: $value) {
+        $gutterVariable: map-get($negative-gutters, $breakpoint);
+        margin-left: $gutterVariable;
+        margin-right: $gutterVariable;
+      }
+    }
+  }
 }

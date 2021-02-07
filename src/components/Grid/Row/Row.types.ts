@@ -16,6 +16,7 @@ export type RowProps = SpaceProps &
     className?: string;
     noGutters?: boolean;
     noInnerGutters?: boolean;
+    noOuterGutters?: boolean;
     v?:
       | "top"
       | "center"

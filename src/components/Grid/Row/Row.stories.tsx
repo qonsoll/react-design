@@ -31,6 +31,12 @@ export default {
         type: 'boolean'
       }
     },
+    noOuterGutters: {
+      description: 'Removes inner column gutters only (for one line layouts)',
+      control: {
+        type: 'boolean'
+      }
+    },
     v: {
       description: 'Align inner content Vertically',
       control: {
