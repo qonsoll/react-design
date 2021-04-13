@@ -2,6 +2,7 @@
 @import '../../../scss/config/gutters';
 
 .col {
+  display: flex;
   box-sizing: border-box;
   padding-left: $gutter-default;
   padding-right: $gutter-default;

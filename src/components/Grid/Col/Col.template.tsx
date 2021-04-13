@@ -49,8 +49,33 @@ const BoxStyleProps = compose(
     order: {
       property: "order",
     },
-    v: {
+    alignSelf: {
       property: "alignSelf",
+    },
+    v: {
+      property: "alignItems",
+      transform: (value) => {
+        const map = {
+          top: "flex-start",
+          center: "center",
+          bottom: "flex-end",
+        };
+        return map[value];
+      },
+    },
+    h: {
+      property: "justifyContent",
+      transform: (value) => {
+        const map = {
+          left: "flex-start",
+          center: "center",
+          right: "flex-end",
+          around: "space-around",
+          between: "space-between",
+          evenly: "space-evenly",
+        };
+        return map[value];
+      },
     },
   })
 );
