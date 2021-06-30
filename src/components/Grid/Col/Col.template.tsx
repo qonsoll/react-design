@@ -63,7 +63,7 @@ const Box = styled.div<ColProps>(BoxStyleProps);
 /**
  * Creating Container which returns Box with className (css)
  */
-const Row: React.FC<ColProps> = (props) => {
+const Col = React.forwardRef<HTMLDivElement, ColProps>((props, ref) => {
   const { cw, children } = props;
   const className = classNames({
     col: true,
@@ -73,11 +73,12 @@ const Row: React.FC<ColProps> = (props) => {
     <Box
       data-testid="col"
       className={className}
+      ref={ref}
       {...(props as typeof BoxStyleProps)}
     >
       {children}
     </Box>
   );
-};
+});
 
-export default Row;
+export default Col;

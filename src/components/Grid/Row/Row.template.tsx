@@ -61,7 +61,7 @@ const Box = styled.div<RowProps>(BoxStyleProps);
 /**
  * Creating Container which returns Box with className (css)
  */
-const Row: React.FC<RowProps> = (props) => {
+const Row = React.forwardRef<HTMLDivElement, RowProps>((props) => {
   const { noGutters, noInnerGutters, noOuterGutters, children } = props;
   const className = classNames({
     row: true,
@@ -70,10 +70,15 @@ const Row: React.FC<RowProps> = (props) => {
     "no-outer-gutters": noOuterGutters,
   });
   return (
-    <Box data-testid="row" className={className} {...(props as unknown)}>
+    <Box
+      data-testid="row"
+      className={className}
+      ref={ref}
+      {...(props as unknown)}
+    >
       {children}
     </Box>
   );
-};
+});
 
 export default Row;

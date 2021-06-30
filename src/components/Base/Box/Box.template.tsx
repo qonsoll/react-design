@@ -16,7 +16,9 @@ import {
 import { BoxProps } from "./Box.types";
 import { hover, focus } from "../../../design-system/extensions";
 
-const StyledBox = styled.div<BoxProps>`
+const StyledBox = styled.div.withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop),
+})<BoxProps>`
   ${compose(
     space,
     color,
