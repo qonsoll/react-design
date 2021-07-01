@@ -13,8 +13,6 @@ import {
   shadowArgTypes
 } from '../../../design-system/extensions/arg-types'
 import CSSPropTypes from '../../../design-system/extensions/css-prop-values'
-import { ThemeProvider } from 'styled-components'
-import { Theme } from '../../../design-system/Theme'
 
 export default {
   title: "Grid/Col",
@@ -33,6 +31,20 @@ export default {
       }
     },
     v: {
+      description: 'Align inner content Vertically',
+      control: {
+        type: 'select',
+        options: ['top', 'center', 'bottom']
+      }
+    },
+    h: {
+      description: 'Align inner content Horizontally',
+      control: {
+        type: 'select',
+        options: ['left', 'center', 'right', 'around', 'between', 'evenly']
+      }
+    },
+    alignSelf: {
       description: 'Column vertical alignment',
       control: CSSPropTypes.alignSelf
     },
@@ -47,7 +59,6 @@ export default {
 };
 
 export const Default = (args) => (
-  <ThemeProvider theme={Theme}>
     <Container>
       <Row>
         <Col {...args}>
@@ -58,7 +69,6 @@ export const Default = (args) => (
         </Col>
       </Row>
     </Container>
-  </ThemeProvider>
 );
 
 Default.args = { bg: 'accent', cw: [12, 12, 6] }
@@ -71,18 +81,22 @@ Default.parameters = {
 }
 
 export const Order = (args) => (
-  <ThemeProvider theme={Theme}>
     <Container>
       <Row>
         <Col bg="accent" order={args.order}>
           <Box bg="theme">Column 1 BOX</Box>
         </Col>
-        <Col bg="accent" cw={[12, 12, 6]}>
+        <Col bg="accent" cw={12}>
           <Box bg="theme">Column 2 BOX</Box>
+        </Col>
+        <Col bg="accent" cw={12}>
+          <Box bg="theme">Column 3 BOX</Box>
+        </Col>
+        <Col bg="accent" cw={12}>
+          <Box bg="theme">Column 4 BOX</Box>
         </Col>
       </Row>
     </Container>
-  </ThemeProvider>
 );
 
 Order.args = { bg: 'accent', cw: [12, 12, 6], order: 6 }
@@ -95,10 +109,9 @@ Order.parameters = {
 }
 
 export const SelfVerticalAlignment = (args) => (
-  <ThemeProvider theme={Theme}>
     <Container>
       <Row height="100px">
-        <Col bg="accent" v={args.v}>
+        <Col bg="accent" alignSelf={args.alignSelf}>
           <Box bg="theme">Column 1 BOX</Box>
         </Col>
         <Col bg="accent" cw={[12, 12, 6]}>
@@ -106,14 +119,13 @@ export const SelfVerticalAlignment = (args) => (
         </Col>
       </Row>
     </Container>
-  </ThemeProvider>
 );
 
 SelfVerticalAlignment.args = { bg: 'accent', cw: [12, 12, 6], v: 'flex-start' }
 SelfVerticalAlignment.parameters = {
   docs: {
     source: {
-      code: '<Col v="flex-start">Col content</Col>'
+      code: '<Col alignSelf="flex-start">Col content</Col>'
     }
   }
 }

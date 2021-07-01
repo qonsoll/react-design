@@ -1,7 +1,7 @@
-import React from "react";
-import classNames from "classnames";
-import "./Row.scss";
-import styled from "styled-components";
+import React from 'react'
+import classNames from 'classnames'
+import './Row.scss'
+import styled from 'styled-components'
 import {
   space,
   color,
@@ -10,9 +10,9 @@ import {
   border,
   shadow,
   compose,
-  system,
-} from "styled-system";
-import { RowProps } from "./Row.types";
+  system
+} from 'styled-system'
+import { RowProps } from './Row.types'
 
 /**
  * Composing props from styled system
@@ -26,54 +26,61 @@ const BoxStyleProps = compose(
   shadow,
   system({
     v: {
-      property: "alignItems",
+      property: 'alignItems',
       transform: (value) => {
         const map = {
-          top: "flex-start",
-          center: "center",
-          bottom: "flex-end",
-        };
-        return map[value];
-      },
+          top: 'flex-start',
+          center: 'center',
+          bottom: 'flex-end'
+        }
+        return map[value]
+      }
     },
     h: {
-      property: "justifyContent",
+      property: 'justifyContent',
       transform: (value) => {
         const map = {
-          left: "flex-start",
-          center: "center",
-          right: "flex-end",
-          around: "space-around",
-          between: "space-between",
-          evenly: "space-evenly",
-        };
-        return map[value];
-      },
-    },
+          left: 'flex-start',
+          center: 'center',
+          right: 'flex-end',
+          around: 'space-around',
+          between: 'space-between',
+          evenly: 'space-evenly'
+        }
+        return map[value]
+      }
+    }
   })
-);
+)
 
 /**
  * Building styled Box. Core element for container
  */
-const Box = styled.div<RowProps>(BoxStyleProps);
+const Box = styled.div.withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})<RowProps>(BoxStyleProps)
 
 /**
  * Creating Container which returns Box with className (css)
  */
-const Row: React.FC<RowProps> = (props) => {
-  const { noGutters, noInnerGutters, noOuterGutters, children } = props;
+const Row = React.forwardRef<HTMLDivElement, RowProps>((props, ref) => {
+  const { noGutters, noInnerGutters, noOuterGutters, children } = props
   const className = classNames({
     row: true,
-    "no-gutters": noGutters,
-    "no-inner-gutters": noInnerGutters,
-    "no-outer-gutters": noOuterGutters,
-  });
+    'no-gutters': noGutters,
+    'no-inner-gutters': noInnerGutters,
+    'no-outer-gutters': noOuterGutters
+  })
   return (
-    <Box data-testid="row" className={className} {...(props as unknown)}>
+    <Box
+      data-testid="row"
+      className={className}
+      ref={ref}
+      {...(props as unknown)}
+    >
       {children}
     </Box>
-  );
-};
+  )
+})
 
-export default Row;
+export default Row

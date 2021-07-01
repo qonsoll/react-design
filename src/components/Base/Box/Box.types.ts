@@ -8,10 +8,10 @@ import {
   BackgroundProps,
   BorderProps,
   PositionProps,
-  ShadowProps,
-} from "styled-system";
-import { HoverProps } from "../../../design-system/extensions/hover/hover.types";
-import { FocusProps } from "../../../design-system/extensions/focus/focus.types";
+  ShadowProps
+} from 'styled-system'
+import { HoverProps } from '../../../design-system/extensions/hover/hover.types'
+import { FocusProps } from '../../../design-system/extensions/focus/focus.types'
 
 export type BoxProps = SpaceProps &
   ColorProps &
@@ -25,7 +25,7 @@ export type BoxProps = SpaceProps &
   ShadowProps &
   HoverProps &
   FocusProps & {
-    as?: string;
-    className?: string;
-    children?: JSX.Element | JSX.Element[];
-  };
+    as?: string
+    className?: string
+    children?: JSX.Element | JSX.Element[] | string
+  }
