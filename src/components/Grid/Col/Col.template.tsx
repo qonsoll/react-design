@@ -1,5 +1,5 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react'
+import classNames from 'classnames'
 import {
   space,
   color,
@@ -9,10 +9,11 @@ import {
   shadow,
   compose,
   system,
-} from "styled-system";
-import styled from "styled-components";
-import { ColProps } from "./Col.types";
-import "./Col.scss";
+  flexbox
+} from 'styled-system'
+import styled from 'styled-components'
+import { ColProps } from './Col.types'
+import './Col.scss'
 
 /**
  * Composing props from styled system
@@ -24,9 +25,10 @@ const BoxStyleProps = compose(
   background,
   border,
   shadow,
+  flexbox,
   system({
     cw: {
-      property: "width",
+      property: 'width',
       transform: (value) => {
         /**
          * Applying theme override rules if exist, otherwise taking rules
@@ -37,63 +39,65 @@ const BoxStyleProps = compose(
          * Value auto will take content width, col - all available space,
          * otherwise - calculate column width
          */
-        if (value === "auto") {
-          return value;
+        if (value === 'auto') {
+          return value
         }
-        if (value !== "col") {
-          return `${(100 / 12) * parseInt(value, 10)}%`;
+        if (value !== 'col') {
+          return `${(100 / 12) * parseInt(value, 10)}%`
         }
-        return "auto";
-      },
+        return 'auto'
+      }
     },
     order: {
-      property: "order",
+      property: 'order'
     },
     alignSelf: {
-      property: "alignSelf",
+      property: 'alignSelf'
     },
     v: {
-      property: "alignItems",
+      property: 'alignItems',
       transform: (value) => {
         const map = {
-          top: "flex-start",
-          center: "center",
-          bottom: "flex-end",
-        };
-        return map[value];
-      },
+          top: 'flex-start',
+          center: 'center',
+          bottom: 'flex-end'
+        }
+        return map[value]
+      }
     },
     h: {
-      property: "justifyContent",
+      property: 'justifyContent',
       transform: (value) => {
         const map = {
-          left: "flex-start",
-          center: "center",
-          right: "flex-end",
-          around: "space-around",
-          between: "space-between",
-          evenly: "space-evenly",
-        };
-        return map[value];
-      },
-    },
+          left: 'flex-start',
+          center: 'center',
+          right: 'flex-end',
+          around: 'space-around',
+          between: 'space-between',
+          evenly: 'space-evenly'
+        }
+        return map[value]
+      }
+    }
   })
-);
+)
 
 /**
  * Building styled Box. Core element for container
  */
-const Box = styled.div<ColProps>(BoxStyleProps);
+const Box = styled.div.withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})<ColProps>(BoxStyleProps)
 
 /**
  * Creating Container which returns Box with className (css)
  */
 const Col = React.forwardRef<HTMLDivElement, ColProps>((props, ref) => {
-  const { cw, children } = props;
+  const { cw, children } = props
   const className = classNames({
     col: true,
-    "content-space": !!cw,
-  });
+    'content-space': !!cw
+  })
   return (
     <Box
       data-testid="col"
@@ -103,7 +107,7 @@ const Col = React.forwardRef<HTMLDivElement, ColProps>((props, ref) => {
     >
       {children}
     </Box>
-  );
-});
+  )
+})
 
-export default Col;
+export default Col

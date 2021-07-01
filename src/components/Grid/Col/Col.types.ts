@@ -5,20 +5,23 @@ import {
   BackgroundProps,
   BorderProps,
   ShadowProps,
-} from "styled-system";
+  FlexboxProps
+} from 'styled-system'
 
 export type ColProps = SpaceProps &
   ColorProps &
   LayoutProps &
   BackgroundProps &
   BorderProps &
-  ShadowProps & {
+  ShadowProps &
+  FlexboxProps & {
     cw?:
       | number
       | string
       | [string?, string?, string?, string?, string?]
-      | [number?, number?, number?, number?, number?];
-    order?: number;
-    v?: "top" | "center" | "bottom";
-    children?: JSX.Element | JSX.Element[];
-  };
+      | [number?, number?, number?, number?, number?]
+    order?: number
+    v?: 'top' | 'center' | 'bottom'
+    h?: 'left' | 'center' | 'right' | 'around' | 'between' | 'evenly'
+    children?: JSX.Element | JSX.Element[]
+  }

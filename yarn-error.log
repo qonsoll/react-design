@@ -1,0 +1,143 @@
+Arguments: 
+  /opt/homebrew/Cellar/nvm/0.38.0/versions/node/v14.17.0/bin/node /opt/homebrew/opt/nvm/versions/node/v14.17.0/bin/yarn install
+
+PATH: 
+  /opt/homebrew/opt/nvm/versions/node/v14.17.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/opt/nvm/versions/node/v14.17.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/maxik/Library/Android/sdk/emulator:/Users/maxik/Library/Android/sdk/tools:/Users/maxik/Library/Android/sdk/tools/bin:/Users/maxik/Library/Android/sdk/platform-tools:/Users/maxik/Library/Android/sdk/emulator:/Users/maxik/Library/Android/sdk/tools:/Users/maxik/Library/Android/sdk/tools/bin:/Users/maxik/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26)
+
+npm manifest: 
+  {
+    "name": "@qonsoll/react-design",
+    "version": "1.0.12",
+    "description": "React-components and design system for enterprise-level products.",
+    "main": "build/index.js",
+    "module": "build/index.esm.js",
+    "files": [
+      "build"
+    ],
+    "types": "build/index.d.ts",
+    "scripts": {
+      "build": "rollup -c",
+      "test": "jest",
+      "test:watch": "jest --watch",
+      "format": "prettier --write src/**/*.ts{,x}",
+      "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+      "plop": "plop",
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "deploy-docs": "gh-pages -d storybook-static",
+      "deploy-all": "rollup -c && build-storybook && gh-pages -d storybook-static && npm publish"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/qonsoll/react-design.git"
+    },
+    "keywords": [
+      "react",
+      "react v17",
+      "components",
+      "library",
+      "jest",
+      "typescript",
+      "scss",
+      "css modules",
+      "styled components",
+      "rollup",
+      "eslint",
+      "prettier"
+    ],
+    "author": "qonsoll",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/qonsoll/react-design/issues"
+    },
+    "homepage": "https://github.com/qonsoll/react-design#readme",
+    "peerDependencies": {
+      "react": ">=16.8.0",
+      "react-dom": ">=16.8.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.10",
+      "@babel/preset-env": "^7.12.11",
+      "@babel/preset-react": "^7.12.10",
+      "@rollup/plugin-babel": "^5.2.2",
+      "@rollup/plugin-commonjs": "^17.0.0",
+      "@rollup/plugin-multi-entry": "^4.0.0",
+      "@rollup/plugin-node-resolve": "^11.1.0",
+      "@storybook/addon-a11y": "^6.1.14",
+      "@storybook/addon-actions": "^6.1.14",
+      "@storybook/addon-backgrounds": "^6.1.14",
+      "@storybook/addon-controls": "^6.1.14",
+      "@storybook/addon-docs": "^6.1.14",
+      "@storybook/addon-essentials": "^6.1.14",
+      "@storybook/addon-knobs": "^6.1.14",
+      "@storybook/addon-links": "^6.1.14",
+      "@storybook/addon-storyshots": "^6.1.14",
+      "@storybook/addon-storysource": "^6.1.14",
+      "@storybook/addon-toolbars": "^6.1.14",
+      "@storybook/addon-viewport": "^6.1.14",
+      "@storybook/preset-scss": "^1.0.3",
+      "@storybook/react": "^6.1.14",
+      "@testing-library/jest-dom": "^5.11.9",
+      "@testing-library/react": "^11.2.3",
+      "@types/jest": "^26.0.20",
+      "@types/react": "^17.0.0",
+      "@types/styled-components": "^5.1.7",
+      "@types/styled-system": "^5.1.10",
+      "@typescript-eslint/eslint-plugin": "^4.13.0",
+      "@typescript-eslint/parser": "^4.13.0",
+      "babel-loader": "^8.2.2",
+      "babel-preset-react-app": "^10.0.0",
+      "classnames": "^2.2.6",
+      "eslint": "7.2.0",
+      "eslint-config-airbnb": "18.2.1",
+      "eslint-config-airbnb-typescript": "^12.0.0",
+      "eslint-config-prettier": "^7.1.0",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-jest": "^24.1.3",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-prettier": "^3.3.1",
+      "eslint-plugin-react": "^7.21.5",
+      "eslint-plugin-react-hooks": "4.0.0",
+      "gh-pages": "^3.1.0",
+      "identity-obj-proxy": "^3.0.0",
+      "jest": "^26.6.3",
+      "node-sass": "^5.0.0",
+      "postcss": "^8.2.4",
+      "postcss-nested": "^5.0.3",
+      "prettier": "^2.2.1",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "rollup": "^2.36.1",
+      "rollup-plugin-astroturf": "^0.1.0",
+      "rollup-plugin-css-only": "^3.1.0",
+      "rollup-plugin-peer-deps-external": "^2.2.4",
+      "rollup-plugin-postcss": "^4.0.0",
+      "rollup-plugin-terser": "^7.0.2",
+      "rollup-plugin-typescript2": "^0.29.0",
+      "rollup-watch": "^4.3.1",
+      "sass-loader": "^10.1.1",
+      "styled-components": "^5.2.1",
+      "styled-system": "^5.1.5",
+      "ts-jest": "^26.4.4",
+      "typescript": "^4.1.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

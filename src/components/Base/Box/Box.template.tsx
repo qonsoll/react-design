@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 import {
   space,
   color,
@@ -11,13 +11,13 @@ import {
   border,
   position,
   shadow,
-  compose,
-} from "styled-system";
-import { BoxProps } from "./Box.types";
-import { hover, focus } from "../../../design-system/extensions";
+  compose
+} from 'styled-system'
+import { BoxProps } from './Box.types'
+import { hover, focus } from '../../../design-system/extensions'
 
 const StyledBox = styled.div.withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop),
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
 })<BoxProps>`
   ${compose(
     space,
@@ -33,15 +33,15 @@ const StyledBox = styled.div.withConfig({
   )}
   ${hover}
   ${focus}
-`;
+`
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
-  const { children } = props;
+  const { children } = props
   return (
     <StyledBox data-testid="box" ref={ref} {...(props as unknown)}>
       {children}
     </StyledBox>
-  );
-});
+  )
+})
 
-export default Box;
+export default Box
