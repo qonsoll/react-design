@@ -5,49 +5,50 @@
 [![NPM](https://img.shields.io/npm/v/antd-styled.svg)](https://www.npmjs.com/package/antd-styled) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
-
+### Install dependencies
 ```bash
-npm install --save antd-styled
+npm install --save antd @ant-design/icons styled-components
 ```
-
+or
+```bash
+yarn add antd @ant-design/icons styled-components
+```
+### Install library
+```bash
+npm install --save @qonsoll/react-design
+```
+or
+```bash
+yarn add @qonsoll/react-design
+```
 ## Usage
 
+1. Create vars.css files inside styles/ directory. Here is an example how vars.css file should look like https://github.com/qonsoll/react-design/blob/main/src/styles/vars.css
+
+2. In your index.js file insert:
 ```jsx
-import React, { Component } from 'react'
+import "@qonsoll/react-design/dist/styles/styles.css"; // Insert this line
 
-import MyComponent from 'antd-styled'
-import 'antd-styled/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 ```
 
-## StoryBook
-https://bllago.github.io/antd-styled/
+### How to import components?
+```jsx
+import { Container, Row, Col, Button, Text } from "@qonsoll/react-design"
+```
+
+## Documentation (Storybook)
+https://qonsoll.github.io/react-design
 
 ## Deploy Storybook changes to GitPages
 Switch to root directory, then push changes and deploy it to GitPages:
 ```bash
 git add . && git commit -m 'Commit message...' && git push && npm publish && npm run deploy-storybook
-```
-
-## Playground
-Switch to root directory and run project:
-```bash
-npm start
-```
-
-Then switch to playground directory "example" and run project:
-```bash
-npm start
-```
-
-Then switch back to root directory and run storybook :
-```bash
-npm run storybook
 ```
 
 ## License
