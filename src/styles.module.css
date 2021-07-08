@@ -1,0 +1,4 @@
+/* add css module styles here (optional) */
+
+@import './styles/antd.css';
+@import './components/Inputs/PhoneInput/PhoneInput.module.css';
