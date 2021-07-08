@@ -1,15 +1,23 @@
 import React from 'react'
-import {ThemeProvider} from 'styled-components'
-import { Theme } from '../src/design-system/Theme'
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+import '../src/styles/vars.css'
+import '../src/styles/antd.css'
+import '../src/styles/PhoneInput.css'
+// import "antd/dist/antd.css";
+// import {ThemeProvider} from 'styled-components'
+// import theme from './theme'
 
-  controls: { expanded: true }
+export const parameters = {
+  layout: 'centered',
+  controls: { expanded: true },
+  actions: {
+    argTypesRegex: '^on[A-Z].*'
+  }
 }
+
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme = {Theme}>
-      <Story/>
-    </ThemeProvider>
+    //  <ThemeProvider theme = {theme}>
+    <Story />
+    //  </ThemeProvider>
   )
 ]
