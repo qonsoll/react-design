@@ -1,6 +1,6 @@
-# antd-styled
+# React design
 
-> AntdD + styled system. Extended antd components with additional style properties
+> AntdD + styled system based on CSS vars. Extended antd components with additional style properties and advanced grid system.
 
 [![NPM](https://img.shields.io/npm/v/antd-styled.svg)](https://www.npmjs.com/package/antd-styled) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
