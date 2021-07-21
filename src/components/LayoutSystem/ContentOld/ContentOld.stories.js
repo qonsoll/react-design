@@ -1,9 +1,9 @@
 import React from 'react'
-import Content from './Content'
+import ContentOld from './ContentOld'
 
 export default {
-  title: 'Components/Layout system/Content',
-  component: Content,
+  title: 'Components/Layout system/ContentOld',
+  component: ContentOld,
   argTypes: {
     'Default AntD props': {
       description:
@@ -29,5 +29,11 @@ export default {
 }
 
 export const Template = (args) => (
-  <Content {...args} width='72vw' height='92vh' bg='#e9e9e9' borderRadius={6} />
+  <ContentOld
+    {...args}
+    width='72vw'
+    height='92vh'
+    bg='#e9e9e9'
+    borderRadius={6}
+  />
 )

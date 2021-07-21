@@ -1,79 +1,66 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Layout as AntLayout } from 'antd'
-import styled from 'styled-components'
-import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
-  background,
-  border,
-  position,
-  shadow,
-  system
-} from 'styled-system'
+import BaseLayout from '../BaseLayout'
+import DirectionLayout from '../DirectionLayout'
+import CompositionLayout from '../CompositionLayout'
 
-/**
- * Layout (19 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {object}      [Default AntD props]      Component absolutely maintain default AntD layout properties (check Ant documentation: https://ant.design/components/layout/#Layout).
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- *
- * @return {ReactComponent}
- */
+const Layout = (props) => {
+  const {
+    children,
+    header,
+    asideLeft,
+    asideRight,
+    footer,
+    asideLeftOuter,
+    asideRightOuter
+  } = props
 
-const StyledAntLayout = styled(AntLayout).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    !['minHeight', 'backgroundImage'].includes(prop)
-})(
-  compose(
-    space,
-    color,
-    typography,
-    layout,
-    flexbox,
-    background,
-    border,
-    position,
-    shadow,
-    system({
-      whiteSpace: true,
-      cursor: true,
-      wordBreak: true,
-      zoom: true,
-      transform: true
-    })
+  const isOuterLayoutExists = asideLeftOuter || asideRightOuter
+
+  return (
+    <>
+      <BaseLayout direction={isOuterLayoutExists ? 'row' : 'column'}>
+        {isOuterLayoutExists ? (
+          <>
+            {asideLeftOuter && asideLeft}
+            <DirectionLayout direction='column'>
+              <CompositionLayout
+                header={header}
+                asideLeft={asideLeft}
+                asideRight={asideRight}
+                footer={footer}
+                asideLeftOuter={asideLeftOuter}
+                asideRightOuter={asideRightOuter}
+              >
+                {children}
+              </CompositionLayout>
+            </DirectionLayout>
+            {asideRightOuter && asideRight}
+          </>
+        ) : (
+          <CompositionLayout
+            header={header}
+            asideLeft={asideLeft}
+            asideRight={asideRight}
+            footer={footer}
+            asideLeftOuter={asideLeftOuter}
+            asideRightOuter={asideRightOuter}
+          >
+            {children}
+          </CompositionLayout>
+        )}
+      </BaseLayout>
+    </>
   )
-)
-
-const Layout = (props) => <StyledAntLayout {...props} />
+}
 
 Layout.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  header: PropTypes.node,
+  asideLeft: PropTypes.node,
+  asideRight: PropTypes.node,
+  footer: PropTypes.node,
+  asideLeftOuter: PropTypes.bool,
+  asideRightOuter: PropTypes.bool
 }
 
 export default Layout

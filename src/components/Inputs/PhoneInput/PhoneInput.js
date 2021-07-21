@@ -16,19 +16,6 @@ import {
   system
 } from 'styled-system'
 
-/**
- * PhoneInput (24 Mar 2021)
- *
- * @since      0.0.1
- *
- * @param {object}      [Default react-phone-input-2 props]      Component absolutely maintain default react-phone-input-2 input properties (check documentation: https://github.com/bl00mber/react-phone-input-2).
- * @param {oneOf}       [Packages]                               Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]                        Additional CSS properties which could be applyed.
- * @param {oneOf}       [size]                                   Allow you to specify input size.
- *
- * @return {ReactComponent}
- */
-
 const StyledReactPhoneInput = styled(PhoneInput)(
   compose(
     typography,

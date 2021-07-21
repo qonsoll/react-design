@@ -8,27 +8,6 @@ import Link from '../Typography/Link'
 import Divider from '../Divider'
 import { UserOutlined } from '@ant-design/icons'
 
-/**
- * Notification (25 Mar 2021)
- *
- * @since      0.0.1
- *
- * @param {oneOf}      [status]                  Use it to show notification status.
- * @param {oneOf}      [avatarUrl]               Use to specify avatar url.
- * @param {oneOf}      [avatarSize]              Use it to specify avatar size.
- * @param {oneOf}      [avatarIcon]              Use it to specify avatar icon when avatar url is absent.
- * @param {oneOf}      [userName]                Use it to specify user name.
- * @param {oneOf}      [onClickUserName]         Use it to specify url after clicking on user name.
- * @param {oneOf}      [message]                 Use it to specify message text.
- * @param {oneOf}      [redirectButtonUrl]       Use it to specify extra action url.
- * @param {oneOf}      [redirectButtonText]      Use it to specify extra action text.
- * @param {oneOf}      [onClickMarkAsSeen]       Use it to specify "mark as seen" action url.
- * @param {oneOf}      [markAsSeenText]          Use it to specify "mark as seen" action text.
- * @param {oneOf}      [dateTime]                Use it to show date or/and time.
- *
- * @return {ReactComponent}
- */
-
 const Notification = (props) => {
   const {
     status,

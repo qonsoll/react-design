@@ -371,26 +371,72 @@
 
 
 
+  /****** Layout system config —————————————————————————————— Start ******/
+
+
+
+  /* Header —————————————————————————————— Start */
+
+  --ql-header-height: 64px;
+  --ql-header-background: #4c4c4c;
+
+  /* Header —————————————————————————————— End */
+
+
+
+  /****** Layout system config —————————————————————————————— End ******/
+
+
+
+  /****** AntD layout config —————————————————————————————— Start ******/
+
+
+
   /* Layout —————————————————————————————— Start */
 
-  /* + */ --layout-header-background: var(--white);
   /* + */ --layout-body-background: var(--primary-2);
-  /* + */ --layout-header-height: 64px;
-  /* + */ --layout-header-padding: 0 24px;
-  /* + */ --layout-header-color: var(--text-color);
-  /* + */ --layout-footer-padding: 24px 24px;
-  /* + */ --layout-footer-background: var(--layout-body-background);
-  /* + */ --layout-sider-background: var(--layout-header-background);
   /* + */ --layout-trigger-height: 48px;
   /* + */ --layout-trigger-background: #002140; /* FIXME */
   /* + */ --layout-trigger-color: var(--white);
   /* + */ --layout-zero-trigger-width: 36px;
   /* + */ --layout-zero-trigger-height: 42px;
-  /* + */ --layout-sider-background-light: var(--white);
   /* + */ --layout-trigger-background-light: var(--white);
   /* + */ --layout-trigger-color-light: var(--text-color);
 
   /* Layout —————————————————————————————— End */
+
+
+
+  /* Header —————————————————————————————— Start */
+
+  /* + */ --layout-header-height: 64px;
+  /* + */ --layout-header-padding: 0 24px;
+  /* + */ --layout-header-background: var(--white);
+  /* + */ --layout-header-color: var(--text-color);
+
+  /* Header —————————————————————————————— End */
+
+
+
+  /* Sider —————————————————————————————— Start */
+
+  /* + */ --layout-sider-background: var(--layout-header-background);
+  /* + */ --layout-sider-background-light: var(--white);
+
+  /* Sider —————————————————————————————— End */
+
+
+
+  /* Footer —————————————————————————————— Start */
+
+  /* + */ --layout-footer-padding: 24px 24px;
+  /* + */ --layout-footer-background: var(--layout-body-background);
+
+  /* Footer —————————————————————————————— End */
+
+
+
+  /****** AntD layout config —————————————————————————————— End ******/
 
 
 

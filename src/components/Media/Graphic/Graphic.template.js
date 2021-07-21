@@ -4,27 +4,6 @@ import Box from '../../Box'
 import Img from '../Img'
 import { DEFAULT_PROPS } from './constants'
 
-/**
- * Graphic (19 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {string.isRequired}       [src]                Image url.
- * @param {string.isRequired}       [alt]                Image alt-description.
- * @param {array}                   [hidden]             Use to setup when component should be hidden (based on breakpoints).
- * @param {string}                  [animation]          Use to specify animation rules (based on classes).
- * @param {oneOfType}               [width]              Component width.
- * @param {oneOfType}               [height]             Component height.
- * @param {string}                  [position]           Use to specify component position.
- * @param {string}                  [top]                Top offset.
- * @param {string}                  [bottom]             Bottom offset.
- * @param {string}                  [left]               Left offset.
- * @param {string}                  [right]              Right offset.
- * @param {string}                  [objectFit]          Use to specify render method.
- *
- * @return {ReactComponent}
- */
-
 const Graphic = (props) => {
   const {
     src,

@@ -1,9 +1,9 @@
 import React from 'react'
-import Sider from './Sider'
+import SiderOld from './SiderOld'
 
 export default {
-  title: 'Components/Layout system/Sider',
-  component: Sider,
+  title: 'Components/Layout system/SiderOld',
+  component: SiderOld,
   argTypes: {
     'Default AntD props': {
       description:
@@ -29,5 +29,11 @@ export default {
 }
 
 export const Template = (args) => (
-  <Sider {...args} width='20vw' height='92vh' bg='#e9e9e9' borderRadius={6} />
+  <SiderOld
+    {...args}
+    width='20vw'
+    height='92vh'
+    bg='#e9e9e9'
+    borderRadius={6}
+  />
 )

@@ -6,8 +6,8 @@ export default {
   component: Save,
   argTypes: {
     text: {
-      description: 'Use to add text label for button button.',
-      defaultValue: 'Save'
+      description: 'Use to add text label for button button.'
+      // defaultValue: 'Save'
     },
     type: {
       description: 'Use to change button type.'
@@ -35,12 +35,12 @@ export default {
     },
     tooltip: {
       description:
-        'Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.',
-      defaultValue: 'Back button'
+        'Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.'
+      // defaultValue: 'Back button'
     },
     tooltipPlacement: {
-      description: 'Use to specify tooltip position.',
-      defaultValue: 'topLeft'
+      description: 'Use to specify tooltip position.'
+      // defaultValue: 'topLeft'
     },
     props: {
       description:

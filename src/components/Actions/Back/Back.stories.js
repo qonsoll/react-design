@@ -6,8 +6,7 @@ export default {
   component: Back,
   argTypes: {
     text: {
-      description: 'Use to add text label for button button',
-      defaultValue: 'Back button'
+      description: 'Use to add text label for button button'
     },
     icon: {
       description:
@@ -30,15 +29,15 @@ export default {
     tooltip: {
       description:
         'Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.',
-      defaultValue: 'Back button'
+      table: { defaultValue: { summary: 'Back button' } }
     },
     tooltipPlacement: {
       description: 'Use to specify tooltip position.',
-      defaultValue: 'top'
+      table: { defaultValue: { summary: 'top' } }
     },
     divided: {
       description: 'Use to enable divider at the right side of the button.',
-      defaultValue: false
+      table: { defaultValue: { summary: 'false' } }
     },
     props: {
       description:

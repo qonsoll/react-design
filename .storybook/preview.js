@@ -7,7 +7,7 @@ import '../src/styles/PhoneInput.css'
 // import theme from './theme'
 
 export const parameters = {
-  layout: 'centered',
+  layout: 'fullscreen',
   controls: { expanded: true },
   actions: {
     argTypesRegex: '^on[A-Z].*'

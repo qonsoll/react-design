@@ -4,31 +4,6 @@ import { Typography, Tooltip, Popconfirm } from 'antd'
 import Button from '../../Button'
 import { DeleteOutlined } from '@ant-design/icons'
 
-/**
- * Remove button (19 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {string}      [text]                      Use to add text label for button button.
- * @param {string}      [type]                      Use to change button type.
- * @param {node}        [icon]                      Use to add icon at the left side inside button (shortcut, worked the same as property "iconLeft").
- * @param {node}        [iconLeft]                  Use to add icon at the left side inside button (worked the same as property "icon").
- * @param {node}        [iconRight]                 Use to add icon at the right side inside button.
- * @param {oneOf}       [shape]                     Use to set button shape.
- * @param {string}      [tooltip]                   Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.
- * @param {oneOf}       [tooltipPlacement]          Use to specify tooltip position.
- * @param {string}      [question]                  Use to specify remove question.
- * @param {function}    [onSubmit]                  Set the handler to handle submit event.
- * @param {string}      [confirmLabel]              Use to specify submit button text.
- * @param {function}    [onCancel]                  Set the handler to handle cancel event.
- * @param {string}      [cancelLabel]               Use to specify cancel button text.
- * @param {string}      [popconfirmPlacement]       Use to specify popconfirm placement.
- * @param {string}      [itemName]                  Use to set item name.
- * @param {object}      [props]                     Rest of the button properties are similar as in default AntD button (check Ant documentation: https://ant.design/components/button/).
- *
- * @return {ReactComponent}
- */
-
 const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom',
   question: 'Are you sure you want to remove',

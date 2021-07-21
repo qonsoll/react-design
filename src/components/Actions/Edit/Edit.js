@@ -4,24 +4,6 @@ import Button from '../../Button'
 import { Tooltip } from 'antd'
 import { EditOutlined } from '@ant-design/icons'
 
-/**
- * Edit button (16 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {string}      [text]                Use to add text label for button button.
- * @param {node}        [icon]                Use to add icon at the left side inside button (shortcut, worked the same as property "iconLeft").
- * @param {node}        [iconLeft]            Use to add icon at the left side inside button (worked the same as property "icon").
- * @param {node}        [iconRight]           Use to add icon at the right side inside button.
- * @param {oneOf}       [shape]               Use to set button shape.
- * @param {function}    [onClick]             Set the handler to handle click event.
- * @param {string}      [tooltip]             Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.
- * @param {oneOf}       [tooltipPlacement]    Use to specify tooltip position.
- * @param {object}      [props]               Rest of the button properties are similar as in default AntD button (check Ant documentation: https://ant.design/components/button/).
- *
- * @return {ReactComponent}
- */
-
 const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom'
 }

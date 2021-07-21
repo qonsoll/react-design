@@ -1,21 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Layout from '../../LayoutSystem/Layout'
-import Content from '../../LayoutSystem/Content'
-
-/**
- * AppWrapper (12 Apr 2021)
- *
- * @since      0.0.2
- *
- * @param {boolean}      [horizontal]                Use to specify horizontal layout direction for component.
- * @param {node}         [children]                  Use to insert any node within component.
- * @param {node}         [appNavbar]                 Use to insert App navigation within component.
- * @param {node}         [bottomNavbar]              Use to insert App bottom navigation within component.
- * @param {node}         [appHeader]                 Use to insert App header within component.
- *
- * @return {ReactComponent}
- */
+import LayoutOld from '../../LayoutSystem/LayoutOld'
+import ContentOld from '../../LayoutSystem/ContentOld'
 
 const AppWrapper = (props) => {
   const {
@@ -29,10 +15,10 @@ const AppWrapper = (props) => {
   } = props
 
   return (
-    <Layout height='inherit' flexDirection={horizontal && 'row'} {...rest}>
+    <LayoutOld height='inherit' flexDirection={horizontal && 'row'} {...rest}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
-      <Content
+      <ContentOld
         px={[
           'var(--layout-padding-default)',
           'var(--layout-padding-sm)',
@@ -46,9 +32,9 @@ const AppWrapper = (props) => {
         {...contentProps}
       >
         {children}
-      </Content>
+      </ContentOld>
       {!horizontal && bottomNavbar}
-    </Layout>
+    </LayoutOld>
   )
 }
 

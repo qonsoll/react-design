@@ -1,75 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Layout } from 'antd'
-import styled from 'styled-components'
-import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
-  background,
-  border,
-  position,
-  shadow,
-  system
-} from 'styled-system'
+import Box from '../../Box'
+import Container from '../../Grid/Container'
+import Row from '../../Grid/Row'
+import Col from '../../Grid/Col'
 
-/**
- * Footer (19 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {object}      [Default AntD props]      Component absolutely maintain default AntD footer properties (check Ant documentation: https://ant.design/components/layout/#Layout).
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- *
- * @return {ReactComponent}
- */
+const Footer = (props) => {
+  const { height, layout } = props
 
-const StyledAntFooter = styled(Layout.Footer)(
-  compose(
-    space,
-    color,
-    typography,
-    layout,
-    flexbox,
-    background,
-    border,
-    position,
-    shadow,
-    system({
-      whiteSpace: true,
-      cursor: true,
-      wordBreak: true,
-      zoom: true,
-      transform: true
-    })
+  return (
+    <Box
+      flexBasis={height || 64}
+      minHeight={height || 64}
+      bg='#4c4c4c'
+      display='flex'
+    >
+      <Container>
+        <Row height='100%'>
+          {layout.map(({ component, ...arg }, index) => (
+            <Col key={index} {...arg}>
+              {component}
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </Box>
   )
-)
+}
 
-const Footer = (props) => <StyledAntFooter {...props} />
 Footer.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  height: PropTypes.number,
+  layout: PropTypes.array
 }
 
 export default Footer

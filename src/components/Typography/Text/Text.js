@@ -17,20 +17,6 @@ import {
   variant
 } from 'styled-system'
 
-/**
- * Text (15 Apr 2021)
- *
- * @since      0.0.3
- *
- * @param {object}      [Default AntD props]      Component absolutely maintain default AntD text properties (check Ant documentation: https://ant.design/components/typography/#Typography.Text).
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- * @param {oneOf}       [variant]                 Use to change text type.
- * @param {oneOf}       [isEllipsis]              Use to truncate text.
- *
- * @return {ReactComponent}
- */
-
 const StyledText = styled(AntTypography.Text).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
 })(({ theme }) =>

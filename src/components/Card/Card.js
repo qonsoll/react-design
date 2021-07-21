@@ -16,19 +16,6 @@ import {
   system
 } from 'styled-system'
 
-/**
- * Card (16 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {object}      [Default AntD props]      Component absolutely maintain default AntD card properties (check Ant documentation: https://ant.design/components/card/#Card).
- * @param {boolean}     [shadowless]              Use to disable card shadow.
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- *
- * @return {ReactComponent}
- */
-
 const StyledAntCard = styled(AntCard)(
   compose(
     compose,

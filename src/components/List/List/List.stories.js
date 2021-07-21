@@ -31,12 +31,12 @@ export default {
       //   control: { disable: true }
     },
     title: {
-      description: 'Use to add title text.',
-      defaultValue: 'Back button'
+      description: 'Use to add title text.'
+      // defaultValue: 'Back button'
     },
     titleWidthProps: {
-      description: 'Use to specify title width.',
-      defaultValue: 'topLeft'
+      description: 'Use to specify title width.'
+      // defaultValue: 'topLeft'
     },
     titleProps: {
       description: 'Use to specify title props.'

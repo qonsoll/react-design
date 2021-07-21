@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 // import './Row.scss'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import {
   space,
   color,
@@ -13,7 +13,7 @@ import {
   system
 } from 'styled-system'
 
-import { DEFAULTS, BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
+// import { DEFAULTS, BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -33,27 +33,13 @@ const StyledDiv = styled.div`
       padding-right: 0;
     }
   }
-
   &.no-outer-gutters {
-    margin-left: ${DEFAULTS.negativeGutterDefault};
-    margin-right: ${DEFAULTS.negativeGutterDefault};
     & > .col:first-child {
       padding-left: 0;
     }
     & > .col:last-child {
       padding-right: 0;
     }
-    ${(props) => {
-      const breakpoints = Object.keys(BREAKPOINTS)
-      return breakpoints.map((breakpoint) => {
-        return css`
-          @media (min-width: ${BREAKPOINTS[breakpoint]}) {
-            margin-left: ${NEGATIVE_GUTTERS_MAP[breakpoint]};
-            margin-right: ${NEGATIVE_GUTTERS_MAP[breakpoint]};
-          }
-        `
-      })
-    }}
   }
 `
 

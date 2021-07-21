@@ -16,19 +16,6 @@ import {
   variant
 } from 'styled-system'
 
-/**
- * Divider (14 Apr 2021)
- *
- * @since      0.0.2
- *
- * @param {object}      [Default AntD props]      Component absolutely maintain default AntD button properties (check Ant documentation: https://ant.design/components/button/#API).
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- * @param {oneOf}       [variant]                 Use to change button type.
- *
- * @return {ReactComponent}
- */
-
 const Button = styled(AntButton)(({ theme }) =>
   compose(
     space,

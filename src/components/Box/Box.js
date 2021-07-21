@@ -15,17 +15,6 @@ import {
   system
 } from 'styled-system'
 
-/**
- * Box (16 Dec 2020)
- *
- * @since      0.0.1
- *
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- *
- * @return {ReactComponent}
- */
-
 const StyledDiv = styled('div')(
   compose(
     space,

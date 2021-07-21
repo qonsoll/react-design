@@ -6,8 +6,8 @@ export default {
   component: Edit,
   argTypes: {
     text: {
-      description: 'Use to add text label for button button',
-      defaultValue: 'Edit'
+      description: 'Use to add text label for button button'
+      // defaultValue: 'Edit'
     },
     icon: {
       description:
@@ -32,12 +32,12 @@ export default {
     },
     tooltip: {
       description:
-        'Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.',
-      defaultValue: 'Back button'
+        'Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.'
+      // defaultValue: 'Back button'
     },
     tooltipPlacement: {
-      description: 'Use to specify tooltip position.',
-      defaultValue: 'topLeft'
+      description: 'Use to specify tooltip position.'
+      // defaultValue: 'topLeft'
     },
     props: {
       description:

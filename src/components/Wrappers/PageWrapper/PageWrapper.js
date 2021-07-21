@@ -4,26 +4,6 @@ import PositioningWrapper from '../PositioningWrapper'
 import ContentWrapper from '../ContentWrapper'
 import Graphic from '../../Media/Graphic'
 
-/**
- * PageWrapper (20 Apr 2021)
- *
- * @since      0.0.1
- *
- * @param {node}         [children]                  Use to place smth. under the title (second level).
- * @param {boolean}      [alignMiddle]               Use to make everything centered.
- * @param {boolean}      [isBottomSticky]            Allows to stick smth. to the bottom.
- * @param {object}       [contentWidth]              Use to specify content width.
- * @param {func}         [onBack]                    Back event.
- * @param {object}       [backBtnProps]              Properties for back button. Read documentation above.
- * @param {boolean}      [divided]                   Use to place divider between back button and title.
- * @param {object}       [graphicProps]              Properties for graphic component. Read documentation above.
- * @param {boolean}      [firstLevelHidden]          Use to hide first level (back button, heading and actions).
- * @param {object}       [headingProps]              Properties for heading.
- * @param {node}         [action]                    Use to add actions.
- *
- * @return {ReactComponent}
- */
-
 const PageWrapper = (props) => {
   const {
     children,

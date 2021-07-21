@@ -59,10 +59,10 @@ html {
 body {
   margin: 0;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
   font-family: var(--font-family);
   font-variant: tabular-nums;
-  line-height: 1.5715;
+  line-height: var(--line-height-base);
   background-color: var(--body-background);
   -webkit-font-feature-settings: 'tnum';
           font-feature-settings: 'tnum';

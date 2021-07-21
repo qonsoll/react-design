@@ -16,18 +16,6 @@ import {
   system
 } from 'styled-system'
 
-/**
- * Menu (24 Mar 2021)
- *
- * @since      0.0.1
- *
- * @param {object}      [Default AntD props]      Component absolutely maintain default AntD menu properties (check Ant documentation: https://ant.design/components/menu/#Menu).
- * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
- * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
- *
- * @return {ReactComponent}
- */
-
 const StyledMenu = styled(AntMenu)(
   compose(
     space,

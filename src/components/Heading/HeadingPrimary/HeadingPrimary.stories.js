@@ -6,8 +6,8 @@ export default {
   component: HeadingPrimary,
   argTypes: {
     title: {
-      description: 'Use to specify title text.',
-      defaultValue: 'Heading'
+      description: 'Use to specify title text.'
+      // defaultValue: 'Heading'
     },
     titleSize: {
       description: 'Use to set title size.',

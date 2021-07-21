@@ -11,8 +11,8 @@ export default {
       control: { disable: true }
     },
     width: {
-      description: 'Use to specify component width.',
-      defaultValue: 280
+      description: 'Use to specify component width.'
+      // defaultValue: 280
     }
   }
 }

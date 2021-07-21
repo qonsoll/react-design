@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box } from '@qonsoll/react-design'
+import Box from '../../Box'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
 import Back from '../../Actions/Back'
 
