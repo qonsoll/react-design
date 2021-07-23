@@ -17144,14 +17144,14 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   display: inline-block;
   width: 100%;
   min-width: 0;
-  padding: 4px 11px;
+  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.5715;
   background-color: var(--white);
   background-image: none;
   border: 1px solid var(--gray-5);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
   display: -webkit-inline-box;
@@ -17244,11 +17244,11 @@ textarea.ant-input-affix-wrapper {
   transition: all var(--animation-duration-slow), height 0s;
 }
 .ant-input-affix-wrapper-lg {
-  padding: 6.5px 11px;
+  padding: var(--input-padding-vertical-lg) var(--input-padding-horizontal-lg);
   font-size: 16px;
 }
 .ant-input-affix-wrapper-sm {
-  padding: 0px 7px;
+  padding: var(--input-padding-vertical-sm) var(--input-padding-horizontal-sm)
 }
 .ant-input-affix-wrapper-rtl {
   direction: rtl;
