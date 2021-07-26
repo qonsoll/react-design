@@ -27368,50 +27368,50 @@ div.ant-typography,
 }
 h1.ant-typography,
 .ant-typography h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--typography-title-margin-bottom);
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 1.23;
+  font-weight: var(--typography-title-font-weight);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 h2.ant-typography,
 .ant-typography h2 {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--typography-title-margin-bottom);
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 1.35;
+  font-weight: var(--typography-title-font-weight);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 h3.ant-typography,
 .ant-typography h3 {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--typography-title-margin-bottom);
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.35;
+  font-weight: var(--typography-title-font-weight);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
 }
 h4.ant-typography,
 .ant-typography h4 {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--typography-title-margin-bottom);
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.4;
+  font-weight: var(--typography-title-font-weight);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
 }
 h5.ant-typography,
 .ant-typography h5 {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--typography-title-margin-bottom);
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
+  font-weight: var(--typography-title-font-weight);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
 }
 .ant-typography + h1.ant-typography,
 .ant-typography + h2.ant-typography,
 .ant-typography + h3.ant-typography,
 .ant-typography + h4.ant-typography,
 .ant-typography + h5.ant-typography {
-  margin-top: 1.2em;
+  margin-top: var(--typography-title-margin-top);
 }
 .ant-typography div + h1,
 .ant-typography ul + h1,
@@ -27458,7 +27458,7 @@ h5.ant-typography,
 .ant-typography h3 + h5,
 .ant-typography h4 + h5,
 .ant-typography h5 + h5 {
-  margin-top: 1.2em;
+  margin-top: var(--typography-title-margin-top);
 }
 a.ant-typography-ellipsis,
 span.ant-typography-ellipsis {
