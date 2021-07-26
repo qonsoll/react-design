@@ -9659,7 +9659,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   margin: 0;
   padding: 0;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -9984,11 +9984,11 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 .ant-tabs-small > .ant-tabs-nav .ant-tabs-tab {
   padding: 8px 0;
-  font-size: 14px;
+  font-size: var(--font-size-body2);
 }
 .ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
   padding: 16px 0;
-  font-size: 16px;
+  font-size: var(--font-size-base);
 }
 .ant-tabs-card.ant-tabs-small > .ant-tabs-nav .ant-tabs-tab {
   padding: 6px 16px;
