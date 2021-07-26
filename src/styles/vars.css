@@ -166,23 +166,10 @@
   --gray-8: #595959;
   --gray-9: #434343; /* Not used */
   --gray-10: #262626; /* Not used */
-  --gray-11: #1f1f1f; /* Not used */
+  /*--gray-11: #1f1f1f; old */
+  --gray-11: #030b17;
   --gray-12: #141414; /* Not used */
   --gray-13: #000000; /* Not used */
-
-  --gray-t-1: #030b17; /* Typo title */
-  --gray-t-2: rgba(3, 11, 23, 0.1); /* Avatar bg */
-  --gray-t-3: rgba(3, 11, 23, 0.5); /* Avatar color */
-  --gray-t-4: #f0f0f0; /* Not used */
-  --gray-t-5: #d9d9d9; /* Not used */
-  --gray-t-6: #bfbfbf; /* Not used */
-  --gray-t-7: #8c8c8c; /* Not used */
-  --gray-t-8: #595959; /* Not used */
-  --gray-t-9: #434343; /* Not used */
-  --gray-t-10: rgba(3, 11, 23, 0.65); /* Typo color */
-  --gray-t-11: #1f1f1f; /* Not used */
-  --gray-t-12: #141414; /* Not used */
-  --gray-t-13: #000000; /* Not used */
 
   /* Semantic color palettes */
 
@@ -348,8 +335,7 @@
   --font-size-base: var(--font-size-body1);
   --font-size-lg: var(--font-size-h4);
   --font-size-sm: var(--font-size-body2);
-  /* --heading-color: var(--gray-11); old */
-  --heading-color: var(--gray-t-1);
+  --heading-color: var(--gray-11);
   --heading-1-size: var(--font-size-h1);
   --heading-2-size: var(--font-size-h2);
   --heading-3-size: var(--font-size-h3);
