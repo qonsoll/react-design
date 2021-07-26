@@ -2072,7 +2072,7 @@ html {
   margin: 0;
   padding: 0;
   color: var(--alert-text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -2087,7 +2087,7 @@ html {
           align-items: center;
   padding: 8px 15px;
   word-wrap: break-word;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
 }
 .ant-alert-content {
   -webkit-box-flex: 1;
