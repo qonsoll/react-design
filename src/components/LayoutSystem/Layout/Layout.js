@@ -12,39 +12,76 @@ const Layout = (props) => {
     asideRight,
     footer,
     asideLeftOuter,
-    asideRightOuter
+    asideRightOuter,
+    isAsideLeftCollapsed,
+    isAsideRightCollapsed,
+    isHeaderSticky,
+    isFooterSticky,
+    bg,
+    contentP
   } = props
 
   const isOuterLayoutExists = asideLeftOuter || asideRightOuter
 
   return (
     <>
-      <BaseLayout direction={isOuterLayoutExists ? 'row' : 'column'}>
+      <BaseLayout direction={isOuterLayoutExists ? 'row' : 'column'} bg={bg}>
         {isOuterLayoutExists ? (
           <>
-            {asideLeftOuter && asideLeft}
-            <DirectionLayout direction='column'>
+            {asideLeftOuter &&
+              asideLeft &&
+              React.cloneElement(asideLeft, { side: 'left' })}
+            <DirectionLayout
+              direction='column'
+              maxHeight='100vh'
+              overflow='auto'
+            >
               <CompositionLayout
                 header={header}
-                asideLeft={asideLeft}
-                asideRight={asideRight}
-                footer={footer}
+                asideLeft={
+                  asideRightOuter &&
+                  asideLeft &&
+                  React.cloneElement(asideLeft, { maxHeight: 'unset' })
+                }
+                asideRight={
+                  asideLeftOuter &&
+                  asideRight &&
+                  React.cloneElement(asideRight, { maxHeight: 'unset' })
+                }
                 asideLeftOuter={asideLeftOuter}
                 asideRightOuter={asideRightOuter}
+                isAsideLeftCollapsed={isAsideLeftCollapsed}
+                isAsideRightCollapsed={isAsideRightCollapsed}
+                footer={footer}
+                isHeaderSticky={isHeaderSticky}
+                isFooterSticky={isFooterSticky}
+                contentP={contentP}
               >
                 {children}
               </CompositionLayout>
             </DirectionLayout>
-            {asideRightOuter && asideRight}
+            {asideRightOuter &&
+              asideRight &&
+              React.cloneElement(asideRight, { side: 'right' })}
           </>
         ) : (
           <CompositionLayout
             header={header}
-            asideLeft={asideLeft}
-            asideRight={asideRight}
-            footer={footer}
+            asideLeft={
+              asideLeft && React.cloneElement(asideLeft, { maxHeight: 'unset' })
+            }
+            asideRight={
+              asideRight &&
+              React.cloneElement(asideRight, { maxHeight: 'unset' })
+            }
             asideLeftOuter={asideLeftOuter}
             asideRightOuter={asideRightOuter}
+            isAsideLeftCollapsed={isAsideLeftCollapsed}
+            isAsideRightCollapsed={isAsideRightCollapsed}
+            footer={footer}
+            isHeaderSticky={isHeaderSticky}
+            isFooterSticky={isFooterSticky}
+            contentP={contentP}
           >
             {children}
           </CompositionLayout>
@@ -58,9 +95,11 @@ Layout.propTypes = {
   header: PropTypes.node,
   asideLeft: PropTypes.node,
   asideRight: PropTypes.node,
-  footer: PropTypes.node,
   asideLeftOuter: PropTypes.bool,
-  asideRightOuter: PropTypes.bool
+  asideRightOuter: PropTypes.bool,
+  isAsideLeftCollapsed: PropTypes.bool,
+  isAsideRightCollapsed: PropTypes.bool,
+  footer: PropTypes.node
 }
 
 export default Layout

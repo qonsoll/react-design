@@ -50,6 +50,7 @@ import AppNavbarWrapper from './components/Wrappers/AppNavbarWrapper'
 import AppHeaderWrapper from './components/Wrappers/AppHeaderWrapper'
 import Navigation from './components/Navigation'
 import NavigationItem from './components/NavigationItem'
+import Icon from './components/Icon'
 
 export {
   LayoutOld,
@@ -103,7 +104,8 @@ export {
   AppHeaderWrapper,
   Button,
   Navigation,
-  NavigationItem
+  NavigationItem,
+  Icon
 }
 
 export default {
@@ -157,5 +159,6 @@ export default {
   AppHeaderWrapper,
   Button,
   Navigation,
-  NavigationItem
+  NavigationItem,
+  Icon
 }

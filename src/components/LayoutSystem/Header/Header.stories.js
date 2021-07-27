@@ -10,6 +10,9 @@ export default {
     },
     bg: {
       description: 'Use to specify Header background color.'
+    },
+    shadow: {
+      description: 'Use to specify Header shadow.'
     }
   }
 }

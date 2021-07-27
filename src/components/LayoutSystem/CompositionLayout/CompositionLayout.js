@@ -8,20 +8,33 @@ const CompositionLayout = (props) => {
     header,
     asideLeft,
     asideRight,
-    footer,
     asideLeftOuter,
-    asideRightOuter
+    asideRightOuter,
+    footer,
+    isHeaderSticky,
+    isFooterSticky,
+    contentP
   } = props
 
   return (
     <>
-      {header}
+      {isHeaderSticky
+        ? React.cloneElement(header, { position: 'sticky', top: 0 })
+        : header}
       <DirectionLayout direction='row'>
-        {!asideLeftOuter && asideLeft}
-        <Box flexGrow={1}>{children}</Box>
-        {!asideRightOuter && asideRight}
+        {!asideLeftOuter &&
+          asideLeft &&
+          React.cloneElement(asideLeft, { side: 'left' })}
+        <Box flexGrow={1} p={contentP || 'var(--ql-content-padding)'}>
+          {children}
+        </Box>
+        {!asideRightOuter &&
+          asideRight &&
+          React.cloneElement(asideRight, { side: 'right' })}
       </DirectionLayout>
-      {footer}
+      {isFooterSticky
+        ? React.cloneElement(footer, { position: 'sticky', bottom: 0 })
+        : footer}
     </>
   )
 }

@@ -5,11 +5,20 @@ export default {
   title: 'Components/NavigationItem',
   component: NavigationItem,
   argTypes: {
-    height: {
-      description: 'Use to specify Header height.'
+    text: {
+      description: 'Use to specify Item text.'
     },
-    layout: {
-      description: 'Use to specify layout structure and inner components.'
+    icon: {
+      description: 'Use to specify Item icon.'
+    },
+    iconSize: {
+      description: 'Use to specify Icon size.'
+    },
+    iconColor: {
+      description: 'Use to specify Icon color.'
+    },
+    spaceBetween: {
+      description: 'Use to specify space between icon and text.'
     }
   }
 }

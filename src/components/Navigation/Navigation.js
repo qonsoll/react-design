@@ -4,19 +4,32 @@ import Box from '../Box'
 import NavigationItem from '../NavigationItem'
 
 const Navigation = (props) => {
-  const { dataSource } = props
+  const { vertical, color, dataSource, isCollapsed } = props
 
   return (
-    <Box display='flex' flexDirection=''>
+    <Box
+      height='inherit'
+      display='flex'
+      flexDirection={vertical && 'column'}
+      color={color || 'var(--ql-navigation-color)'}
+      alignItems={isCollapsed && 'center'}
+    >
       {dataSource.map(({ ...arg }, index) => (
-        <NavigationItem key={index} {...arg} />
+        <NavigationItem
+          key={index}
+          vertical={vertical}
+          isCollapsed={isCollapsed}
+          {...arg}
+        />
       ))}
     </Box>
   )
 }
 
 Navigation.propTypes = {
-  dataSource: PropTypes.array
+  dataSource: PropTypes.array,
+  vertical: PropTypes.bool,
+  color: PropTypes.string
 }
 
 export default Navigation

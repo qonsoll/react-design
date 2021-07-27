@@ -3586,8 +3586,8 @@ html {
   text-align: center;
   background: var(--badge-color);
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 0 1px var(--white);
-          box-shadow: 0 0 0 1px var(--white);
+  /* -webkit-box-shadow: 0 0 0 1px var(--white);
+          box-shadow: 0 0 0 1px var(--white); */
 }
 .ant-badge-count a,
 .ant-badge-count a:hover {

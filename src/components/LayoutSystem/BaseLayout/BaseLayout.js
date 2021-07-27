@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Box from '../../Box'
 
 const BaseLayout = (props) => {
-  const { children, direction } = props
+  const { children, direction, bg } = props
 
   return (
     <Box
@@ -11,6 +11,7 @@ const BaseLayout = (props) => {
       width='100vw'
       display='flex'
       flexDirection={direction}
+      bg={bg || 'var(--ql-layout-background)'}
     >
       {children}
     </Box>
@@ -18,7 +19,8 @@ const BaseLayout = (props) => {
 }
 
 BaseLayout.propTypes = {
-  direction: PropTypes.oneOf(['row', 'column'])
+  direction: PropTypes.oneOf(['row', 'column']),
+  bg: PropTypes.string
 }
 
 export default BaseLayout

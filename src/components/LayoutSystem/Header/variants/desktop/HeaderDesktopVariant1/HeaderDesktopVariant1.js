@@ -1,37 +1,44 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Container from '../../../../../Grid/Container'
 import Row from '../../../../../Grid/Row'
 import Col from '../../../../../Grid/Col'
 import Img from '../../../../../Media/Img'
 import Avatar from '../../../../../Media/Avatar'
 import Navigation from '../../../../../Navigation'
+import {
+  AppstoreOutlined,
+  CalendarOutlined,
+  CarOutlined,
+  UserOutlined
+} from '@ant-design/icons'
+
+const navConfig = [
+  { text: 'Dashboard', icon: <AppstoreOutlined /> },
+  { text: 'Scheduler', icon: <CalendarOutlined /> },
+  { text: 'My cars', icon: <CarOutlined /> }
+]
 
 const HeaderVariant1Desktop = (props) => {
   return (
     <Container>
-      <Row height='100%'>
-        <Col cw='auto' alignSelf='center'>
+      <Row height='100%' noOuterGutters v='center'>
+        <Col cw='auto'>
           <Img
             src='https://worktube.ai/images/wt-logo-full-color.svg'
             alt='Logo'
-            height={28}
+            height={24}
           />
         </Col>
-        <Col>
-          <Navigation dataSource={[1, 2, 3]} />
+        <Col height='inherit' alignItems='center'>
+          <Navigation dataSource={navConfig} />
         </Col>
         <Col cw='auto'>
-          notifications and language select
-          <Avatar size='large' />
+          {/* notifications and language select */}
+          <Avatar size='large' icon={<UserOutlined />} />
         </Col>
       </Row>
     </Container>
   )
-}
-
-HeaderVariant1Desktop.propTypes = {
-  layout: PropTypes.array
 }
 
 export default HeaderVariant1Desktop

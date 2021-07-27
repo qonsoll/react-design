@@ -370,26 +370,75 @@
 
 
 
-  /****** Layout system config —————————————————————————————— Start ******/
+  /** ** ** Layout system config —————————————————————————————— Start ** ** **/
+
+  /* Layout —————————————————————————————— Start */
+
+  --ql-layout-background: #f4f5fe;
+
+  /* Layout —————————————————————————————— End */
 
 
 
   /* Header —————————————————————————————— Start */
 
-  --ql-header-height: 64px;
-  --ql-header-background: #4c4c4c;
+  --ql-header-height: 56px;
+  --ql-header-background: #272247;
+  --ql-header-shadow: none;
+
+  --ql-header-desktop-px: 40px;
 
   /* Header —————————————————————————————— End */
 
 
 
-  /****** Layout system config —————————————————————————————— End ******/
+  /* Aside —————————————————————————————— Start */
+
+  --ql-aside-width: 280px;
+  --ql-aside-collapsed-width: 104px;
+  --ql-aside-max-height: 100vh; /* calc(100vh - var(--ql-header-height)) */
+  --ql-aside-background: #ecedf6;
+  --ql-aside-padding: 40px 0;
+
+  /* Aside —————————————————————————————— End */
 
 
 
-  /****** AntD layout config —————————————————————————————— Start ******/
+  /* Content —————————————————————————————— Start */
+
+  --ql-content-max-height-without-header-footer: 100vh;
+  --ql-content-max-height-with-header: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-header-height));
+  --ql-content-max-height-with-footer: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-footer-height));
+  --ql-content-max-height-with-header-footer: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-header-height) - var(--ql-footer-height));
+  --ql-content-padding: 48px 40px;
+
+  /* Content —————————————————————————————— End */
 
 
+
+  /* Footer —————————————————————————————— Start */
+
+  --ql-footer-height: 40px;
+  --ql-footer-background: #4c4c4c;
+  --ql-footer-desktop-px: 40px;
+
+  /* Footer —————————————————————————————— End */
+
+  /** ** ** Layout system config —————————————————————————————— End ** ** **/
+
+
+
+  /** ** ** Navigation —————————————————————————————— Start ** ** **/
+
+  --ql-navigation-color: var(--text-color-secondary);
+
+  --ql-navigation-item-height: 48px;
+
+  /** ** ** Navigation —————————————————————————————— End ** ** **/
+
+
+
+  /** ** ** AntD layout config —————————————————————————————— Start ** ** **/
 
   /* Layout —————————————————————————————— Start */
 
@@ -433,9 +482,7 @@
 
   /* Footer —————————————————————————————— End */
 
-
-
-  /****** AntD layout config —————————————————————————————— End ******/
+  /** ** ** AntD layout config —————————————————————————————— End ** ** **/
 
 
 
@@ -951,6 +998,8 @@
   /* + */ --zindex-back-top: 10;
   /* + */ --zindex-picker-panel: 10;
   /* + */ --zindex-popup-close: 10;
+  --ql-zindex-overlay: 950;
+  --ql-zindex-drawer: 1000;
   /* + */ --zindex-modal: 1000;
   /* + */ --zindex-modal-mask: 1000;
   /* + */ --zindex-message: 1010;
@@ -1198,12 +1247,12 @@
   /* + */ --badge-height: 20px;
   /* + */ --badge-height-sm: 14px;
   /* + */ --badge-dot-size: 6px;
-  /* + */ --badge-font-size: var(--font-size-sm);
-  /* + */ --badge-font-size-sm: var(--badge-font-size);
-  /* + */ --badge-font-weight: normal;
+  /* + */ --badge-font-size: var(--font-size-caption1);
+  /* + */ --badge-font-size-sm: var(--font-size-caption2);
+  /* + */ --badge-font-weight: var(--font-weight-medium);
   /* + */ --badge-status-size: 6px;
   /* + */ --badge-text-color: var(--component-background);
-  /* + */ --badge-color: var(--highlight-color);
+  /* + */ --badge-color: var(--primary-color);
 
   /* Badge —————————————————————————————— End */
 
