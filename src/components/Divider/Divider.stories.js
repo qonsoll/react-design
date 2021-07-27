@@ -1,4 +1,5 @@
 import React from 'react'
+import Box from '../Box'
 import Divider from './Divider'
 
 export default {
@@ -28,4 +29,10 @@ export default {
   }
 }
 
-export const Template = (args) => <Divider {...args} width={320} />
+export const Template = (args) => (
+  <Box display='flex' alignItems='center' flexDirection='column'>
+    <Divider {...args} width={320} minWidth={320}>
+      Or
+    </Divider>
+  </Box>
+)

@@ -16,20 +16,22 @@ import {
   system
 } from 'styled-system'
 
-const StyledAntDivider = styled(AntDivider)(
-  compose(
-    space,
-    color,
-    typography,
-    layout,
-    flexbox,
-    background,
-    border,
-    position,
-    shadow,
-    system({ transform: true })
-  )
-)
+const StyledAntDivider = styled(AntDivider)`
+  && {
+    ${compose(
+      space,
+      color,
+      typography,
+      layout,
+      flexbox,
+      background,
+      border,
+      position,
+      shadow,
+      system({ transform: true })
+    )}
+  }
+`
 
 const Divider = (props) => <StyledAntDivider {...props} />
 
