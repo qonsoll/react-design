@@ -8327,7 +8327,7 @@ span.ant-radio + * {
 }
 .ant-picker:hover,
 .ant-picker-focused {
-  border-color: var(--primary-5);
+  border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
 }
 .ant-picker-focused {
