@@ -2554,8 +2554,8 @@ html {
   margin-top: 2px;
   margin-bottom: 2px;
   line-height: 22px;
-  background: var(--gray-3);
-  border: 1px solid var(--gray-4);
+  background-color: var(--input-bg);
+  border: var(--border-width-base) var(--border-style-base) var(--input-border-color);
   border-radius: var(--border-radius-xxs);
   cursor: default;
   -webkit-transition: font-size var(--animation-duration-slow), line-height var(--animation-duration-slow), height var(--animation-duration-slow);
@@ -17544,11 +17544,7 @@ textarea.ant-input {
   margin: -5px -11px;
 }
 .ant-input-group-addon .ant-select.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-  color: var(--input-color);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
   background-color: var(--input-bg);
-  background-image: none;
   border: var(--border-width-base) var(--border-style-base) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
   -webkit-box-shadow: none;
