@@ -17544,8 +17544,13 @@ textarea.ant-input {
   margin: -5px -11px;
 }
 .ant-input-group-addon .ant-select.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-  background-color: inherit;
-  border: 1px solid transparent;
+  color: var(--input-color);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--input-bg);
+  background-image: none;
+  border: var(--border-width-base) var(--border-style-base) var(--input-border-color);
+  border-radius: var(--input-border-radius-base);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
