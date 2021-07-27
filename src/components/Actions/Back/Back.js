@@ -103,7 +103,7 @@ Back.propTypes = {
   props: PropTypes.object
 }
 Back.defaultProps = {
-  text: 'Hello'
+  text: 'Back'
 }
 
 export default Back
