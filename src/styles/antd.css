@@ -2725,9 +2725,12 @@ html {
 }
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   position: relative;
-  background-color: var(--white);
-  border: 1px solid var(--gray-5);
-  border-radius: var(--border-radius-xxs);
+  color: var(--input-color);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--input-bg);
+  border: var(--border-width-base) var(--border-style-base) var(--input-border-color);
+  border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--animation-duration-slow) var(--ease-in-out);
   transition: all var(--animation-duration-slow) var(--ease-in-out);
 }
