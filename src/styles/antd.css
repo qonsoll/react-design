@@ -5995,7 +5995,7 @@ html {
 .ant-btn-primary:hover,
 .ant-btn-primary:focus {
   color: var(--white);
-  background: var(--primary-5);
+  background: var(--input-hover-border-color);
   border-color: var(--input-hover-border-color);
 }
 .ant-btn-primary:hover > a:only-child,
