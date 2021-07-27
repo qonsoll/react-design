@@ -17151,12 +17151,12 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   width: 100%;
   min-width: 0;
   padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
-  color: var(--text-color);
-  font-size: 14px;
-  line-height: 1.5715;
-  background-color: var(--white);
+  color: var(--input-color);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--input-bg);
   background-image: none;
-  border: 1px solid var(--gray-5);
+  border: var(--border-width-base) var(--border-style-base) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
