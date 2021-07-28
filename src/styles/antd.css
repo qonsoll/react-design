@@ -4832,7 +4832,7 @@ html {
 .ant-menu-dark .ant-menu-sub,
 .ant-menu.ant-menu-dark .ant-menu-sub {
   color: rgba(255, 255, 255, 0.65);
-  background: #001529;
+  background: var(--menu-dark-bg);
 }
 .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow,
 .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow,
@@ -8090,15 +8090,12 @@ span.ant-radio + * {
 .ant-radio-button-wrapper {
   position: relative;
   display: inline-block;
-  height: 40px;
   margin: 0;
-  padding: 0 15px;
-  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
+  padding: 0;
   color: var(--text-color);
   font-size: var(--font-size-base);
-  line-height: 30px;
   background: transparent;
-  border: 1px solid var(--gray-5);
+  border: 1px var(--border-style-base) var(--input-border-color);
   border-top-width: 1.02px;
   border-left-width: 0;
   cursor: pointer;
@@ -8145,10 +8142,10 @@ span.ant-radio + * {
 }
 .ant-radio-button-wrapper:first-child {
   border-left: 1px solid var(--gray-5);
-  border-radius: 2px 0 0 2px;
+  border-radius: var(--input-border-radius-base) 0 0 var(--input-border-radius-base);
 }
 .ant-radio-button-wrapper:last-child {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 var(--input-border-radius-base) var(--input-border-radius-base) 0;
 }
 .ant-radio-button-wrapper:first-child:last-child {
   border-radius: var(--border-radius-xxs);
