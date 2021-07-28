@@ -17,8 +17,24 @@ import {
   variant
 } from 'styled-system'
 
+const ANTD_TEXT_PROPS = [
+  'code',
+  'copyable',
+  'delete',
+  'disabled',
+  'editable',
+  'ellipsis',
+  'keyboard',
+  'mark',
+  'onClick',
+  'italic',
+  'type',
+  'underline'
+]
+
 const StyledText = styled(AntTypography.Text).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_TEXT_PROPS.includes(prop) || defaultValidatorFn(prop)
 })`
   && {
     ${compose(

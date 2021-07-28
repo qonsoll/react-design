@@ -16,8 +16,24 @@ import {
   system
 } from 'styled-system'
 
-const Title = styled(AntTypography.Title).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+const ANTD_TITLE_PROPS = [
+  'level',
+  'code',
+  'copyable',
+  'delete',
+  'disabled',
+  'editable',
+  'ellipsis',
+  'mark',
+  'onClick',
+  'italic',
+  'type',
+  'underline'
+]
+
+const StyledTitle = styled(AntTypography.Title).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_TITLE_PROPS.includes(prop) || defaultValidatorFn(prop)
 })`
   && {
     ${compose(
@@ -42,6 +58,10 @@ const Title = styled(AntTypography.Title).withConfig({
     )}
   }
 `
+
+const Title = (props) => {
+  return <StyledTitle {...props} />
+}
 
 Title.propTypes = {
   'Default AntD props': PropTypes.object,
