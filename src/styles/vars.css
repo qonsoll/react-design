@@ -366,6 +366,7 @@
   /* Vertical paddings for all form controls */
   --control-padding-horizontal-sm: var(--padding-xs);
   --control-padding-horizontal: var(--padding-sm);
+  --control-padding-horizontal-md: var(--padding-md);
   --control-padding-horizontal-lg: var(--padding-lg);
 
 
@@ -602,6 +603,7 @@
   /* + */ --input-padding-horizontal: calc(var(--control-padding-horizontal) - 1px);
   /* + */ --input-padding-horizontal-sm: calc(var(--control-padding-horizontal-sm) - 1px);
   /* + */ --input-padding-horizontal-base: var(--input-padding-horizontal);
+  /* + */ --input-padding-horizontal-md: calc(var(--control-padding-horizontal-md) - 1px);
   /* + */ --input-padding-horizontal-lg: calc(var(--control-padding-horizontal-lg) - 1px);
 
   /* + */ --input-padding-vertical-sm: calc((var(--input-height-sm) - var(--font-size-sm) * var(--line-height-base) - var(--border-width-base) * 2) / 2);

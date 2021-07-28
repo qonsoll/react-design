@@ -4969,10 +4969,10 @@ html {
   background-color: transparent;
 }
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  background-color: var(--primary-color);
+  background-color: var(--menu-dark-item-active-bg);
 }
 .ant-menu-dark .ant-menu-item-selected {
-  color: var(--white);
+  color: var(--menu-dark-selected-item-text-color);
   border-right: 0;
 }
 .ant-menu-dark .ant-menu-item-selected::after {
@@ -8098,6 +8098,8 @@ span.ant-radio + * {
   border: 1px var(--border-style-base) var(--input-border-color);
   border-top-width: 1.02px;
   border-left-width: 0;
+  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-md);
+  line-height: var(--line-height-base);
   cursor: pointer;
   -webkit-transition: color var(--animation-duration-slow), background var(--animation-duration-slow), border-color var(--animation-duration-slow), -webkit-box-shadow var(--animation-duration-slow);
   transition: color var(--animation-duration-slow), background var(--animation-duration-slow), border-color var(--animation-duration-slow), -webkit-box-shadow var(--animation-duration-slow);
