@@ -20,7 +20,7 @@ import {
 const StyledText = styled(AntTypography.Text).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
 })`
-  &&& {
+  && {
     ${compose(
       space,
       color,

@@ -16,32 +16,32 @@ import {
   system
 } from 'styled-system'
 
-const StyledTitle = styled(AntTypography.Title)(
-  compose(
-    space,
-    color,
-    typography,
-    layout,
-    flexbox,
-    background,
-    border,
-    position,
-    shadow,
-    system({
-      whiteSpace: true,
-      cursor: true,
-      wordBreak: true,
-      zoom: true,
-      transform: true,
-      textTransform: true,
-      textOverflow: true
-    })
-  )
-)
-
-const Title = (props) => {
-  return <StyledTitle {...props} />
-}
+const Title = styled(AntTypography.Title).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})`
+  && {
+    ${compose(
+      space,
+      color,
+      typography,
+      layout,
+      flexbox,
+      background,
+      border,
+      position,
+      shadow,
+      system({
+        whiteSpace: true,
+        cursor: true,
+        wordBreak: true,
+        zoom: true,
+        transform: true,
+        textTransform: true,
+        textOverflow: true
+      })
+    )}
+  }
+`
 
 Title.propTypes = {
   'Default AntD props': PropTypes.object,
