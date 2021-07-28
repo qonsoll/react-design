@@ -4539,7 +4539,7 @@ html {
 .ant-menu-submenu-title .anticon {
   min-width: 14px;
   margin-right: 10px;
-  font-size: 14px;
+  font-size: var(--menu-icon-size);
   -webkit-transition: font-size 0.15s var(--ease-out),
     margin var(--animation-duration-slow) var(--ease-in-out),
     color var(--animation-duration-slow);
@@ -5345,7 +5345,7 @@ html {
 .ant-menu-dark .ant-menu-item-selected > span > a,
 .ant-menu-dark .ant-menu-item-selected > a:hover,
 .ant-menu-dark .ant-menu-item-selected > span > a:hover {
-  color: var(--white);
+  color: var(--menu-dark-selected-item-icon-color);
 }
 .ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon,
 .ant-menu-dark .ant-menu-item-selected .anticon {
