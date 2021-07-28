@@ -6127,7 +6127,7 @@ html {
 .ant-dropdown-trigger > .anticon.anticon-down,
 .ant-dropdown-link > .anticon.anticon-down,
 .ant-dropdown-button > .anticon.anticon-down {
-  font-size: 10px;
+  font-size: var(--select-dropdown-font-size);
   vertical-align: baseline;
 }
 .ant-dropdown-button {
