@@ -5962,8 +5962,11 @@ html {
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
 }
-.ant-dropdown-menu-submenu-title:first-child {
+.ant-dropdown-menu:first-child {
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+.ant-dropdown-menu:last-child {
+   border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
 }
 .ant-dropdown-menu-item > .anticon:first-child,
 .ant-dropdown-menu-submenu-title > .anticon:first-child,
