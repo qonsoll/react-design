@@ -5915,7 +5915,7 @@ html {
 .ant-dropdown-menu {
   position: relative;
   margin: 0;
-  padding: 4px 0;
+  padding: var(--padding-xs);
   text-align: left;
   list-style-type: none;
   background-color: var(--white);
@@ -5961,12 +5961,13 @@ html {
   cursor: pointer;
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
+  border-radius: var(--border-radius-base);
 }
 .ant-dropdown-menu-item:first-child {
-  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+  border-radius: var(--border-radius-md) var(--border-radius-md) var(--border-radius-base) var(--border-radius-base);
 }
 .ant-dropdown-menu-item:last-child {
-   border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+   border-radius: var(--border-radius-base) var(--border-radius-base) var(--border-radius-md) var(--border-radius-md);
 }
 .ant-dropdown-menu-item > .anticon:first-child,
 .ant-dropdown-menu-submenu-title > .anticon:first-child,
