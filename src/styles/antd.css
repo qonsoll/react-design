@@ -23399,8 +23399,8 @@ textarea.ant-mentions {
 }
 .ant-modal-body {
   padding: var(--modal-body-padding);
-  font-size: 14px;
-  line-height: 1.5715;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   word-wrap: break-word;
 }
 .ant-modal-footer {
