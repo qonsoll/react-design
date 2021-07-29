@@ -5920,7 +5920,7 @@ html {
   list-style-type: none;
   background-color: var(--white);
   background-clip: padding-box;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-md);
   outline: none;
   -webkit-box-shadow: var(--box-shadow-base);
   box-shadow: var(--box-shadow-base);
@@ -5955,12 +5955,15 @@ html {
   padding: 5px 12px;
   color: var(--text-color);
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--font-size-base);
   line-height: var(--dropdown-line-height);
   white-space: nowrap;
   cursor: pointer;
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
+}
+.ant-dropdown-menu-submenu-title:first-child {
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 .ant-dropdown-menu-item > .anticon:first-child,
 .ant-dropdown-menu-submenu-title > .anticon:first-child,
