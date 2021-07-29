@@ -6430,9 +6430,9 @@ html {
 }
 .ant-btn-primary:hover,
 .ant-btn-primary:focus {
-  color: var(--white);
-  background: var(--input-hover-border-color);
-  border-color: var(--input-hover-border-color);
+  color: var(--btn-primary-hover-color);
+  background: var(--btn-primary-hover-bg);
+  border-color: var(--btn-primary-hover-border);
 }
 .ant-btn-primary:hover > a:only-child,
 .ant-btn-primary:focus > a:only-child {

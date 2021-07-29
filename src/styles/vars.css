@@ -552,6 +552,9 @@
   /* + */ --btn-primary-bg: var(--primary-color);
   /* + */ --btn-primary-border: var(--primary-color);
   /* + */ --btn-primary-shadow: var(--btn-shadow);
+  /* + */ --btn-primary-hover-bg: var(--blue-6);
+  /* + */ --btn-primary-hover-color: var(--white);
+  /* + */ --btn-primary-hover-border: var(--input-hover-border-color);
 
   /* + */ --btn-danger-color: var(--white);
   /* + */ --btn-danger-bg: var(--error-color);
