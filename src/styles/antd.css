@@ -5962,12 +5962,14 @@ html {
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
   border-radius: var(--border-radius-base);
+  margin-bottom: 4px;
 }
 .ant-dropdown-menu-item:first-child {
   border-radius: var(--border-radius-md) var(--border-radius-md) var(--border-radius-base) var(--border-radius-base);
 }
 .ant-dropdown-menu-item:last-child {
    border-radius: var(--border-radius-base) var(--border-radius-base) var(--border-radius-md) var(--border-radius-md);
+   margin-bottom: 0;
 }
 .ant-dropdown-menu-item > .anticon:first-child,
 .ant-dropdown-menu-submenu-title > .anticon:first-child,
