@@ -1,10 +1,10 @@
 /*!
- * 
+ *
  * antd v4.14.1
- * 
+ *
  * Copyright 2015-present, Alipay, Inc.
  * All rights reserved.
- *       
+ *
  */
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
@@ -2073,7 +2073,6 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   color: var(--alert-text-color);
   font-size: var(--font-size-base);
   font-variant: tabular-nums;
@@ -2088,7 +2087,7 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 15px;
+  padding: 8px 15px; /*FIXME*/
   word-wrap: break-word;
   border-radius: var(--border-radius-base);
 }
@@ -2430,6 +2429,7 @@ html {
 }
 .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
 .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  margin:auto;
   padding-right: 18px;
 }
 .ant-select-single.ant-select-open .ant-select-selection-item {
@@ -2633,9 +2633,7 @@ html {
   text-overflow: ellipsis;
 }
 .ant-select-multiple .ant-select-selection-item-remove {
-  color: inherit;
   font-style: normal;
-  line-height: 0;
   text-align: center;
   text-transform: none;
   vertical-align: -0.125em;
@@ -2889,9 +2887,7 @@ html {
 }
 .ant-select-arrow {
   display: inline-block;
-  color: inherit;
   font-style: normal;
-  line-height: 0;
   text-transform: none;
   vertical-align: -0.125em;
   text-rendering: optimizeLegibility;
@@ -2972,7 +2968,6 @@ html {
 }
 .ant-select-dropdown {
   margin: 0;
-  padding: 0;
   color: var(--text-color);
   font-variant: tabular-nums;
   line-height: 1.5715;
@@ -2985,12 +2980,12 @@ html {
   z-index: var(--zindex-dropdown);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 4px 0;
+  padding: var(--padding-xxs) 0;
   overflow: hidden;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-variant: initial;
   background-color: var(--white);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
   outline: none;
   -webkit-box-shadow: var(--box-shadow-base);
   box-shadow: var(--box-shadow-base);
@@ -3024,7 +3019,6 @@ html {
   display: block;
   min-height: 32px;
   padding: 5px 12px;
-  color: var(--text-color);
   font-weight: normal;
   font-size: 14px;
   line-height: var(--dropdown-line-height);
@@ -3037,7 +3031,7 @@ html {
   padding: 5px 12px;
   color: var(--text-color);
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--font-size-base);
   line-height: var(--dropdown-line-height);
   cursor: pointer;
   -webkit-transition: background var(--animation-duration-slow) ease;
@@ -3254,10 +3248,8 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: var(--text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
   font-variant: tabular-nums;
-  line-height: 1.5715;
   list-style: none;
   -webkit-font-feature-settings: 'tnum';
   font-feature-settings: 'tnum';
@@ -6289,14 +6281,14 @@ html {
 }
 .ant-btn > .anticon {
   line-height: 0; /* Test */
-  font-size: var(--btn-square-only-icon-size); /* Test */
+  font-size: var(--btn-icon-size); /* Test */
 }
 /* Test ————— Start */
 .ant-btn.ant-btn-sm > .anticon {
-  font-size: var(--btn-square-only-icon-size-sm);
+  font-size: var(--btn-icon-size-sm);
 }
 .ant-btn.ant-btn-lg > .anticon {
-  font-size: var(--btn-square-only-icon-size-lg);
+  font-size: var(--btn-icon-size-lg);
 }
 /* Test ————— End */
 .ant-btn,
@@ -7499,7 +7491,7 @@ html {
   width: var(--btn-square-size);
   height: var(--btn-square-size);
   padding: 0; /* Test */
-  font-size: var(--btn-square-only-icon-size);
+  font-size: var(--btn-icon-size);
   border-radius: var(--btn-border-radius-base);
   /* vertical-align: -1px; */ /* Test */
 }
@@ -7510,7 +7502,7 @@ html {
   width: var(--btn-square-size-lg);
   height: var(--btn-square-size-lg);
   padding: 0; /* Test */
-  font-size: var(--btn-square-only-icon-size-lg);
+  font-size: var(--btn-icon-size-lg);
   border-radius: var(--btn-border-radius-lg);
 }
 .ant-btn-icon-only.ant-btn-lg > * {
@@ -7520,7 +7512,7 @@ html {
   width: var(--btn-square-size-sm);
   height: var(--btn-square-size-sm);
   padding: 0; /* Test */
-  font-size: var(--btn-square-only-icon-size-sm);
+  font-size: var(--btn-icon-size-sm);
   border-radius: var(--btn-border-radius-sm);
 }
 .ant-btn-icon-only.ant-btn-sm > * {
@@ -7529,19 +7521,19 @@ html {
 .ant-btn-round {
   height: var(--btn-height-base);
   padding: 0 var(--padding-lg); /* Test */
-  font-size: var(--btn-square-only-icon-size);
+  font-size: var(--btn-icon-size);
   border-radius: var(--btn-height-base);
 }
 .ant-btn-round.ant-btn-lg {
   height: var(--btn-height-lg);
   padding: 0 var(--padding-xxl); /* Test */
-  font-size: var(--btn-square-only-icon-size-lg);
+  font-size: var(--btn-icon-size-lg);
   border-radius: var(--btn-height-lg);
 }
 .ant-btn-round.ant-btn-sm {
   height: var(--btn-height-sm);
-  padding: 0px var(--padding-xs);
-  font-size: var(--btn-square-only-icon-size-sm);
+  padding: 0 var(--padding-xs);
+  font-size: var(--btn-icon-size-sm);
   border-radius: var(--btn-height-sm);
 }
 .ant-btn-round.ant-btn-icon-only {
@@ -18110,7 +18102,6 @@ textarea.ant-input-affix-wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   font-variant: tabular-nums;
   list-style: none;
   -webkit-font-feature-settings: 'tnum';
@@ -20262,8 +20253,8 @@ textarea.ant-input {
   width: 32px;
   height: 20px;
   margin-top: -10px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   text-align: center;
   visibility: visible;
   -webkit-animation: zoomIn var(--animation-duration-slow) var(--ease-out-back);
@@ -21266,20 +21257,19 @@ textarea.ant-input {
   position: relative;
   width: 100%;
   min-width: 0;
-  padding: 4px 11px;
+  padding: var(--input-padding-vertical-base)
+  var(--input-padding-horizontal-base);
   color: var(--text-color);
-  font-size: 14px;
-  line-height: 1.5715;
-  background-color: var(--white);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color:  var(--input-bg);
   background-image: none;
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
   display: inline-block;
-  width: 90px;
   margin: 0;
-  padding: 0;
-  border: 1px solid var(--gray-5);
-  border-radius: var(--border-radius-xxs);
+  border: var(--border-width-base) var(--border-style-base) var(--input-border-color);
+  border-radius: var(--border-radius-base);
 }
 .ant-input-number::-moz-placeholder {
   opacity: 1;
@@ -21352,17 +21342,19 @@ textarea.ant-input-number {
   max-width: 100%;
   height: auto;
   min-height: 32px;
-  line-height: 1.5715;
+  line-height: var(--line-height-base);
   vertical-align: bottom;
   -webkit-transition: all var(--animation-duration-slow), height 0s;
   transition: all var(--animation-duration-slow), height 0s;
 }
 .ant-input-number-lg {
-  padding: 6.5px 11px;
+  padding:var(--input-padding-vertical-lg)
+  var(--input-padding-horizontal-lg);
   font-size: var(--font-size-base);
 }
 .ant-input-number-sm {
-  padding: 0px 7px;
+  padding:var(--input-padding-vertical-sm)
+  var(--input-padding-horizontal-sm);
 }
 .ant-input-number-handler {
   position: relative;
@@ -21382,14 +21374,12 @@ textarea.ant-input-number {
 }
 .ant-input-number-handler:hover .ant-input-number-handler-up-inner,
 .ant-input-number-handler:hover .ant-input-number-handler-down-inner {
-  color: var(--primary-5);
+  color: var(--primary-color);
 }
 .ant-input-number-handler-up-inner,
 .ant-input-number-handler-down-inner {
   display: inline-block;
-  color: inherit;
   font-style: normal;
-  line-height: 0;
   text-align: center;
   text-transform: none;
   vertical-align: -0.125em;
@@ -21401,7 +21391,7 @@ textarea.ant-input-number {
   width: 12px;
   height: 12px;
   color: var(--text-color-secondary);
-  line-height: 12px;
+  line-height: var(--line-height-caption2);
   -webkit-transition: all var(--animation-duration-fast) linear;
   transition: all var(--animation-duration-fast) linear;
   -webkit-user-select: none;
@@ -21433,8 +21423,8 @@ textarea.ant-input-number {
 }
 .ant-input-number:hover + .ant-form-item-children-icon {
   opacity: 0;
-  -webkit-transition: opacity 0.24s linear 0.24s;
-  transition: opacity 0.24s linear 0.24s;
+  -webkit-transition: opacity var(--animation-duration-base) linear var(--animation-duration-base);
+  transition: opacity var(--animation-duration-base) linear var(--animation-duration-base);
 }
 .ant-input-number-focused {
   border-color: var(--input-hover-border-color);
@@ -21465,11 +21455,11 @@ textarea.ant-input-number {
 .ant-input-number-input {
   width: 100%;
   height: 30px;
-  padding: 0 11px;
+  padding: 0;
   text-align: left;
   background-color: transparent;
   border: 0;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
   outline: 0;
   -webkit-transition: all var(--animation-duration-slow) linear;
   transition: all var(--animation-duration-slow) linear;
@@ -21526,7 +21516,7 @@ textarea.ant-input-number {
   height: 100%;
   background: var(--input-number-handler-bg);
   border-left: 1px solid var(--input-number-handler-border-color);
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
   opacity: 0;
   -webkit-transition: opacity 0.24s linear var(--animation-duration-fast);
   transition: opacity 0.24s linear var(--animation-duration-fast);
@@ -21551,7 +21541,7 @@ textarea.ant-input-number {
   opacity: 1;
 }
 .ant-input-number-handler-up {
-  border-top-right-radius: 2px;
+  border-top-right-radius: var(--border-radius-base);
   cursor: pointer;
 }
 .ant-input-number-handler-up-inner {
@@ -21565,7 +21555,7 @@ textarea.ant-input-number {
 .ant-input-number-handler-down {
   top: 0;
   border-top: 1px solid var(--gray-5);
-  border-bottom-right-radius: 2px;
+  border-bottom-right-radius: var(--border-radius-base);
   cursor: pointer;
 }
 .ant-input-number-handler-down-inner {
@@ -21604,7 +21594,7 @@ textarea.ant-input-number {
   left: 0;
   border-right: 1px solid var(--gray-5);
   border-left: 0;
-  border-radius: 2px 0 0 2px;
+  border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
 }
 .ant-input-number-rtl.ant-input-number-borderless
   .ant-input-number-handler-wrap {
