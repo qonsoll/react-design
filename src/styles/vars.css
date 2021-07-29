@@ -1130,7 +1130,7 @@
   /* + */ --modal-header-padding-vertical: var(--padding-md);
   /* + */ --modal-header-padding-horizontal: var(--padding-lg);
   /* + */ --modal-header-padding: var(--modal-header-padding-vertical) var(--modal-header-padding-horizontal);
-  /* + */ --modal-body-padding: var(--padding-lg);
+  /* + */ --modal-body-padding: var(--padding-md);
   /* + */ --modal-header-bg: var(--component-background);
   /* + */ --modal-header-border-width: var(--border-width-base);
   /* + */ --modal-header-border-style: var(--border-style-base);

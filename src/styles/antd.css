@@ -23351,7 +23351,7 @@ textarea.ant-mentions {
   background-color: var(--modal-content-bg);
   background-clip: padding-box;
   border: 0;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-lg);
   -webkit-box-shadow: var(--box-shadow-base);
   box-shadow: var(--box-shadow-base);
   pointer-events: auto;
@@ -23395,7 +23395,7 @@ textarea.ant-mentions {
   background: var(--modal-header-bg);
   border-bottom: var(--modal-header-border-width)
     var(--modal-header-border-style) var(--modal-header-border-color-split);
-  border-radius: 2px 2px 0 0;
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
 .ant-modal-body {
   padding: var(--modal-body-padding);
