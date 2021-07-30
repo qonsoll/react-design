@@ -1,10 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../../Box'
-import { HeaderDesktopVariant1 } from '../Header/variants'
 
 const Header = (props) => {
-  const { height, bg, px, shadow, position, top, ...arg } = props
+  const {
+    children,
+    height,
+    bg,
+    px,
+    shadow,
+    asideToggleBtnLeft,
+    asideToggleBtnRight,
+    ...rest
+  } = props
 
   return (
     <Box
@@ -14,11 +22,12 @@ const Header = (props) => {
       px={px || 'var(--ql-header-desktop-px)'}
       boxShadow={shadow || 'var(--ql-header-shadow)'}
       display='flex'
-      position={position}
-      top={top}
-      {...arg}
+      alignItems='center'
+      {...rest}
     >
-      <HeaderDesktopVariant1 />
+      {asideToggleBtnLeft}
+      {children}
+      {asideToggleBtnRight}
     </Box>
   )
 }

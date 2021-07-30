@@ -17,36 +17,71 @@ const Layout = (props) => {
     isAsideRightCollapsed,
     isHeaderSticky,
     isFooterSticky,
+    asideLeftCollapsed,
+    asideRightCollapsed,
+    collapseVariant,
+    overlay,
     bg,
     contentP
   } = props
 
   const isOuterLayoutExists = asideLeftOuter || asideRightOuter
 
+  const collapseMap = {
+    full: { offset: '0' },
+    short: { offset: 'var(--ql-aside-collapsed-width)' }
+  }
+
   return (
     <>
       <BaseLayout direction={isOuterLayoutExists ? 'row' : 'column'} bg={bg}>
         {isOuterLayoutExists ? (
           <>
+            {/* Aside left */}
             {asideLeftOuter &&
               asideLeft &&
-              React.cloneElement(asideLeft, { side: 'left' })}
+              React.cloneElement(asideLeft, { side: 'left', collapseVariant })}
+
             <DirectionLayout
               direction='column'
               maxHeight='100vh'
               overflow='auto'
+              ml={
+                asideLeft &&
+                // !asideLeftCollapsed &&
+                overlay &&
+                (collapseMap[collapseVariant]?.offset ||
+                  'var(--ql-aside-collapsed-width)')
+              }
+              mr={
+                asideRight &&
+                // !asideRightCollapsed &&
+                overlay &&
+                (collapseMap[collapseVariant]?.offset ||
+                  'var(--ql-aside-collapsed-width)')
+              }
             >
               <CompositionLayout
-                header={header}
+                header={
+                  header && asideLeft
+                    ? React.cloneElement(header, { asideLeft: true })
+                    : header
+                }
                 asideLeft={
                   asideRightOuter &&
                   asideLeft &&
-                  React.cloneElement(asideLeft, { maxHeight: 'unset' })
+                  React.cloneElement(asideLeft, {
+                    maxHeight: 'unset',
+                    collapseVariant
+                  })
                 }
                 asideRight={
                   asideLeftOuter &&
                   asideRight &&
-                  React.cloneElement(asideRight, { maxHeight: 'unset' })
+                  React.cloneElement(asideRight, {
+                    maxHeight: 'unset',
+                    collapseVariant
+                  })
                 }
                 asideLeftOuter={asideLeftOuter}
                 asideRightOuter={asideRightOuter}
@@ -60,19 +95,36 @@ const Layout = (props) => {
                 {children}
               </CompositionLayout>
             </DirectionLayout>
+
+            {/* Aside right */}
             {asideRightOuter &&
               asideRight &&
               React.cloneElement(asideRight, { side: 'right' })}
           </>
         ) : (
           <CompositionLayout
-            header={header}
+            header={
+              header && asideLeft
+                ? React.cloneElement(header, { asideLeft: true })
+                : header
+            }
             asideLeft={
-              asideLeft && React.cloneElement(asideLeft, { maxHeight: 'unset' })
+              asideLeft &&
+              React.cloneElement(asideLeft, {
+                maxHeight: 'unset',
+                isHeaderExists: !!header,
+                isFooterExists: !!footer,
+                collapseVariant
+              })
             }
             asideRight={
               asideRight &&
-              React.cloneElement(asideRight, { maxHeight: 'unset' })
+              React.cloneElement(asideRight, {
+                maxHeight: 'unset',
+                isHeaderExists: !!header,
+                isFooterExists: !!footer,
+                collapseVariant
+              })
             }
             asideLeftOuter={asideLeftOuter}
             asideRightOuter={asideRightOuter}
@@ -82,6 +134,10 @@ const Layout = (props) => {
             isHeaderSticky={isHeaderSticky}
             isFooterSticky={isFooterSticky}
             contentP={contentP}
+            asideLeftCollapsed={asideLeftCollapsed}
+            asideRightCollapsed={asideRightCollapsed}
+            collapseVariant={collapseVariant}
+            overlay={overlay}
           >
             {children}
           </CompositionLayout>

@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './Layout'
 import Aside from '../Aside'
 import Header from '../Header'
 import Footer from '../Footer'
-// import Box from '../../Box'
-// import Img from '../../Media/Img'
-import Navigation from '../../Navigation'
-import PageWrapper from '../../Wrappers/PageWrapper'
+import Container from '../../Grid/Container'
+import Row from '../../Grid/Row'
+import Col from '../../Grid/Col'
+import Img from '../../Media/Img'
 import Avatar from '../../Media/Avatar'
+import Navigation from '../../Navigation'
+import Box from '../../Box'
+import Icon from '../../Icon'
+import { Menu } from 'antd'
+import PageWrapper from '../../Wrappers/PageWrapper'
 import {
   AppstoreOutlined,
   CalendarOutlined,
   CarOutlined,
-  UserOutlined
+  UserOutlined,
+  // ArrowLeftOutlined,
+  // ArrowRightOutlined,
+  CloseCircleOutlined,
+  AppstoreAddOutlined,
+  MailOutlined,
+  SettingOutlined
 } from '@ant-design/icons'
 
 export default {
@@ -39,32 +50,64 @@ export default {
     }
   }
 }
-// React.cloneElement(asideLeft, isAsideAsDrawer && { isAsideAsDrawer: 'left' })
+
 export const Template = (args) => {
+  const [asideLeftCollapsed, setAsideLeftCollapsed] = useState(true)
+  const [asideRightCollapsed, setAsideRightCollapsed] = useState(true)
+  const toggleAsideLeft = () => {
+    setAsideLeftCollapsed(!asideLeftCollapsed)
+  }
+  const toggleAsideRight = () => {
+    setAsideRightCollapsed(!asideRightCollapsed)
+  }
+
   return (
     <Layout
-      header={<Header />}
+      asideLeftCollapsed={asideLeftCollapsed}
+      asideRightCollapsed={asideRightCollapsed}
+      collapseVariant='full'
+      overlay
+      header={
+        <Header
+          asideToggleBtnLeft={
+            <LeftCollapseBtnLayout
+              onClick={toggleAsideLeft}
+              collapsed={asideLeftCollapsed}
+            />
+          }
+          asideToggleBtnRight={
+            <RightCollapseBtnLayout onClick={toggleAsideRight} />
+          }
+        >
+          <TestMenu />
+        </Header>
+      }
       asideLeft={
         <Aside
-          // isAsideCollapsed
-          isAsideAsDrawer
+          collapse={asideLeftCollapsed}
+          collapseVariant='full'
+          overlay
+          // drawer
+          asideToggleBtn={<AsideCloseBtn onClick={toggleAsideLeft} />}
         >
-          <Navigation vertical dataSource={navConfig} />
+          {/* <Navigation vertical dataSource={navConfig} /> */}
         </Aside>
       }
       asideRight={
         <Aside
-        // isAsideCollapsed
-        // isAsideAsDrawer
+          collapse={asideRightCollapsed}
+          // overlay
+          // drawer
+          asideToggleBtn={<AsideCloseBtn onClick={toggleAsideRight} />}
         >
           <Navigation vertical dataSource={navConfig} />
         </Aside>
       }
-      footer={<Footer />}
+      // footer={<Footer />}
       asideLeftOuter
-      // asideRightOuter
+      asideRightOuter
       isHeaderSticky
-      isFooterSticky
+      // isFooterSticky
     >
       <PageWrapper
         headingProps={{
@@ -199,6 +242,9 @@ export const Template = (args) => {
   )
 }
 
+// ================================================================================================================================================
+// ================================================================================================================================================
+
 // const footerLayout = [
 //   {
 //     cw: 'auto',
@@ -244,3 +290,76 @@ const navConfig = [
     // subMenuPlacement: 'rightBottom'
   }
 ]
+
+const LeftCollapseBtnLayout = (props) => {
+  const { onClick } = props
+  return (
+    <Box
+      alignSelf='center'
+      pr={3}
+      mr={3}
+      borderRight='1px solid rgba(255 255 255 / 15%)'
+    >
+      <Icon
+        component={<AppstoreAddOutlined />}
+        onClick={onClick}
+        color='#fff'
+        cursor='pointer'
+      />
+    </Box>
+  )
+}
+const RightCollapseBtnLayout = (props) => {
+  const { onClick } = props
+  return (
+    <Box onClick={onClick} cursor='pointer'>
+      <Avatar size='large' icon={<UserOutlined />} onClick={onClick} />
+    </Box>
+  )
+}
+const AsideCloseBtn = (props) => {
+  const { onClick } = props
+  return (
+    <Box onClick={onClick} cursor='pointer' display='flex'>
+      <Icon component={<CloseCircleOutlined />} onClick={onClick} mr={3} />
+      Close
+    </Box>
+  )
+}
+
+const TestMenu = (props) => {
+  return (
+    <Menu
+      // onClick={this.handleClick}
+      // selectedKeys={[current]}
+      mode='horizontal'
+      // theme='dark'
+    >
+      <Menu.Item key='mail' icon={<MailOutlined />}>
+        Navigation One
+      </Menu.Item>
+      <Menu.Item key='app' disabled icon={<AppstoreOutlined />}>
+        Navigation Two
+      </Menu.Item>
+      <Menu.SubMenu
+        key='SubMenu'
+        icon={<SettingOutlined />}
+        title='Navigation Three - Submenu'
+      >
+        <Menu.ItemGroup title='Item 1'>
+          <Menu.Item key='setting:1'>Option 1</Menu.Item>
+          <Menu.Item key='setting:2'>Option 2</Menu.Item>
+        </Menu.ItemGroup>
+        <Menu.ItemGroup title='Item 2'>
+          <Menu.Item key='setting:3'>Option 3</Menu.Item>
+          <Menu.Item key='setting:4'>Option 4</Menu.Item>
+        </Menu.ItemGroup>
+      </Menu.SubMenu>
+      <Menu.Item key='alipay'>
+        <a href='https://ant.design' target='_blank' rel='noopener noreferrer'>
+          Navigation Four - Link
+        </a>
+      </Menu.Item>
+    </Menu>
+  )
+}

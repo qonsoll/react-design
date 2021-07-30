@@ -4553,9 +4553,9 @@ html {
   color: var(--primary-color);
 }
 .ant-menu-horizontal {
-  line-height: 46px;
+  line-height: var(--menu-horizontal-line-height);
   border: 0;
-  border-bottom: 1px solid var(--gray-4);
+  border-bottom: var(--ql-menu-horizontal-border-bottom);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -4824,7 +4824,7 @@ html {
 .ant-menu-dark .ant-menu-sub,
 .ant-menu.ant-menu-dark .ant-menu-sub {
   color: rgba(255, 255, 255, 0.65);
-  background: #001529;
+  background: var(--menu-dark-bg);
 }
 .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow,
 .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow,

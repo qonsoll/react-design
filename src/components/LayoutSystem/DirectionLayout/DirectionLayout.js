@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Box from '../../Box'
 
 const DirectionLayout = (props) => {
-  const { children, direction, maxHeight, overflow } = props
+  const { children, direction, maxHeight, overflow, ...rest } = props
 
   return (
     <Box
@@ -12,6 +12,7 @@ const DirectionLayout = (props) => {
       flexDirection={direction}
       maxHeight={maxHeight}
       overflow={overflow}
+      {...rest}
     >
       {children}
     </Box>

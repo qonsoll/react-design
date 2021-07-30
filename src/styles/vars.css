@@ -695,6 +695,10 @@
 
   /* Menu —————————————————————————————— Start */
 
+  --ql-menu-bg: transparent;
+  --ql-menu-horizontal-height: 56px;
+  --ql-menu-horizontal-border-bottom: unset;
+
   --menu-inline-toplevel-item-height: 40px;
   /* + */ --menu-item-height: 40px;
   --menu-item-group-height: var(--line-height-base);
@@ -713,7 +717,7 @@
   --menu-item-font-size: var(--font-size-base);
   --menu-item-boundary-margin: 8px;
   --menu-item-padding: 0 20px;
-  --menu-horizontal-line-height: 46px;
+  --menu-horizontal-line-height: var(--ql-menu-horizontal-height);
   --menu-icon-margin-right: 10px;
   --menu-icon-size: var(--menu-item-font-size);
   --menu-icon-size-lg: var(--font-size-lg);
@@ -721,7 +725,7 @@
 
   --menu-dark-color: var(--text-color-secondary-dark);
   --menu-dark-danger-color: var(--error-color);
-  --menu-dark-bg: var(--layout-header-background);
+  --menu-dark-bg: var(--ql-menu-bg);
   --menu-dark-arrow-color: var(--white);
   --menu-dark-inline-submenu-bg: #000c17;
   --menu-dark-highlight-color: var(--white);
