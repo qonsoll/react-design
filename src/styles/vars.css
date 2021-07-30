@@ -796,7 +796,7 @@
   /* + */ --popover-bg: var(--component-background);
   /* + */ --popover-color: var(--text-color);
   --popover-padding-horizontal: var(--padding-lg);
-  --popover-distance: var(--popover-arrow-width) + 4px;
+  --popover-distance: calc(var(--popover-arrow-width) + 4px);
   --popover-arrow-width: 6px;
   --popover-arrow-color: var(--popover-bg);
   --popover-arrow-outer-color: var(--popover-bg);
@@ -951,7 +951,7 @@
   /* + */ --radio-size: 16px;
   /* + */ --radio-top: 0.2em;
   /* + */ --radio-border-width: 1px;
-  /* + */ --radio-dot-size: var(--radio-size) - 8px;
+  /* + */ --radio-dot-size: calc(var(--radio-size) - 8px);
   /* + */ --radio-dot-color: var(--primary-color);
   /* + */ --radio-dot-disabled-color: rgba(0, 0, 0, 0.2);
   --radio-solid-checked-color: var(--component-background);
@@ -1117,7 +1117,7 @@
   /* + */ --tooltip-bg: var(--gray-9);
   /* + */ --tooltip-arrow-width: 5px;
   /* + */ --tooltip-arrow-color: var(--tooltip-bg);
-  /* + */ --tooltip-distance: var(--tooltip-arrow-width) - 1px + 4px;
+  /* + */ --tooltip-distance: calc(var(--tooltip-arrow-width) - 1px + 4px);
 
   /* Tooltip —————————————————————————————— End */
 

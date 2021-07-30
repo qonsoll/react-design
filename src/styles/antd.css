@@ -2437,6 +2437,7 @@ html {
 }
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
   width: 100%;
+  height: var(--input-height-base);
   padding: var(--input-padding-vertical-base)
     var(--input-padding-horizontal-base);
 }
@@ -2464,7 +2465,7 @@ html {
   position: absolute;
   right: 0;
   left: 0;
-  padding: 0 11px;
+  padding: 0 var(--input-padding-horizontal-base);
 }
 .ant-select-single.ant-select-customize-input
   .ant-select-selector
@@ -2473,7 +2474,7 @@ html {
 }
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input)
   .ant-select-selector {
-  height: 40px;
+  height: var(--input-height-lg);
 }
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input)
   .ant-select-selector::after,
@@ -2487,11 +2488,11 @@ html {
 }
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input):not(.ant-select-customize-input)
   .ant-select-selection-search-input {
-  height: 38px;
+  height: var(--input-height-lg);
 }
 .ant-select-single.ant-select-sm:not(.ant-select-customize-input)
   .ant-select-selector {
-  height: 24px;
+  height: var(--input-height-sm);
 }
 .ant-select-single.ant-select-sm:not(.ant-select-customize-input)
   .ant-select-selector::after,
@@ -2505,7 +2506,7 @@ html {
 }
 .ant-select-single.ant-select-sm:not(.ant-select-customize-input):not(.ant-select-customize-input)
   .ant-select-selection-search-input {
-  height: 22px;
+  height: var(--input-height-sm);
 }
 .ant-select-single.ant-select-sm:not(.ant-select-customize-input)
   .ant-select-selection-search {
@@ -2514,7 +2515,7 @@ html {
 }
 .ant-select-single.ant-select-sm:not(.ant-select-customize-input)
   .ant-select-selector {
-  padding: 0 7px;
+  padding: 0 var(--input-padding-horizontal-sm);
 }
 .ant-select-single.ant-select-sm:not(.ant-select-customize-input).ant-select-show-arrow
   .ant-select-selection-search {
@@ -2528,7 +2529,7 @@ html {
 }
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input)
   .ant-select-selector {
-  padding: 0 11px;
+  padding: 0 var(--input-padding-horizontal-lg);
 }
 /**
  * Do not merge `height` & `line-height` under style with `selection` & `search`,
@@ -3321,7 +3322,7 @@ html {
   margin: 0;
 }
 .ant-avatar-square {
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
 }
 .ant-avatar > img {
   display: block;
@@ -3336,7 +3337,7 @@ html {
   display: inline-flex;
 }
 .ant-avatar-group .ant-avatar {
-  border: 1px solid var(--avatar-group-border-color);
+  border: var(--border-width-base) var(--border-style-base)  var(--avatar-group-border-color);
 }
 .ant-avatar-group .ant-avatar:not(:first-child) {
   margin-left: var(--avatar-group-overlapping);
@@ -3737,7 +3738,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid var(--primary-color);
+  border: var(--border-width-base) var(--border-style-base)  var(--primary-color);
   border-radius: var(--border-radius-rounded);
   -webkit-animation: antStatusProcessing 1.2s infinite ease-in-out;
   animation: antStatusProcessing 1.2s infinite ease-in-out;
@@ -6259,7 +6260,6 @@ html {
   white-space: nowrap;
   text-align: center;
   background-image: none;
-  border: var(--border-width-base) var(--border-style-base) transparent;
   -webkit-box-shadow: var(--btn-shadow);
   box-shadow: var(--btn-shadow);
   cursor: pointer;
@@ -18357,13 +18357,13 @@ textarea.ant-input {
 }
 .ant-input-group-sm .ant-input,
 .ant-input-group-sm > .ant-input-group-addon {
-  padding: 0px 7px;
+  padding: 0 7px;
 }
 .ant-input-group-lg .ant-select-single .ant-select-selector {
-  height: 40px;
+  height: var(--input-height-lg);
 }
 .ant-input-group-sm .ant-select-single .ant-select-selector {
-  height: 24px;
+  height: var(--input-height-sm);
 }
 .ant-input-group .ant-input-affix-wrapper:not(:first-child) {
   border-top-left-radius: 0;
@@ -24410,25 +24410,25 @@ textarea.ant-mentions {
   display: inline-block;
   vertical-align: top;
   background: rgba(190, 190, 190, 0.2);
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: var(--avatar-size-base);
+  height: var(--avatar-size-base);
+  line-height: var(--avatar-size-base);
 }
 .ant-skeleton-header .ant-skeleton-avatar.ant-skeleton-avatar-circle {
   border-radius: var(--border-radius-rounded);
 }
 .ant-skeleton-header .ant-skeleton-avatar-lg {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: var(--avatar-size-lg);
+  height: var(--avatar-size-lg);
+  line-height: var(--avatar-size-lg);
 }
 .ant-skeleton-header .ant-skeleton-avatar-lg.ant-skeleton-avatar-circle {
   border-radius: var(--border-radius-rounded);
 }
 .ant-skeleton-header .ant-skeleton-avatar-sm {
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: var(--avatar-size-sm);
+  height: var(--avatar-size-sm);
+  line-height: var(--avatar-size-sm);
 }
 .ant-skeleton-header .ant-skeleton-avatar-sm.ant-skeleton-avatar-circle {
   border-radius: var(--border-radius-rounded);
@@ -24626,25 +24626,25 @@ textarea.ant-mentions {
   display: inline-block;
   vertical-align: top;
   background: rgba(190, 190, 190, 0.2);
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: var(--avatar-size-base);
+  height: var(--avatar-size-base);
+  line-height: var(--avatar-size-base);
 }
 .ant-skeleton-element .ant-skeleton-avatar.ant-skeleton-avatar-circle {
   border-radius: var(--border-radius-rounded);
 }
 .ant-skeleton-element .ant-skeleton-avatar-lg {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: var(--avatar-size-lg);
+  height: var(--avatar-size-lg);
+  line-height: var(--avatar-size-lg);
 }
 .ant-skeleton-element .ant-skeleton-avatar-lg.ant-skeleton-avatar-circle {
   border-radius: var(--border-radius-rounded);
 }
 .ant-skeleton-element .ant-skeleton-avatar-sm {
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: var(--avatar-size-sm);
+  height: var(--avatar-size-sm);
+  line-height: var(--avatar-size-sm);
 }
 .ant-skeleton-element .ant-skeleton-avatar-sm.ant-skeleton-avatar-circle {
   border-radius: var(--border-radius-rounded);
@@ -24654,18 +24654,18 @@ textarea.ant-mentions {
   vertical-align: top;
   background: rgba(190, 190, 190, 0.2);
   width: 100%;
-  height: 32px;
-  line-height: 32px;
+  height: var(--avatar-size-base);
+  line-height: var(--avatar-size-base);
 }
 .ant-skeleton-element .ant-skeleton-input-lg {
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: var(--avatar-size-lg);
+  line-height: var(--avatar-size-lg);
 }
 .ant-skeleton-element .ant-skeleton-input-sm {
   width: 100%;
-  height: 24px;
-  line-height: 24px;
+  height: var(--avatar-size-sm);
+  line-height: var(--avatar-size-sm);
 }
 .ant-skeleton-element .ant-skeleton-image {
   display: -webkit-box;

@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 // import './Row.scss'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   space,
   color,
@@ -12,8 +13,7 @@ import {
   compose,
   system
 } from 'styled-system'
-
-// import { DEFAULTS, BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
+import { BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -40,6 +40,23 @@ const StyledDiv = styled.div`
     & > .col:last-child {
       padding-right: 0;
     }
+  }
+
+  &.negative-block-margin {
+    margin-left: var(--grid-negative-gutter-default);
+    margin-right: var(--grid-negative-gutter-default);
+
+    ${() => {
+      const breakpoints = Object.keys(BREAKPOINTS)
+      return breakpoints.map((breakpoint) => {
+        return css`
+          @media (min-width: ${BREAKPOINTS[breakpoint]}) {
+            margin-left: ${NEGATIVE_GUTTERS_MAP[breakpoint]};
+            margin-right: ${NEGATIVE_GUTTERS_MAP[breakpoint]};
+          }
+        `
+      })
+    }}
   }
 `
 
@@ -93,12 +110,19 @@ const Box = styled(StyledDiv).withConfig({
  * Creating Container which returns Box with className (css)
  */
 const Row = React.forwardRef((props, ref) => {
-  const { noGutters, noInnerGutters, noOuterGutters, children } = props
+  const {
+    noGutters,
+    noInnerGutters,
+    noOuterGutters,
+    negativeBlockMargin,
+    children
+  } = props
   const className = classNames({
     row: true,
     'no-gutters': noGutters,
     'no-inner-gutters': noInnerGutters,
-    'no-outer-gutters': noOuterGutters
+    'no-outer-gutters': noOuterGutters,
+    'negative-block-margin': negativeBlockMargin
   })
   return (
     <Box data-testid='row' className={className} ref={ref} {...props}>
@@ -107,4 +131,10 @@ const Row = React.forwardRef((props, ref) => {
   )
 })
 
+Row.propTypes = {
+  noGutters: PropTypes.bool,
+  noInnerGutters: PropTypes.bool,
+  noOuterGutters: PropTypes.bool,
+  negativeBlockMargin: PropTypes.bool
+}
 export default Row
