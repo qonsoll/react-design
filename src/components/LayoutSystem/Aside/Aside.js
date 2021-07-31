@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../../Box'
+import { useLayoutSystem } from '../LayoutSystem'
 
 const collapseMap = {
   full: { width: '0' },
@@ -14,17 +15,33 @@ const AsideLayout = (props) => {
     isHeaderExists,
     isFooterExists,
     width,
-    collapse,
-    collapseVariant,
-    overlay,
+    // collapse,
     maxHeight,
     bg,
     p,
     ...rest
   } = props
 
+  const LayoutSystemConfig = useLayoutSystem()
+  const {
+    asideLeftCollapseVariant,
+    asideRightCollapseVariant,
+    asideLeftOverlay,
+    asideRightOverlay,
+    asideLeftCollapsed,
+    asideRightCollapsed
+  } = LayoutSystemConfig
+
   const isAsideLeft = side === 'left'
   const isAsideRight = side === 'right'
+
+  const collapseVariant = isAsideLeft
+    ? asideLeftCollapseVariant
+    : asideRightCollapseVariant
+  const overlay = isAsideLeft ? asideLeftOverlay : asideRightOverlay
+  const collapse = isAsideLeft ? asideLeftCollapsed : asideRightCollapsed
+
+  const isNotCollapsedOverlay = !collapse && overlay
 
   return (
     <Box
@@ -47,16 +64,16 @@ const AsideLayout = (props) => {
       p={p || 'var(--ql-aside-padding)'}
       overflow='auto'
       wordBreak='break-word'
-      position={!collapse && overlay && 'fixed'}
+      position={isNotCollapsedOverlay && 'fixed'}
       top={
-        !collapse && overlay && isHeaderExists ? 'var(--ql-header-height)' : 0
+        isNotCollapsedOverlay && isHeaderExists ? 'var(--ql-header-height)' : 0
       }
       bottom={
-        !collapse && overlay && isFooterExists ? 'var(--ql-footer-height)' : 0
+        isNotCollapsedOverlay && isFooterExists ? 'var(--ql-footer-height)' : 0
       }
-      left={!collapse && overlay && isAsideLeft && 0}
-      right={!collapse && overlay && isAsideRight && 0}
-      zIndex={!collapse && overlay && 'var(--ql-zindex-drawer)'}
+      left={isNotCollapsedOverlay && isAsideLeft && 0}
+      right={isNotCollapsedOverlay && isAsideRight && 0}
+      zIndex={isNotCollapsedOverlay && 'var(--ql-zindex-drawer)'}
       {...rest}
     >
       {children}
@@ -83,49 +100,6 @@ const Aside = (props) => {
 
   return (
     <>
-      {/* {overlay ? (
-        <>
-          {overlayState && (
-            <Box
-              position='absolute'
-              top={0}
-              bottom={0}
-              left={0}
-              right={0}
-              zIndex='var(--ql-zindex-overlay)'
-              bg='rgba(0 0 0 / 75%)'
-            />
-          )}
-          <AsideLayout
-            width={width}
-            maxHeight={maxHeight}
-            bg={bg}
-            p={p}
-            display={overlayState ? 'flex' : 'none'}
-            position='fixed'
-            top={overlayState && 0}
-            bottom={overlayState && 0}
-            left={overlayState && isAsideLeftAsDrawer && 0}
-            right={overlayState && isAsideRightAsDrawer && 0}
-            zIndex='var(--ql-zindex-drawer)'
-          >
-            {asideToggleBtn}
-            {children}
-          </AsideLayout>
-        </>
-      ) : (
-        <AsideLayout
-          width={width}
-          maxHeight={maxHeight}
-          bg={bg}
-          p={p}
-          collapse={collapse}
-          collapseVariant={collapseVariant}
-        >
-          {asideToggleBtn}
-          {children}
-        </AsideLayout>
-      )} */}
       {!collapse && drawer && (
         <Box
           position='absolute'

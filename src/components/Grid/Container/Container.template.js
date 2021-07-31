@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import classNames from 'classnames'
 import ContainerBase from './ContainerBase.template'
 
 /**
  * Creating Container which returns Box with className (css)
  */
-const Container = (props) => {
+const Container = forwardRef((props, ref) => {
   const {
     bounded,
     gutters,
@@ -39,10 +39,15 @@ const Container = (props) => {
     'gutter-xxl': gutterXxl
   })
   return (
-    <ContainerBase data-testid='container' className={className} {...props}>
+    <ContainerBase
+      data-testid='container'
+      className={className}
+      ref={ref}
+      {...props}
+    >
       {children}
     </ContainerBase>
   )
-}
+})
 
 export default Container

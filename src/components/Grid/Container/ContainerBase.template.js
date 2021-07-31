@@ -1,5 +1,14 @@
 import styled, { css } from 'styled-components'
-
+import {
+  space,
+  color,
+  layout,
+  background,
+  border,
+  flexbox,
+  shadow,
+  compose
+} from 'styled-system'
 import {
   BREAKPOINTS,
   CONTAINER_MAX_WIDTH_MAP,
@@ -92,6 +101,7 @@ const ContainerBase = styled.div`
       `
     })
   }}
+  ${compose(space, color, layout, flexbox, background, border, shadow)}
 `
 
 export default ContainerBase

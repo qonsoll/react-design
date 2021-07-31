@@ -1,149 +1,88 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useLayoutSystem } from '../LayoutSystem'
 import BaseLayout from '../BaseLayout'
 import DirectionLayout from '../DirectionLayout'
 import CompositionLayout from '../CompositionLayout'
 
 const Layout = (props) => {
+  const { children, header, asideLeft, asideRight, footer } = props
+
+  const LayoutSystemConfig = useLayoutSystem()
   const {
-    children,
-    header,
-    asideLeft,
-    asideRight,
-    footer,
     asideLeftOuter,
     asideRightOuter,
-    isAsideLeftCollapsed,
-    isAsideRightCollapsed,
-    isHeaderSticky,
-    isFooterSticky,
-    asideLeftCollapsed,
-    asideRightCollapsed,
-    collapseVariant,
-    overlay,
-    bg,
-    contentP
-  } = props
+    layoutBg,
+    isOuterLayoutExists,
+    ml,
+    mr,
+    asideLeftOuterExists,
+    asideRightOuterExists
+  } = LayoutSystemConfig
 
-  const isOuterLayoutExists = asideLeftOuter || asideRightOuter
+  const asideLeftPropsOverride =
+    isOuterLayoutExists && asideRightOuter
+      ? { maxHeight: 'unset' }
+      : {
+          maxHeight: 'unset',
+          isHeaderExists: !!header,
+          isFooterExists: !!footer
+        }
+  const asideRightPropsOverride =
+    isOuterLayoutExists && asideLeftOuter
+      ? { maxHeight: 'unset' }
+      : {
+          maxHeight: 'unset',
+          isHeaderExists: !!header,
+          isFooterExists: !!footer
+        }
 
-  const collapseMap = {
-    full: { offset: '0' },
-    short: { offset: 'var(--ql-aside-collapsed-width)' }
-  }
+  const asideLeftExtended =
+    asideLeft && React.cloneElement(asideLeft, asideLeftPropsOverride)
+
+  const asideRightExtended =
+    asideRight && React.cloneElement(asideRight, asideRightPropsOverride)
+
+  const compositionLayout = (
+    <CompositionLayout
+      header={header}
+      asideLeft={asideLeftExtended}
+      asideRight={asideRightExtended}
+      footer={footer}
+    >
+      {children}
+    </CompositionLayout>
+  )
 
   return (
-    <>
-      <BaseLayout direction={isOuterLayoutExists ? 'row' : 'column'} bg={bg}>
-        {isOuterLayoutExists ? (
-          <>
-            {/* Aside left */}
-            {asideLeftOuter &&
-              asideLeft &&
-              React.cloneElement(asideLeft, { side: 'left', collapseVariant })}
+    <BaseLayout
+      direction={isOuterLayoutExists ? 'row' : 'column'}
+      bg={layoutBg}
+    >
+      {isOuterLayoutExists ? (
+        <>
+          {/* Aside left */}
+          {asideLeftOuterExists &&
+            React.cloneElement(asideLeft, { side: 'left' })}
 
-            <DirectionLayout
-              direction='column'
-              maxHeight='100vh'
-              overflow='auto'
-              ml={
-                asideLeft &&
-                // !asideLeftCollapsed &&
-                overlay &&
-                (collapseMap[collapseVariant]?.offset ||
-                  'var(--ql-aside-collapsed-width)')
-              }
-              mr={
-                asideRight &&
-                // !asideRightCollapsed &&
-                overlay &&
-                (collapseMap[collapseVariant]?.offset ||
-                  'var(--ql-aside-collapsed-width)')
-              }
-            >
-              <CompositionLayout
-                header={
-                  header && asideLeft
-                    ? React.cloneElement(header, { asideLeft: true })
-                    : header
-                }
-                asideLeft={
-                  asideRightOuter &&
-                  asideLeft &&
-                  React.cloneElement(asideLeft, {
-                    maxHeight: 'unset',
-                    collapseVariant
-                  })
-                }
-                asideRight={
-                  asideLeftOuter &&
-                  asideRight &&
-                  React.cloneElement(asideRight, {
-                    maxHeight: 'unset',
-                    collapseVariant
-                  })
-                }
-                asideLeftOuter={asideLeftOuter}
-                asideRightOuter={asideRightOuter}
-                isAsideLeftCollapsed={isAsideLeftCollapsed}
-                isAsideRightCollapsed={isAsideRightCollapsed}
-                footer={footer}
-                isHeaderSticky={isHeaderSticky}
-                isFooterSticky={isFooterSticky}
-                contentP={contentP}
-              >
-                {children}
-              </CompositionLayout>
-            </DirectionLayout>
-
-            {/* Aside right */}
-            {asideRightOuter &&
-              asideRight &&
-              React.cloneElement(asideRight, { side: 'right' })}
-          </>
-        ) : (
-          <CompositionLayout
-            header={
-              header && asideLeft
-                ? React.cloneElement(header, { asideLeft: true })
-                : header
-            }
-            asideLeft={
-              asideLeft &&
-              React.cloneElement(asideLeft, {
-                maxHeight: 'unset',
-                isHeaderExists: !!header,
-                isFooterExists: !!footer,
-                collapseVariant
-              })
-            }
-            asideRight={
-              asideRight &&
-              React.cloneElement(asideRight, {
-                maxHeight: 'unset',
-                isHeaderExists: !!header,
-                isFooterExists: !!footer,
-                collapseVariant
-              })
-            }
-            asideLeftOuter={asideLeftOuter}
-            asideRightOuter={asideRightOuter}
-            isAsideLeftCollapsed={isAsideLeftCollapsed}
-            isAsideRightCollapsed={isAsideRightCollapsed}
-            footer={footer}
-            isHeaderSticky={isHeaderSticky}
-            isFooterSticky={isFooterSticky}
-            contentP={contentP}
-            asideLeftCollapsed={asideLeftCollapsed}
-            asideRightCollapsed={asideRightCollapsed}
-            collapseVariant={collapseVariant}
-            overlay={overlay}
+          <DirectionLayout
+            direction='column'
+            maxHeight='100vh'
+            overflow='auto'
+            ml={ml}
+            mr={mr}
           >
-            {children}
-          </CompositionLayout>
-        )}
-      </BaseLayout>
-    </>
+            {compositionLayout}
+          </DirectionLayout>
+
+          {/* Aside right */}
+          {asideRightOuterExists &&
+            React.cloneElement(asideRight, { side: 'right' })}
+        </>
+      ) : (
+        compositionLayout
+      )}
+    </BaseLayout>
   )
 }
 

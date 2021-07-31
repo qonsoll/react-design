@@ -102,8 +102,5 @@ Back.propTypes = {
   divided: PropTypes.bool,
   props: PropTypes.object
 }
-Back.defaultProps = {
-  text: 'Hello'
-}
 
 export default Back

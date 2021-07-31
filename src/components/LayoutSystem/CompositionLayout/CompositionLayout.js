@@ -1,29 +1,21 @@
 import React from 'react'
 import Box from '../../Box'
+import { useLayoutSystem } from '../LayoutSystem'
 import DirectionLayout from '../DirectionLayout'
 
 const CompositionLayout = (props) => {
+  const { children, header, asideLeft, asideRight, footer } = props
+
+  const LayoutSystemConfig = useLayoutSystem()
   const {
-    children,
-    header,
-    asideLeft,
-    asideRight,
-    asideLeftOuter,
-    asideRightOuter,
-    footer,
     isHeaderSticky,
     isFooterSticky,
-    asideLeftCollapsed,
-    asideRightCollapsed,
-    collapseVariant,
-    overlay,
-    contentP
-  } = props
-
-  const collapseMap = {
-    full: { offset: '0' },
-    short: { offset: 'var(--ql-aside-collapsed-width)' }
-  }
+    contentPadding,
+    ml,
+    mr,
+    asideLeftNotOuterExists,
+    asideRightNotOuterExists
+  } = LayoutSystemConfig
 
   return (
     <>
@@ -34,34 +26,20 @@ const CompositionLayout = (props) => {
 
       <DirectionLayout direction='row'>
         {/* Aside left */}
-        {!asideLeftOuter &&
-          asideLeft &&
+        {asideLeftNotOuterExists &&
           React.cloneElement(asideLeft, { side: 'left' })}
 
         <Box
           flexGrow={1}
-          p={contentP || 'var(--ql-content-padding)'}
-          ml={
-            asideLeft &&
-            // !asideLeftCollapsed &&
-            overlay &&
-            (collapseMap[collapseVariant]?.offset ||
-              'var(--ql-aside-collapsed-width)')
-          }
-          mr={
-            asideRight &&
-            // !asideRightCollapsed &&
-            overlay &&
-            (collapseMap[collapseVariant]?.offset ||
-              'var(--ql-aside-collapsed-width)')
-          }
+          p={contentPadding || 'var(--ql-content-padding)'}
+          ml={ml}
+          mr={mr}
         >
           {children}
         </Box>
 
         {/* Aside right */}
-        {!asideRightOuter &&
-          asideRight &&
+        {asideRightNotOuterExists &&
           React.cloneElement(asideRight, { side: 'right' })}
       </DirectionLayout>
 

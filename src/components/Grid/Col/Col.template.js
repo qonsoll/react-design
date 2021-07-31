@@ -77,24 +77,24 @@ const BoxStyleProps = compose(
     alignSelf: {
       property: 'alignSelf'
     },
-    v: {
-      property: 'alignItems',
-      transform: (value) => {
-        const map = {
-          top: 'flex-start',
-          center: 'center',
-          bottom: 'flex-end'
-        }
-        return map[value]
-      }
-    },
     h: {
-      property: 'justifyContent',
+      property: 'alignItems',
       transform: (value) => {
         const map = {
           left: 'flex-start',
           center: 'center',
-          right: 'flex-end',
+          right: 'flex-end'
+        }
+        return map[value]
+      }
+    },
+    v: {
+      property: 'justifyContent',
+      transform: (value) => {
+        const map = {
+          top: 'flex-start',
+          center: 'center',
+          bottom: 'flex-end',
           around: 'space-around',
           between: 'space-between',
           evenly: 'space-evenly'
