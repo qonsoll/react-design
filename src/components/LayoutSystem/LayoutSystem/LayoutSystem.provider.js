@@ -35,9 +35,6 @@ const LayoutSystemProvider = (props) => {
   const asideRightNotCollapsedOverlay =
     isAsideRight && !asideRightCollapsed && asideRightOverlay
 
-  console.log(isAsideLeft, !asideLeftCollapsed, asideLeftOverlay)
-  console.log(asideLeftNotCollapsedOverlay, asideLeftNotCollapsedOverlay)
-
   const ml =
     asideLeftNotCollapsedOverlay &&
     (collapseMap[asideLeftCollapseVariant]?.offset ||

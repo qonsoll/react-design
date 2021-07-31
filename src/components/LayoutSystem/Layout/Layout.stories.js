@@ -57,14 +57,14 @@ export const Template = (args) => {
   // const [asideRightCollapsed, setAsideRightCollapsed] = useState(true)
 
   const [layoutConfig, setLayoutConfig] = useState({
-    // asideLeftCollapseVariant: 'full',
+    asideLeftCollapseVariant: 'full',
     // asideRightCollapseVariant: 'short',
     isHeaderSticky: true,
     // asideLeftOverlay: true,
     asideLeftCollapsed: false,
     asideRightCollapsed: true,
     // asideRightOverlay: true,
-    // asideLeftOuter: true,
+    asideLeftOuter: true,
     asideRightOuter: true,
     asideRightOverlay: true,
     isAsideLeft: true,
@@ -116,6 +116,7 @@ export const Template = (args) => {
           <Aside
             collapse={layoutConfig.asideRightCollapsed}
             drawer
+            onClose={toggleAsideRight}
             asideToggleBtn={<AsideCloseBtn onClick={toggleAsideRight} />}
           >
             <Navigation vertical dataSource={navConfig} />

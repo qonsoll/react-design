@@ -8,6 +8,7 @@ import CompositionLayout from '../CompositionLayout'
 const Layout = (props) => {
   const { children, header, asideLeft, asideRight, footer } = props
 
+  // Requesting data from LayoutSystem context
   const LayoutSystemConfig = useLayoutSystem()
   const {
     asideLeftOuter,
@@ -20,6 +21,7 @@ const Layout = (props) => {
     asideRightOuterExists
   } = LayoutSystemConfig
 
+  // Building asides overrides props
   const asideLeftPropsOverride =
     isOuterLayoutExists && asideRightOuter
       ? { maxHeight: 'unset' }
@@ -37,12 +39,14 @@ const Layout = (props) => {
           isFooterExists: !!footer
         }
 
+  // Extending existing asides with additional props
   const asideLeftExtended =
     asideLeft && React.cloneElement(asideLeft, asideLeftPropsOverride)
 
   const asideRightExtended =
     asideRight && React.cloneElement(asideRight, asideRightPropsOverride)
 
+  // Unified composition layout
   const compositionLayout = (
     <CompositionLayout
       header={header}
