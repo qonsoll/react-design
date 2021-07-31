@@ -38,13 +38,15 @@ const LayoutSystemProvider = (props) => {
   console.log(isAsideLeft, !asideLeftCollapsed, asideLeftOverlay)
   console.log(asideLeftNotCollapsedOverlay, asideLeftNotCollapsedOverlay)
 
-  const ml = asideLeftNotCollapsedOverlay
-    ? collapseMap[asideLeftCollapseVariant]?.offset
-    : 'var(--ql-aside-collapsed-width)'
+  const ml =
+    asideLeftNotCollapsedOverlay &&
+    (collapseMap[asideLeftCollapseVariant]?.offset ||
+      'var(--ql-aside-collapsed-width)')
 
-  const mr = asideRightNotCollapsedOverlay
-    ? collapseMap[asideRightCollapseVariant]?.offset
-    : 'var(--ql-aside-collapsed-width)'
+  const mr =
+    asideRightNotCollapsedOverlay &&
+    (collapseMap[asideRightCollapseVariant]?.offset ||
+      'var(--ql-aside-collapsed-width)')
 
   const asideLeftOuterExists = asideLeftOuter && isAsideLeft
   const asideRightOuterExists = asideRightOuter && isAsideRight
