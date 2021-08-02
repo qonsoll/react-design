@@ -6277,7 +6277,7 @@ html {
   border-radius: var(--btn-border-radius-base);
   color: var(--btn-default-color);
   background: var(--btn-default-bg);
-  border-color: var(--btn-default-border);
+  border: var(--btn-border-width) var(--btn-border-style) var(--btn-default-border);
 }
 .ant-btn > .anticon {
   line-height: 0; /* Test */
@@ -6470,12 +6470,12 @@ html {
 .ant-btn-primary[disabled]:hover,
 .ant-btn-primary[disabled]:focus,
 .ant-btn-primary[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-primary[disabled] > a:only-child,
 .ant-btn-primary[disabled]:hover > a:only-child,
@@ -6574,12 +6574,12 @@ html {
 .ant-btn-ghost[disabled]:hover,
 .ant-btn-ghost[disabled]:focus,
 .ant-btn-ghost[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-ghost[disabled] > a:only-child,
 .ant-btn-ghost[disabled]:hover > a:only-child,
@@ -6744,12 +6744,12 @@ html {
 .ant-btn-danger[disabled]:hover,
 .ant-btn-danger[disabled]:focus,
 .ant-btn-danger[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-danger[disabled] > a:only-child,
 .ant-btn-danger[disabled]:hover > a:only-child,
@@ -6829,12 +6829,12 @@ html {
 .ant-btn-link[disabled]:hover,
 .ant-btn-link[disabled]:focus,
 .ant-btn-link[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-link[disabled] > a:only-child,
 .ant-btn-link[disabled]:hover > a:only-child,
@@ -6951,12 +6951,12 @@ html {
 .ant-btn-text[disabled]:hover,
 .ant-btn-text[disabled]:focus,
 .ant-btn-text[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-text[disabled] > a:only-child,
 .ant-btn-text[disabled]:hover > a:only-child,
@@ -7160,12 +7160,12 @@ html {
 .ant-btn-dangerous.ant-btn-primary[disabled]:hover,
 .ant-btn-dangerous.ant-btn-primary[disabled]:focus,
 .ant-btn-dangerous.ant-btn-primary[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-dangerous.ant-btn-primary[disabled] > a:only-child,
 .ant-btn-dangerous.ant-btn-primary[disabled]:hover > a:only-child,
@@ -7860,12 +7860,12 @@ html {
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:active {
-  color: var(--disabled-color);
-  background: var(--gray-3);
-  border-color: var(--gray-5);
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  color: var(--btn-disable-color);
+  background: var(--btn-disable-bg);
+  border-color: var(--btn-disable-border);
+  text-shadow: var(--btn-disable-font-shadow);
+  -webkit-box-shadow: var(--btn-disable-shadow);
+  box-shadow: var(--btn-disable-shadow);
 }
 .ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child,
@@ -7876,8 +7876,7 @@ html {
 .ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:active
-  > a:only-child::after {
+.ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -23189,9 +23188,9 @@ textarea.ant-mentions {
   margin: 0;
   padding: 0;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
   font-variant: tabular-nums;
-  line-height: 1.5715;
+  line-height: var(--line-height-base);
   list-style: none;
   -webkit-font-feature-settings: 'tnum';
   font-feature-settings: 'tnum';
@@ -23203,14 +23202,14 @@ textarea.ant-mentions {
   pointer-events: none;
 }
 .ant-message-notice {
-  padding: 8px;
+  padding: var(--padding-xs);
   text-align: center;
 }
 .ant-message-notice-content {
   display: inline-block;
   padding: var(--message-notice-content-padding);
   background: var(--message-notice-content-bg);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
   -webkit-box-shadow: var(--box-shadow-base);
   box-shadow: var(--box-shadow-base);
   pointer-events: all;
@@ -23231,7 +23230,7 @@ textarea.ant-mentions {
 .ant-message .anticon {
   position: relative;
   top: 1px;
-  margin-right: 8px;
+  margin-right: var(--margin-xs);
   font-size: var(--font-size-base);
 }
 .ant-message-notice.move-up-leave.move-up-leave-active {
@@ -23243,7 +23242,7 @@ textarea.ant-mentions {
 @-webkit-keyframes MessageMoveOut {
   0% {
     max-height: 150px;
-    padding: 8px;
+    padding: var(--padding-xs);
     opacity: 1;
   }
   100% {
@@ -23255,7 +23254,7 @@ textarea.ant-mentions {
 @keyframes MessageMoveOut {
   0% {
     max-height: 150px;
-    padding: 8px;
+    padding: var(--padding-xs);
     opacity: 1;
   }
   100% {
@@ -23272,7 +23271,7 @@ textarea.ant-mentions {
 }
 .ant-message-rtl .anticon {
   margin-right: 0;
-  margin-left: 8px;
+  margin-left: var(--margin-xs);
 }
 
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
@@ -23282,12 +23281,11 @@ textarea.ant-mentions {
 .ant-modal {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
   font-variant: tabular-nums;
-  line-height: 1.5715;
+  line-height: var(--line-height-base);
   list-style: none;
   -webkit-font-feature-settings: 'tnum';
   font-feature-settings: 'tnum';
@@ -23297,7 +23295,7 @@ textarea.ant-mentions {
   width: auto;
   max-width: calc(100vw - 32px);
   margin: 0 auto;
-  padding-bottom: 24px;
+  padding-bottom: var(--padding-xl);
 }
 .ant-modal.zoom-enter,
 .ant-modal.zoom-appear {
@@ -23340,7 +23338,7 @@ textarea.ant-mentions {
 .ant-modal-title {
   margin: 0;
   color: var(--modal-heading-color);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: var(--modal-header-title-font-size);
   line-height: var(--modal-header-title-line-height);
   word-wrap: break-word;
@@ -23362,7 +23360,7 @@ textarea.ant-mentions {
   z-index: 10;
   padding: 0;
   color: var(--modal-close-color);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1;
   text-decoration: none;
   background: transparent;
@@ -23409,11 +23407,11 @@ textarea.ant-mentions {
   background: var(--modal-footer-bg);
   border-top: var(--modal-footer-border-width) var(--modal-footer-border-style)
     var(--modal-footer-border-color-split);
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 var(--border-radius-xxs) var(--border-radius-xxs);
 }
 .ant-modal-footer .ant-btn + .ant-btn {
   margin-bottom: 0;
-  margin-left: 8px;
+  margin-left: var(--margin-xs);
 }
 .ant-modal-open {
   overflow: hidden;
@@ -23437,7 +23435,7 @@ textarea.ant-mentions {
 @media (max-width: 767px) {
   .ant-modal {
     max-width: calc(100vw - 16px);
-    margin: 8px auto;
+    margin: var(--margin-xs) auto;
   }
   .ant-modal-centered .ant-modal {
     -webkit-box-flex: 1;
@@ -23471,17 +23469,14 @@ textarea.ant-mentions {
 .ant-modal-confirm-body .ant-modal-confirm-content {
   margin-top: 8px;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: var(--font-size-base);
 }
 .ant-modal-confirm-body > .anticon {
   float: left;
   margin-right: 16px;
   font-size: 22px;
 }
-.ant-modal-confirm-body
-  > .anticon
-  + .ant-modal-confirm-title
-  + .ant-modal-confirm-content {
+.ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
   margin-left: 38px;
 }
 .ant-modal-confirm .ant-modal-confirm-btns {
@@ -23621,7 +23616,7 @@ textarea.ant-mentions {
   margin-bottom: 8px;
   color: var(--text-color);
   font-size: var(--font-size-base);
-  line-height: 24px;
+  line-height: var(--line-height-body1);
 }
 .ant-notification-notice-message-single-line-auto-margin {
   display: block;
@@ -23682,8 +23677,8 @@ textarea.ant-mentions {
   margin-top: 16px;
 }
 .ant-notification .notification-fade-effect {
-  -webkit-animation-duration: 0.24s;
-  animation-duration: 0.24s;
+  -webkit-animation-duration: var(--animation-duration-base);
+  animation-duration: var(--animation-duration-base);
   -webkit-animation-timing-function: var(--ease-in-out);
   animation-timing-function: var(--ease-in-out);
   -webkit-animation-fill-mode: both;
@@ -23702,8 +23697,6 @@ textarea.ant-mentions {
   animation-play-state: paused;
 }
 .ant-notification-fade-leave {
-  -webkit-animation-duration: 0.24s;
-  animation-duration: 0.24s;
   -webkit-animation-timing-function: var(--ease-in-out);
   animation-timing-function: var(--ease-in-out);
   -webkit-animation-fill-mode: both;

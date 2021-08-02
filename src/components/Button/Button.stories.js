@@ -10,6 +10,18 @@ export default {
         'Component absolutely maintain default AntD button properties (check Ant documentation: https://ant.design/components/button/#API).',
       control: { disable: true }
     },
+    type: {
+      options: ['primary', 'secondary', 'text', 'link', 'ghost'],
+      control: {
+        type: 'select'
+      }
+    },
+    danger: {
+      control: { type: 'boolean' }
+    },
+    disabled: {
+      control: { type: 'boolean' }
+    },
     Packages: {
       table: {
         category: 'Extentions'
