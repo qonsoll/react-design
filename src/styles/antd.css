@@ -2429,7 +2429,6 @@ html {
 }
 .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
 .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
-  margin:auto;
   padding-right: 18px;
 }
 .ant-select-single.ant-select-open .ant-select-selection-item {
@@ -3414,7 +3413,7 @@ html {
 .ant-popover-inner {
   background-color: var(--popover-bg);
   background-clip: padding-box;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
   -webkit-box-shadow: var(--box-shadow-base);
   box-shadow: var(--box-shadow-base);
 }
