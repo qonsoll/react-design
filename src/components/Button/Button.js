@@ -40,11 +40,11 @@ const Button = styled(AntButton)`
         variants: {
           white: {
             color: 'var(--btn-white-color)',
-            bg: 'var(--btn-white-bg)',
+            background: 'var(--btn-white-bg)',
             borderColor: 'var(--btn-white-border)',
             '&:hover': {
               color: 'var(--btn-text-hover-color)',
-              bg: 'var(--btn-white-hover-bg)',
+              background: 'var(--btn-white-hover-bg)',
               borderColor: 'var(--btn-white-hover-border)'
             }
           }
