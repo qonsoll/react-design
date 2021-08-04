@@ -2813,12 +2813,12 @@ html {
 .ant-select-disabled.ant-select:not(.ant-select-customize-input)
   .ant-select-selector {
   color: var(--disabled-color);
-  background: var(--gray-3);
   cursor: not-allowed;
 }
 .ant-select-multiple.ant-select-disabled.ant-select:not(.ant-select-customize-input)
   .ant-select-selector {
-  background: var(--gray-3);
+  color: var(--disabled-color);
+  cursor: not-allowed;
 }
 .ant-select-disabled.ant-select:not(.ant-select-customize-input)
   .ant-select-selector
@@ -3065,7 +3065,7 @@ html {
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   color: var(--text-color);
-  font-weight: 600;
+  font-weight: var(--select-item-selected-font-weight);
   background-color: var(--primary-1);
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
@@ -4543,6 +4543,7 @@ html {
 .ant-menu-submenu-title .ant-menu-item-icon + span,
 .ant-menu-item .anticon + span,
 .ant-menu-submenu-title .anticon + span {
+  flex:1; 
   opacity: 1;
   -webkit-transition: opacity var(--animation-duration-slow) var(--ease-in-out),
     width var(--animation-duration-slow) var(--ease-in-out),
@@ -4808,7 +4809,9 @@ html {
 .ant-menu-vertical-left .ant-menu-item:not(:last-child),
 .ant-menu-vertical-right .ant-menu-item:not(:last-child),
 .ant-menu-inline .ant-menu-item:not(:last-child) {
-  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--menu-item-vertical-margin);
 }
 .ant-menu-vertical > .ant-menu-item,
 .ant-menu-vertical-left > .ant-menu-item,
@@ -6600,7 +6603,6 @@ html {
 }
 .ant-btn-dashed {
   color: var(--text-color);
-  background: var(--white);
   border-color: var(--gray-5);
   border-style: dashed;
 }
@@ -20325,7 +20327,7 @@ textarea.ant-input {
 .ant-form-item-has-warning
   .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input)
   .ant-select-selector {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--warning-color) !important;
 }
 .ant-form-item-has-warning
@@ -20342,7 +20344,7 @@ textarea.ant-input {
 }
 .ant-form-item-has-warning .ant-input-number,
 .ant-form-item-has-warning .ant-picker {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--warning-color);
 }
 .ant-form-item-has-warning .ant-input-number-focused,
@@ -20357,7 +20359,7 @@ textarea.ant-input {
 }
 .ant-form-item-has-warning .ant-input-number:not([disabled]):hover,
 .ant-form-item-has-warning .ant-picker:not([disabled]):hover {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--warning-color);
 }
 .ant-form-item-has-warning .ant-cascader-picker:focus .ant-cascader-input {
@@ -20425,7 +20427,7 @@ textarea.ant-input {
 .ant-form-item-has-error
   .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input)
   .ant-select-selector {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--error-color) !important;
 }
 .ant-form-item-has-error
@@ -20451,7 +20453,7 @@ textarea.ant-input {
 }
 .ant-form-item-has-error .ant-input-number,
 .ant-form-item-has-error .ant-picker {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--error-color);
 }
 .ant-form-item-has-error .ant-input-number-focused,
@@ -20466,14 +20468,14 @@ textarea.ant-input {
 }
 .ant-form-item-has-error .ant-input-number:not([disabled]):hover,
 .ant-form-item-has-error .ant-picker:not([disabled]):hover {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--error-color);
 }
 .ant-form-item-has-error .ant-mention-wrapper .ant-mention-editor,
 .ant-form-item-has-error
   .ant-mention-wrapper
   .ant-mention-editor:not([disabled]):hover {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--error-color);
 }
 .ant-form-item-has-error
@@ -20489,7 +20491,7 @@ textarea.ant-input {
   box-shadow: var(--outline-error);
 }
 .ant-form-item-has-error .ant-cascader-picker:focus .ant-cascader-input {
-  background-color: var(--white);
+  background-color: var(--input-bg);
   border-color: var(--error-4);
   border-right-width: 1px !important;
   outline: 0;
@@ -21452,7 +21454,6 @@ textarea.ant-input-number {
 }
 .ant-input-number-input {
   width: 100%;
-  height: 30px;
   padding: 0;
   text-align: left;
   background-color: transparent;

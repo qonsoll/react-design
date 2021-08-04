@@ -15,7 +15,7 @@ import {
   system
 } from 'styled-system'
 
-const StyledDiv = styled('div')(
+const Box = styled('div')(
   compose(
     space,
     color,
@@ -36,8 +36,6 @@ const StyledDiv = styled('div')(
     })
   )
 )
-
-const Box = (props) => <StyledDiv {...props} />
 
 Box.propTypes = {
   Packages: PropTypes.oneOf([

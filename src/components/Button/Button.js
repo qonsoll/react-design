@@ -16,41 +16,43 @@ import {
   variant
 } from 'styled-system'
 
-const Button = styled(AntButton)(({ theme }) =>
-  compose(
-    space,
-    color,
-    typography,
-    layout,
-    flexbox,
-    background,
-    border,
-    position,
-    shadow,
-    system({
-      whiteSpace: true,
-      cursor: true,
-      wordBreak: true,
-      zoom: true,
-      transform: true,
-      transition: true
-    }),
-    variant({
-      variants: {
-        white: {
-          color: 'var(--btn-white-color)',
-          bg: 'var(--btn-white-bg)',
-          borderColor: 'var(--btn-white-border)',
-          '&:hover': {
-            color: 'var(--btn-text-hover-color)',
-            bg: 'var(--btn-white-hover-bg)',
-            borderColor: 'var(--btn-white-hover-border)'
+const Button = styled(AntButton)`
+  &&& {
+    ${compose(
+      space,
+      color,
+      typography,
+      layout,
+      flexbox,
+      background,
+      border,
+      position,
+      shadow,
+      system({
+        whiteSpace: true,
+        cursor: true,
+        wordBreak: true,
+        zoom: true,
+        transform: true,
+        transition: true
+      }),
+      variant({
+        variants: {
+          white: {
+            color: 'var(--btn-white-color)',
+            bg: 'var(--btn-white-bg)',
+            borderColor: 'var(--btn-white-border)',
+            '&:hover': {
+              color: 'var(--btn-text-hover-color)',
+              bg: 'var(--btn-white-hover-bg)',
+              borderColor: 'var(--btn-white-hover-border)'
+            }
           }
         }
-      }
-    })
-  )
-)
+      })
+    )}
+  }
+`
 
 Button.propTypes = {
   'Default AntD props': PropTypes.object,
