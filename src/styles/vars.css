@@ -1032,14 +1032,6 @@
 
 
 
-  /* Collapse —————————————————————————————— Start */
-
-  --collapse-panel-border-radius: var(--border-radius-base);
-
-  /* Collapse —————————————————————————————— End */
-
-
-
   /* Dropdown —————————————————————————————— Start */
 
   --dropdown-menu-bg: var(--component-background);
@@ -1466,6 +1458,8 @@
 
 
   /* Collapse —————————————————————————————— Start */
+
+          --collapse-panel-border-radius: var(--border-radius-base);
 
   /* + */ --collapse-header-padding: var(--padding-sm) var(--padding-md);
   /* + */ --collapse-header-padding-extra: 40px;
