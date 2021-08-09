@@ -9,7 +9,8 @@ import {
   shadow,
   compose,
   system,
-  flexbox
+  flexbox,
+  position
 } from 'styled-system'
 import styled, { css } from 'styled-components'
 import { BREAKPOINTS, GUTTERS_MAP } from '../../../constants'
@@ -49,6 +50,7 @@ const BoxStyleProps = compose(
   border,
   shadow,
   flexbox,
+  position,
   system({
     cw: {
       property: 'width',
