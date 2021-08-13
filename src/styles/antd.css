@@ -8680,7 +8680,7 @@ span.ant-radio + * {
     var(--input-border-radius-base) 0;
 }
 .ant-radio-button-wrapper:first-child:last-child {
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
 }
 .ant-radio-button-wrapper:hover {
   position: relative;
@@ -8705,24 +8705,24 @@ span.ant-radio + * {
   border-color: var(--primary-color);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
-  background-color: var(--primary-color);
+  background-color: var(--radio-button-checked-bg);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
-  border-color: var(--primary-color);
+  border-color: var(--radio-button-border-color);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-  color: var(--primary-5);
-  border-color: var(--input-hover-border-color);
+  color: var(--radio-button-hover-color);
+  border-color: var(--radio-button-hover-border-color);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
-  background-color: var(--primary-5);
+  background-color: var(--radio-button-hover-bg);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
-  color: var(--primary-7);
-  border-color: var(--primary-7);
+  color: var(--radio-button-checked-active-color);
+  border-color: var(--radio-button-checked-active-border-color);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active::before {
-  background-color: var(--primary-7);
+  background-color: var(--radio-button-checked-active-bg);
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
   -webkit-box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
@@ -8818,7 +8818,7 @@ span.ant-radio + * {
   border-radius: 0 var(--border-width-base) var(--border-width-base) 0;
 }
 .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
-  border-right-color: var(--primary-5);
+  border-right-color: var(--primary-color);
 }
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:last-child {
   border-radius: var(--border-width-base) 0 0 var(--border-width-base);

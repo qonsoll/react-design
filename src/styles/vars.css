@@ -962,8 +962,11 @@
   --radio-button-bg: var(--btn-default-bg);
   --radio-button-checked-bg: var(--btn-default-bg);
   --radio-button-color: var(--btn-default-color);
-  --radio-button-hover-color: var(--primary-5);
-  --radio-button-active-color: var(--primary-7);
+  --radio-button-checked-color: var(--btn-default-color);
+  --radio-button-hover-bg: var(--primary-5);
+  --radio-button-checked-hover-bg: var(--primary-5);
+  --radio-button-active-bg: var(--primary-7);
+  --radio-button-checked-active-bg: var(--primary-7);
   --radio-disabled-button-checked-bg: rgba(0 0 0, 0.1);
   --radio-disabled-button-checked-color: var(--disabled-color);
   /* + */ --radio-wrapper-margin-right: 8px;
