@@ -1,47 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../../Box'
-// import Container from '../../Grid/Container'
-// import Row from '../../Grid/Row'
-// import Col from '../../Grid/Col'
 
 const Footer = (props) => {
-  const {
-    height,
-    // layout,
-    bg,
-    px,
-    position,
-    bottom
-  } = props
+  const { children, height, bg, px, ...rest } = props
 
   return (
     <Box
       flexBasis={height || 'var(--ql-footer-height)'}
       minHeight={height || 'var(--ql-footer-height)'}
       bg={bg || 'var(--ql-footer-background)'}
-      px={px || 'var(--ql-footer-desktop-px)'}
+      px={
+        px || [
+          'var(--ql-footer-px-xxs)',
+          'var(--ql-footer-px-xs)',
+          'var(--ql-footer-px-sm)',
+          'var(--ql-footer-px-md)',
+          'var(--ql-footer-px-lg)',
+          'var(--ql-footer-px-xl)',
+          'var(--ql-footer-px-xxl)',
+          'var(--ql-footer-px-xxxl)'
+        ]
+      }
       display='flex'
-      position={position}
-      bottom={bottom}
+      {...rest}
     >
-      Content
-      {/* <Container>
-        <Row height='100%'>
-          {layout.map(({ component, ...arg }, index) => (
-            <Col key={index} {...arg}>
-              {component}
-            </Col>
-          ))}
-        </Row>
-      </Container> */}
+      {children}
     </Box>
   )
 }
 
 Footer.propTypes = {
-  height: PropTypes.number,
-  layout: PropTypes.array
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
+  bg: PropTypes.string,
+  px: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array])
 }
 
 export default Footer

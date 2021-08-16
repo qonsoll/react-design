@@ -88,8 +88,8 @@
 
 
   /* Common */
-  --white: #fff;
-  --black: #000;
+  --white: #ffffff;
+  --black: #000000;
 
   /* Primary/Info */
   --blue-base: #1890ff;
@@ -325,7 +325,7 @@
   --code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   --font-variant-base: tabular-nums;
   --font-feature-settings-base: 'tnum';
-  --line-height-base: 1.5;
+  --line-height-base: var(--line-height-body1);
   --text-color: var(--gray-10);
   --text-color-secondary: var(--gray-8);
   --text-color-inverse: var(--white);
@@ -382,9 +382,25 @@
 
   /** ** ** Layout system config —————————————————————————————— Start ** ** **/
 
+  /* General —————————————————————————————— Start */
+
+  --ql-general-layout-px-xxs: 8px;     /* mobile (portrait): 0 - 576px */
+  --ql-general-layout-px-xs: 16px;     /* mobile (landscape): 576px - 768px */
+  --ql-general-layout-px-sm: 16px;     /* tablet (portrait): 768px - 1024px */
+  --ql-general-layout-px-md: 32px;     /* tablet (landscape): 1024px - 1280px */
+  --ql-general-layout-px-lg: 32px;     /* desktop: 1280px - 1440px */
+  --ql-general-layout-px-xl: 48px;     /* desktop: 1440px - 1680px */
+  --ql-general-layout-px-xxl: 64px;    /* desktop: 1690px - 1920px */
+  --ql-general-layout-px-xxxl: 64px;   /* desktop: over 1920px */
+
+  /* General —————————————————————————————— End */
+
+
+
   /* Layout —————————————————————————————— Start */
 
-  --ql-layout-background: #f4f5fe;
+  /* --ql-layout-background: #4c4c4c; */
+  --ql-layout-background: var(--white);
 
   /* Layout —————————————————————————————— End */
 
@@ -393,10 +409,18 @@
   /* Header —————————————————————————————— Start */
 
   --ql-header-height: 56px;
-  --ql-header-background: #272247;
-  --ql-header-shadow: none;
+  --ql-header-background: var(--white);
+  --ql-header-shadow: 0 8px 16px 0 rgba(0 0 0 / 10%);
+  --ql-header-z-index: 1;
 
-  --ql-header-desktop-px: 40px;
+  --ql-header-px-xxs: var(--ql-general-layout-px-xxs);
+  --ql-header-px-xs: var(--ql-general-layout-px-xs);
+  --ql-header-px-sm: var(--ql-general-layout-px-sm);
+  --ql-header-px-md: var(--ql-general-layout-px-md);
+  --ql-header-px-lg: var(--ql-general-layout-px-lg);
+  --ql-header-px-xl: var(--ql-general-layout-px-xl);
+  --ql-header-px-xxl: var(--ql-general-layout-px-xxl);
+  --ql-header-px-xxxl: var(--ql-general-layout-px-xxxl);
 
   /* Header —————————————————————————————— End */
 
@@ -406,8 +430,11 @@
 
   --ql-aside-width: 280px;
   --ql-aside-collapsed-width: 104px;
-  --ql-aside-max-height: 100vh; /* calc(100vh - var(--ql-header-height)) */
-  --ql-aside-background: #ecedf6;
+  --ql-aside-max-height: 100vh;
+  --ql-aside-background: #fff;
+  --ql-aside-border-width: 1px;
+  --ql-aside-border-left: var(--ql-aside-border-width) solid #f2f2f2;
+  --ql-aside-border-right: var(--ql-aside-border-width) solid #f2f2f2;
   --ql-aside-padding: 40px 0;
 
   /* Aside —————————————————————————————— End */
@@ -420,7 +447,18 @@
   --ql-content-max-height-with-header: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-header-height));
   --ql-content-max-height-with-footer: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-footer-height));
   --ql-content-max-height-with-header-footer: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-header-height) - var(--ql-footer-height));
-  --ql-content-padding: 48px 40px;
+
+  --ql-content-py: 32px;
+  --ql-content-py2: 129px;
+
+  --ql-content-px-xxs: var(--ql-general-layout-px-xxs);
+  --ql-content-px-xs: var(--ql-general-layout-px-xs);
+  --ql-content-px-sm: var(--ql-general-layout-px-sm);
+  --ql-content-px-md: var(--ql-general-layout-px-md);
+  --ql-content-px-lg: var(--ql-general-layout-px-lg);
+  --ql-content-px-xl: var(--ql-general-layout-px-xl);
+  --ql-content-px-xxl: var(--ql-general-layout-px-xxl);
+  --ql-content-px-xxxl: var(--ql-general-layout-px-xxxl);
 
   /* Content —————————————————————————————— End */
 
@@ -429,8 +467,17 @@
   /* Footer —————————————————————————————— Start */
 
   --ql-footer-height: 40px;
-  --ql-footer-background: #4c4c4c;
+  --ql-footer-background: #f1f1f1;
   --ql-footer-desktop-px: 40px;
+
+  --ql-footer-px-xxs: var(--ql-general-layout-px-xxs);
+  --ql-footer-px-xs: var(--ql-general-layout-px-xs);
+  --ql-footer-px-sm: var(--ql-general-layout-px-sm);
+  --ql-footer-px-md: var(--ql-general-layout-px-md);
+  --ql-footer-px-lg: var(--ql-general-layout-px-lg);
+  --ql-footer-px-xl: var(--ql-general-layout-px-xl);
+  --ql-footer-px-xxl: var(--ql-general-layout-px-xxl);
+  --ql-footer-px-xxxl: var(--ql-general-layout-px-xxxl);
 
   /* Footer —————————————————————————————— End */
 
@@ -709,35 +756,53 @@
 
   /* Menu —————————————————————————————— Start */
 
-  --ql-menu-bg: transparent;
-  --ql-menu-horizontal-height: 56px;
-  --ql-menu-horizontal-border-bottom: unset;
-
-  --menu-inline-toplevel-item-height: 40px;
-  /* + */ --menu-item-height: 40px;
-  --menu-item-group-height: var(--line-height-base);
-  /* + */ --menu-collapsed-width: 80px;
   /* + */ --menu-bg: transparent;
-  --menu-popup-bg: var(--component-background);
-  /* + */ --menu-item-color: var(--text-color);
-  --menu-inline-submenu-bg: var(--background-color-light);
-  --menu-highlight-color: var(--primary-color);
-  --menu-highlight-danger-color: var(--error-color);
+  /* + */ --menu-padding: var(--padding-xs) 0;
+  /* + */ --menu-highlight-color: var(--primary-color);
+  /* + */ --menu-highlight-danger-color: var(--error-color);
+
+  /* + */ --menu-inline-collapsed-width: calc(var(--ql-aside-collapsed-width) - var(--ql-aside-border-width));
+  /* + */ --menu-inline-submenu-bg: var(--gray-2);
+
+  /* + */ --menu-horizontal-height: var(--ql-header-height);
+  /* + */ --menu-horizontal-border-bottom: unset;
+
+  /* + */ --menu-horizontal-main-item-spacing: 0 0;
+  /* + */ --menu-horizontal-main-item-padding: 0 16px;
+  /* + */ --menu-horizontal-main-item-color-hover: var(--menu-highlight-color);
+  /* + */ --menu-horizontal-main-item-box-shadow-hover: inset 0 -2px var(--menu-highlight-color);
+  /* + */ --menu-horizontal-main-item-danger-color-hover: var(--menu-highlight-danger-color);
+  /* + */ --menu-horizontal-main-item-danger-box-shadow-hover: inset 0 -2px var(--menu-highlight-danger-color);
+
+  /* + */ --menu-item-height: 48px;
+  /* + */ --menu-item-font-size: var(--font-size-base);
+  /* + */ --menu-item-line-height: var(--line-height-base);
+  /* + */ --menu-item-color: var(--text-color-secondary);
+  /* + */ --menu-item-padding: calc((var(--menu-item-height) - var(--line-height-base)) / 2) 20px;
+  /* + */ --menu-item-vertical-margin: 0;
+  /* + */ --menu-item-boundary-margin: 0;
+  /* + */ --menu-item-icon-size: var(--menu-item-font-size);
+  /* + */ --menu-item-icon-margin-right: 10px;
   /* + */ --menu-item-active-bg: var(--primary-1);
   /* + */ --menu-item-active-danger-bg: var(--red-1);
+  /* + */ --menu-item-active-border-right: 3px solid var(--menu-highlight-color);
+  
+  /* + */ --menu-submenu-bg: var(--component-background);
+  /* + */ --menu-submenu-border-radius: var(--border-radius-sm);
+  
+  /* + */ --menu-group-title-font-size: var(--font-size-caption1);
+  /* + */ --menu-group-title-line-height: var(--line-height-caption1);
+  /* + */ --menu-group-title-font-weight: var(--font-weight-medium);
+  /* + */ --menu-group-title-letter-spacing: var(--letter-spacing-default);
+  /* + */ --menu-group-title-text-transform: uppercase;
+  /* + */ --menu-group-title-color: var(--disabled-color);
+  /* + */ --menu-group-title-padding: var(--menu-item-padding);
+  
+  --menu-item-group-height: var(--line-height-base);
   --menu-item-active-border-width: 3px;
-  --menu-item-group-title-color: var(--text-color-secondary);
-  /* + */ --menu-item-vertical-margin: 4px;
-  --menu-item-font-size: var(--font-size-base);
-  --menu-item-boundary-margin: 8px;
-  --menu-item-padding: 0 20px;
-  --menu-horizontal-line-height: var(--ql-menu-horizontal-height);
-  --menu-icon-margin-right: 10px;
-  --menu-icon-size: var(--menu-item-font-size);
-  --menu-icon-size-lg: var(--font-size-lg);
-  --menu-item-group-title-font-size: var(--menu-item-font-size);
+  --menu-inline-toplevel-item-height: 40px;
 
-  --menu-dark-color: var(--text-color-secondary-dark);
+  /* --menu-dark-color: var(--text-color-secondary-dark);
   --menu-dark-danger-color: var(--error-color);
   --menu-dark-bg: var(--ql-menu-bg);
   --menu-dark-arrow-color: var(--white);
@@ -747,7 +812,7 @@
   --menu-dark-item-active-danger-bg: var(--error-color);
   --menu-dark-selected-item-icon-color: var(--white);
   --menu-dark-selected-item-text-color: var(--white);
-  --menu-dark-item-hover-bg: transparent;
+  --menu-dark-item-hover-bg: transparent; */
 
   /* Menu —————————————————————————————— End */
 
@@ -828,27 +893,6 @@
   /* + */ --link-focus-outline: 0;
 
   /* Link —————————————————————————————— End */
-
-
-
-  /* Animation —————————————————————————————— Start */
-
-  /* + */ --ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);
-  --ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7);
-  /* + */ --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  /* + */ --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
-  /* + */ --ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
-  /* + */ --ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
-  --ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
-  /* + */ --ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
-  /* + */ --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
-  /* + */ --ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
-  /* + */ --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
-  /* + */ --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
-
-  /* Animation —————————————————————————————— End */
 
 
 
@@ -935,8 +979,52 @@
 
   /* Dropdown —————————————————————————————— Start */
 
+  /* + */ --dropdown-menu-bg: var(--component-background);
+  /* + */ --dropdown-menu-border-radius: var(--border-radius-sm);
+  /* + */ --dropdown-menu-shadow: var(--box-shadow-base);
+  /* + */ --dropdown-menu-padding: var(--padding-xs) 0;
+
+  --dropdown-edge-child-vertical-padding: 4px;
+
+  /* + */ --dropdown-item-font-size: var(--font-size-base);
+  /* + */ --dropdown-item-line-height: var(--line-height-base);
+  /* + */ --dropdown-item-font-weight: var(--font-weight-regular);
+  /* + */ --dropdown-item-color: var(--text-color-secondary);
+
+  /* + */ --dropdown-item-padding: 8px 20px;
+
+  /* + */ --dropdown-item-margin-bottom: 0;
+  /* + */ --dropdown-item-margin-bottom-last-child: 0;
+
+  /* + */ --dropdown-item-border-radius: unset;
+  /* + */ --dropdown-item-border-radius-first-child: unset;
+  /* + */ --dropdown-item-border-radius-last-child: unset;
+
+  /* + */ --dropdown-item-icon-size: var(--font-size-base);
+  /* + */ --dropdown-item-icon-margin-right: 16px;
+
+  /* + */ --dropdown-item-default-bg-hover: var(--gray-3);
+
+  /* + */ --dropdown-item-danger-color: var(--error-color);
+  /* + */ --dropdown-item-danger-color-hover: var(--error-color);
+  /* + */ --dropdown-item-danger-bg-hover: var(--error-1);
+
+  /* + */ --dropdown-item-disabled-color: var(--disabled-color);
+  /* + */ --dropdown-item-disabled-bg: var(--component-background);
+
   /* + */ --dropdown-selected-color: var(--primary-color);
-  /* + */ --dropdown-menu-submenu-disabled-bg: var(--component-background);
+
+  /* + */ --dropdown-group-margin: 0 0 0 20px;
+
+  /* + */ --dropdown-group-title-font-size: var(--menu-group-title-font-size);
+  /* + */ --dropdown-group-title-line-height: var(--menu-group-title-line-height);
+  /* + */ --dropdown-group-title-font-weight: var(--menu-group-title-font-weight);
+  /* + */ --dropdown-group-title-letter-spacing: var(--menu-group-title-letter-spacing);
+  /* + */ --dropdown-group-title-text-transform: var(--menu-group-title-text-transform);
+  /* + */ --dropdown-group-title-color: var(--menu-group-title-color);
+  /* + */ --dropdown-group-title-padding: var(--dropdown-item-padding);
+
+  /* + */ --dropdown-group-item-border-radius: 20px 0 0 20px;
 
   /* Dropdown —————————————————————————————— End */
 
@@ -1025,25 +1113,52 @@
 
 
 
-  /* Animation —————————————————————————————— Start */
+  /* Animation duration —————————————————————————————— Start */
 
   /* + */ --animation-duration-slow: 0.3s;
   /* + */ --animation-duration-base: 0.2s;
   /* + */ --animation-duration-fast: 0.1s;
 
-  /* Animation —————————————————————————————— End */
+  /* Animation duration —————————————————————————————— End */
 
 
 
-  /* Dropdown —————————————————————————————— Start */
+  /* Animation type (cubic-bezier) —————————————————————————————— Start */
 
-  --dropdown-menu-bg: var(--component-background);
-  --dropdown-vertical-padding: 5px;
-  --dropdown-edge-child-vertical-padding: 4px;
-  /* + */ --dropdown-font-size: var(--font-size-base);
-  /* + */ --dropdown-line-height: 22px;
+  /* + */ --ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);
+  --ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7);
+  /* + */ --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  /* + */ --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* + */ --ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  /* + */ --ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+  --ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+  /* + */ --ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+  /* + */ --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  /* + */ --ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  /* + */ --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  /* + */ --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
-  /* Dropdown —————————————————————————————— End */
+  /* Animation type (cubic-bezier) —————————————————————————————— End */
+
+
+
+  /* Transition —————————————————————————————— Start */
+
+  --ql-transition-all-slow-in-out: all var(--animation-duration-slow) var(--ease-in-out);
+  --ql-transition-all-default-in-out: all var(--animation-duration-base) var(--ease-in-out);
+  --ql-transition-all-fast-in-out: all var(--animation-duration-fast) var(--ease-in-out);
+
+  /* Transition —————————————————————————————— End */
+
+
+
+  /* Collapse —————————————————————————————— Start */
+
+  --collapse-panel-border-radius: var(--border-radius-base);
+
+  /* Collapse —————————————————————————————— End */
 
 
 
@@ -1634,4 +1749,18 @@
   /* + */ --image-preview-operation-disabled-color: rgba(255, 255, 255, 0.25);
 
   /* Image —————————————————————————————— End */
+
+
+
+  /* Account —————————————————————————————— Start */
+
+    --ql-account-height: var(--ql-header-height);
+    --ql-account-color: var(--text-color-secondary);
+    --ql-account-transition: var(--ql-transition-all-default-in-out);
+    --ql-account-avatar-box-shadow: inset 0 0 0 1px var(--gray-5);
+    
+    --ql-account-color-hover: var(--text-color);
+    --ql-account-avatar-box-shadow-hover: inset 0 0 0 2px var(--gray-10);
+
+  /* Account —————————————————————————————— End */
 }

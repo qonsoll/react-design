@@ -38,7 +38,7 @@ const StyledMenuItem = styled(AntMenu.Item)(
 )
 
 const MenuItem = (props) => {
-  return <StyledMenuItem {...props} />
+  return <StyledMenuItem key={props.key1} {...props} />
 }
 
 MenuItem.propTypes = {

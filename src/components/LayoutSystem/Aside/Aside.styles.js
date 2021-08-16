@@ -21,6 +21,8 @@ const buildAsideLayoutStyles = ({
       : 'var(--ql-aside-width)',
     maxHeight: maxHeight || 'var(--ql-aside-max-height)',
     bg: 'var(--ql-aside-background)',
+    borderLeft: isAsideRight && 'var(--ql-aside-border-left)',
+    borderRight: isAsideLeft && 'var(--ql-aside-border-right)',
     p: p || 'var(--ql-aside-padding)',
     overflow: 'auto',
     wordBreak: 'break-word',

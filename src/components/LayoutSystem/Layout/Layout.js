@@ -61,7 +61,7 @@ const Layout = (props) => {
   return (
     <BaseLayout
       direction={isOuterLayoutExists ? 'row' : 'column'}
-      bg={layoutBg}
+      bg={layoutBg || 'var(--ql-layout-background)'}
     >
       {isOuterLayoutExists ? (
         <>
@@ -94,10 +94,6 @@ Layout.propTypes = {
   header: PropTypes.node,
   asideLeft: PropTypes.node,
   asideRight: PropTypes.node,
-  asideLeftOuter: PropTypes.bool,
-  asideRightOuter: PropTypes.bool,
-  isAsideLeftCollapsed: PropTypes.bool,
-  isAsideRightCollapsed: PropTypes.bool,
   footer: PropTypes.node
 }
 

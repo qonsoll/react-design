@@ -63,20 +63,6 @@ const AsideLayout = (props) => {
   )
 }
 
-/** 
- * Aside props
-  side,
-  isHeaderExists,
-  isFooterExists,
-  width,
-  maxHeight,
-  bg,
-  p,
-  collapse,
-  collapseVariant,
-  overlay
- */
-
 const Aside = (props) => {
   const { children, asideToggleBtn, drawer, onClose, ...rest } = props
 
@@ -94,11 +80,10 @@ const Aside = (props) => {
 }
 
 Aside.propTypes = {
-  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   collapse: PropTypes.bool,
-  maxHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  bg: PropTypes.string,
-  p: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  drawer: PropTypes.bool,
+  onClose: PropTypes.func,
+  asideToggleBtn: PropTypes.node
 }
 
 export default Aside
