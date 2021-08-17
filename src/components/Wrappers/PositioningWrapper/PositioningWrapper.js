@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../../Box'
 import Back from '../../Actions/Back'
+import { Breadcrumb } from 'antd'
 
 const PositioningWrapper = (props) => {
   const {
@@ -11,7 +12,8 @@ const PositioningWrapper = (props) => {
     onBack,
     backBtnProps,
     divided,
-    isBottomSticky
+    isBottomSticky,
+    breadcrumb
   } = props
 
   return (
@@ -23,8 +25,13 @@ const PositioningWrapper = (props) => {
       // minHeight='fit-content'
     >
       {onBack && (
-        <Box mb={[2, 2, 2, 0, 0]}>
+        <Box mb={[2, 2, 2, 0, 0]} display='flex' alignItems='center'>
           <Back onClick={onBack} {...backBtnProps} divided={divided} />
+          {breadcrumb && (
+            <Breadcrumb {...breadcrumb?.props}>
+              {breadcrumb?.children}
+            </Breadcrumb>
+          )}
         </Box>
       )}
       <Box
@@ -54,7 +61,8 @@ PositioningWrapper.propTypes = {
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
-  isBottomSticky: PropTypes.bool
+  isBottomSticky: PropTypes.bool,
+  breadcrumb: PropTypes.object
 }
 
 export default PositioningWrapper

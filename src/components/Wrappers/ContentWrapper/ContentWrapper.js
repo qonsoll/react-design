@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Box from '../../Box'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
 import Back from '../../Actions/Back'
+import { Breadcrumb } from 'antd'
 
 const ContentWrapperTest = (props) => {
   const {
@@ -13,7 +14,8 @@ const ContentWrapperTest = (props) => {
     action,
     onBack,
     backBtnProps,
-    divided
+    divided,
+    breadcrumb
   } = props
 
   const DEFAULT_PROPS = {
@@ -47,13 +49,21 @@ const ContentWrapperTest = (props) => {
             justifyContent={
               onBack || action || !alignMiddle ? 'flex-start' : 'center'
             }
+            flexDirection={breadcrumb ? 'column' : 'row'}
           >
             {onBack && (
-              <Back
-                onClick={onBack}
-                {...backBtnProps}
-                divided={divided !== undefined ? divided : true}
-              />
+              <Box display='flex' alignItems='center'>
+                <Back
+                  onClick={onBack}
+                  {...backBtnProps}
+                  divided={divided !== undefined ? divided : true}
+                />
+                {breadcrumb && (
+                  <Breadcrumb {...breadcrumb?.props}>
+                    {breadcrumb?.children}
+                  </Breadcrumb>
+                )}
+              </Box>
             )}
             <HeadingPrimary {...headingProps} />
           </Box>
@@ -75,7 +85,8 @@ ContentWrapperTest.propTypes = {
   onBack: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
-  alignMiddle: PropTypes.bool
+  alignMiddle: PropTypes.bool,
+  breadcrumb: PropTypes.object
 }
 
 export default ContentWrapperTest

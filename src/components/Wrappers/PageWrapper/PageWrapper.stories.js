@@ -32,6 +32,11 @@ export default {
     divided: {
       description: 'Use to place divider between back button and title.'
     },
+    breadcrumb: {
+      description: `Use to add breadcrumb near back button,
+      contain 2 properties: "props" (all properties of AntDesign Breadcrumb component)
+      and "children" (breadcrumb items)`
+    },
     graphicProps: {
       description:
         'Properties for graphic component. Read documentation above.',
