@@ -8825,6 +8825,10 @@ span.ant-radio + * {
   border-radius: 0 var(--border-width-base) var(--border-width-base) 0;
 }
 .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+  border-right-color: var(--radio-button-checked-border-color);
+}
+
+.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child:hover {
   border-right-color: var(--radio-button-checked-hover-border-color);
 }
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:last-child {
