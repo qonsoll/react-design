@@ -51,6 +51,8 @@ import AppHeaderWrapper from './components/Wrappers/AppHeaderWrapper'
 import Navigation from './components/Navigation'
 import NavigationItem from './components/NavigationItem'
 import Icon from './components/Icon'
+import Account from './components/Account'
+import { LayoutSystemProvider } from './components/LayoutSystem/LayoutSystem'
 
 export {
   LayoutOld,
@@ -105,7 +107,9 @@ export {
   Button,
   Navigation,
   NavigationItem,
-  Icon
+  Icon,
+  Account,
+  LayoutSystemProvider
 }
 
 export default {
@@ -160,5 +164,7 @@ export default {
   Button,
   Navigation,
   NavigationItem,
-  Icon
+  Icon,
+  Account,
+  LayoutSystemProvider
 }

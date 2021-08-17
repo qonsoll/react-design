@@ -18,11 +18,23 @@ const Header = (props) => {
     <Box
       flexBasis={height || 'var(--ql-header-height)'}
       minHeight={height || 'var(--ql-header-height)'}
-      bg={bg || 'var(--ql-header-background)'}
-      px={px || 'var(--ql-header-desktop-px)'}
+      background={bg || 'var(--ql-header-background)'}
+      px={
+        px || [
+          'var(--ql-header-px-xxs)',
+          'var(--ql-header-px-xs)',
+          'var(--ql-header-px-sm)',
+          'var(--ql-header-px-md)',
+          'var(--ql-header-px-lg)',
+          'var(--ql-header-px-xl)',
+          'var(--ql-header-px-xxl)',
+          'var(--ql-header-px-xxxl)'
+        ]
+      }
       boxShadow={shadow || 'var(--ql-header-shadow)'}
       display='flex'
       alignItems='center'
+      zIndex='var(--ql-header-z-index)'
       {...rest}
     >
       {asideToggleBtnLeft}
@@ -33,10 +45,20 @@ const Header = (props) => {
 }
 
 Header.propTypes = {
-  height: PropTypes.number,
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
   bg: PropTypes.string,
-  px: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  shadow: PropTypes.string
+  px: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
+  shadow: PropTypes.string,
+  asideToggleBtnLeft: PropTypes.node,
+  asideToggleBtnRight: PropTypes.node
 }
 
 export default Header

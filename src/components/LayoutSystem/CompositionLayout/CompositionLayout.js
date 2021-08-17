@@ -10,11 +10,12 @@ const CompositionLayout = (props) => {
   const {
     isHeaderSticky,
     isFooterSticky,
-    contentPadding,
     ml,
     mr,
     asideLeftNotOuterExists,
-    asideRightNotOuterExists
+    asideRightNotOuterExists,
+    contentVerticalPadding,
+    contentHorizontalPadding
   } = LayoutSystemConfig
 
   return (
@@ -31,7 +32,19 @@ const CompositionLayout = (props) => {
 
         <Box
           flexGrow={1}
-          p={contentPadding || 'var(--ql-content-padding)'}
+          py={contentVerticalPadding || 'var(--ql-content-py)'}
+          px={
+            contentHorizontalPadding || [
+              'var(--ql-content-px-xxs)',
+              'var(--ql-content-px-xs)',
+              'var(--ql-content-px-sm)',
+              'var(--ql-content-px-md)',
+              'var(--ql-content-px-lg)',
+              'var(--ql-content-px-xl)',
+              'var(--ql-content-px-xxl)',
+              'var(--ql-content-px-xxxl)'
+            ]
+          }
           ml={ml}
           mr={mr}
         >

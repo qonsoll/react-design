@@ -6,15 +6,28 @@ export default {
   component: Header,
   argTypes: {
     height: {
-      description: 'Use to specify Header height.'
+      description: 'Use to override default Header height.'
     },
     bg: {
-      description: 'Use to specify Header background color.'
+      description: 'Use to override default Header background color.'
+    },
+    px: {
+      description: 'Use to override default Header padding.'
     },
     shadow: {
-      description: 'Use to specify Header shadow.'
+      description: 'Use to override default Header shadow.'
+    },
+    asideToggleBtnLeft: {
+      description: 'Use to insert component which will control left aside.'
+    },
+    asideToggleBtnRight: {
+      description: 'Use to insert component which will control right aside.'
+    },
+    'Any other Box properties': {
+      description:
+        'Set any other properties (accepted by the Box) to change the default settings.'
     }
   }
 }
 
-export const Template = (args) => <Header />
+export const Template = (args) => <Header>This is header</Header>

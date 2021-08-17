@@ -1,6 +1,6 @@
 {
   "name": "@qonsoll/react-design",
-  "version": "2.0.91",
+  "version": "2.0.96",
   "description": "React-components and design system for enterprise-level products.",
   "author": "qonsoll",
   "license": "MIT",
@@ -60,7 +60,7 @@
     "@storybook/addon-links": "^6.1.11",
     "@storybook/react": "^6.2.9",
     "@storybook/storybook-deployer": "^2.8.7",
-    "antd": "^4.5.1",
+    "antd": "^4.16.10",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.2",
