@@ -33,7 +33,8 @@ const buildAsideLayoutStyles = ({
       isNotCollapsedOverlay && isFooterExists ? 'var(--ql-footer-height)' : 0,
     left: isNotCollapsedOverlay && isAsideLeft && 0,
     right: isNotCollapsedOverlay && isAsideRight && 0,
-    zIndex: isNotCollapsedOverlay && 'var(--ql-zindex-drawer)'
+    zIndex: isNotCollapsedOverlay && 'var(--ql-zindex-drawer)',
+    boxShadow: 'var(--ql-aside-shadow)'
   }
 }
 

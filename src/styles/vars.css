@@ -432,10 +432,11 @@
   --ql-aside-collapsed-width: 104px;
   --ql-aside-max-height: 100vh;
   --ql-aside-background: #fff;
+  --ql-aside-padding: 40px 0;
   --ql-aside-border-width: 1px;
   --ql-aside-border-left: var(--ql-aside-border-width) solid #f2f2f2;
   --ql-aside-border-right: var(--ql-aside-border-width) solid #f2f2f2;
-  --ql-aside-padding: 40px 0;
+  --ql-aside-shadow: 0 4px 16px 0 #000;
 
   /* Aside —————————————————————————————— End */
 
