@@ -436,7 +436,7 @@
   --ql-aside-border-width: 1px;
   --ql-aside-border-left: var(--ql-aside-border-width) solid #f2f2f2;
   --ql-aside-border-right: var(--ql-aside-border-width) solid #f2f2f2;
-  --ql-aside-shadow: 0 4px 16px 0 #000;
+  --ql-aside-shadow: 0 4px 16px 0 #000000;
 
   /* Aside —————————————————————————————— End */
 
