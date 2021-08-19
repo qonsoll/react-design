@@ -604,6 +604,9 @@
   /* + */ --btn-default-color: var(--text-color);
   /* + */ --btn-default-bg: transparent;
   /* + */ --btn-default-border: var(--btn-border-color);
+  /* + */ --btn-default-hover-bg: var(--blue-6);
+  /* + */ --btn-default-hover-color: var(--white);
+  /* + */ --btn-default-hover-border: var(--input-hover-border-color);
 
   /* + */ --btn-primary-color: var(--white);
   /* + */ --btn-primary-bg: var(--primary-color);
@@ -622,7 +625,6 @@
   /* + */ --btn-white-bg: var(--white);
   /* + */ --btn-white-border: var(--white);
   /* + */ --btn-white-shadow: var(--btn-shadow);
-  /* + */ --btn-text-hover-color: var(--text-color);
   /* + */ --btn-white-hover-bg: var(--btn-white-bg);
   /* + */ --btn-white-hover-border: var(--btn-white-border);
 
@@ -630,6 +632,7 @@
   /* + */ --btn-text-bg: transparent;
   /* + */ --btn-text-border: transparent;
   /* + */ --btn-text-shadow: var(--btn-shadow);
+  /* + */ --btn-text-hover-color: var(--text-color);
   /* + */ --btn-text-hover-bg: var(--gray-1);
 
   /* + */ --btn-default-ghost-color: var(--white);
@@ -750,6 +753,7 @@
   /* + */ --list-item-meta-title-margin-bottom: var(--padding-sm);
   /* + */--list-item-meta-description-font-size: var(--font-size-base);
   --list-customize-card-bg: var(--component-background);
+  --list-item-border-color: var(--gray-4)
 
   /* List —————————————————————————————— End */
 

@@ -5060,7 +5060,7 @@ html {
 .ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
 .ant-menu-light .ant-menu-submenu-active,
 .ant-menu-light .ant-menu-submenu-title:hover {
-  color: #1890ff;
+  color: var(--primary-color);
 }
 .ant-menu.ant-menu-dark,
 .ant-menu-dark .ant-menu-sub,
@@ -6346,9 +6346,9 @@ html {
 }
 .ant-btn:hover,
 .ant-btn:focus {
-  color: var(--primary-5);
-  background: var(--white);
-  border-color: var(--input-hover-border-color);
+  color: var(--btn-default-hover-color);
+  background: var(--btn-default-hover-bg);
+  border-color: var(--btn-primary-hover-border);
 }
 .ant-btn:hover > a:only-child,
 .ant-btn:focus > a:only-child {
@@ -21895,7 +21895,7 @@ textarea.ant-input-number {
   width: 1px;
   height: 14px;
   margin-top: -7px;
-  background-color: var(--gray-4);
+  background-color: var(--list-item-border-color);
 }
 .ant-list-header {
   background: var(--list-header-background);
@@ -21915,16 +21915,16 @@ textarea.ant-input-number {
   text-align: center;
 }
 .ant-list-split .ant-list-item {
-  border-bottom: 1px solid var(--gray-4);
+  border-bottom: var(--border-width-base) var(--border-style-base) var(--list-item-border-color);
 }
 .ant-list-split .ant-list-item:last-child {
   border-bottom: none;
 }
 .ant-list-split .ant-list-header {
-  border-bottom: 1px solid var(--gray-4);
+  border-bottom: var(--border-width-base) var(--border-style-base) var(--list-item-border-color);
 }
 .ant-list-split.ant-list-empty .ant-list-footer {
-  border-top: 1px solid var(--gray-4);
+  border-top: var(--border-width-base) var(--border-style-base) var(--list-item-border-color);
 }
 .ant-list-loading .ant-list-spin-nested-loading {
   min-height: 32px;
@@ -21933,7 +21933,7 @@ textarea.ant-input-number {
   .ant-spin-container
   > .ant-list-items
   > .ant-list-item:last-child {
-  border-bottom: 1px solid var(--gray-4);
+  border-bottom: var(--border-width-base) var(--border-style-base) var(--list-item-border-color);
 }
 .ant-list-lg .ant-list-item {
   padding: var(--list-item-padding-lg);
@@ -21990,7 +21990,7 @@ textarea.ant-input-number {
 }
 .ant-list-bordered {
   border: 1px solid var(--gray-5);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--border-radius-base);
 }
 .ant-list-bordered .ant-list-header {
   padding-right: 24px;
