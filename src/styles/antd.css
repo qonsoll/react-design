@@ -2432,7 +2432,7 @@ html {
   padding-right: 18px;
 }
 .ant-select-single.ant-select-open .ant-select-selection-item {
-  color: var(--text-color-secondary-dark);
+  color: var(--select-open-selection-item-color);
 }
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
   width: 100%;
@@ -2980,11 +2980,11 @@ html {
   z-index: var(--zindex-dropdown);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: var(--padding-xxs) 0;
+  padding: var(--select-dropdown-vertical-padding) 0;
   overflow: hidden;
   font-size: var(--font-size-sm);
   font-variant: initial;
-  background-color: var(--white);
+  background-color: var(--select-dropdown-bg);
   border-radius: var(--border-radius-base);
   outline: none;
   -webkit-box-shadow: var(--box-shadow-base);
@@ -3061,12 +3061,12 @@ html {
   flex: none;
 }
 .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-  background-color: var(--gray-3);
+  background-color: var(--select-item-hover);
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-  color: var(--text-color);
+  color: var(--select-item-selected-color);
   font-weight: var(--select-item-selected-font-weight);
-  background-color: var(--primary-1);
+  background-color: var(--select-item-selected-bg);
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
   .ant-select-item-option-state {
@@ -3483,8 +3483,8 @@ html {
 .ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
   bottom: 6.2px;
   border-top-color: transparent;
-  border-right-color: var(--white);
-  border-bottom-color: var(--white);
+  border-right-color: var(--popover-arrow-color);
+  border-bottom-color: var(--popover-arrow-color);
   border-left-color: transparent;
   -webkit-box-shadow: 3px 3px 7px var(--box-shadow-color-dropdown-arrow);
   box-shadow: 3px 3px 7px var(--box-shadow-color-dropdown-arrow);
@@ -3506,8 +3506,8 @@ html {
   left: 6px;
   border-top-color: transparent;
   border-right-color: transparent;
-  border-bottom-color: var(--white);
-  border-left-color: var(--white);
+  border-bottom-color: var(--popover-arrow-color);
+  border-left-color: var(--popover-arrow-color);
   -webkit-box-shadow: -3px 3px 7px var(--box-shadow-color-dropdown-arrow);
   box-shadow: -3px 3px 7px var(--box-shadow-color-dropdown-arrow);
 }
@@ -3526,10 +3526,10 @@ html {
 .ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
   top: 6px;
-  border-top-color: var(--white);
+  border-top-color: var(--popover-arrow-color);
   border-right-color: transparent;
   border-bottom-color: transparent;
-  border-left-color: var(--white);
+  border-left-color: var(--popover-arrow-color);
   -webkit-box-shadow: -2px -2px 5px var(--box-shadow-color-dropdown-arrow);
   box-shadow: -2px -2px 5px var(--box-shadow-color-dropdown-arrow);
 }
@@ -3548,8 +3548,8 @@ html {
 .ant-popover-placement-leftTop > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-leftBottom > .ant-popover-content > .ant-popover-arrow {
   right: 6px;
-  border-top-color: var(--white);
-  border-right-color: var(--white);
+  border-top-color: var(--popover-arrow-color);
+  border-right-color: var(--popover-arrow-color);
   border-bottom-color: transparent;
   border-left-color: transparent;
   -webkit-box-shadow: 3px -3px 7px var(--box-shadow-color-dropdown-arrow);
@@ -6414,7 +6414,7 @@ html {
 .ant-btn:focus,
 .ant-btn:active {
   text-decoration: none;
-  background: var(--white);
+  background: var(--btn-default-hover-bg);
 }
 .ant-btn > span {
   display: inline-block;

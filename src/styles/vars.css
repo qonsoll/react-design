@@ -706,10 +706,11 @@
   /* Select —————————————————————————————— Start */
 
   --select-border-color: var(--border-color-base);
+  --select-item-hover: var(--gray-3);
   --select-item-selected-color: var(--text-color);
   --select-item-selected-font-weight: 600;
-  --select-dropdown-bg: var(--component-background);
   --select-item-selected-bg: var(--primary-4);
+  --select-dropdown-bg: var(--component-background);
   --select-item-active-bg: var(--item-hover-bg);
   --select-dropdown-vertical-padding: var(--dropdown-vertical-padding);
   --select-dropdown-font-size: var(--dropdown-font-size);
@@ -717,6 +718,7 @@
   --select-dropdown-height: 32px;
   --select-background: var(--gray-1);
   --select-clear-background: var(--select-background);
+  --select-open-selection-item-color: var(--text-color-secondary-dark);
   --select-selection-item-bg: var(--gray-2);
   --select-selection-item-border-color: var(--border-color-split);
   --select-single-item-height-lg: var(--height-lg);
