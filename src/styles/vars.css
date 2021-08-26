@@ -1285,6 +1285,7 @@
 
   /* Table */
   --table-bg: var(--component-background);
+  --table-hover-bg: var(--component-background);
   --table-header-bg: var(--background-color-light);
   --table-header-color: var(--heading-color);
   --table-header-sort-bg: var(--background-color-base);
@@ -1292,6 +1293,7 @@
   --table-row-hover-bg: var(--background-color-light);
   --table-selected-row-color: inherit;
   --table-selected-row-bg: var(--primary-1);
+  --table-selected-row-hover-bg: var(--primary-1);
   --table-body-selected-sort-bg: var(--table-selected-row-bg);
   /* --table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%); */
   --table-expanded-row-bg: #fbfbfb;
@@ -1468,6 +1470,7 @@
   /* + */ --avatar-group-overlapping: -8px;
   /* + */ --avatar-group-space: 3px;
   /* + */ --avatar-group-border-color: var(--white);
+  /* + */ --avatar-group-border-width: 2px;
 
   /* Avatar —————————————————————————————— End */
 
