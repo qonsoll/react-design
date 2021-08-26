@@ -2601,7 +2601,7 @@ html {
   background-color: var(--input-bg);
   border: var(--border-width-base) var(--border-style-base)
     var(--input-border-color);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-select-multiple-item-border-radius);
   cursor: default;
   -webkit-transition: font-size var(--animation-duration-slow),
     line-height var(--animation-duration-slow),
@@ -2833,10 +2833,9 @@ html {
   color: var(--input-color);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  background-color: var(--input-bg);
+  background-color: var(--ql-select-with-search-bg); /* TEST: default = var(--input-bg) */
   background-image: none;
-  border: var(--border-width-base) var(--border-style-base)
-    var(--input-border-color);
+  border: var(--ql-select-with-search-border); /* TEST: default = var(--border-width-base) var(--border-style-base) var(--input-border-color) */
   border-radius: var(--input-border-radius-base);
   outline: none;
   -webkit-appearance: none;
@@ -4556,7 +4555,7 @@ html {
 .ant-menu-submenu-title .ant-menu-item-icon + span,
 .ant-menu-item .anticon + span,
 .ant-menu-submenu-title .anticon + span {
-  flex:1; 
+  flex:1;
   opacity: 1;
   -webkit-transition: opacity var(--animation-duration-slow) var(--ease-in-out),
     width var(--animation-duration-slow) var(--ease-in-out),
@@ -5836,8 +5835,8 @@ html {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.ant-dropdown-hidden,	
-.ant-dropdown-menu-hidden,	
+.ant-dropdown-hidden,
+.ant-dropdown-menu-hidden,
 .ant-dropdown-menu-submenu-hidden {
   display: none;
 }

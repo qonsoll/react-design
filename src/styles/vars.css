@@ -721,17 +721,25 @@
   --select-open-selection-item-color: var(--text-color-secondary-dark);
   --select-selection-item-bg: var(--gray-2);
   --select-selection-item-border-color: var(--border-color-split);
+
+
+  /* Micro config for select with search*/
+  --ql-select-with-search-bg: transparent;
+  --ql-select-with-search-border: unset;
+
+  /* Micro config for select multiple */
+ --ql-select-multiple-item-border-radius: var(--border-radius-md);
+
   --select-single-item-height-lg: var(--height-lg);
   /* --select-multiple-item-height: @input-height-base - @input-padding-vertical-base * 2; */
   --select-multiple-item-height-lg: 40px;
   /* --select-multiple-item-spacing-half: ceil((@input-padding-vertical-base / 2)); */
   --select-multiple-disabled-background: var(--input-disabled-bg);
   --select-multiple-item-disabled-color: #bfbfbf;
+
   --select-multiple-item-disabled-border-color: var(--select-border-color);
 
   /* Select —————————————————————————————— End */
-
-
 
   /*
     The background colors for active and hover states for things like
@@ -793,10 +801,10 @@
   /* + */ --menu-item-active-bg: var(--primary-1);
   /* + */ --menu-item-active-danger-bg: var(--red-1);
   /* + */ --menu-item-active-border-right: 3px solid var(--menu-highlight-color);
-  
+
   /* + */ --menu-submenu-bg: var(--component-background);
   /* + */ --menu-submenu-border-radius: var(--border-radius-sm);
-  
+
   /* + */ --menu-group-title-font-size: var(--font-size-caption1);
   /* + */ --menu-group-title-line-height: var(--line-height-caption1);
   /* + */ --menu-group-title-font-weight: var(--font-weight-medium);
@@ -804,7 +812,7 @@
   /* + */ --menu-group-title-text-transform: uppercase;
   /* + */ --menu-group-title-color: var(--disabled-color);
   /* + */ --menu-group-title-padding: var(--menu-item-padding);
-  
+
   --menu-item-group-height: var(--line-height-base);
   --menu-item-active-border-width: 3px;
   --menu-inline-toplevel-item-height: 40px;
@@ -1768,7 +1776,7 @@
     --ql-account-color: var(--text-color-secondary);
     --ql-account-transition: var(--ql-transition-all-default-in-out);
     --ql-account-avatar-box-shadow: inset 0 0 0 1px var(--gray-5);
-    
+
     --ql-account-color-hover: var(--text-color);
     --ql-account-avatar-box-shadow-hover: inset 0 0 0 2px var(--gray-10);
 
