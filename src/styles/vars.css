@@ -728,7 +728,7 @@
   --ql-select-with-search-border: unset;
 
   /* Micro config for select multiple */
- --ql-select-multiple-item-border-radius: var(--border-radius-md);
+ --ql-select-multiple-item-border-radius: var(--border-radius-base);
 
   --select-single-item-height-lg: var(--height-lg);
   /* --select-multiple-item-height: @input-height-base - @input-padding-vertical-base * 2; */
