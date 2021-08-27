@@ -16,7 +16,9 @@ import {
   system
 } from 'styled-system'
 
-const StyledAntCard = styled(AntCard)(
+const StyledAntCard = styled(AntCard).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})(
   compose(
     compose,
     space,

@@ -6919,9 +6919,9 @@ html {
   content: '';
 }
 .ant-btn-text:hover,
-.ant-btn-text:focus {
-  color: var(--primary-5);
-  background: transparent;
+.ant-btn-text:focus,.ant-btn-text:active  {
+  color: var(--btn-text-hover-color);
+  background: var(--btn-text-hover-bg);
   border-color: var(--input-hover-border-color);
 }
 .ant-btn-text:hover > a:only-child,
@@ -6937,11 +6937,6 @@ html {
   left: 0;
   background: transparent;
   content: '';
-}
-.ant-btn-text:active {
-  color: var(--primary-7);
-  background: transparent;
-  border-color: var(--primary-7);
 }
 .ant-btn-text:active > a:only-child {
   color: currentColor;
@@ -6983,17 +6978,6 @@ html {
   left: 0;
   background: transparent;
   content: '';
-}
-.ant-btn-text:hover,
-.ant-btn-text:focus {
-  color: var(--text-color);
-  background: var(--btn-text-hover-bg);
-  border-color: transparent;
-}
-.ant-btn-text:active {
-  color: var(--text-color);
-  background: rgba(0, 0, 0, 0.028);
-  border-color: transparent;
 }
 .ant-btn-text[disabled],
 .ant-btn-text[disabled]:hover,
@@ -10050,7 +10034,6 @@ _:-ms-fullscreen
   margin: 0;
   padding: 0;
   color: var(--tag-default-color);
-  font-size: 14px;
   font-variant: tabular-nums;
   line-height: var(--line-height-base);
   list-style: none;
@@ -10064,8 +10047,8 @@ _:-ms-fullscreen
   line-height: var(--tag-line-height);
   white-space: nowrap;
   background: var(--tag-default-bg);
-  border: 1px solid var(--gray-5);
-  border-radius: var(--border-radius-xxs);
+  border: var(--border-width-base) var(--border-style-base) var(--tag-default-border-color);
+  border-radius: var(--border-radius-base);
   opacity: 1;
   -webkit-transition: all var(--animation-duration-slow);
   transition: all var(--animation-duration-slow);
