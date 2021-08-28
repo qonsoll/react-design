@@ -16,8 +16,32 @@ import {
   system
 } from 'styled-system'
 
+const ANTD_CARD_PROPS = [
+  'actions',
+  'activeTabKey',
+  'bodyStyle',
+  'bordered',
+  'cover',
+  'defaultActiveTabKey',
+  'extra',
+  'headStyle',
+  'hoverable',
+  'loading',
+  'size',
+  'tabBarExtraContent',
+  'tabList',
+  'tabProps',
+  'title',
+  'type',
+  'onTabChange',
+  'hoverable',
+  'avatar',
+  'description'
+]
+
 const StyledAntCard = styled(AntCard).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_CARD_PROPS.includes(prop) || defaultValidatorFn(prop)
 })(
   compose(
     compose,
