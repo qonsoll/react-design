@@ -11,7 +11,8 @@ import {
   border,
   shadow,
   compose,
-  system
+  system,
+  flexbox
 } from 'styled-system'
 import { BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
 
@@ -70,6 +71,7 @@ const BoxStyleProps = compose(
   background,
   border,
   shadow,
+  flexbox,
   system({
     v: {
       property: 'alignItems',

@@ -14,7 +14,9 @@ import {
   system
 } from 'styled-system'
 
-const Box = styled('div')(
+const Box = styled('div').withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})(
   compose(
     space,
     color,
