@@ -1,0 +1,27 @@
+:root {
+  --tabs-card-head-background: var(--ql-color-dark-t-lighten5);
+  --tabs-card-height: 40px;
+  --tabs-card-active-color: var(--ql-color-accent1);
+  /* --tabs-card-horizontal-padding: calc(((var(--tabs-card-height) - floor(var(--ql-typography-font-size-md) * var(--ql-typography-line-height-md))) / 2) - var(--ql-border-width-default)) 16px; */
+  --tabs-card-horizontal-padding-sm: 6px 16px;
+  --tabs-card-horizontal-padding-lg: 7px 16px 6px;
+  --tabs-title-font-size: var(--ql-typography-font-size-md);
+  --tabs-title-font-size-lg: var(--ql-typography-font-size-lg);
+  --tabs-title-font-size-sm: var(--ql-typography-font-size-md);
+  --tabs-ink-bar-color: var(--ql-color-accent1);
+  --tabs-bar-margin: 0 0 16px 0;
+  --tabs-horizontal-gutter: 32px;
+  --tabs-horizontal-margin: 0 0 0 var(--tabs-horizontal-gutter);
+  --tabs-horizontal-margin-rtl: 0 0 0 32px;
+  --tabs-horizontal-padding: 12px 0;
+  --tabs-horizontal-padding-lg: 16px 0;
+  --tabs-horizontal-padding-sm: 8px 0;
+  --tabs-vertical-padding: 8px 20px;
+  --tabs-vertical-margin: 16px 0 0 0;
+  --tabs-scrolling-size: 32px;
+  --tabs-highlight-color: var(--ql-color-accent1);
+  --tabs-hover-color: var(--ql-color-accent1-t-lighten5);
+  --tabs-active-color: var(--ql-color-accent1);
+  --tabs-card-gutter: 2px;
+  --tabs-card-tab-active-border-top: 2px solid transparent;
+}

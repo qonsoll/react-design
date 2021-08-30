@@ -1,0 +1,14 @@
+
+@import './_black.css';
+@import './_blending.css';
+
+/* Theme */
+/* These palettes form the main theme of the application. */
+@import './theme/index.css';
+
+/* System */
+@import './system/index.css';
+
+/* Alternative colors (extra) */
+/* These are additional palettes that will help you diversify specific components in specific cases. */
+@import './alternative/index.css';

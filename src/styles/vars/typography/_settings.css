@@ -1,0 +1,25 @@
+:root {
+  --ql-typography-font-variant-default: tabular-nums;
+  --ql-typography-font-feature-settings-default: 'tnum';
+
+  --ql-typography-heading-color: var(--ql-color-dark);
+  --ql-typography-heading-font-weight: var(--ql-font-weight-semibold);
+  --ql-typography-typography-heading-margin-top: 0;
+  --ql-typography-typography-heading-margin-bottom: 0;
+
+  --ql-typography-font-size-lg: var(--ql-font-size-h4);
+  --ql-typography-font-size-md: var(--ql-font-size-body1);
+  --ql-typography-font-size-sm: var(--ql-font-size-body2);
+
+  /* --line-height-lg: var(--ql-line-height-h4); */
+  --ql-typography-line-height-md: var(--ql-line-height-body1);
+  /* --line-height-sm: var(--ql-line-height-body2); */
+
+  --ql-typography-text-color-primary: var(--ql-color-dark);
+  --ql-typography-text-color-primary-inverse: var(--ql-color-white);
+  --ql-typography-text-color-secondary: var(--ql-color-dark-t-lighten1);
+  
+  /* --text-color-dark: var(); */
+  /* --text-color-secondary-dark: var(); */
+  /* --text-selection-bg: var(); */
+}

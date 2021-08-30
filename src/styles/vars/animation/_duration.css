@@ -1,0 +1,5 @@
+:root {
+  --ql-animation-duration-slow: 0.3s;
+  --ql-animation-duration-default: 0.2s;
+  --ql-animation-duration-fast: 0.1s;
+}

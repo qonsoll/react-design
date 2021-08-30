@@ -1,0 +1,90 @@
+:root {
+  --btn-height-sm: var(--ql-component-height-sm);
+  --btn-height-base: var(--ql-component-height-md);
+  --btn-height-lg: var(--ql-component-height-lg);
+
+  --btn-square-size-sm: var(--btn-height-sm);
+  --btn-square-size: var(--btn-height-base);
+  --btn-square-size-lg: var(--btn-height-lg);
+
+  --btn-circle-size-sm: var(--btn-height-sm);
+  --btn-circle-size: var(--btn-height-base);
+  --btn-circle-size-lg: var(--btn-height-lg);
+
+  --btn-padding-horizontal-sm: calc(8px - 1px);
+  --btn-padding-horizontal-base: calc(16px - 1px);
+  --btn-padding-horizontal-lg: calc(24px - 1px);
+
+  --btn-shadow: none;
+
+  --btn-font-size-sm: var(--ql-typography-font-size-sm);
+  --btn-font-size-base: var(--ql-typography-font-size-md);
+  --btn-font-size-lg: var(--ql-typography-font-size-lg);
+
+  --btn-line-height: var(--ql-typography-line-height-md);
+
+  --btn-font-weight: 600;
+
+  --btn-font-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+
+  --btn-border-width: var(--ql-border-width-default);
+  --btn-border-style: var(--ql-border-style-default);
+  --btn-border-color: var(--ql-border-color-default);
+
+  --btn-border-radius-sm: var(--ql-border-radius-sm);
+  --btn-border-radius-base: var(--ql-border-radius-md);
+  --btn-border-radius-lg: var(--ql-border-radius-md);
+
+  --btn-icon-size-sm: 16px;
+  --btn-icon-size: 20px;
+  --btn-icon-size-lg: 24px;
+
+  --btn-default-color: var(--ql-typography-text-color-primary);
+  --btn-default-bg: transparent;
+  --btn-default-border: var(--btn-border-color);
+
+  --btn-primary-color: var(--ql-color-white);
+  --btn-primary-bg: var(--ql-color-accent1);
+  --btn-primary-border: var(--ql-color-accent1);
+  --btn-primary-shadow: var(--btn-shadow);
+  --btn-primary-hover-bg: var(--ql-color-accent1-t-lighten1);
+  --btn-primary-hover-color: var(--ql-color-white);
+  --btn-primary-hover-border: var(--ql-color-accent1-t-lighten1);
+
+  --btn-danger-color: var(--ql-color-white);
+  --btn-danger-bg: var(--ql-color-danger);
+  --btn-danger-border: var(--ql-color-danger);
+  --btn-danger-shadow: var(--btn-shadow);
+
+  --btn-white-color: var(--ql-typography-text-color-secondary);
+  --btn-white-bg: var(--ql-color-white);
+  --btn-white-border: var(--ql-color-white);
+  --btn-white-shadow: var(--btn-shadow);
+  --btn-text-hover-color: var(--ql-typography-text-color-primary);
+  --btn-white-hover-bg: var(--btn-white-bg);
+  --btn-white-hover-border: var(--btn-white-border);
+
+  --btn-text-color: var(--btn-default-color);
+  --btn-text-bg: transparent;
+  --btn-text-border: transparent;
+  --btn-text-shadow: var(--btn-shadow);
+  --btn-text-hover-bg: var(--ql-color-dark-t-lighten6);
+
+  --btn-default-ghost-color: var(--ql-color-white);
+  --btn-default-ghost-bg: transparent;
+  --btn-default-ghost-border: var(--ql-color-white);
+
+  --btn-link-color: var(--ql-color-accent1);
+  --btn-link-bg: transparent;
+  --btn-link-border: transparent;
+  --btn-link-shadow: var(--btn-shadow);
+  --btn-link-hover-bg: transparent;
+
+  --btn-disable-color: var(--ql-state-disabled-color);
+  --btn-disable-bg: var(--ql-state-disabled-bg);
+  --btn-disable-border: var(--ql-border-color-default);
+  --btn-disable-shadow: var(--btn-shadow);
+  --btn-disable-font-shadow: none;
+
+  --btn-group-border: var(--ql-color-accent1-t-lighten5);
+}

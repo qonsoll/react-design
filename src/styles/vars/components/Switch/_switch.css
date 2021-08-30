@@ -1,0 +1,15 @@
+:root {
+  --switch-height: 22px;
+  --switch-sm-height: 16px;
+  --switch-min-width: 44px;
+  --switch-sm-min-width: 28px;
+  --switch-disabled-opacity: 0.4;
+  --switch-color: var(--ql-color-accent1);
+  --switch-bg: var(--ql-color-white);
+  --switch-shadow-color: rgba(0, 35, 11, 0.2);
+  --switch-padding: 2px;
+  --switch-inner-margin-min: 7px;
+  --switch-inner-margin-max: 25px;
+  --switch-sm-inner-margin-min: 5px;
+  --switch-sm-inner-margin-max: 18px;
+}

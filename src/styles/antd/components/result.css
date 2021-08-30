@@ -1,0 +1,64 @@
+.ant-result {
+  padding: 48px 32px;
+}
+.ant-result-success .ant-result-icon > .anticon {
+  color: var(--ql-color-success);
+}
+.ant-result-error .ant-result-icon > .anticon {
+  color: var(--ql-color-danger);
+}
+.ant-result-info .ant-result-icon > .anticon {
+  color: var(--ql-color-info);
+}
+.ant-result-warning .ant-result-icon > .anticon {
+  color: var(--ql-color-warning);
+}
+.ant-result-image {
+  width: 250px;
+  height: 295px;
+  margin: auto;
+}
+.ant-result-icon {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.ant-result-icon > .anticon {
+  font-size: var(--result-icon-font-size);
+}
+.ant-result-title {
+  color: var(--ql-typography-text-color-primary);
+  font-size: var(--result-title-font-size);
+  line-height: 1.8;
+  text-align: center;
+}
+.ant-result-subtitle {
+  color: var(--ql-typography-text-color-secondary);
+  font-size: var(--result-subtitle-font-size);
+  line-height: 1.6;
+  text-align: center;
+}
+.ant-result-extra {
+  margin: var(--result-extra-margin);
+  text-align: center;
+}
+.ant-result-extra > * {
+  margin-right: 8px;
+}
+.ant-result-extra > *:last-child {
+  margin-right: 0;
+}
+.ant-result-content {
+  margin-top: 24px;
+  padding: 24px 40px;
+  background-color: var(--ql-color-dark-t-lighten6);
+}
+.ant-result-rtl {
+  direction: rtl;
+}
+.ant-result-rtl .ant-result-extra > * {
+  margin-right: 0;
+  margin-left: 8px;
+}
+.ant-result-rtl .ant-result-extra > *:last-child {
+  margin-left: 0;
+}

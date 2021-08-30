@@ -7,8 +7,7 @@ const buildAsideLayoutStyles = ({
   isHeaderExists,
   isFooterExists,
   isAsideLeft,
-  isAsideRight,
-  p
+  isAsideRight
 }) => {
   return {
     display: 'flex',
@@ -23,7 +22,7 @@ const buildAsideLayoutStyles = ({
     bg: 'var(--ql-aside-background)',
     borderLeft: isAsideRight && 'var(--ql-aside-border-left)',
     borderRight: isAsideLeft && 'var(--ql-aside-border-right)',
-    p: p || 'var(--ql-aside-padding)',
+    p: 'var(--ql-aside-padding)',
     overflow: 'auto',
     wordBreak: 'break-word',
     position: isNotCollapsedOverlay && 'fixed',

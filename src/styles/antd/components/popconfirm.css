@@ -1,0 +1,3 @@
+.ant-popconfirm {
+  z-index: var(--ql-zindex-popoconfirm);
+}

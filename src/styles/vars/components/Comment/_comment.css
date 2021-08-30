@@ -1,0 +1,14 @@
+:root {
+  --comment-bg: inherit;
+  --comment-padding-base: 16px 0;
+  --comment-nest-indent: 44px;
+  --comment-font-size-base: var(--ql-typography-font-size-md);
+  --comment-font-size-sm: var(--ql-typography-font-size-sm);
+  --comment-author-name-color: var(--ql-typography-text-color-secondary);
+  --comment-author-time-color: #ccc;
+  --comment-action-color: var(--ql-typography-text-color-secondary);
+  --comment-action-hover-color:var(--ql-color-dark-t-lighten5) ;
+  --comment-actions-margin-bottom: inherit;
+  --comment-actions-margin-top: 12px;
+  --comment-content-detail-p-margin-bottom: inherit;
+}

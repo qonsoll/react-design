@@ -1,0 +1,18 @@
+:root {
+  --ql-content-max-height-without-header-footer: 100vh;
+  --ql-content-max-height-with-header: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-header-height));
+  --ql-content-max-height-with-footer: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-footer-height));
+  --ql-content-max-height-with-header-footer: calc(var(--ql-content-max-height-without-header-footer) - var(--ql-header-height) - var(--ql-footer-height));
+
+  --ql-content-py: 32px;
+  --ql-content-shadow: -24px 0 32px -24px var(--gray-lighten15);
+
+  --ql-content-px-xxs: var(--ql-general-layout-px-xxs);
+  --ql-content-px-xs: var(--ql-general-layout-px-xs);
+  --ql-content-px-sm: var(--ql-general-layout-px-sm);
+  --ql-content-px-md: var(--ql-general-layout-px-md);
+  --ql-content-px-lg: var(--ql-general-layout-px-lg);
+  --ql-content-px-xl: var(--ql-general-layout-px-xl);
+  --ql-content-px-xxl: var(--ql-general-layout-px-xxl);
+  --ql-content-px-xxxl: var(--ql-general-layout-px-xxxl);
+}

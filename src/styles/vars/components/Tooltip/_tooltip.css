@@ -1,0 +1,8 @@
+:root {
+  --tooltip-max-width: 250px;
+  --tooltip-color: var(--ql-color-white);
+  --tooltip-bg: var(--ql-color-dark);
+  --tooltip-arrow-width: 5px;
+  --tooltip-arrow-color: var(--tooltip-bg);
+  --tooltip-distance: calc(var(--tooltip-arrow-width) - 1px + 4px);
+}

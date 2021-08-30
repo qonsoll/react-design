@@ -1,0 +1,13 @@
+:root {
+  --pagination-item-bg: var(--ql-color-white);
+  --pagination-item-size: var(--ql-component-height-md);
+  --pagination-item-size-sm: 24px;
+  --pagination-font-family: var(--ql-font-family-main);
+  --pagination-font-weight-active: 500;
+  --pagination-item-bg-active: var(--ql-color-white);
+  --pagination-item-link-bg: var(--ql-color-white);
+  --pagination-item-disabled-color-active: var(--ql-color-white);
+  --pagination-item-disabled-bg-active: #dbdbdb;
+  --pagination-item-input-bg: var(--ql-color-white);
+  --pagination-mini-options-size-changer-top: 0px;
+}

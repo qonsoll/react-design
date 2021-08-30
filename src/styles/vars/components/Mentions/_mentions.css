@@ -1,0 +1,4 @@
+:root {
+  --mentions-dropdown-bg: var(--ql-color-white);
+  --mentions-dropdown-menu-item-hover-bg: var(--mentions-dropdown-bg);
+}

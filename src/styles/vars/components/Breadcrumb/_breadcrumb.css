@@ -1,0 +1,10 @@
+:root {
+  --breadcrumb-base-color: var(--ql-typography-text-color-secondary);
+  --breadcrumb-last-item-color: var(--ql-typography-text-color-primary);
+  --breadcrumb-font-size: var(--ql-typography-font-size-md);
+  --breadcrumb-icon-font-size: var(--ql-typography-font-size-md);
+  --breadcrumb-link-color: var(--ql-typography-text-color-secondary);
+  --breadcrumb-link-color-hover: var(--ql-color-accent1-t-lighten5);
+  --breadcrumb-separator-color: var(--ql-typography-text-color-secondary);
+  --breadcrumb-separator-margin: 0 8px;
+}

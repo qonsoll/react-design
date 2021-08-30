@@ -1,0 +1,10 @@
+:root {
+  --progress-default-color: var(--ql-color-accent1);
+  --progress-remaining-color: var(--ql-color-dark-t-lighten5);
+  --progress-text-color: var(--ql-typography-text-color-primary);
+  --progress-info-text-color: var(--progress-text-color);
+  --progress-radius: 100px;
+  --progress-steps-item-bg: #f3f3f3;
+  --progress-text-font-size: 1em;
+  --progress-circle-text-font-size: 1em;
+}

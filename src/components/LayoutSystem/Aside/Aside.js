@@ -17,8 +17,6 @@ const AsideLayout = (props) => {
     isFooterExists,
     width,
     maxHeight,
-    bg,
-    p,
     ...rest
   } = props
 
@@ -52,8 +50,7 @@ const AsideLayout = (props) => {
     isHeaderExists,
     isFooterExists,
     isAsideLeft,
-    isAsideRight,
-    p
+    isAsideRight
   })
 
   return (

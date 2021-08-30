@@ -1,0 +1,20 @@
+:root {
+  --ql-zindex-badge: auto;
+  --ql-zindex-table-fixed: 2;
+  --ql-zindex-affix: 10;
+  --ql-zindex-back-top: 10;
+  /* --zindex-picker-panel: 10; */
+  /* --zindex-popup-close: 10; */
+  --ql-zindex-overlay: 950;
+  --ql-zindex-drawer: 1000;
+  --ql-zindex-modal: 1000;
+  --ql-zindex-modal-mask: 1000;
+  --ql-zindex-message: 1010;
+  --ql-zindex-notification: 1010;
+  --ql-zindex-popover: 1030;
+  --ql-zindex-dropdown: 1050;
+  /* --ql-zindex-picker: 1050; */
+  --ql-zindex-popoconfirm: 1060;
+  --ql-zindex-tooltip: 1070;
+  --ql-zindex-image: 1080;
+}

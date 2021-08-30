@@ -1,0 +1,20 @@
+:root {
+  --radio-size: 16px;
+  --radio-top: 0.2em;
+  --radio-border-width: 1px;
+  --radio-dot-size: calc(var(--radio-size) - 8px);
+  --radio-dot-color: var(--ql-color-accent1);
+  --radio-dot-disabled-color: rgba(0, 0, 0, 0.2);
+  --radio-solid-checked-color: var(--ql-color-white);
+  --radio-button-bg: var(--btn-default-bg);
+  --radio-button-checked-bg: var(--btn-default-bg);
+  --radio-button-color: var(--btn-default-color);
+  --radio-button-checked-color: var(--btn-default-color);
+  --radio-button-hover-bg: var(--ql-color-accent1-t-lighten5);
+  --radio-button-checked-hover-bg: var(--ql-color-accent1-t-lighten5);
+  --radio-button-active-bg: var(--ql-color-accent1);
+  --radio-button-checked-active-bg: var(--ql-color-accent1);
+  --radio-disabled-button-checked-bg: rgba(0 0 0, 0.1);
+  --radio-disabled-button-checked-color: var(--ql-state-disabled-color);
+  --radio-wrapper-margin-right: 8px;
+}

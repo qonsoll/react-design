@@ -1,6 +1,6 @@
 const DEFAULTS = {
-  gutterDefault: 'var(--grid-gutter-default)',
-  negativeGutterDefault: 'var(--grid-negative-gutter-default)'
+  gutterDefault: 'var(--ql-grid-gutter-default)',
+  negativeGutterDefault: 'var(--ql-grid-negative-gutter-default)'
 }
 
 export default DEFAULTS

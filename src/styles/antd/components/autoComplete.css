@@ -1,0 +1,16 @@
+.ant-select-auto-complete {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+}
+.ant-select-auto-complete .ant-select-clear {
+  right: 13px;
+}

@@ -1,0 +1,14 @@
+:root {
+  --ql-footer-height: 40px;
+  --ql-footer-background: #f1f1f1;
+  --ql-footer-desktop-px: 40px;
+
+  --ql-footer-px-xxs: var(--ql-general-layout-px-xxs);
+  --ql-footer-px-xs: var(--ql-general-layout-px-xs);
+  --ql-footer-px-sm: var(--ql-general-layout-px-sm);
+  --ql-footer-px-md: var(--ql-general-layout-px-md);
+  --ql-footer-px-lg: var(--ql-general-layout-px-lg);
+  --ql-footer-px-xl: var(--ql-general-layout-px-xl);
+  --ql-footer-px-xxl: var(--ql-general-layout-px-xxl);
+  --ql-footer-px-xxxl: var(--ql-general-layout-px-xxxl);
+}

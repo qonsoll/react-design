@@ -1,0 +1,7 @@
+:root {
+  --anchor-bg: var(--ql-color-white);
+  --anchor-border-color: var(--ql-border-color-default);
+  --anchor-link-top: 7px;
+  --anchor-link-left: 16px;
+  --anchor-link-padding: var(--anchor-link-top) 0 var(--anchor-link-top) var(--anchor-link-left);
+}

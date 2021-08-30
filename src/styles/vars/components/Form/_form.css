@@ -1,0 +1,12 @@
+:root {
+  /* --form-item-trailing-colon: true; */
+  --form-item-margin-bottom: 24px;
+  --form-vertical-label-padding: 0 0 8px;
+  --form-vertical-label-margin: 0;
+  --form-item-label-font-size: var(--ql-typography-font-size-md);
+  --form-item-label-height: var(--input-height-base);
+  --form-item-label-colon-margin-right: 8px;
+  --form-item-label-colon-margin-left: 2px;
+  --form-error-input-bg: var(--input-bg);
+  --form-warning-input-bg: var(--input-bg);
+}

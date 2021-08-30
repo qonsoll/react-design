@@ -1,0 +1,6 @@
+:root {
+  --statistic-title-font-size: var(--ql-typography-font-size-md);
+  --statistic-content-font-size: 24px;
+  --statistic-unit-font-size: 24px;
+  --statistic-font-family: var(--ql-font-family-main);
+}

@@ -1,0 +1,13 @@
+:root {
+  --ql-font-size-h1: 40px;
+  --ql-font-size-h2: 32px;
+  --ql-font-size-h3: 24px;
+  --ql-font-size-h4: 20px;
+  --ql-font-size-h5: 16px;
+  --ql-font-size-h6: 14px;
+  --ql-font-size-overline: 12px;
+  --ql-font-size-body1: 16px;
+  --ql-font-size-body2: 14px;
+  --ql-font-size-caption1: 12px;
+  --ql-font-size-caption2: 10px;
+}

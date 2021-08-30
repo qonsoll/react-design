@@ -2,7 +2,7 @@ import React from 'react'
 import Graphic from './Graphic.template'
 
 export default {
-  title: 'Components/Media/Graphic',
+  title: 'Media/Graphic',
   component: Graphic,
   argTypes: {
     src: {

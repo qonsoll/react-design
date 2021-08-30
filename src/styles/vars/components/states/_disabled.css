@@ -1,0 +1,5 @@
+:root {
+  --ql-state-disabled-color: var(--ql-color-dark-t-lighten3);
+  --ql-state-disabled-bg: var(--ql-color-dark-t-lighten5);
+  /* --disabled-color-dark: var(--gray-lighten5); */
+}

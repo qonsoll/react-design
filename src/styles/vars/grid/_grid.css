@@ -1,0 +1,33 @@
+/*
+    This config is used for Grid system (Container/Row/Col).
+    Be sure to match these config with the breakpoints.js
+*/
+
+/* FIXME: need to fix inconsistency (there is inconsistency in the number of breakpoints) between these config and breakpoints.js */
+
+:root {
+  --ql-grid-columns: 12; /* FIXME: It looks like this property is not being used. -> Ask Oleksiy about it.*/
+
+  --ql-grid-gutter-default: 8px;
+  --ql-grid-gutter-sm: 8px;
+  --ql-grid-gutter-md: 12px;
+  --ql-grid-gutter-lg: 16px;
+  --ql-grid-gutter-xl: 16px;
+  --ql-grid-gutter-xxl: 16px;
+
+  --ql-grid-negative-gutter-default: -8px;
+  --ql-grid-negative-gutter-sm: -8px;
+  --ql-grid-negative-gutter-md: -12px;
+  --ql-grid-negative-gutter-lg: -16px;
+  --ql-grid-negative-gutter-xl: -16px;
+  --ql-grid-negative-gutter-xxl: -16px;
+
+  /*
+    Be sure to match these config with the breakpoints.js
+  */
+  --ql-grid-container-max-width-sm: 540px;
+  --ql-grid-container-max-width-md: 720px;
+  --ql-grid-container-max-width-lg: 960px;
+  --ql-grid-container-max-width-xl: 1140px;
+  --ql-grid-container-max-width-xxl: 1320px;
+}

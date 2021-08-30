@@ -1,0 +1,5 @@
+:root {
+  --back-top-color: var(--ql-color-white);
+  --back-top-bg: var(--ql-typography-text-color-secondary);
+  --back-top-hover-bg: var(--ql-typography-text-color-primary);
+}

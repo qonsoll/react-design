@@ -65,70 +65,70 @@ const StyledText = styled(AntTypography.Text).withConfig({
       variant({
         variants: {
           h1: {
-            fontSize: 'var(--font-size-h1)',
-            lineHeight: 'var(--line-height-h1)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-h1)',
+            lineHeight: 'var(--ql-line-height-h1)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h2: {
-            fontSize: 'var(--font-size-h2)',
-            lineHeight: 'var(--line-height-h2)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-h2)',
+            lineHeight: 'var(--ql-line-height-h2)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h3: {
-            fontSize: 'var(--font-size-h3)',
-            lineHeight: 'var(--line-height-h3)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-h3)',
+            lineHeight: 'var(--ql-line-height-h3)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h4: {
-            fontSize: 'var(--font-size-h4)',
-            lineHeight: 'var(--line-height-h4)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-h4)',
+            lineHeight: 'var(--ql-line-height-h4)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h5: {
-            fontSize: 'var(--font-size-h5)',
-            lineHeight: 'var(--line-height-h5)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-h5)',
+            lineHeight: 'var(--ql-line-height-h5)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h6: {
-            fontSize: 'var(--font-size-h6)',
-            lineHeight: 'var(--line-height-h6)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-h6)',
+            lineHeight: 'var(--ql-line-height-h6)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           overline: {
-            fontSize: 'var(--font-size-overline)',
-            lineHeight: 'var(--line-height-overline)',
-            fontWeight: 'var(--font-weight-medium)',
-            letterSpacing: 'var(--letter-spacing-default)'
+            fontSize: 'var(--ql-font-size-overline)',
+            lineHeight: 'var(--ql-line-height-overline)',
+            fontWeight: 'var(--ql-font-weight-medium)',
+            letterSpacing: 'var(--ql-letter-spacing-default)'
           },
           body1: {
-            fontSize: 'var(--font-size-body1)',
-            lineHeight: 'var(--line-height-body1)',
-            fontWeight: 'var(--font-weight-regular)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-body1)',
+            lineHeight: 'var(--ql-line-height-body1)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           body2: {
-            fontSize: 'var(--font-size-body2)',
-            lineHeight: 'var(--line-height-body2)',
-            fontWeight: 'var(--font-weight-regular)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-body2)',
+            lineHeight: 'var(--ql-line-height-body2)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           caption1: {
-            fontSize: 'var(--font-size-caption1)',
-            lineHeight: 'var(--line-height-caption1)',
-            fontWeight: 'var(--font-weight-regular)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-caption1)',
+            lineHeight: 'var(--ql-line-height-caption1)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           caption2: {
-            fontSize: 'var(--font-size-caption2)',
-            lineHeight: 'var(--line-height-caption2)',
-            fontWeight: 'var(--font-weight-regular)',
-            letterSpacing: 'var(--letter-spacing-none)'
+            fontSize: 'var(--ql-font-size-caption2)',
+            lineHeight: 'var(--ql-line-height-caption2)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           }
         }
       })

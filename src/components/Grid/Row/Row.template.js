@@ -43,8 +43,8 @@ const StyledDiv = styled.div`
   }
 
   &.negative-block-margin {
-    margin-left: var(--grid-negative-gutter-default);
-    margin-right: var(--grid-negative-gutter-default);
+    margin-left: var(--ql-grid-negative-gutter-default);
+    margin-right: var(--ql-grid-negative-gutter-default);
 
     ${() => {
       const breakpoints = Object.keys(BREAKPOINTS)

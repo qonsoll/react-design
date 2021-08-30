@@ -2,48 +2,72 @@ import CSSPropValues from '../css-prop-values'
 
 const layoutArgTypes = {
   width: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Width. Theme field: sizes',
     control: {
       type: 'text'
     }
   },
   height: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Height. Theme field: sizes',
     control: {
       type: 'text'
     }
   },
   minWidth: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Min width. Theme field: sizes',
     control: {
       type: 'text'
     }
   },
   maxWidth: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Max width. Theme field: sizes',
     control: {
       type: 'text'
     }
   },
   minHeight: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Min height. Theme field: sizes',
     control: {
       type: 'text'
     }
   },
   maxHeight: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Max height. Theme field: sizes',
     control: {
       type: 'text'
     }
   },
   size: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Size',
     control: {
       type: 'text'
     }
   },
   display: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Display',
     control: {
       type: 'select',
@@ -51,6 +75,9 @@ const layoutArgTypes = {
     }
   },
   verticalAlign: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Vertical align',
     control: {
       type: 'select',
@@ -58,6 +85,9 @@ const layoutArgTypes = {
     }
   },
   overflow: {
+    table: {
+      category: 'Layout'
+    },
     description: 'Overflow',
     control: {
       type: 'select',
@@ -65,6 +95,9 @@ const layoutArgTypes = {
     }
   },
   overflowX: {
+    table: {
+      category: 'Layout'
+    },
     description: 'OverflowX',
     control: {
       type: 'select',
@@ -72,6 +105,9 @@ const layoutArgTypes = {
     }
   },
   overflowY: {
+    table: {
+      category: 'Layout'
+    },
     description: 'OverflowY',
     control: {
       type: 'select',

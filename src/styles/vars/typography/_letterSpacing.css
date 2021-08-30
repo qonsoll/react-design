@@ -1,0 +1,6 @@
+/* FIXME: need to come up with a naming for different values. */
+
+:root {
+  --ql-letter-spacing-none: 0;
+  --ql-letter-spacing-default: 0.6;
+}

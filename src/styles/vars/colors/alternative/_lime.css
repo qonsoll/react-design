@@ -1,0 +1,11 @@
+/*
+    This palette is used only for the components: Tag, Badge, Ribbon, Tooltip.
+    You can leave it unchanged if you do not plan to use the default colors of the above listed components.
+*/
+
+:root {
+  --lime-1: #fcffe6;
+  --lime-3: #eaff8f;
+  --lime-6: #a0d911;
+  --lime-7: #7cb305;
+}

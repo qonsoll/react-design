@@ -1,0 +1,11 @@
+/*
+    This palette is used only for the components: Tag, Badge, Ribbon, Tooltip.
+    You can leave it unchanged if you do not plan to use the default colors of the above listed components.
+*/
+
+:root {
+  --green-1: #f6ffed;
+  --green-3: #b7eb8f;
+  --green-6: #52c41a;
+  --green-7: #389e0d;
+}

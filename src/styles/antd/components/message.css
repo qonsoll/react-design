@@ -1,0 +1,91 @@
+.ant-message {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: var(--ql-typography-font-size-md);
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  position: fixed;
+  top: 8px;
+  left: 0;
+  z-index: var(--ql-zindex-message);
+  width: 100%;
+  pointer-events: none;
+}
+.ant-message-notice {
+  padding: 8px;
+  text-align: center;
+}
+.ant-message-notice-content {
+  display: inline-block;
+  padding: var(--message-notice-content-padding);
+  background: var(--message-notice-content-bg);
+  border-radius: var(--border-radius-base);
+  -webkit-box-shadow: var(--ql-shadow-default);
+  box-shadow: var(--ql-shadow-default);
+  pointer-events: all;
+}
+.ant-message-success .anticon {
+  color: var(--ql-color-success);
+}
+.ant-message-error .anticon {
+  color: var(--ql-color-danger);
+}
+.ant-message-warning .anticon {
+  color: var(--ql-color-warning);
+}
+.ant-message-info .anticon,
+.ant-message-loading .anticon {
+  color: var(--ql-color-info);
+}
+.ant-message .anticon {
+  position: relative;
+  top: 1px;
+  margin-right: 8px;
+  font-size: var(--ql-typography-font-size-md);
+}
+.ant-message-notice.move-up-leave.move-up-leave-active {
+  -webkit-animation-name: MessageMoveOut;
+  animation-name: MessageMoveOut;
+  -webkit-animation-duration: var(--ql-animation-duration-slow);
+  animation-duration: var(--ql-animation-duration-slow);
+}
+@-webkit-keyframes MessageMoveOut {
+  0% {
+    max-height: 150px;
+    padding: 8px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+@keyframes MessageMoveOut {
+  0% {
+    max-height: 150px;
+    padding: 8px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+.ant-message-rtl {
+  direction: rtl;
+}
+.ant-message-rtl span {
+  direction: rtl;
+}
+.ant-message-rtl .anticon {
+  margin-right: 0;
+  margin-left: 8px;
+}

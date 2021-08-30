@@ -1,0 +1,9 @@
+:root {
+  --link-color: var(--ql-color-accent1);
+  --link-hover-color: var(--ql-color-accent1-t-lighten5);
+  --link-active-color: var(--ql-color-accent1);
+  --link-decoration: none;
+  --link-hover-decoration: none;
+  --link-focus-decoration: none;
+  --link-focus-outline: 0;
+}

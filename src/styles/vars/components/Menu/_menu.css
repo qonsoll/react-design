@@ -1,0 +1,64 @@
+:root {
+  --menu-bg: transparent;
+  --menu-padding: 8px 0;
+  --menu-highlight-color: var(--ql-color-accent1);
+  --menu-highlight-danger-color: var(--ql-color-danger);
+
+  --menu-inline-collapsed-width: calc(var(--ql-aside-collapsed-width) - var(--ql-aside-border-width));
+  --menu-inline-submenu-bg: var(--ql-color-dark-t-lighten5);
+
+  --menu-horizontal-height: var(--ql-header-height);
+  --menu-horizontal-border-bottom: unset;
+
+  --menu-horizontal-main-item-spacing: 0 0;
+  --menu-horizontal-main-item-padding: 0 16px;
+  --menu-horizontal-main-item-color-hover: var(--menu-highlight-color);
+  --menu-horizontal-main-item-box-shadow-hover: inset 0 -2px var(--menu-highlight-color);
+  --menu-horizontal-main-item-danger-color-hover: var(--menu-highlight-danger-color);
+  --menu-horizontal-main-item-danger-box-shadow-hover: inset 0 -2px var(--menu-highlight-danger-color);
+
+  --menu-item-height: 48px;
+  --menu-item-font-size: var(--ql-typography-font-size-md);
+  --menu-item-line-height: var(--ql-typography-line-height-md);
+  --menu-item-color: var(--ql-typography-text-color-secondary);
+  --menu-item-padding: calc((var(--menu-item-height) - var(--ql-typography-line-height-md)) / 2) 20px;
+  --menu-vertical-inline-item-padding: 0 48px;
+  --menu-item-vertical-margin: 0;
+  --menu-item-boundary-margin: 0;
+  --menu-item-icon-size: var(--menu-item-font-size);
+  --menu-item-icon-margin-right: 24px;
+  --menu-item-color-hover: var(--menu-highlight-color);
+
+  --menu-item-active-color: var(--ql-color-white);
+  --menu-item-active-bg: var(--ql-color-accent1);
+  --menu-item-active-border-right: 3px solid var(--menu-highlight-color);
+  
+  --menu-item-active-danger-bg: var(--ql-color-danger-t-lighten6);
+  
+  --menu-submenu-bg: var(--ql-color-white);
+  --menu-submenu-border-radius: var(--ql-border-radius-sm);
+  
+  --menu-group-title-font-size: var(--ql-font-size-caption1);
+  --menu-group-title-line-height: var(--ql-line-height-caption1);
+  --menu-group-title-font-weight: var(--ql-font-weight-medium);
+  --menu-group-title-letter-spacing: var(--ql-letter-spacing-default);
+  --menu-group-title-text-transform: uppercase;
+  --menu-group-title-color: var(--ql-state-disabled-color);
+  --menu-group-title-padding: var(--menu-item-padding);
+  
+  --menu-item-group-height: var(--ql-typography-line-height-md);
+  --menu-item-active-border-width: 3px;
+  --menu-inline-toplevel-item-height: 40px;
+
+  --menu-dark-color: var(--text-color-secondary-dark);
+  --menu-dark-danger-color: var(--ql-color-danger);
+  --menu-dark-bg: var(--ql-menu-bg);
+  --menu-dark-arrow-color: var(--ql-color-white);
+  --menu-dark-inline-submenu-bg: #000c17;
+  --menu-dark-highlight-color: var(--ql-color-white);
+  --menu-dark-item-active-bg: var(--ql-color-accent1);
+  --menu-dark-item-active-danger-bg: var(--ql-color-danger);
+  --menu-dark-selected-item-icon-color: var(--ql-color-white);
+  --menu-dark-selected-item-text-color: var(--ql-color-white);
+  --menu-dark-item-hover-bg: transparent;
+}

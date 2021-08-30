@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {
@@ -37,26 +36,6 @@ const Box = styled('div')(
   )
 )
 
-Box.propTypes = {
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform',
-    'transition'
-  ])
-}
+Box.propTypes = {}
 
 export default Box

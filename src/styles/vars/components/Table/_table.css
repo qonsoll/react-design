@@ -1,0 +1,35 @@
+:root {
+  --table-bg: var(--ql-color-white);
+  --table-header-bg: var(--ql-color-dark-t-lighten5);
+  --table-header-color: var(--ql-typography-heading-color);
+  --table-header-sort-bg: var(--ql-color-dark-t-lighten4);
+  --table-body-sort-bg: #fafafa;
+  --table-row-hover-bg: var(--ql-color-dark-t-lighten5);
+  --table-selected-row-color: inherit;
+  --table-selected-row-bg: var(--ql-color-accent1-t-lighten6);
+  --table-body-selected-sort-bg: var(--table-selected-row-bg);
+  /* --table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%); */
+  --table-expanded-row-bg: #fbfbfb;
+  --table-padding-vertical: 16px;
+  --table-padding-horizontal: 16px;
+  /* --table-padding-vertical-md: (@table-padding-vertical * 3 / 4); */
+  /* --table-padding-horizontal-md: (@table-padding-horizontal / 2); */
+  /* --table-padding-vertical-sm: (@table-padding-vertical / 2); */
+  /* --table-padding-horizontal-sm: (@table-padding-horizontal / 2); */
+  --table-border-color: var(--ql-border-color-default);
+  --table-border-radius-base: var(--ql-border-radius-md);
+  --table-footer-bg: var(--ql-color-dark-t-lighten5);
+  --table-footer-color: var(--ql-typography-heading-color);
+  --table-header-bg-sm: var(--table-header-bg);
+  --table-font-size: var(--ql-typography-font-size-md);
+  --table-font-size-md: var(--table-font-size);
+  --table-font-size-sm: var(--table-font-size);
+  /* --table-header-sort-active-bg: rgba(0, 0, 0, 0.04); */
+  /* --table-header-filter-active-bg: rgba(0, 0, 0, 0.04); */
+  --table-filter-btns-bg: inherit;
+  --table-filter-dropdown-bg: var(--ql-color-white);
+  --table-expand-icon-bg: var(--ql-color-white);
+  --table-selection-column-width: 32px;
+  /* --table-sticky-scroll-bar-bg: fade(#000, 35%); */
+  --table-sticky-scroll-bar-radius: 4px;
+}

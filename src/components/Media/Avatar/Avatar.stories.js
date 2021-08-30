@@ -2,7 +2,7 @@ import React from 'react'
 import Avatar from './Avatar'
 
 export default {
-  title: 'Components/Media/Avatar',
+  title: 'Media/Avatar',
   component: Avatar,
   argTypes: {
     'Default AntD props': {

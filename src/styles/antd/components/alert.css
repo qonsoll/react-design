@@ -1,0 +1,173 @@
+.ant-alert {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--alert-text-color);
+  font-size: var(--ql-typography-font-size-md);
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 15px; /*FIXME*/
+  word-wrap: break-word;
+  border-radius: var(--border-radius-base);
+}
+.ant-alert-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+.ant-alert-icon {
+  margin-right: 8px;
+}
+.ant-alert-description {
+  display: none;
+  font-size: 14px;
+  line-height: 22px;
+}
+.ant-alert-success {
+  background-color: var(--alert-success-bg-color);
+  border: 1px solid var(--alert-success-border-color);
+}
+.ant-alert-success .ant-alert-icon {
+  color: var(--alert-success-icon-color);
+}
+.ant-alert-info {
+  background-color: var(--alert-info-bg-color);
+  border: 1px solid var(--alert-info-border-color);
+}
+.ant-alert-info .ant-alert-icon {
+  color: var(--alert-info-icon-color);
+}
+.ant-alert-warning {
+  background-color: var(--alert-warning-bg-color);
+  border: 1px solid var(--alert-warning-border-color);
+}
+.ant-alert-warning .ant-alert-icon {
+  color: var(--alert-warning-icon-color);
+}
+.ant-alert-error {
+  background-color: var(--alert-error-bg-color);
+  border: 1px solid var(--alert-error-border-color);
+}
+.ant-alert-error .ant-alert-icon {
+  color: var(--alert-error-icon-color);
+}
+.ant-alert-error .ant-alert-description > pre {
+  margin: 0;
+  padding: 0;
+}
+.ant-alert-action {
+  margin-left: 8px;
+}
+.ant-alert-close-icon {
+  margin-left: 8px;
+  padding: 0;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.ant-alert-close-icon .anticon-close {
+  color: var(--alert-close-color);
+  -webkit-transition: color var(--ql-animation-duration-slow);
+  transition: color var(--ql-animation-duration-slow);
+}
+.ant-alert-close-icon .anticon-close:hover {
+  color: var(--alert-close-hover-color);
+}
+.ant-alert-close-text {
+  color: var(--alert-close-color);
+  -webkit-transition: color var(--ql-animation-duration-slow);
+  transition: color var(--ql-animation-duration-slow);
+}
+.ant-alert-close-text:hover {
+  color: var(--alert-close-hover-color);
+}
+.ant-alert-with-description {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: var(--alert-with-description-padding-vertical) 15px
+    var(--alert-with-description-padding-vertical) 24px;
+}
+.ant-alert-with-description.ant-alert-no-icon {
+  padding: var(--alert-with-description-no-icon-padding-vertical) 15px;
+}
+.ant-alert-with-description .ant-alert-icon {
+  margin-right: 15px;
+  font-size: var(--alert-with-description-icon-size);
+}
+.ant-alert-with-description .ant-alert-message {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ql-typography-text-color-primary);
+  font-size: var(--ql-typography-font-size-md);
+}
+.ant-alert-message {
+  color: var(--alert-message-color);
+}
+.ant-alert-with-description .ant-alert-description {
+  display: block;
+}
+.ant-alert.ant-alert-motion-leave {
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: max-height var(--ql-animation-duration-slow)
+      var(--ql-animation-cubic-ease-in-out-circ),
+    opacity var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    padding-top var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    padding-bottom var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    margin-bottom var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ);
+  transition: max-height var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    opacity var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    padding-top var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    padding-bottom var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ),
+    margin-bottom var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ);
+}
+.ant-alert.ant-alert-motion-leave-active {
+  max-height: 0;
+  margin-bottom: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+.ant-alert-banner {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: var(--border-radius-none);
+}
+.ant-alert.ant-alert-rtl {
+  direction: rtl;
+}
+.ant-alert-rtl.ant-alert.ant-alert-no-icon {
+  padding: var(--alert-no-icon-padding-vertical) 15px;
+}
+.ant-alert-rtl .ant-alert-icon {
+  margin-right: auto;
+  margin-left: 8px;
+}
+.ant-alert-rtl .ant-alert-action {
+  margin-right: 8px;
+  margin-left: auto;
+}
+.ant-alert-rtl .ant-alert-close-icon {
+  margin-right: 8px;
+  margin-left: auto;
+}
+.ant-alert-rtl.ant-alert-with-description .ant-alert-icon {
+  margin-right: auto;
+  margin-left: 15px;
+}

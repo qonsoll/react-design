@@ -1,0 +1,13 @@
+:root {
+  --ql-line-height-h1: 48px;
+  --ql-line-height-h2: 40px;
+  --ql-line-height-h3: 32px;
+  --ql-line-height-h4: 28px;
+  --ql-line-height-h5: 24px;
+  --ql-line-height-h6: 20px;
+  --ql-line-height-overline: 16px;
+  --ql-line-height-body1:24px;
+  --ql-line-height-body2: 20px;
+  --ql-line-height-caption1: 16px;
+  --ql-line-height-caption2: 12px;
+}

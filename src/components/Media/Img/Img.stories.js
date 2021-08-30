@@ -2,7 +2,7 @@ import React from 'react'
 import Img from './Img'
 
 export default {
-  title: 'Components/Media/Img',
+  title: 'Media/Img',
   component: Img,
   argTypes: {
     src: {

@@ -1,68 +1,86 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import breakpoints from '../../../styles/breakpoints'
 import { LayoutSystemProvider } from '../LayoutSystem'
 import Layout from '../Layout'
+import Header from '../Header'
 import Aside from './Aside'
+import Footer from '../Footer'
 import Button from '../../Button'
+import { ArrowLeftOutlined } from '@ant-design/icons'
+
+import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 export default {
-  title: 'Components/Layout system/Aside',
+  title: 'Layout system/Aside',
   component: Aside,
+  parameters: {
+    layout: 'fullscreen',
+    docs: {
+      description: {
+        // Here could be general description...
+      }
+    },
+    badges: [BADGE.NEEDS_REVISION]
+  },
   argTypes: {
     collapse: {
-      description: 'Use it to control Aside collapse state.'
+      description: 'Use it to control Aside collapse state.',
+      control: {
+        disable: true
+      }
     },
     drawer: {
       description: 'Use it to apply drawer styles and behavior.'
     },
     onClose: {
-      description: 'FIXME'
+      description: 'Use it to add action (function) which will toogle aside.'
     },
     asideToggleBtn: {
       description:
-        'Use it to place component which will collapse/uncollapse aside.'
+        'Use it to place component which will collapse/uncollapse aside.',
+      control: {
+        disable: true
+      }
     },
-    'Any other Box properties': {
+    'other properties': {
       description:
-        'Set any other properties (accepted by the Box) to change the default settings.'
+        'Set any other properties (accepted by the Box) to change the default settings. [Read more >](/?path=/story/components-box--template)'
     }
-  }
+  },
+  args: {}
 }
 
 export const Template = (args) => {
-  const [layoutConfig, setLayoutConfig] = useState({
+  const layoutConfig = {
     isAsideLeft: true,
-    asideLeftCollapsed: true,
-    asideLeftCollapseVariant: 'short',
-    asideLeftOuter: false,
+    asideLeftOuter: true,
     asideLeftOverlay: true
-  })
-
-  const toggleAsideLeft = () => {
-    setLayoutConfig({
-      ...layoutConfig,
-      asideLeftCollapsed: !layoutConfig.asideLeftCollapsed
-    })
   }
 
   return (
     <ThemeProvider theme={breakpoints}>
       <LayoutSystemProvider {...layoutConfig}>
         <Layout
+          header={<Header bg='#f2f2f2' />}
           asideLeft={
             <Aside
-              collapse={layoutConfig.asideLeftCollapsed}
-              drawer
+              {...args}
+              bg='#6648bf'
+              color='#fff'
               asideToggleBtn={
-                <Button type='primary' onClick={toggleAsideLeft}>
-                  Toogle
-                </Button>
+                <Button
+                  type='dashed'
+                  ghost
+                  icon={<ArrowLeftOutlined />}
+                  mb={5}
+                />
               }
             >
-              Aside left
+              Hi!👋 I'm aside (currently left).
             </Aside>
           }
+          footer={<Footer bg='#f2f2f2' />}
         >
           Content
         </Layout>

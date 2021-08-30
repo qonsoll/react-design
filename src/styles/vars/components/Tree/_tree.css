@@ -1,0 +1,9 @@
+:root {
+  --tree-bg: var(--ql-color-white);
+  --tree-title-height: 24px;
+  --tree-child-padding: 18px;
+  --tree-directory-selected-color: var(--ql-color-white);
+  --tree-directory-selected-bg: var(--ql-color-accent1);
+  --tree-node-hover-bg: var(--ql-color-dark-t-lighten5);
+  --tree-node-selected-bg: var(--ql-color-accent1-t-lighten6);
+}

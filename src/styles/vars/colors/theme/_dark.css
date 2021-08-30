@@ -1,0 +1,11 @@
+:root {
+  --ql-color-dark: rgb(46, 45, 53);
+
+  /* Transparent shades */
+  --ql-color-dark-t-lighten1: rgb(46, 45, 53, var(--ql-color-blending-lighten1));
+  --ql-color-dark-t-lighten2: rgb(46, 45, 53, var(--ql-color-blending-lighten2));
+  --ql-color-dark-t-lighten3: rgb(46, 45, 53, var(--ql-color-blending-lighten3));
+  --ql-color-dark-t-lighten4: rgb(46, 45, 53, var(--ql-color-blending-lighten4));
+  --ql-color-dark-t-lighten5: rgb(46, 45, 53, var(--ql-color-blending-lighten5));
+  --ql-color-dark-t-lighten6: rgb(46, 45, 53, var(--ql-color-blending-lighten6));
+}

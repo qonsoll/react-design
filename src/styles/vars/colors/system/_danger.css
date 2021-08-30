@@ -1,0 +1,11 @@
+:root {
+  --ql-color-danger: rgb(247, 81, 100);
+
+  /* Transparent shades */
+  --ql-color-danger-t-lighten1: rgb(247, 81, 100, var(--ql-color-blending-lighten1));
+  --ql-color-danger-t-lighten2: rgb(247, 81, 100, var(--ql-color-blending-lighten2));
+  --ql-color-danger-t-lighten3: rgb(247, 81, 100, var(--ql-color-blending-lighten3));
+  --ql-color-danger-t-lighten4: rgb(247, 81, 100, var(--ql-color-blending-lighten4));
+  --ql-color-danger-t-lighten5: rgb(247, 81, 100, var(--ql-color-blending-lighten5));
+  --ql-color-danger-t-lighten6: rgb(247, 81, 100, var(--ql-color-blending-lighten6));
+}

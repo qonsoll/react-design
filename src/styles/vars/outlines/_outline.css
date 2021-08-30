@@ -1,0 +1,15 @@
+:root {
+  --ql-outline-width-default: 2px;
+
+  --ql-outline-color-default: var(--ql-color-dark-t-lighten5);
+  --ql-outline-color-accent1: var(--ql-color-accent1-t-lighten5);
+  --ql-outline-color-success: var(--ql-color-success-t-lighten5);
+  --ql-outline-color-warning: var(--ql-color-warning-t-lighten5);
+  --ql-outline-color-danger:  var(--ql-color-danger-t-lighten5);
+
+  --ql-outline-default: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-default);
+  --ql-outline-accent1: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-accent1);
+  --ql-outline-success: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-success);
+  --ql-outline-warning: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-warning);
+  --ql-outline-danger:  0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-danger);
+}

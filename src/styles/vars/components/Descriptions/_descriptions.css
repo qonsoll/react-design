@@ -1,0 +1,12 @@
+:root {
+  --descriptions-bg: #fafafa;
+  --descriptions-title-margin-bottom: 20px;
+  --descriptions-default-padding: 16px 20px;
+  --descriptions-middle-padding: 12px 20px;
+  --descriptions-small-padding: 8px 16px;
+  --descriptions-item-padding-bottom: 16px;
+  --descriptions-item-trailing-colon: true;
+  --descriptions-item-label-colon-margin-right: 8px;
+  --descriptions-item-label-colon-margin-left: 2px;
+  --descriptions-extra-color: var(--ql-typography-text-color-primary);
+}

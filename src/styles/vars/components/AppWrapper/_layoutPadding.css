@@ -1,0 +1,12 @@
+/*
+    This config is used only for AppWrapper component.
+*/
+
+:root {
+  --ql-layout-padding-default: var(--ql-grid-gutter-default);
+  --ql-layout-padding-sm: var(--ql-grid-gutter-sm);
+  --ql-layout-padding-md: var(--ql-grid-gutter-md);
+  --ql-layout-padding-lg: calc(var(--ql-grid-gutter-lg) * 2);
+  --ql-layout-padding-xl: calc(var(--ql-grid-gutter-xl) * 2);
+  --ql-layout-padding-xxl: calc(var(--ql-grid-gutter-xxl) * 2);
+}

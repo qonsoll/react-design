@@ -1,0 +1,15 @@
+:root {
+  --ql-header-height: 56px;
+  --ql-header-background: transparent;
+  --ql-header-shadow: unset;
+  --ql-header-z-index: 1;
+
+  --ql-header-px-xxs: var(--ql-general-layout-px-xxs);
+  --ql-header-px-xs: var(--ql-general-layout-px-xs);
+  --ql-header-px-sm: var(--ql-general-layout-px-sm);
+  --ql-header-px-md: var(--ql-general-layout-px-md);
+  --ql-header-px-lg: var(--ql-general-layout-px-lg);
+  --ql-header-px-xl: var(--ql-general-layout-px-xl);
+  --ql-header-px-xxl: var(--ql-general-layout-px-xxl);
+  --ql-header-px-xxxl: var(--ql-general-layout-px-xxxl);
+}

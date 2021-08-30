@@ -2,6 +2,9 @@ import CSSPropValues from '../css-prop-values'
 
 const flexboxArgTypes = {
   alignItems: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -9,6 +12,9 @@ const flexboxArgTypes = {
     }
   },
   alignContent: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -16,6 +22,9 @@ const flexboxArgTypes = {
     }
   },
   justifyContent: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -23,6 +32,9 @@ const flexboxArgTypes = {
     }
   },
   flexWrap: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -30,6 +42,9 @@ const flexboxArgTypes = {
     }
   },
   flexDirection: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -37,30 +52,45 @@ const flexboxArgTypes = {
     }
   },
   flex: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'text'
     }
   },
   flexGrow: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'number'
     }
   },
   flexShrink: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'number'
     }
   },
   flexBasis: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'text'
     }
   },
   justifySelf: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -68,6 +98,9 @@ const flexboxArgTypes = {
     }
   },
   alignSelf: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'select',
@@ -75,6 +108,9 @@ const flexboxArgTypes = {
     }
   },
   order: {
+    table: {
+      category: 'Flexbox'
+    },
     description: '',
     control: {
       type: 'number'

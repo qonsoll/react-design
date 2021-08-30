@@ -31,16 +31,30 @@ const AccountAvatarStyled = styled.div`
 `
 
 const AccountAvatar = (props) => {
-  const { avatar, title, caption, short, isEllipsis, ref } = props
+  const {
+    avatar,
+    avatarSize,
+    avatarShape,
+    title,
+    caption,
+    short,
+    isEllipsis,
+    ref
+  } = props
   return (
     <AccountAvatarStyled ref={ref}>
       <Box
         boxShadow='inherit'
         p='3px'
-        borderRadius='50%'
+        borderRadius={avatarShape === 'square' ? 0 : '50%'}
         mr={short ? 'unset' : 3}
       >
-        <Avatar size='large' src={avatar} icon={<UserOutlined />} />
+        <Avatar
+          src={avatar}
+          size={avatarSize || 'large'}
+          shape={avatarShape}
+          icon={<UserOutlined />}
+        />
       </Box>
       {!short && (
         <Box display='flex' flexDirection='column' minWidth={isEllipsis && 0}>
@@ -131,6 +145,13 @@ const Account = (props) => {
 }
 
 Account.propTypes = {
+  avatar: PropTypes.string,
+  avatarSize: PropTypes.oneOf(['large', 'default', 'small']),
+  avatarShape: PropTypes.oneOf(['circle', 'square']),
+  title: PropTypes.string,
+  caption: PropTypes.string,
+  short: PropTypes.bool,
+  isEllipsis: PropTypes.bool,
   menu: PropTypes.array,
   menuPlacement: PropTypes.oneOf([
     'bottomLeft',
@@ -141,7 +162,21 @@ Account.propTypes = {
     'topRight'
   ]),
   menuArrow: PropTypes.bool,
-  menuTrigger: PropTypes.oneOf(['click', 'hover'])
+  menuTrigger: PropTypes.oneOf(['click', 'hover']),
+  ref: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ])
+}
+
+Account.defaultProps = {
+  avatarSize: 'large',
+  avatarShape: 'circle',
+  short: false,
+  isEllipsis: false,
+  menuPlacement: 'bottomLeft',
+  menuArrow: false,
+  menuTrigger: 'hover'
 }
 
 export default Account

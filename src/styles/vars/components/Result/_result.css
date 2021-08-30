@@ -1,0 +1,6 @@
+:root {
+  --result-title-font-size: 24px;
+  --result-subtitle-font-size: var(--ql-typography-font-size-md);
+  --result-icon-font-size: 72px;
+  --result-extra-margin: 24px 0 0 0;
+}

@@ -1,0 +1,5 @@
+:root {
+  --ql-border-style-solid: solid;
+  --ql-border-style-dashed: dashed;
+  --ql-border-style-dotted: dotted;
+}

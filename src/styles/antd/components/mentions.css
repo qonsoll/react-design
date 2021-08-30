@@ -1,0 +1,277 @@
+.ant-mentions {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  font-variant: var(--ql-typography-font-variant-default);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  background-color: var(--ql-color-white);
+  background-image: none;
+  border: 1px solid var(--ql-color-dark-t-lighten5);
+  border-radius: var(--border-radius-xxs);
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+  position: relative;
+  display: inline-block;
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+  line-height: var(--ql-typography-line-height-md);
+  white-space: pre-wrap;
+  vertical-align: bottom;
+}
+.ant-mentions::-moz-placeholder {
+  opacity: 1;
+}
+.ant-mentions::-webkit-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions:-ms-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions::-ms-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions::placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions:-moz-placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions:-ms-input-placeholder {
+  text-overflow: ellipsis;
+}
+.ant-mentions:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions:hover {
+  border-color: var(--input-hover-border-color);
+  border-right-width: 1px !important;
+}
+.ant-mentions:focus,
+.ant-mentions-focused {
+  border-color: var(--input-hover-border-color);
+  border-right-width: 1px !important;
+  outline: 0;
+  -webkit-box-shadow: var(--ql-outline-accent1);
+  box-shadow: var(--ql-outline-accent1);
+}
+.ant-mentions-disabled {
+  color: var(--disabled-color);
+  background-color: var(--ql-color-dark-t-lighten5);
+  cursor: not-allowed;
+  opacity: 1;
+}
+.ant-mentions-disabled:hover {
+  border-color: var(--ql-color-dark-t-lighten5);
+  border-right-width: 1px !important;
+}
+.ant-mentions[disabled] {
+  color: var(--disabled-color);
+  background-color: var(--ql-color-dark-t-lighten5);
+  cursor: not-allowed;
+  opacity: 1;
+}
+.ant-mentions[disabled]:hover {
+  border-color: var(--ql-color-dark-t-lighten5);
+  border-right-width: 1px !important;
+}
+.ant-mentions-borderless,
+.ant-mentions-borderless:hover,
+.ant-mentions-borderless:focus,
+.ant-mentions-borderless-focused,
+.ant-mentions-borderless-disabled,
+.ant-mentions-borderless[disabled] {
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+textarea.ant-mentions {
+  max-width: 100%;
+  height: auto;
+  min-height: 32px;
+  line-height: var(--ql-typography-line-height-md);
+  vertical-align: bottom;
+  -webkit-transition: all var(--ql-animation-duration-slow), height 0s;
+  transition: all var(--ql-animation-duration-slow), height 0s;
+}
+.ant-mentions-lg {
+  padding: 6.5px 11px;
+  font-size: var(--ql-typography-font-size-md);
+}
+.ant-mentions-sm {
+  padding: 0px 7px;
+}
+.ant-mentions-disabled > textarea {
+  color: var(--disabled-color);
+  background-color: var(--ql-color-dark-t-lighten5);
+  cursor: not-allowed;
+  opacity: 1;
+}
+.ant-mentions-disabled > textarea:hover {
+  border-color: var(--ql-color-dark-t-lighten5);
+  border-right-width: 1px !important;
+}
+.ant-mentions-focused {
+  border-color: var(--input-hover-border-color);
+  border-right-width: 1px !important;
+  outline: 0;
+  -webkit-box-shadow: var(--ql-outline-accent1);
+  box-shadow: var(--ql-outline-accent1);
+}
+.ant-mentions > textarea,
+.ant-mentions-measure {
+  min-height: 30px;
+  margin: 0;
+  padding: 4px 11px;
+  overflow: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-size-adjust: inherit;
+  font-stretch: inherit;
+  line-height: inherit;
+  direction: inherit;
+  letter-spacing: inherit;
+  white-space: inherit;
+  text-align: inherit;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: inherit;
+  -moz-tab-size: inherit;
+  -o-tab-size: inherit;
+  tab-size: inherit;
+}
+.ant-mentions > textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.ant-mentions > textarea::-moz-placeholder {
+  opacity: 1;
+}
+.ant-mentions > textarea::-webkit-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions > textarea:-ms-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions > textarea::-ms-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions > textarea::placeholder {
+  color: var(--input-placeholder-color);
+}
+.ant-mentions > textarea:-moz-placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions > textarea:-ms-input-placeholder {
+  text-overflow: ellipsis;
+}
+.ant-mentions > textarea:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions-measure {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  color: transparent;
+  pointer-events: none;
+}
+.ant-mentions-measure > span {
+  display: inline-block;
+  min-height: 1em;
+}
+.ant-mentions-dropdown {
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: var(--ql-zindex-dropdown);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-variant: initial;
+  background-color: var(--mentions-dropdown-bg);
+  border-radius: var(--border-radius-xxs);
+  outline: none;
+  -webkit-box-shadow: var(--ql-shadow-default);
+  box-shadow: var(--ql-shadow-default);
+}
+.ant-mentions-dropdown-hidden {
+  display: none;
+}
+.ant-mentions-dropdown-menu {
+  max-height: 250px;
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow: auto;
+  list-style: none;
+  outline: none;
+}
+.ant-mentions-dropdown-menu-item {
+  position: relative;
+  display: block;
+  min-width: 100px;
+  padding: 5px 12px;
+  overflow: hidden;
+  color: var(--ql-typography-text-color-primary);
+  font-weight: normal;
+  line-height: var(--ql-typography-line-height-md);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  -webkit-transition: background var(--ql-animation-duration-slow) ease;
+  transition: background var(--ql-animation-duration-slow) ease;
+}
+.ant-mentions-dropdown-menu-item:hover {
+  background-color: var(--mentions-dropdown-menu-item-hover-bg);
+}
+.ant-mentions-dropdown-menu-item:first-child {
+  border-radius: 2px 2px 0 0;
+}
+.ant-mentions-dropdown-menu-item:last-child {
+  border-radius: 0 0 2px 2px;
+}
+.ant-mentions-dropdown-menu-item-disabled {
+  color: var(--disabled-color);
+  cursor: not-allowed;
+}
+.ant-mentions-dropdown-menu-item-disabled:hover {
+  color: var(--disabled-color);
+  background-color: var(--ql-color-white);
+  cursor: not-allowed;
+}
+.ant-mentions-dropdown-menu-item-selected {
+  color: var(--ql-typography-text-color-primary);
+  font-weight: 600;
+  background-color: var(--ql-color-dark-t-lighten6);
+}
+.ant-mentions-dropdown-menu-item-active {
+  background-color: var(--ql-color-dark-t-lighten5);
+}
+.ant-mentions-rtl {
+  direction: rtl;
+}

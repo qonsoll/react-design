@@ -1,25 +1,32 @@
 import React from 'react'
 import Box from './Box'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes,
+  extraArgTypes
+} from '../../helpers/arg-types'
 
 export default {
   title: 'Components/Box',
   component: Box,
   argTypes: {
-    Packages: {
-      table: {
-        category: 'Extentions'
-      },
-      description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
-    },
-    'Extra CSS props': {
-      table: {
-        category: 'Extentions'
-      },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
-    }
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    ...extraArgTypes
   }
 }
 

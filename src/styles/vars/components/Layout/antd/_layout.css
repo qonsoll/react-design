@@ -1,0 +1,10 @@
+:root {
+  --layout-body-background: var(--ql-color-accent1-t-lighten6);
+  --layout-trigger-height: 48px;
+  --layout-trigger-background: #002140;
+  --layout-trigger-color: var(--ql-color-white);
+  --layout-zero-trigger-width: 36px;
+  --layout-zero-trigger-height: 42px;
+  --layout-trigger-background-light: var(--ql-color-white);
+  --layout-trigger-color-light: var(--ql-typography-text-color-primary);
+}

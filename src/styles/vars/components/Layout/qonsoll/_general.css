@@ -1,0 +1,10 @@
+:root {
+  --ql-general-layout-px-xxs: 8px;     /* mobile (portrait): 0 - 576px */
+  --ql-general-layout-px-xs: 16px;     /* mobile (landscape): 576px - 768px */
+  --ql-general-layout-px-sm: 16px;     /* tablet (portrait): 768px - 1024px */
+  --ql-general-layout-px-md: 32px;     /* tablet (landscape): 1024px - 1280px */
+  --ql-general-layout-px-lg: 32px;     /* desktop: 1280px - 1440px */
+  --ql-general-layout-px-xl: 48px;     /* desktop: 1440px - 1680px */
+  --ql-general-layout-px-xxl: 64px;    /* desktop: 1690px - 1920px */
+  --ql-general-layout-px-xxxl: 64px;   /* desktop: over 1920px */
+}

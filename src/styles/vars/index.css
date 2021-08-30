@@ -1,0 +1,19 @@
+@import './colors/index.css';
+@import './typography/index.css';
+@import './grid/index.css';
+@import './_borderRadius.css';
+@import './borders/index.css';
+@import './outlines/index.css';
+@import './_iconography.css';
+@import './_shadow.css';
+@import './_zIndex.css';
+@import './animation/index.css';
+
+/* General */
+@import './_general.css';
+
+/* Components */
+@import './components/index.css';
+
+/* Old configs */
+@import './old/index.css';

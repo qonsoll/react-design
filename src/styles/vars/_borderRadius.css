@@ -1,0 +1,21 @@
+:root {
+  --ql-border-radius-full: 50%;
+  --ql-border-radius-40: 40px;
+  --ql-border-radius-36: 36px;
+  --ql-border-radius-32: 32px;
+  --ql-border-radius-28: 28px;
+  --ql-border-radius-24: 24px;
+  --ql-border-radius-20: 20px;
+  --ql-border-radius-16: 16px;
+  --ql-border-radius-12: 12px;
+  --ql-border-radius-10: 10px;
+  --ql-border-radius-8: 8px;
+  --ql-border-radius-6: 6px;
+  --ql-border-radius-4: 4px;
+  --ql-border-radius-2: 2px;
+  --ql-border-radius-0: 0;
+
+  --ql-border-radius-lg: var(--ql-border-radius-12);
+  --ql-border-radius-md: var(--ql-border-radius-8);
+  --ql-border-radius-sm: var(--ql-border-radius-6);
+}

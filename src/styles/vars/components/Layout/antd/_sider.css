@@ -1,0 +1,4 @@
+:root {
+  --layout-sider-background: var(--layout-header-background);
+  --layout-sider-background-light: var(--ql-color-white);
+}

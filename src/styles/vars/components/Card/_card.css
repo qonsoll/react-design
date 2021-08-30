@@ -1,0 +1,21 @@
+:root {
+  --card-head-color: var(--ql-typography-heading-color);
+  --card-head-background: transparent;
+  --card-head-font-size: var(--ql-typography-font-size-lg);
+  --card-head-font-size-sm: var(--ql-typography-font-size-md);
+  --card-head-padding: 16px;
+  --card-head-padding-sm: calc(var(--card-head-padding) / 2);
+  --card-head-height: 48px;
+  --card-head-height-sm: 36px;
+  --card-inner-head-padding: 12px;
+  --card-padding-base: 24px;
+  --card-padding-base-sm: calc(var(--card-padding-base) / 2);
+  --card-actions-background: var(--ql-color-white);
+  --card-actions-li-margin: 12px 0;
+  --card-background: var(--ql-color-white);
+  --card-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  --card-radius: var(--ql-border-radius-lg);
+  --card-head-tabs-margin-bottom: -17px;
+  --card-head-extra-color: var(--ql-typography-text-color-primary);
+  --card-skeleton-bg: #cfd8dc;
+}

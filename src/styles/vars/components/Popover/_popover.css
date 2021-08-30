@@ -1,0 +1,11 @@
+:root {
+  --popover-min-width: 177px;
+  --popover-min-height: 32px;
+  --popover-bg: var(--ql-color-white);
+  --popover-color: var(--ql-typography-text-color-primary);
+  --popover-padding-horizontal: 20px;
+  --popover-distance: calc(var(--popover-arrow-width) + 4px);
+  --popover-arrow-width: 6px;
+  --popover-arrow-color: var(--popover-bg);
+  --popover-arrow-outer-color: var(--popover-bg);
+}

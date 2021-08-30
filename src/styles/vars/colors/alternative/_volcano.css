@@ -1,0 +1,11 @@
+/*
+    This palette is used only for the components: Tag, Badge, Ribbon, Tooltip.
+    You can leave it unchanged if you do not plan to use the default colors of the above listed components.
+*/
+
+:root {
+  --volcano-1: #fff2e8;
+  --volcano-3: #ffbb96;
+  --volcano-6: #fa541c;
+  --volcano-7: #d4380d;
+}

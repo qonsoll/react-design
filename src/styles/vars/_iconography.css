@@ -1,0 +1,4 @@
+:root {
+  --ql-icon-color-default: inherit;
+  --ql-icon-color-hover: var(--ql-color-dark);
+}

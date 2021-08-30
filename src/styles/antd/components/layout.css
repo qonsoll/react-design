@@ -1,0 +1,142 @@
+.ant-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* fix firefox can't set height smaller than content on flex item */
+  min-height: 0;
+  background: var(--layout-body-background);
+}
+.ant-layout,
+.ant-layout * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ant-layout.ant-layout-has-sider {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.ant-layout.ant-layout-has-sider > .ant-layout,
+.ant-layout.ant-layout-has-sider > .ant-layout-content {
+  width: 0;
+}
+.ant-layout-header,
+.ant-layout-footer {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.ant-layout-header {
+  height: var(--layout-header-height);
+  padding: var(--layout-header-padding);
+  color: var(--layout-header-color);
+  line-height: var(--layout-header-height);
+  background: var(--layout-header-background);
+}
+.ant-layout-footer {
+  padding: var(--layout-footer-padding);
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  background: var(--layout-footer-background);
+}
+.ant-layout-content {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  /* fix firefox can't set height smaller than content on flex item */
+  min-height: 0;
+}
+.ant-layout-sider {
+  position: relative;
+  /* fix firefox can't set width smaller than content on flex item */
+  min-width: 0;
+  background: var(--layout-sider-background);
+  -webkit-transition: all var(--ql-animation-duration-default);
+  transition: all var(--ql-animation-duration-default);
+}
+.ant-layout-sider-children {
+  height: 100%;
+  margin-top: -0.1px;
+  padding-top: 0.1px;
+}
+.ant-layout-sider-has-trigger {
+  padding-bottom: 48px;
+}
+.ant-layout-sider-right {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.ant-layout-sider-trigger {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  height: var(--layout-trigger-height);
+  color: var(--layout-trigger-color);
+  line-height: 48px;
+  text-align: center;
+  background: var(--layout-trigger-background);
+  cursor: pointer;
+  -webkit-transition: all var(--ql-animation-duration-default);
+  transition: all var(--ql-animation-duration-default);
+}
+.ant-layout-sider-zero-width > * {
+  overflow: hidden;
+}
+.ant-layout-sider-zero-width-trigger {
+  position: absolute;
+  top: 64px;
+  right: calc(0 - var(--layout-zero-trigger-width));
+  z-index: 1;
+  width: var(--layout-zero-trigger-width);
+  height: var(--layout-zero-trigger-height);
+  color: var(--ql-color-white);
+  font-size: 18px;
+  line-height: var(--layout-zero-trigger-height);
+  text-align: center;
+  background: var(--layout-sider-background);
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  -webkit-transition: background var(--ql-animation-duration-slow) ease;
+  transition: background var(--ql-animation-duration-slow) ease;
+}
+.ant-layout-sider-zero-width-trigger::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+  content: '';
+}
+.ant-layout-sider-zero-width-trigger:hover::after {
+  background: rgba(255, 255, 255, 0.1);
+}
+.ant-layout-sider-zero-width-trigger-right {
+  left: -36px;
+  border-radius: 2px 0 0 2px;
+}
+.ant-layout-sider-light {
+  background: var(--layout-sider-background-light);
+}
+.ant-layout-sider-light .ant-layout-sider-trigger {
+  color: var(--layout-trigger-color-light);
+  background: var(--layout-trigger-background-light);
+}
+.ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
+  color: var(--layout-trigger-color-light);
+  background: var(--layout-sider-background-light);
+}
+.ant-layout-rtl {
+  direction: rtl;
+}

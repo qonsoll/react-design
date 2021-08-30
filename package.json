@@ -42,7 +42,7 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "deploy-storybook": "storybook-to-ghpages",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -o docs-build"
   },
   "peerDependencies": {
@@ -98,6 +98,9 @@
     "dist"
   ],
   "dependencies": {
+    "@geometricpanda/storybook-addon-badges": "^0.0.4",
+    "@storybook/addons": "^6.3.7",
+    "@storybook/theming": "^6.3.7",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@umijs/hooks": "^1.9.3",
     "classnames": "^2.3.1",

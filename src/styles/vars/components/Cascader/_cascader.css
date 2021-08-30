@@ -1,0 +1,10 @@
+:root {
+  --cascader-bg: var(--ql-color-white);
+  --cascader-item-selected-bg: var(--ql-color-accent1-t-lighten6);
+  --cascader-menu-bg: var(--ql-color-white);
+  --cascader-menu-border-color-split: var(--ql-border-color-default);
+  --cascader-dropdown-vertical-padding: var(--dropdown-vertical-padding);
+  --cascader-dropdown-edge-child-vertical-padding: var(--dropdown-edge-child-vertical-padding);
+  --cascader-dropdown-font-size: var(--dropdown-font-size);
+  --cascader-dropdown-line-height: var(--dropdown-line-height);
+}

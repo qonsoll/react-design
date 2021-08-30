@@ -1,0 +1,4 @@
+:root {
+  --layout-footer-padding: 24px 24px;
+  --layout-footer-background: var(--layout-body-background);
+}

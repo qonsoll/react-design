@@ -1,0 +1,298 @@
+.ant-timeline {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ant-timeline-item {
+  position: relative;
+  margin: 0;
+  padding-bottom: var(--timeline-item-padding-bottom);
+  font-size: 14px;
+  list-style: none;
+}
+.ant-timeline-item-tail {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  height: calc(100% - 10px);
+  border-left: var(--timeline-width) solid var(--timeline-color);
+}
+.ant-timeline-item-pending .ant-timeline-item-head {
+  font-size: 12px;
+  background-color: transparent;
+}
+.ant-timeline-item-pending .ant-timeline-item-tail {
+  display: none;
+}
+.ant-timeline-item-head {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--timeline-dot-bg);
+  border: var(--timeline-dot-border-width) solid transparent;
+  border-radius: 100px;
+}
+.ant-timeline-item-head-blue {
+  color: var(--timeline-dot-color);
+  border-color: var(--timeline-dot-color);
+}
+.ant-timeline-item-head-red {
+  color: var(--ql-color-danger);
+  border-color: var(--ql-color-danger);
+}
+.ant-timeline-item-head-green {
+  color: var(--ql-color-success);
+  border-color: var(--ql-color-success);
+}
+.ant-timeline-item-head-gray {
+  color: var(--disabled-color);
+  border-color: var(--disabled-color);
+}
+.ant-timeline-item-head-custom {
+  position: absolute;
+  top: 5.5px;
+  left: 5px;
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  padding: 3px 1px;
+  line-height: 1;
+  text-align: center;
+  border: 0;
+  border-radius: var(--border-radius-none);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ant-timeline-item-content {
+  position: relative;
+  top: -7.001px;
+  margin: 0 0 0 26px;
+  word-break: break-word;
+}
+.ant-timeline-item-last > .ant-timeline-item-tail {
+  display: none;
+}
+.ant-timeline-item-last > .ant-timeline-item-content {
+  min-height: 48px;
+}
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-right .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-label .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head,
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head-custom,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head-custom {
+  left: 50%;
+}
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head {
+  margin-left: -4px;
+}
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head-custom,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head-custom {
+  margin-left: 1px;
+}
+.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-label
+  .ant-timeline-item-left
+  .ant-timeline-item-content {
+  left: calc(50% - 4px);
+  width: calc(50% - 14px);
+  text-align: left;
+}
+.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-right
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-label
+  .ant-timeline-item-right
+  .ant-timeline-item-content {
+  width: calc(50% - 12px);
+  margin: 0;
+  text-align: right;
+}
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-head,
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-head-custom {
+  left: calc(100% - 4px - 2px);
+}
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-content {
+  width: calc(100% - 18px);
+}
+.ant-timeline.ant-timeline-pending
+  .ant-timeline-item-last
+  .ant-timeline-item-tail {
+  display: block;
+  height: calc(100% - 14px);
+  border-left: var(--timeline-width) dotted var(--timeline-color);
+}
+.ant-timeline.ant-timeline-reverse
+  .ant-timeline-item-last
+  .ant-timeline-item-tail {
+  display: none;
+}
+.ant-timeline.ant-timeline-reverse
+  .ant-timeline-item-pending
+  .ant-timeline-item-tail {
+  top: 15px;
+  display: block;
+  height: calc(100% - 15px);
+  border-left: var(--timeline-width) dotted var(--timeline-color);
+}
+.ant-timeline.ant-timeline-reverse
+  .ant-timeline-item-pending
+  .ant-timeline-item-content {
+  min-height: 48px;
+}
+.ant-timeline.ant-timeline-label .ant-timeline-item-label {
+  position: absolute;
+  top: -7.001px;
+  width: calc(50% - 12px);
+  text-align: right;
+}
+.ant-timeline.ant-timeline-label
+  .ant-timeline-item-right
+  .ant-timeline-item-label {
+  left: calc(50% + 14px);
+  width: calc(50% - 14px);
+  text-align: left;
+}
+.ant-timeline-rtl {
+  direction: rtl;
+}
+.ant-timeline-rtl .ant-timeline-item-tail {
+  right: 4px;
+  left: auto;
+  border-right: var(--timeline-width) solid var(--timeline-color);
+  border-left: none;
+}
+.ant-timeline-rtl .ant-timeline-item-head-custom {
+  right: 5px;
+  left: auto;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+.ant-timeline-rtl .ant-timeline-item-content {
+  margin: 0 18px 0 0;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate .ant-timeline-item-tail,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right .ant-timeline-item-tail,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label .ant-timeline-item-tail,
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right .ant-timeline-item-head,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label .ant-timeline-item-head,
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-head-custom,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-head-custom,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label
+  .ant-timeline-item-head-custom {
+  right: 50%;
+  left: auto;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right .ant-timeline-item-head,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label .ant-timeline-item-head {
+  margin-right: -4px;
+  margin-left: 0;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-head-custom,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-head-custom,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label
+  .ant-timeline-item-head-custom {
+  margin-right: 1px;
+  margin-left: 0;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label
+  .ant-timeline-item-left
+  .ant-timeline-item-content {
+  right: calc(50% - 4px);
+  left: auto;
+  text-align: right;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-right
+  .ant-timeline-item-content,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-content,
+.ant-timeline-rtl.ant-timeline.ant-timeline-label
+  .ant-timeline-item-right
+  .ant-timeline-item-content {
+  text-align: left;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-tail,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-head,
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-head-custom {
+  right: 0;
+  left: auto;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-right
+  .ant-timeline-item-right
+  .ant-timeline-item-content {
+  width: 100%;
+  margin-right: 18px;
+  text-align: right;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-pending
+  .ant-timeline-item-last
+  .ant-timeline-item-tail {
+  border-right: var(--timeline-width) dotted var(--timeline-color);
+  border-left: none;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-reverse
+  .ant-timeline-item-pending
+  .ant-timeline-item-tail {
+  border-right: var(--timeline-width) dotted var(--timeline-color);
+  border-left: none;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-label .ant-timeline-item-label {
+  text-align: left;
+}
+.ant-timeline-rtl.ant-timeline.ant-timeline-label
+  .ant-timeline-item-right
+  .ant-timeline-item-label {
+  right: calc(50% + 14px);
+  text-align: right;
+}

@@ -1,0 +1,11 @@
+:root {
+  --badge-height: 20px;
+  --badge-height-sm: 14px;
+  --badge-dot-size: 6px;
+  --badge-font-size: var(--ql-font-size-caption1);
+  --badge-font-size-sm: var(--ql-font-size-caption2);
+  --badge-font-weight: var(--ql-font-weight-medium);
+  --badge-status-size: 6px;
+  --badge-text-color: var(--ql-color-white);
+  --badge-color: var(--ql-color-accent1);
+}

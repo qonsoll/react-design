@@ -1,0 +1,6 @@
+:root {
+  --layout-header-height: 64px;
+  --layout-header-padding: 0 24px;
+  --layout-header-background: var(--ql-color-white);
+  --layout-header-color: var(--ql-typography-text-color-primary);
+}

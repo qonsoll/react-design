@@ -1,0 +1,11 @@
+:root {
+  --ql-aside-width: 280px;
+  --ql-aside-collapsed-width: 104px;
+  --ql-aside-max-height: 100vh;
+  --ql-aside-background: unset;
+  --ql-aside-padding: 24px 48px;
+  --ql-aside-border-width: 0;
+  --ql-aside-border-left: unset;
+  --ql-aside-border-right: unset;
+  --ql-aside-shadow: unset;
+}

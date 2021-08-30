@@ -1,0 +1,37 @@
+.anticon {
+  display: inline-block;
+  color: inherit;
+  /* font-style: normal; useless prop */
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  /* vertical-align: -0.125em; useless prop */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.anticon > * {
+  line-height: 1;
+}
+.anticon svg {
+  display: inline-block;
+}
+.anticon::before {
+  display: none;
+}
+.anticon .anticon-icon {
+  display: block;
+}
+.anticon[tabindex] {
+  cursor: pointer;
+}
+.anticon-spin::before {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}

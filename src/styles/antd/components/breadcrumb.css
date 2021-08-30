@@ -1,0 +1,69 @@
+.ant-breadcrumb {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  color: var(--breadcrumb-base-color);
+  font-size: var(--breadcrumb-font-size);
+}
+.ant-breadcrumb .anticon {
+  font-size: var(--breadcrumb-icon-font-size);
+}
+.ant-breadcrumb a {
+  color: var(--breadcrumb-link-color);
+  -webkit-transition: color var(--ql-animation-duration-slow);
+  transition: color var(--ql-animation-duration-slow);
+}
+.ant-breadcrumb a:hover {
+  color: var(--breadcrumb-link-color-hover);
+}
+.ant-breadcrumb > span:last-child {
+  color: var(--breadcrumb-last-item-color);
+}
+.ant-breadcrumb > span:last-child a {
+  color: var(--breadcrumb-last-item-color);
+}
+.ant-breadcrumb > span:last-child .ant-breadcrumb-separator {
+  display: none;
+}
+.ant-breadcrumb-separator {
+  margin: var(--breadcrumb-separator-margin);
+  color: var(--breadcrumb-separator-color);
+}
+.ant-breadcrumb-link > .anticon + span,
+.ant-breadcrumb-link > .anticon + a {
+  margin-left: 4px;
+}
+.ant-breadcrumb-overlay-link > .anticon {
+  margin-left: 4px;
+}
+.ant-breadcrumb-rtl {
+  direction: rtl;
+}
+.ant-breadcrumb-rtl::before {
+  display: table;
+  content: '';
+}
+.ant-breadcrumb-rtl::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.ant-breadcrumb-rtl > span {
+  float: right;
+}
+.ant-breadcrumb-rtl .ant-breadcrumb-link > .anticon + span,
+.ant-breadcrumb-rtl .ant-breadcrumb-link > .anticon + a {
+  margin-right: 4px;
+  margin-left: 0;
+}
+.ant-breadcrumb-rtl .ant-breadcrumb-overlay-link > .anticon {
+  margin-right: 4px;
+  margin-left: 0;
+}

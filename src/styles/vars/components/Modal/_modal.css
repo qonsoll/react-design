@@ -1,0 +1,24 @@
+:root {
+  --modal-header-padding-vertical: 16px;
+  --modal-header-padding-horizontal: 20px;
+  --modal-header-padding: var(--modal-header-padding-vertical) var(--modal-header-padding-horizontal);
+  --modal-body-padding: 16px;
+  --modal-header-bg: var(--ql-color-white);
+  --modal-header-border-width: var(--ql-border-width-default);
+  --modal-header-border-style: var(--ql-border-style-default);
+  --modal-header-title-line-height: 22px;
+  --modal-header-title-font-size: var(--ql-typography-font-size-lg);
+  --modal-header-border-color-split: var(--ql-border-color-default);
+  --modal-header-close-size: 56px;
+  --modal-content-bg: var(--ql-color-white);
+  --modal-heading-color: var(--ql-typography-heading-color);
+  --modal-close-color: var(--ql-typography-text-color-secondary);
+  --modal-footer-bg: transparent;
+  --modal-footer-border-width: var(--ql-border-width-default);
+  --modal-footer-border-style: var(--ql-border-style-default);
+  --modal-footer-border-color-split: var(--ql-border-color-default);
+  --modal-footer-padding-vertical: 10px;
+  --modal-footer-padding-horizontal: 16px;
+  --modal-mask-bg: var(--ql-typography-text-color-secondary);
+  --modal-confirm-body-padding: 32px 32px 24px;
+}

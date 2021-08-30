@@ -1,0 +1,11 @@
+:root {
+  --ql-color-accent1: rgb(102, 72, 191);
+
+  /* Transparent shades */
+  --ql-color-accent1-t-lighten1: rgb(102, 72, 191, var(--ql-color-blending-lighten1));
+  --ql-color-accent1-t-lighten2: rgb(102, 72, 191, var(--ql-color-blending-lighten2));
+  --ql-color-accent1-t-lighten3: rgb(102, 72, 191, var(--ql-color-blending-lighten3));
+  --ql-color-accent1-t-lighten4: rgb(102, 72, 191, var(--ql-color-blending-lighten4));
+  --ql-color-accent1-t-lighten5: rgb(102, 72, 191, var(--ql-color-blending-lighten5));
+  --ql-color-accent1-t-lighten6: rgb(102, 72, 191, var(--ql-color-blending-lighten6));
+}

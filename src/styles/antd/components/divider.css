@@ -1,0 +1,114 @@
+.ant-divider {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  border-top: 1px solid var(--divider-color);
+}
+.ant-divider-vertical {
+  position: relative;
+  top: -0.06em;
+  display: inline-block;
+  height: 0.9em;
+  margin: 0 8px;
+  vertical-align: middle;
+  border-top: 0;
+  border-left: 1px solid var(--divider-color);
+}
+.ant-divider-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+  margin: var(--divider-horizontal-padding);
+}
+.ant-divider-horizontal.ant-divider-with-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0;
+  color: var(--ql-typography-text-color-primary);
+  font-weight: 500;
+  font-size: var(--ql-typography-font-size-md);
+  white-space: nowrap;
+  text-align: center;
+  border-top: 0;
+  border-top-color: var(--divider-color);
+}
+.ant-divider-horizontal.ant-divider-with-text::before,
+.ant-divider-horizontal.ant-divider-with-text::after {
+  position: relative;
+  top: 50%;
+  width: 50%;
+  border-top: 1px solid transparent;
+  border-top-color: inherit;
+  border-bottom: 0;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  content: '';
+}
+.ant-divider-horizontal.ant-divider-with-text-left::before {
+  top: 50%;
+  width: var(--divider-orientation-margin); /* 5% */
+}
+.ant-divider-horizontal.ant-divider-with-text-left::after {
+  top: 50%;
+  width: calc(100% - var(--divider-orientation-margin)); /* 95% */
+}
+.ant-divider-horizontal.ant-divider-with-text-right::before {
+  top: 50%;
+  width: calc(100% - var(--divider-orientation-margin)); /* 95% */
+}
+.ant-divider-horizontal.ant-divider-with-text-right::after {
+  top: 50%;
+  width: var(--divider-orientation-margin); /* 5% */
+}
+.ant-divider-inner-text {
+  display: inline-block;
+  padding: 0 var(--divider-text-padding);
+}
+.ant-divider-dashed {
+  background: none;
+  border-color: var(--divider-color);
+  border-style: dashed;
+  border-width: 1px 0 0;
+}
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed {
+  border-top: 0;
+}
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed::before,
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed::after {
+  border-style: dashed none none;
+}
+.ant-divider-vertical.ant-divider-dashed {
+  border-width: 0 0 0 1px;
+}
+.ant-divider-plain.ant-divider-with-text {
+  color: var(--ql-typography-text-color-primary);
+  font-weight: normal;
+  font-size: 14px;
+}
+.ant-divider-rtl {
+  direction: rtl;
+}
+.ant-divider-rtl.ant-divider-horizontal.ant-divider-with-text-left::before {
+  width: calc(100% - var(--divider-orientation-margin)); /* 95% */
+}
+.ant-divider-rtl.ant-divider-horizontal.ant-divider-with-text-left::after {
+  width: var(--divider-orientation-margin); /* 5% */
+}
+.ant-divider-rtl.ant-divider-horizontal.ant-divider-with-text-right::before {
+  width: var(--divider-orientation-margin); /* 5% */
+}
+.ant-divider-rtl.ant-divider-horizontal.ant-divider-with-text-right::after {
+  width: calc(100% - var(--divider-orientation-margin)); /* 95% */
+}

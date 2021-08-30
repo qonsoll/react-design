@@ -1,0 +1,10 @@
+:root {
+  --image-size-base: 48px;
+  --image-font-size-base: 24px;
+  --image-bg: #f5f5f5;
+  --image-color: var(--ql-color-white);
+  --image-mask-font-size: 16px;
+  --image-preview-operation-size: 18px;
+  --image-preview-operation-color: var(--ql-color-white);
+  /* + */ --image-preview-operation-disabled-color: rgba(255, 255, 255, 0.25);
+}

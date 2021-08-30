@@ -1,0 +1,11 @@
+:root {
+  --ql-color-white: rgb(255, 255, 255); 
+
+  /* Transparent shades */
+  --ql-color-white-t-lighten1: rgb(255, 255, 255, var(--ql-color-blending-lighten1));
+  --ql-color-white-t-lighten2: rgb(255, 255, 255, var(--ql-color-blending-lighten2));
+  --ql-color-white-t-lighten3: rgb(255, 255, 255, var(--ql-color-blending-lighten3));
+  --ql-color-white-t-lighten4: rgb(255, 255, 255, var(--ql-color-blending-lighten4));
+  --ql-color-white-t-lighten5: rgb(255, 255, 255, var(--ql-color-blending-lighten5));
+  --ql-color-white-t-lighten6: rgb(255, 255, 255, var(--ql-color-blending-lighten6));
+}

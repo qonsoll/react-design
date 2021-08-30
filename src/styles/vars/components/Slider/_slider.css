@@ -1,0 +1,21 @@
+:root {
+  --slider-margin: 10px 6px 10px;
+  --slider-rail-background-color: var(--ql-color-dark-t-lighten4);
+  --slider-rail-background-color-hover: #e1e1e1;
+  --slider-track-background-color: var(--ql-color-accent1-t-lighten5);
+  --slider-track-background-color-hover: var(--ql-color-accent1-t-lighten5);
+  --slider-handle-border-width: 2px;
+  --slider-handle-background-color: var(--ql-color-white);
+  --slider-handle-color: var(--ql-color-accent1-t-lighten5);
+  --slider-handle-color-hover: var(--ql-color-accent1-t-lighten5);
+  --slider-handle-color-focus: #46a6ff;
+  --slider-handle-color-focus-shadow: rgba(24, 144, 255, 0.12);
+  --slider-handle-color-tooltip-open: var(--ql-color-accent1);
+  --slider-handle-size: 14px;
+  --slider-handle-margin-top: -5px;
+  --slider-handle-shadow: 0;
+  --slider-dot-border-color: var(--ql-border-color-default);
+  --slider-dot-border-color-active: #8cc8ff;
+  --slider-disabled-color: var(--ql-state-disabled-color);
+  --slider-disabled-background-color: var(--ql-color-white);
+}

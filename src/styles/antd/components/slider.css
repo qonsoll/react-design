@@ -1,0 +1,229 @@
+.ant-slider {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  position: relative;
+  height: 12px;
+  margin: var(--slider-margin);
+  padding: 4px 0;
+  cursor: pointer;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ant-slider-vertical {
+  width: 12px;
+  height: 100%;
+  margin: 6px 10px;
+  padding: 0 4px;
+}
+.ant-slider-vertical .ant-slider-rail {
+  width: 4px;
+  height: 100%;
+}
+.ant-slider-vertical .ant-slider-track {
+  width: 4px;
+}
+.ant-slider-vertical .ant-slider-handle {
+  margin-top: -6px;
+  margin-left: -5px;
+}
+.ant-slider-vertical .ant-slider-mark {
+  top: 0;
+  left: 12px;
+  width: 18px;
+  height: 100%;
+}
+.ant-slider-vertical .ant-slider-mark-text {
+  left: 4px;
+  white-space: nowrap;
+}
+.ant-slider-vertical .ant-slider-step {
+  width: 4px;
+  height: 100%;
+}
+.ant-slider-vertical .ant-slider-dot {
+  top: auto;
+  left: 2px;
+  margin-bottom: -4px;
+}
+.ant-slider-tooltip .ant-tooltip-inner {
+  min-width: unset;
+}
+.ant-slider-rtl.ant-slider-vertical .ant-slider-handle {
+  margin-right: -5px;
+  margin-left: 0;
+}
+.ant-slider-rtl.ant-slider-vertical .ant-slider-mark {
+  right: 12px;
+  left: auto;
+}
+.ant-slider-rtl.ant-slider-vertical .ant-slider-mark-text {
+  right: 4px;
+  left: auto;
+}
+.ant-slider-rtl.ant-slider-vertical .ant-slider-dot {
+  right: 2px;
+  left: auto;
+}
+.ant-slider-with-marks {
+  margin-bottom: 28px;
+}
+.ant-slider-rail {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--slider-rail-background-color);
+  border-radius: var(--border-radius-xxs);
+  -webkit-transition: background-color var(--ql-animation-duration-slow);
+  transition: background-color var(--ql-animation-duration-slow);
+}
+.ant-slider-track {
+  position: absolute;
+  height: 4px;
+  background-color: var(--slider-track-background-color);
+  border-radius: var(--border-radius-xxs);
+  -webkit-transition: background-color var(--ql-animation-duration-slow);
+  transition: background-color var(--ql-animation-duration-slow);
+}
+.ant-slider-handle {
+  position: absolute;
+  width: var(--slider-handle-size);
+  height: var(--slider-handle-size);
+  margin-top: var(--slider-handle-margin-top);
+  background-color: var(--slider-handle-background-color);
+  border: var(--slider-handle-border-width) solid var(--slider-handle-color);
+  border-radius: var(--ql-border-radius-full);
+  -webkit-box-shadow: var(--slider-handle-shadow);
+  box-shadow: var(--slider-handle-shadow);
+  cursor: pointer;
+  -webkit-transition: border-color var(--ql-animation-duration-slow),
+    -webkit-box-shadow 0.6s,
+    -webkit-transform var(--ql-animation-duration-slow) cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: border-color var(--ql-animation-duration-slow),
+    -webkit-box-shadow 0.6s,
+    -webkit-transform var(--ql-animation-duration-slow) cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: border-color var(--ql-animation-duration-slow), box-shadow 0.6s,
+    transform var(--ql-animation-duration-slow)
+      cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: border-color var(--ql-animation-duration-slow), box-shadow 0.6s,
+    transform var(--ql-animation-duration-slow)
+      cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    -webkit-box-shadow 0.6s,
+    -webkit-transform var(--ql-animation-duration-slow) cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.ant-slider-handle-dragging.ant-slider-handle-dragging.ant-slider-handle-dragging {
+  border-color: var(--slider-handle-color-focus);
+  -webkit-box-shadow: 0 0 0 5px var(--slider-handle-color-focus-shadow);
+  box-shadow: 0 0 0 5px var(--slider-handle-color-focus-shadow);
+}
+.ant-slider-handle:focus {
+  border-color: var(--slider-handle-color-focus);
+  outline: none;
+  -webkit-box-shadow: 0 0 0 5px var(--slider-handle-color-focus-shadow);
+  box-shadow: 0 0 0 5px var(--slider-handle-color-focus-shadow);
+}
+.ant-slider-handle.ant-tooltip-open {
+  border-color: var(--slider-handle-color-tooltip-open);
+}
+.ant-slider:hover .ant-slider-rail {
+  background-color: var(--slider-rail-background-color-hover);
+}
+.ant-slider:hover .ant-slider-track {
+  background-color: var(--slider-track-background-color-hover);
+}
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+  border-color: var(--slider-handle-color-hover);
+}
+.ant-slider-mark {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+}
+.ant-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  color: var(--ql-typography-text-color-secondary);
+  text-align: center;
+  word-break: keep-all;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ant-slider-mark-text-active {
+  color: var(--ql-typography-text-color-primary);
+}
+.ant-slider-step {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+}
+.ant-slider-dot {
+  position: absolute;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  background-color: var(--ql-color-white);
+  border: 2px solid var(--ql-border-color-default);
+  border-radius: var(--ql-border-radius-full);
+  cursor: pointer;
+}
+.ant-slider-dot:first-child {
+  margin-left: -4px;
+}
+.ant-slider-dot:last-child {
+  margin-left: -4px;
+}
+.ant-slider-dot-active {
+  border-color: var(--slider-dot-border-color-active);
+}
+.ant-slider-disabled {
+  cursor: not-allowed;
+}
+.ant-slider-disabled .ant-slider-track {
+  background-color: var(--slider-disabled-color) !important;
+}
+.ant-slider-disabled .ant-slider-handle,
+.ant-slider-disabled .ant-slider-dot {
+  background-color: var(--slider-disabled-background-color);
+  border-color: var(--slider-disabled-color) !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.ant-slider-disabled .ant-slider-mark-text,
+.ant-slider-disabled .ant-slider-dot {
+  cursor: not-allowed !important;
+}
+.ant-slider-rtl {
+  direction: rtl;
+}
+.ant-slider-rtl .ant-slider-mark {
+  right: 0;
+  left: auto;
+}
+.ant-slider-rtl .ant-slider-dot {
+  margin-right: -4px;
+  margin-left: 0;
+}
+.ant-slider-rtl .ant-slider-dot:first-child {
+  margin-right: -4px;
+  margin-left: 0;
+}
+.ant-slider-rtl .ant-slider-dot:last-child {
+  margin-right: -4px;
+  margin-left: 0;
+}

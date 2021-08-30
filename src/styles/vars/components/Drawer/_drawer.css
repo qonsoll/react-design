@@ -1,0 +1,8 @@
+:root {
+  --drawer-header-padding: 16px 20px;
+  --drawer-body-padding: 20px;
+  --drawer-bg: var(--ql-color-white);
+  --drawer-footer-padding-vertical: var(--modal-footer-padding-vertical);
+  --drawer-footer-padding-horizontal: var(--modal-footer-padding-horizontal);
+  --drawer-header-close-size: 56px;
+}

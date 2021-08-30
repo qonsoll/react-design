@@ -1,0 +1,6 @@
+:root {
+  --rate-star-color: var(--yellow-6);
+  --rate-star-bg: var(--ql-border-color-default);
+  --rate-star-size: 20px;
+  --rate-star-hover-scale: scale(1.1);
+}

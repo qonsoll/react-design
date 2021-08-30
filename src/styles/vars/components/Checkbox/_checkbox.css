@@ -1,0 +1,8 @@
+:root {
+  --checkbox-size: 16px;
+  --checkbox-border-width: var(--ql-border-width-default);
+  --checkbox-color: var(--ql-color-accent1);
+  --checkbox-check-color: var(--ql-color-white);
+  --checkbox-check-bg: var(--checkbox-check-color);
+  --checkbox-group-item-margin-right: 8px;
+}

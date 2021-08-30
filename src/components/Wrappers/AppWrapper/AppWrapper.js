@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import LayoutOld from '../../LayoutSystem/LayoutOld'
-import ContentOld from '../../LayoutSystem/ContentOld'
+import LayoutOld from '../../LayoutSystem/Old/LayoutOld'
+import ContentOld from '../../LayoutSystem/Old/ContentOld'
 
 const AppWrapper = (props) => {
   const {
@@ -20,12 +20,12 @@ const AppWrapper = (props) => {
       {!horizontal && appHeader}
       <ContentOld
         px={[
-          'var(--layout-padding-default)',
-          'var(--layout-padding-sm)',
-          'var(--layout-padding-md)',
-          'var(--layout-padding-lg)',
-          'var(--layout-padding-xl)',
-          'var(--layout-padding-xxl)'
+          'var(--ql-layout-padding-default)',
+          'var(--ql-layout-padding-sm)',
+          'var(--ql-layout-padding-md)',
+          'var(--ql-layout-padding-lg)',
+          'var(--ql-layout-padding-xl)',
+          'var(--ql-layout-padding-xxl)'
         ]}
         height='100%'
         overflow='auto'

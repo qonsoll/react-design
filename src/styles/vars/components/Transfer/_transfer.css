@@ -1,0 +1,9 @@
+:root {
+  --transfer-header-height: 40px;
+  --transfer-item-height: var(--ql-component-height-md);
+  --transfer-disabled-bg: var(--ql-state-disabled-bg);
+  --transfer-list-height: 200px;
+  --transfer-item-hover-bg: var(--ql-color-dark-t-lighten5);
+  --transfer-item-padding-vertical: 6px;
+  --transfer-list-search-icon-top: 12px;
+}

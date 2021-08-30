@@ -75,6 +75,7 @@ const Layout = (props) => {
             overflow='auto'
             ml={ml}
             mr={mr}
+            boxShadow='var(--ql-content-shadow)'
           >
             {compositionLayout}
           </DirectionLayout>

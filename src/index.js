@@ -1,27 +1,39 @@
-import LayoutOld from './components/LayoutSystem/LayoutOld'
-import HeaderOld from './components/LayoutSystem/HeaderOld'
-import SiderOld from './components/LayoutSystem/SiderOld'
-import ContentOld from './components/LayoutSystem/ContentOld'
-import FooterOld from './components/LayoutSystem/FooterOld'
+// Layout system: old components (used in FOI helse)
+import LayoutOld from './components/LayoutSystem/Old/LayoutOld'
+import HeaderOld from './components/LayoutSystem/Old/HeaderOld'
+import SiderOld from './components/LayoutSystem/Old/SiderOld'
+import ContentOld from './components/LayoutSystem/Old/ContentOld'
+import FooterOld from './components/LayoutSystem/Old/FooterOld'
+
+// NEW Layout system
+import { LayoutSystemProvider } from './components/LayoutSystem/LayoutSystem'
 import Layout from './components/LayoutSystem/Layout'
 import Header from './components/LayoutSystem/Header'
-import Footer from './components/LayoutSystem/Footer'
 import Aside from './components/LayoutSystem/Aside'
+import Footer from './components/LayoutSystem/Footer'
 import BaseLayout from './components/LayoutSystem/BaseLayout'
 import DirectionLayout from './components/LayoutSystem/DirectionLayout'
 import CompositionLayout from './components/LayoutSystem/CompositionLayout'
+
+// Grid system
 import Container from './components/Grid/Container'
 import Row from './components/Grid/Row'
 import Col from './components/Grid/Col'
-import Img from './components/Media/Img'
+
+// Box
 import Box from './components/Box'
+
+import PageWrapper from './components/Wrappers/PageWrapper'
+import ContentWrapper from './components/Wrappers/ContentWrapper'
+import PositioningWrapper from './components/Wrappers/PositioningWrapper'
+
+// Media components
+import Graphic from './components/Media/Graphic'
+import Img from './components/Media/Img'
+import Avatar from './components/Media/Avatar'
+
 import Button from './components/Button'
 import Card from './components/Card'
-import ContentWrapper from './components/Wrappers/ContentWrapper'
-import PageWrapper from './components/Wrappers/PageWrapper'
-import PositioningWrapper from './components/Wrappers/PositioningWrapper'
-import Graphic from './components/Media/Graphic'
-import Avatar from './components/Media/Avatar'
 import HeadingPrimary from './components/Heading/HeadingPrimary'
 import List from './components/List/List'
 import Skeleton from './components/Skeleton'
@@ -48,11 +60,8 @@ import Notification from './components/Notification'
 import AppWrapper from './components/Wrappers/AppWrapper'
 import AppNavbarWrapper from './components/Wrappers/AppNavbarWrapper'
 import AppHeaderWrapper from './components/Wrappers/AppHeaderWrapper'
-import Navigation from './components/Navigation'
-import NavigationItem from './components/NavigationItem'
 import Icon from './components/Icon'
 import Account from './components/Account'
-import { LayoutSystemProvider } from './components/LayoutSystem/LayoutSystem'
 
 export {
   LayoutOld,
@@ -105,8 +114,6 @@ export {
   AppNavbarWrapper,
   AppHeaderWrapper,
   Button,
-  Navigation,
-  NavigationItem,
   Icon,
   Account,
   LayoutSystemProvider
@@ -162,8 +169,6 @@ export default {
   AppNavbarWrapper,
   AppHeaderWrapper,
   Button,
-  Navigation,
-  NavigationItem,
   Icon,
   Account,
   LayoutSystemProvider

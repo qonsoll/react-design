@@ -1,0 +1,48 @@
+.ant-statistic {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+}
+.ant-statistic-title {
+  margin-bottom: 4px;
+  color: var(--ql-typography-text-color-secondary);
+  font-size: var(--statistic-title-font-size);
+}
+.ant-statistic-content {
+  color: var(--ql-typography-text-color-primary);
+  font-size: var(--statistic-content-font-size);
+  font-family: var(--statistic-font-family);
+}
+.ant-statistic-content-value {
+  display: inline-block;
+  direction: ltr;
+}
+.ant-statistic-content-prefix,
+.ant-statistic-content-suffix {
+  display: inline-block;
+}
+.ant-statistic-content-prefix {
+  margin-right: 4px;
+}
+.ant-statistic-content-suffix {
+  margin-left: 4px;
+}
+.ant-statistic-rtl {
+  direction: rtl;
+}
+.ant-statistic-rtl .ant-statistic-content-prefix {
+  margin-right: 0;
+  margin-left: 4px;
+}
+.ant-statistic-rtl .ant-statistic-content-suffix {
+  margin-right: 4px;
+  margin-left: 0;
+}

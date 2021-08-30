@@ -4,6 +4,8 @@ import LayoutSystemContext from './LayoutSystem.context'
 const LayoutSystemProvider = (props) => {
   const {
     children,
+    isAsideLeft,
+    isAsideRight,
     asideLeftOuter,
     asideRightOuter,
     isAsideLeftCollapsed,
@@ -18,9 +20,7 @@ const LayoutSystemProvider = (props) => {
     asideRightOverlay,
     contentHorizontalPadding,
     contentVerticalPadding,
-    layoutBg,
-    isAsideLeft,
-    isAsideRight
+    layoutBg
   } = props
 
   const isOuterLayoutExists = asideLeftOuter || asideRightOuter

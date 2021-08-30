@@ -1,0 +1,250 @@
+.ant-tag {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--tag-default-color);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  display: inline-block;
+  height: auto;
+  margin-right: 8px;
+  padding: 0 7px;
+  font-size: var(--tag-font-size);
+  line-height: var(--tag-line-height);
+  white-space: nowrap;
+  background: var(--tag-default-bg);
+  border: 1px solid var(--ql-color-dark-t-lighten5);
+  border-radius: var(--border-radius-xxs);
+  opacity: 1;
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+}
+.ant-tag:hover {
+  opacity: 0.85;
+}
+.ant-tag,
+.ant-tag a,
+.ant-tag a:hover {
+  color: var(--tag-default-color);
+}
+.ant-tag > a:first-child:last-child {
+  display: inline-block;
+  margin: 0 -8px;
+  padding: 0 8px;
+}
+.ant-tag-close-icon {
+  margin-left: 3px;
+  color: var(--ql-typography-text-color-secondary);
+  font-size: 10px;
+  cursor: pointer;
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+}
+.ant-tag-close-icon:hover {
+  color: var(--tag-default-color);
+}
+.ant-tag-has-color {
+  border-color: transparent;
+}
+.ant-tag-has-color,
+.ant-tag-has-color a,
+.ant-tag-has-color a:hover,
+.ant-tag-has-color .anticon-close,
+.ant-tag-has-color .anticon-close:hover {
+  color: var(--ql-color-white);
+}
+.ant-tag-checkable {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
+  color: var(--ql-color-accent1);
+}
+.ant-tag-checkable:active,
+.ant-tag-checkable-checked {
+  color: var(--ql-color-white);
+}
+.ant-tag-checkable-checked {
+  background-color: var(--ql-color-accent1);
+}
+.ant-tag-checkable:active {
+  background-color: var(--ql-color-accent1);
+}
+.ant-tag-hidden {
+  display: none;
+}
+.ant-tag-pink {
+  color: var(--magenta-7);
+  background: var(--magenta-1);
+  border-color: var(--magenta-3);
+}
+.ant-tag-pink-inverse {
+  color: var(--ql-color-white);
+  background: var(--magenta-6);
+  border-color: var(--magenta-6);
+}
+.ant-tag-magenta {
+  color: var(--magenta-7);
+  background: var(--magenta-1);
+  border-color: var(--magenta-3);
+}
+.ant-tag-magenta-inverse {
+  color: var(--ql-color-white);
+  background: var(--magenta-6);
+  border-color: var(--magenta-6);
+}
+.ant-tag-red {
+  color: var(--red-7);
+  background: var(--red-1);
+  border-color: var(--red-3);
+}
+.ant-tag-red-inverse {
+  color: var(--ql-color-white);
+  background: var(--red-6);
+  border-color: var(--red-6);
+}
+.ant-tag-volcano {
+  color: var(--volcano-7);
+  background: var(--volcano-1);
+  border-color: var(--volcano-3);
+}
+.ant-tag-volcano-inverse {
+  color: var(--ql-color-white);
+  background: var(--volcano-6);
+  border-color: var(--volcano-6);
+}
+.ant-tag-orange {
+  color: var(--orange-7);
+  background: var(--orange-1);
+  border-color: var(--orange-3);
+}
+.ant-tag-orange-inverse {
+  color: var(--ql-color-white);
+  background: var(--orange-6);
+  border-color: var(--orange-6);
+}
+.ant-tag-yellow {
+  color: var(--yellow-7);
+  background: var(--yellow-1);
+  border-color: var(--yellow-3);
+}
+.ant-tag-yellow-inverse {
+  color: var(--ql-color-white);
+  background: var(--yellow-6);
+  border-color: var(--yellow-6);
+}
+.ant-tag-gold {
+  color: var(--gold-7);
+  background: var(--gold-1);
+  border-color: var(--gold-3);
+}
+.ant-tag-gold-inverse {
+  color: var(--ql-color-white);
+  background: var(--gold-6);
+  border-color: var(--gold-6);
+}
+.ant-tag-cyan {
+  color: var(--cyan-7);
+  background: var(--cyan-1);
+  border-color: var(--cyan-3);
+}
+.ant-tag-cyan-inverse {
+  color: var(--ql-color-white);
+  background: var(--cyan-6);
+  border-color: var(--cyan-6);
+}
+.ant-tag-lime {
+  color: var(--lime-7);
+  background: var(--lime-1);
+  border-color: var(--lime-3);
+}
+.ant-tag-lime-inverse {
+  color: var(--ql-color-white);
+  background: var(--lime-6);
+  border-color: var(--lime-6);
+}
+.ant-tag-green {
+  color: var(--green-7);
+  background: var(--green-1);
+  border-color: var(--green-3);
+}
+.ant-tag-green-inverse {
+  color: var(--ql-color-white);
+  background: var(--green-6);
+  border-color: var(--green-6);
+}
+.ant-tag-blue {
+  color: var(--blue-7);
+  background: var(--blue-1);
+  border-color: var(--blue-3);
+}
+.ant-tag-blue-inverse {
+  color: var(--ql-color-white);
+  background: var(--blue-6);
+  border-color: var(--blue-6);
+}
+.ant-tag-geekblue {
+  color: var(--geekblue-7);
+  background: var(--geekblue-1);
+  border-color: var(--geekblue-3);
+}
+.ant-tag-geekblue-inverse {
+  color: var(--ql-color-white);
+  background: var(--geekblue-6);
+  border-color: var(--geekblue-6);
+}
+.ant-tag-purple {
+  color: var(--purple-7);
+  background: var(--purple-1);
+  border-color: var(--purple-3);
+}
+.ant-tag-purple-inverse {
+  color: var(--ql-color-white);
+  background: var(--purple-6);
+  border-color: var(--purple-6);
+}
+.ant-tag-success {
+  color: var(--ql-color-success);
+  background: var(--ql-color-success-t-lighten6);
+  border-color: var(--ql-color-success-t-lighten5);
+}
+.ant-tag-processing {
+  color: var(--ql-color-accent1);
+  background: var(--ql-color-accent1-t-lighten6);
+  border-color: var(--ql-color-accent1-t-lighten5);
+}
+.ant-tag-error {
+  color: var(--ql-color-danger);
+  background: var(--ql-color-danger-t-lighten6);
+  border-color: var(--ql-color-danger-t-lighten5);
+}
+.ant-tag-warning {
+  color: var(--ql-color-warning);
+  background: var(--ql-color-warning-t-lighten6);
+  border-color: var(--ql-color-warning-t-lighten5);
+}
+.ant-tag > .anticon + span,
+.ant-tag > span + .anticon {
+  margin-left: 7px;
+}
+.ant-tag.ant-tag-rtl {
+  margin-right: 0;
+  margin-left: 8px;
+  direction: rtl;
+  text-align: right;
+}
+.ant-tag-rtl .ant-tag-close-icon {
+  margin-right: 3px;
+  margin-left: 0;
+}
+.ant-tag-rtl.ant-tag > .anticon + span,
+.ant-tag-rtl.ant-tag > span + .anticon {
+  margin-right: 7px;
+  margin-left: 0;
+}

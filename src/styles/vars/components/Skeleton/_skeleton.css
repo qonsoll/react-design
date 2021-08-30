@@ -1,0 +1,9 @@
+:root {
+  --skeleton-color: var(--ql-color-dark-t-lighten6);
+  --skeleton-to-color: var(--ql-color-dark-t-lighten4);
+  --skeleton-paragraph-margin-top: 28px;
+  --skeleton-paragraph-li-margin-top: 16px;
+  --skeleton-paragraph-li-height: 16px;
+  --skeleton-title-height: 16px;
+  --skeleton-title-paragraph-margin-top: 20px;
+}

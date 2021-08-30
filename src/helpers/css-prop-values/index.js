@@ -15,6 +15,9 @@ import overflowY from './overflowY'
 import position from './position'
 import textAlign from './textAlign'
 import verticalAlign from './verticalAlign'
+import whiteSpace from './whiteSpace'
+import cursor from './cursor'
+import wordBreak from './wordBreak'
 
 const CSSPropValues = {
   alignContent,
@@ -33,7 +36,10 @@ const CSSPropValues = {
   overflowY,
   position,
   textAlign,
-  verticalAlign
+  verticalAlign,
+  whiteSpace,
+  cursor,
+  wordBreak
 }
 
 export default CSSPropValues

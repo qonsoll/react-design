@@ -1,0 +1,58 @@
+.ant-back-top {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  z-index: var(--ql-zindex-back-top);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.ant-back-top:empty {
+  display: none;
+}
+.ant-back-top-rtl {
+  right: auto;
+  left: 100px;
+  direction: rtl;
+}
+.ant-back-top-content {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  color: var(--back-top-color);
+  text-align: center;
+  background-color: var(--back-top-bg);
+  border-radius: var(--border-radius-xxl);
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+}
+.ant-back-top-content:hover {
+  background-color: var(--back-top-hover-bg);
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+}
+.ant-back-top-icon {
+  font-size: 24px;
+  line-height: 40px;
+}
+@media screen and (max-width: 768px) {
+  .ant-back-top {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ant-back-top {
+    right: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+:root {
+  --avatar-size-base: 32px;
+  --avatar-size-lg: 40px;
+  --avatar-size-sm: 24px;
+  --avatar-font-size-base: 18px;
+  --avatar-font-size-lg: 24px;
+  --avatar-font-size-sm: 14px;
+  --avatar-bg: #ccc;
+  --avatar-color: var(--ql-color-white);
+  --avatar-border-radius: var(--ql-border-radius-md);
+  --avatar-group-overlapping: -8px;
+  --avatar-group-space: 3px;
+  --avatar-group-border-color: var(--ql-color-white);
+}

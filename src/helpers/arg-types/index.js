@@ -10,6 +10,7 @@ import positionArgTypes from './position'
 import shadowArgTypes from './shadow'
 import spaceArgTypes from './space'
 import typographyArgTypes from './typography'
+import extraArgTypes from './extra'
 
 export {
   backgroundArgTypes,
@@ -23,7 +24,8 @@ export {
   positionArgTypes,
   shadowArgTypes,
   spaceArgTypes,
-  typographyArgTypes
+  typographyArgTypes,
+  extraArgTypes
 }
 
 export default {
@@ -38,5 +40,6 @@ export default {
   positionArgTypes,
   shadowArgTypes,
   spaceArgTypes,
-  typographyArgTypes
+  typographyArgTypes,
+  extraArgTypes
 }

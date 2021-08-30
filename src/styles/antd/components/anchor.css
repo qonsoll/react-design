@@ -1,0 +1,103 @@
+.ant-anchor {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  list-style: none;
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  position: relative;
+  padding-left: 2px;
+}
+.ant-anchor-wrapper {
+  margin-left: -4px;
+  padding-left: 4px;
+  overflow: auto;
+  background-color: var(--anchor-bg);
+}
+.ant-anchor-ink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.ant-anchor-ink::before {
+  position: relative;
+  display: block;
+  width: 2px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--ql-color-dark-t-lighten5);
+  content: ' ';
+}
+.ant-anchor-ink-ball {
+  position: absolute;
+  left: 50%;
+  display: none;
+  width: 8px;
+  height: 8px;
+  background-color: var(--ql-color-white);
+  border: 2px solid var(--ql-color-accent1);
+  border-radius: var(--border-radius-base);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: top var(--ql-animation-duration-slow) ease-in-out;
+  transition: top var(--ql-animation-duration-slow) ease-in-out;
+}
+.ant-anchor-ink-ball.visible {
+  display: inline-block;
+}
+.ant-anchor.fixed .ant-anchor-ink .ant-anchor-ink-ball {
+  display: none;
+}
+.ant-anchor-link {
+  padding: var(--anchor-link-padding);
+  line-height: 1.143;
+}
+.ant-anchor-link-title {
+  position: relative;
+  display: block;
+  margin-bottom: 6px;
+  overflow: hidden;
+  color: var(--ql-typography-text-color-primary);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+}
+.ant-anchor-link-title:only-child {
+  margin-bottom: 0;
+}
+.ant-anchor-link-active > .ant-anchor-link-title {
+  color: var(--ql-color-accent1);
+}
+.ant-anchor-link .ant-anchor-link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.ant-anchor-rtl {
+  direction: rtl;
+}
+.ant-anchor-rtl.ant-anchor-wrapper {
+  margin-right: -4px;
+  margin-left: 0;
+  padding-right: 4px;
+  padding-left: 0;
+}
+.ant-anchor-rtl .ant-anchor-ink {
+  right: 0;
+  left: auto;
+}
+.ant-anchor-rtl .ant-anchor-ink-ball {
+  right: 50%;
+  left: 0;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+.ant-anchor-rtl .ant-anchor-link {
+  padding: 7px 16px 7px 0;
+}

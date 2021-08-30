@@ -1,0 +1,91 @@
+.ant-rate {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: var(--ql-typography-text-color-primary);
+  font-size: 14px;
+  font-variant: var(--ql-typography-font-variant-default);
+  line-height: var(--ql-typography-line-height-md);
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: var(--rate-star-color);
+  font-size: var(--rate-star-size);
+  line-height: unset;
+  list-style: none;
+  outline: none;
+}
+.ant-rate-disabled .ant-rate-star {
+  cursor: default;
+}
+.ant-rate-disabled .ant-rate-star:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.ant-rate-star {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+}
+.ant-rate-star:not(:last-child) {
+  margin-right: 8px;
+}
+.ant-rate-star > div:focus {
+  outline: 0;
+}
+.ant-rate-star > div:hover,
+.ant-rate-star > div:focus {
+  -webkit-transform: var(--rate-star-hover-scale);
+  transform: var(--rate-star-hover-scale);
+}
+.ant-rate-star-first,
+.ant-rate-star-second {
+  color: var(--ql-color-dark-t-lighten5);
+  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ant-rate-star-first .anticon,
+.ant-rate-star-second .anticon {
+  vertical-align: middle;
+}
+.ant-rate-star-first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+.ant-rate-star-half .ant-rate-star-first,
+.ant-rate-star-half .ant-rate-star-second {
+  opacity: 1;
+}
+.ant-rate-star-half .ant-rate-star-first,
+.ant-rate-star-full .ant-rate-star-second {
+  color: inherit;
+}
+.ant-rate-text {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 14px;
+}
+.ant-rate-rtl {
+  direction: rtl;
+}
+.ant-rate-rtl .ant-rate-star:not(:last-child) {
+  margin-right: 0;
+  margin-left: 8px;
+}
+.ant-rate-rtl .ant-rate-star-first {
+  right: 0;
+  left: auto;
+}

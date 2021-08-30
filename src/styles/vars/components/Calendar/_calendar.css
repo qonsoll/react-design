@@ -1,0 +1,13 @@
+:root {
+  --calendar-bg: var(--ql-color-white);
+  --calendar-input-bg: var(--input-bg);
+  --calendar-border-color: var(--ql-border-color-default);
+  --calendar-item-active-bg: var(--ql-color-accent1-t-lighten6);
+  --calendar-full-bg: var(--calendar-bg);
+  --calendar-full-panel-bg: var(--calendar-full-bg);
+  
+  /* WTF?? Check these vars! */
+  --carousel-dot-width: 16px;
+  --carousel-dot-height: 3px;
+  --carousel-dot-active-width: 24px;
+}

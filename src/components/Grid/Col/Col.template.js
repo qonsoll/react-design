@@ -19,8 +19,8 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-left: var(--grid-gutter-default);
-  padding-right: var(--grid-gutter-default);
+  padding-left: var(--ql-grid-gutter-default);
+  padding-right: var(--ql-grid-gutter-default);
   flex: 1 0 0%;
   width: auto;
   &.content-space {

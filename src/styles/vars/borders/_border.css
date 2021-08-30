@@ -1,0 +1,7 @@
+:root {
+  --ql-border-width-default: var(--ql-border-width-1);
+  --ql-border-style-default: var(--ql-border-style-solid);
+  --ql-border-color-default: var(--ql-color-dark-t-lighten5);
+
+  --ql-border-default: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-border-color-default)
+}

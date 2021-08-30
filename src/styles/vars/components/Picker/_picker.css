@@ -1,0 +1,17 @@
+:root {
+  --picker-bg: var(--ql-color-white);
+  --picker-basic-cell-hover-color: var(--ql-color-dark-t-lighten5);
+  --picker-basic-cell-active-with-range-color: var(--ql-color-accent1-t-lighten6);
+  /* --picker-basic-cell-hover-with-range-color: lighten(@primary-color, 35%); */
+  --picker-basic-cell-disabled-bg: var(--ql-state-disabled-bg);
+  --picker-border-color: var(--ql-border-color-default);
+  /* --picker-date-hover-range-border-color: lighten(@primary-color, 20%); */
+  /* --picker-date-hover-range-color: var(--picker-basic-cell-hover-with-range-color); !*FIXME*!*/
+  --picker-time-panel-column-width: 56px;
+  --picker-time-panel-column-height: 224px;
+  --picker-time-panel-cell-height: 28px;
+  --picker-panel-cell-height: 24px;
+  --picker-panel-cell-width: 36px;
+  --picker-text-height: 40px;
+  --picker-panel-without-time-cell-height: 66px;
+}

@@ -1,0 +1,4 @@
+:root {
+  --label-required-color: var(--ql-color-danger);
+  --label-color: var(--ql-typography-heading-color);
+}

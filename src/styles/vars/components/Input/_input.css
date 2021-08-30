@@ -1,0 +1,43 @@
+:root {
+  --input-height-sm: var(--ql-component-height-sm);
+  --input-height-base: var(--ql-component-height-md);
+  --input-height-lg: var(--ql-component-height-lg);
+
+  --input-padding-horizontal: calc(12px - 1px);
+  --input-padding-horizontal-sm: calc(8px - 1px);
+  --input-padding-horizontal-base: var(--input-padding-horizontal);
+  --input-padding-horizontal-md: calc(16px - 1px);
+  --input-padding-horizontal-lg: calc(20px - 1px);
+
+  --input-padding-vertical-sm: calc((var(--input-height-sm) - var(--ql-typography-line-height-md) - var(--ql-border-width-default) * 2) / 2);
+  --input-padding-vertical-base: calc((var(--input-height-base) - var(--ql-typography-line-height-md) - var(--ql-border-width-default) * 2) / 2);
+  --input-padding-vertical-lg: calc((var(--input-height-lg) - var(--ql-typography-line-height-md) - var(--ql-border-width-default) * 2) / 2);
+
+  --input-bg: var(--ql-color-dark-t-lighten6);
+  --input-disabled-bg: var(--ql-state-disabled-bg);
+  --input-addon-bg: var(--ql-color-dark-t-lighten5);
+
+  --input-border-color: var(--ql-border-color-default);
+  --input-hover-border-color: var(--ql-color-accent1);
+
+  --input-border-radius-sm: var(--ql-border-radius-sm);
+  --input-border-radius-base: var(--ql-border-radius-md);
+  --input-border-radius-lg: var(--ql-border-radius-md);
+
+  --input-outline-offset: 0 0;
+
+  --input-color: var(--ql-typography-text-color-primary);
+  --input-disabled-color: var(--ql-state-disabled-color);
+
+  --input-icon-color: var(--input-color);
+  --input-icon-hover-color: var(--ql-color-dark);
+  --input-icon-margin-right: 12px;
+  --input-icon-margin-left: 12px;
+  --input-placeholder-color: var(--ql-state-disabled-color);
+
+  --input-number-hover-border-color: var(--input-hover-border-color);
+  --input-number-handler-active-bg: #f4f4f4;
+  --input-number-handler-hover-bg: var(--ql-color-accent1);
+  --input-number-handler-bg: var(--ql-color-white);
+  --input-number-handler-border-color: var(--ql-border-color-default);
+}

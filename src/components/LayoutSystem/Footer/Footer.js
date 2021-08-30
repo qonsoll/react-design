@@ -40,4 +40,6 @@ Footer.propTypes = {
   px: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array])
 }
 
+Footer.defaultProps = {}
+
 export default Footer

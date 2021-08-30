@@ -1,0 +1,48 @@
+:root {
+  --dropdown-menu-bg: var(--ql-color-white);
+  --dropdown-menu-border-radius: var(--ql-border-radius-sm);
+  --dropdown-menu-shadow: var(--ql-shadow-default);
+  --dropdown-menu-padding: 8px 0;
+
+  --dropdown-edge-child-vertical-padding: 4px;
+
+  --dropdown-item-font-size: var(--ql-typography-font-size-md);
+  --dropdown-item-line-height: var(--ql-typography-line-height-md);
+  --dropdown-item-font-weight: var(--ql-font-weight-regular);
+  --dropdown-item-color: var(--ql-typography-text-color-secondary);
+
+  --dropdown-item-padding: 8px 20px;
+
+  --dropdown-item-margin-bottom: 0;
+  --dropdown-item-margin-bottom-last-child: 0;
+
+  --dropdown-item-border-radius: unset;
+  --dropdown-item-border-radius-first-child: unset;
+  --dropdown-item-border-radius-last-child: unset;
+
+  --dropdown-item-icon-size: var(--ql-typography-font-size-md);
+  --dropdown-item-icon-margin-right: 16px;
+
+  --dropdown-item-default-bg-hover: var(--ql-color-dark-t-lighten4);
+
+  --dropdown-item-danger-color: var(--ql-color-danger);
+  --dropdown-item-danger-color-hover: var(--ql-color-danger);
+  --dropdown-item-danger-bg-hover: var(--ql-color-danger-t-lighten6);
+
+  --dropdown-item-disabled-color: var(--ql-state-disabled-color);
+  --dropdown-item-disabled-bg: var(--ql-color-white);
+
+  --dropdown-selected-color: var(--ql-color-accent1);
+
+  --dropdown-group-margin: 0 0 0 20px;
+
+  --dropdown-group-title-font-size: var(--menu-group-title-font-size);
+  --dropdown-group-title-line-height: var(--menu-group-title-line-height);
+  --dropdown-group-title-font-weight: var(--menu-group-title-font-weight);
+  --dropdown-group-title-letter-spacing: var(--menu-group-title-letter-spacing);
+  --dropdown-group-title-text-transform: var(--menu-group-title-text-transform);
+  --dropdown-group-title-color: var(--menu-group-title-color);
+  --dropdown-group-title-padding: var(--dropdown-item-padding);
+
+  --dropdown-group-item-border-radius: 20px 0 0 20px;
+}
