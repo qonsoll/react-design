@@ -36,7 +36,9 @@ export default {
         { src: 'src/styles/antd.css', dest: 'dist/styles' },
         { src: 'src/styles/PhoneInput.css', dest: 'dist/styles' },
         { src: 'src/styles/styles.css', dest: 'dist/styles' },
-        { src: 'src/styles/vars.css', dest: 'dist/styles' }
+        { src: 'src/styles/vars.css', dest: 'dist/styles' },
+        { src: 'src/styles/antd', dest: 'dist/styles' },
+        { src: 'src/styles/vars', dest: 'dist/styles' }
       ]
     }),
     terser()
