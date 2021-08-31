@@ -262,7 +262,7 @@
 .ant-menu-submenu-title .ant-menu-item-icon + span,
 .ant-menu-item .anticon + span,
 .ant-menu-submenu-title .anticon + span {
-  flex:1; 
+  flex: 1; 
   opacity: 1;
   -webkit-transition: opacity var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out),
     width var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out),

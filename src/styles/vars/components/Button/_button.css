@@ -42,6 +42,9 @@
   --btn-default-color: var(--ql-typography-text-color-primary);
   --btn-default-bg: transparent;
   --btn-default-border: var(--btn-border-color);
+  --btn-default-hover-bg: var(--ql-color-white);
+  --btn-default-hover-color: var(--ql-color-accent1-t-lighten1);
+  --btn-default-hover-border: var(--ql-color-accent1);
 
   --btn-primary-color: var(--ql-color-white);
   --btn-primary-bg: var(--ql-color-accent1);
@@ -60,7 +63,6 @@
   --btn-white-bg: var(--ql-color-white);
   --btn-white-border: var(--ql-color-white);
   --btn-white-shadow: var(--btn-shadow);
-  --btn-text-hover-color: var(--ql-typography-text-color-primary);
   --btn-white-hover-bg: var(--btn-white-bg);
   --btn-white-hover-border: var(--btn-white-border);
 
@@ -69,6 +71,7 @@
   --btn-text-border: transparent;
   --btn-text-shadow: var(--btn-shadow);
   --btn-text-hover-bg: var(--ql-color-dark-t-lighten6);
+  --btn-text-hover-color: var(--ql-color-accent1-t-lighten1);
 
   --btn-default-ghost-color: var(--ql-color-white);
   --btn-default-ghost-bg: transparent;

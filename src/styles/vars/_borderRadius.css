@@ -15,7 +15,9 @@
   --ql-border-radius-2: 2px;
   --ql-border-radius-0: 0;
 
+  --ql-border-radius-default: var(--ql-border-radius-8);
+
   --ql-border-radius-lg: var(--ql-border-radius-12);
-  --ql-border-radius-md: var(--ql-border-radius-8);
+  --ql-border-radius-md: var(--ql-border-radius-default);
   --ql-border-radius-sm: var(--ql-border-radius-6);
 }

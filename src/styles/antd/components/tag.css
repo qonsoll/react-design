@@ -18,8 +18,8 @@
   line-height: var(--tag-line-height);
   white-space: nowrap;
   background: var(--tag-default-bg);
-  border: 1px solid var(--ql-color-dark-t-lighten5);
-  border-radius: var(--border-radius-xxs);
+  border: var(--border-width-default) var(--border-style-default) var(--tag-default-border-color);
+  border-radius: var(--ql-border-radius-default);
   opacity: 1;
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);

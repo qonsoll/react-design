@@ -1,8 +1,8 @@
 :root {
-  /* --select-border-color: var(--ql-border-color-default); */
   --select-border-color: transparent;
   --select-item-selected-color: var(--ql-typography-text-color-primary);
   --select-item-selected-font-weight: 600;
+  --select-item-hover: var(--ql-color-dark-t-lighten5);
   --select-dropdown-bg: var(--ql-color-white);
   --select-item-selected-bg: var(--ql-color-accent1-t-lighten5);
   --select-item-active-bg: var(--ql-color-dark-t-lighten5);
@@ -21,4 +21,12 @@
   --select-multiple-disabled-background: var(--input-disabled-bg);
   --select-multiple-item-disabled-color: #bfbfbf;
   --select-multiple-item-disabled-border-color: var(--select-border-color);
+  --select-open-selection-item-color: var(--ql-typography-text-color-secondary);
+
+  /* Select with search*/
+  --ql-select-with-search-bg: transparent;
+  --ql-select-with-search-border: unset;
+
+  /* Select multiple */
+ --ql-select-multiple-item-border-radius: var(--border-radius-default);
 }

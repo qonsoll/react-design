@@ -82,7 +82,7 @@
   margin: 0;
 }
 .ant-avatar-square {
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
 }
 .ant-avatar > img {
   display: block;
@@ -97,7 +97,7 @@
   display: inline-flex;
 }
 .ant-avatar-group .ant-avatar {
-  border: var(--ql-border-width-default) var(--ql-border-style-default)  var(--avatar-group-border-color);
+  border: var(--avatar-group-border-width) var(--border-style-base)  var(--avatar-group-border-color);
 }
 .ant-avatar-group .ant-avatar:not(:first-child) {
   margin-left: var(--avatar-group-overlapping);
