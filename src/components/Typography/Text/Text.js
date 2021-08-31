@@ -29,7 +29,8 @@ const ANTD_TEXT_PROPS = [
   'onClick',
   'italic',
   'type',
-  'underline'
+  'underline',
+  'variants'
 ]
 
 const StyledText = styled(AntTypography.Text).withConfig({
@@ -172,7 +173,7 @@ Text.propTypes = {
     'webkitLineClamp',
     'webkitBoxOrient'
   ]),
-  variant: PropTypes.oneOf([
+  variants: PropTypes.oneOf([
     'h1',
     'h2',
     'h3',
