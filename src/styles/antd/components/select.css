@@ -54,7 +54,7 @@
   padding-right: 18px;
 }
 .ant-select-single.ant-select-open .ant-select-selection-item {
-  color: var(--text-color-secondary-dark);
+  color: var(--select-open-selection-item-color);
 }
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
   width: 100%;
@@ -223,7 +223,7 @@
   background-color: var(--input-bg);
   border: var(--ql-border-width-default) var(--ql-border-style-default)
     var(--input-border-color);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-select-multiple-item-border-radius);
   cursor: default;
   -webkit-transition: font-size var(--ql-animation-duration-slow),
     line-height var(--ql-animation-duration-slow),
@@ -455,10 +455,9 @@
   color: var(--input-color);
   font-size: var(--ql-typography-font-size-md);
   line-height: var(--ql-typography-line-height-md);
-  background-color: var(--input-bg);
+  background-color: var(--ql-select-with-search-bg); /* TEST: default = var(--input-bg) */
   background-image: none;
-  border: var(--ql-border-width-default) var(--ql-border-style-default)
-    var(--input-border-color);
+  border: var(--ql-select-with-search-border); /* TEST: default = var(--border-width-base) var(--border-style-base) var(--input-border-color) */
   border-radius: var(--input-border-radius-base);
   outline: none;
   -webkit-appearance: none;
@@ -602,12 +601,12 @@
   z-index: var(--ql-zindex-dropdown);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 4px 0;
+  padding: var(--select-dropdown-vertical-padding);
   overflow: hidden;
   font-size: var(--ql-typography-font-size-sm);
   font-variant: initial;
-  background-color: var(--ql-color-white);
-  border-radius: var(--border-radius-base);
+  background-color: var(--select-dropdown-bg);
+  border-radius: var(--ql-border-radius-default);
   outline: none;
   -webkit-box-shadow: var(--ql-shadow-default);
   box-shadow: var(--ql-shadow-default);
@@ -683,12 +682,12 @@
   flex: none;
 }
 .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-  background-color: var(--ql-color-dark-t-lighten5);
+  background-color: var(--select-item-hover);
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-  color: var(--ql-typography-text-color-primary);
+  color: var(--select-item-selected-color);
   font-weight: var(--select-item-selected-font-weight);
-  background-color: var(--ql-color-accent1-t-lighten6);
+  background-color: var(--select-item-selected-bg);
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
   .ant-select-item-option-state {

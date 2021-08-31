@@ -112,7 +112,7 @@
   background-color: var(--radio-dot-color);
   border-top: 0;
   border-left: 0;
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
   -webkit-transform: scale(0);
   transform: scale(0);
   opacity: 0;
@@ -240,7 +240,7 @@ span.ant-radio + * {
     var(--input-border-radius-base) 0;
 }
 .ant-radio-button-wrapper:first-child:last-child {
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
 }
 .ant-radio-button-wrapper:hover {
   position: relative;

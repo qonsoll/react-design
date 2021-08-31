@@ -42,7 +42,7 @@
   height: 8px;
   background-color: var(--ql-color-white);
   border: 2px solid var(--ql-color-accent1);
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   -webkit-transition: top var(--ql-animation-duration-slow) ease-in-out;

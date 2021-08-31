@@ -50,7 +50,7 @@
   --menu-item-active-border-width: 3px;
   --menu-inline-toplevel-item-height: 40px;
 
-  --menu-dark-color: var(--text-color-secondary-dark);
+  --menu-dark-color: var(--ql-typography-text-color-secondary);
   --menu-dark-danger-color: var(--ql-color-danger);
   --menu-dark-bg: var(--ql-menu-bg);
   --menu-dark-arrow-color: var(--ql-color-white);

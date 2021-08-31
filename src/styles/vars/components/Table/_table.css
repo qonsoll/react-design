@@ -1,5 +1,6 @@
 :root {
   --table-bg: var(--ql-color-white);
+  --table-hover-bg: var(--ql-color-white);
   --table-header-bg: var(--ql-color-dark-t-lighten5);
   --table-header-color: var(--ql-typography-heading-color);
   --table-header-sort-bg: var(--ql-color-dark-t-lighten4);
@@ -7,8 +8,8 @@
   --table-row-hover-bg: var(--ql-color-dark-t-lighten5);
   --table-selected-row-color: inherit;
   --table-selected-row-bg: var(--ql-color-accent1-t-lighten6);
+  --table-selected-row-hover-bg: var(--ql-color-accent1-t-lighten6);
   --table-body-selected-sort-bg: var(--table-selected-row-bg);
-  /* --table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%); */
   --table-expanded-row-bg: #fbfbfb;
   --table-padding-vertical: 16px;
   --table-padding-horizontal: 16px;
@@ -32,4 +33,6 @@
   --table-selection-column-width: 32px;
   /* --table-sticky-scroll-bar-bg: fade(#000, 35%); */
   --table-sticky-scroll-bar-radius: 4px;
+
+  --ql-table-border-width-default: ;
 }

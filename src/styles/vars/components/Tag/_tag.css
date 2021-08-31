@@ -3,4 +3,5 @@
   --tag-default-color: var(--ql-typography-text-color-primary);
   --tag-font-size: var(--ql-typography-font-size-sm);
   --tag-line-height: 20px;
+  --tag-default-border-color: var(--ql-color-dark-t-lighten5);
 }

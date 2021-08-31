@@ -20,7 +20,7 @@
   display: inline-block;
   margin: 0;
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
 }
 .ant-input-number::-moz-placeholder {
   opacity: 1;
@@ -209,7 +209,7 @@ textarea.ant-input-number {
   text-align: left;
   background-color: transparent;
   border: 0;
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
   outline: 0;
   -webkit-transition: all var(--ql-animation-duration-slow) linear;
   transition: all var(--ql-animation-duration-slow) linear;
@@ -266,7 +266,7 @@ textarea.ant-input-number {
   height: 100%;
   background: var(--input-number-handler-bg);
   border-left: 1px solid var(--input-number-handler-border-color);
-  border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
+  border-radius: 0 var(--ql-border-radius-default) var(--ql-border-radius-default) 0;
   opacity: 0;
   -webkit-transition: opacity 0.24s linear var(--ql-animation-duration-fast);
   transition: opacity 0.24s linear var(--ql-animation-duration-fast);
@@ -291,7 +291,7 @@ textarea.ant-input-number {
   opacity: 1;
 }
 .ant-input-number-handler-up {
-  border-top-right-radius: var(--border-radius-base);
+  border-top-right-radius: var(--ql-border-radius-default);
   cursor: pointer;
 }
 .ant-input-number-handler-up-inner {
@@ -305,7 +305,7 @@ textarea.ant-input-number {
 .ant-input-number-handler-down {
   top: 0;
   border-top: 1px solid var(--ql-color-dark-t-lighten5);
-  border-bottom-right-radius: var(--border-radius-base);
+  border-bottom-right-radius: var(--ql-border-radius-default);
   cursor: pointer;
 }
 .ant-input-number-handler-down-inner {
@@ -344,7 +344,7 @@ textarea.ant-input-number {
   left: 0;
   border-right: 1px solid var(--ql-color-dark-t-lighten5);
   border-left: 0;
-  border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default) 0 0 var(--ql-border-radius-default);
 }
 .ant-input-number-rtl.ant-input-number-borderless
   .ant-input-number-handler-wrap {

@@ -18,7 +18,7 @@
   align-items: center;
   padding: 8px 15px; /*FIXME*/
   word-wrap: break-word;
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
 }
 .ant-alert-content {
   -webkit-box-flex: 1;

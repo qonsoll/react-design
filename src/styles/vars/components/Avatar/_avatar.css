@@ -11,4 +11,5 @@
   --avatar-group-overlapping: -8px;
   --avatar-group-space: 3px;
   --avatar-group-border-color: var(--ql-color-white);
+  --avatar-group-border-width: 2px;
 }

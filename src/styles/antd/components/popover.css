@@ -54,7 +54,7 @@
 .ant-popover-inner {
   background-color: var(--popover-bg);
   background-clip: padding-box;
-  border-radius: var(--border-radius-base);
+  border-radius: var(--ql-border-radius-default);
   -webkit-box-shadow: var(--ql-shadow-default);
   box-shadow: var(--ql-shadow-default);
 }
@@ -118,8 +118,8 @@
 .ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
   bottom: 6.2px;
   border-top-color: transparent;
-  border-right-color: var(--ql-color-white);
-  border-bottom-color: var(--ql-color-white);
+  border-right-color: var(--popover-arrow-color);
+  border-bottom-color: var(--popover-arrow-color);
   border-left-color: transparent;
   -webkit-box-shadow: 3px 3px 7px var(--ql-shadow-color-dropdown-arrow);
   box-shadow: 3px 3px 7px var(--ql-shadow-color-dropdown-arrow);
@@ -141,8 +141,8 @@
   left: 6px;
   border-top-color: transparent;
   border-right-color: transparent;
-  border-bottom-color: var(--ql-color-white);
-  border-left-color: var(--ql-color-white);
+  border-bottom-color: var(--popover-arrow-color);
+  border-left-color: var(--popover-arrow-color);
   -webkit-box-shadow: -3px 3px 7px var(--ql-shadow-color-dropdown-arrow);
   box-shadow: -3px 3px 7px var(--ql-shadow-color-dropdown-arrow);
 }
@@ -161,10 +161,10 @@
 .ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
   top: 6px;
-  border-top-color: var(--ql-color-white);
+  border-top-color: var(--popover-arrow-color);
   border-right-color: transparent;
   border-bottom-color: transparent;
-  border-left-color: var(--ql-color-white);
+  border-left-color: var(--popover-arrow-color);
   -webkit-box-shadow: -2px -2px 5px var(--ql-shadow-color-dropdown-arrow);
   box-shadow: -2px -2px 5px var(--ql-shadow-color-dropdown-arrow);
 }
@@ -183,8 +183,8 @@
 .ant-popover-placement-leftTop > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-leftBottom > .ant-popover-content > .ant-popover-arrow {
   right: 6px;
-  border-top-color: var(--ql-color-white);
-  border-right-color: var(--ql-color-white);
+  border-top-color: var(--popover-arrow-color);
+  border-right-color: var(--popover-arrow-color);
   border-bottom-color: transparent;
   border-left-color: transparent;
   -webkit-box-shadow: 3px -3px 7px var(--ql-shadow-color-dropdown-arrow);

@@ -127,7 +127,7 @@
   width: 1px;
   height: 14px;
   margin-top: -7px;
-  background-color: var(--ql-color-dark-t-lighten5);
+  background-color: var(--list-item-border-color);
 }
 .ant-list-header {
   background: var(--list-header-background);
@@ -147,16 +147,16 @@
   text-align: center;
 }
 .ant-list-split .ant-list-item {
-  border-bottom: 1px solid var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--border-width-default) var(--border-style-default) var(--list-item-border-color);
 }
 .ant-list-split .ant-list-item:last-child {
   border-bottom: none;
 }
 .ant-list-split .ant-list-header {
-  border-bottom: 1px solid var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--border-width-default) var(--border-style-default) var(--list-item-border-color);
 }
 .ant-list-split.ant-list-empty .ant-list-footer {
-  border-top: 1px solid var(--ql-color-dark-t-lighten5);
+  border-top: var(--border-width-default) var(--border-style-default) var(--list-item-border-color);
 }
 .ant-list-loading .ant-list-spin-nested-loading {
   min-height: 32px;
@@ -165,7 +165,7 @@
   .ant-spin-container
   > .ant-list-items
   > .ant-list-item:last-child {
-  border-bottom: 1px solid var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--border-width-default) var(--border-style-default) var(--list-item-border-color);
 }
 .ant-list-lg .ant-list-item {
   padding: var(--list-item-padding-lg);
@@ -222,7 +222,7 @@
 }
 .ant-list-bordered {
   border: 1px solid var(--ql-color-dark-t-lighten5);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-default);
 }
 .ant-list-bordered .ant-list-header {
   padding-right: 24px;
