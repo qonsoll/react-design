@@ -54,7 +54,11 @@ const ContentWrapperTest = (props) => {
             flexDirection={breadcrumb ? 'column' : 'row'}
           >
             {onBack && (
-              <Box display='flex' alignItems='center'>
+              <Box
+                mb={breadcrumb ? [2, 2, 3, 3, 3] : []}
+                display='flex'
+                alignItems='center'
+              >
                 <Back
                   onClick={onBack}
                   {...backBtnProps}
