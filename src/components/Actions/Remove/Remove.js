@@ -17,6 +17,7 @@ const ClinicRemove = (props) => {
     text,
     type,
     icon,
+    disabled,
     iconLeft,
     iconRight,
     shape,
@@ -58,11 +59,13 @@ const ClinicRemove = (props) => {
         itemName || DEFAULT_PROPS.itemName
       }`}
       placement={popconfirmPlacement}
+      disabled={disabled}
     >
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
           placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
+          visible={!disabled}
         >
           <Button
             {...props}
