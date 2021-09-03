@@ -65,7 +65,7 @@ const ClinicRemove = (props) => {
         <Tooltip
           title={tooltip}
           placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
-          visible={!disabled}
+          // visible={!disabled} вона тепер завжди видима... навіть якщо тексту нема
         >
           <Button
             {...props}
