@@ -406,7 +406,7 @@
 .ant-btn-dashed[disabled]:hover,
 .ant-btn-dashed[disabled]:focus,
 .ant-btn-dashed[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;
@@ -614,7 +614,7 @@
 .ant-btn-link[disabled]:hover,
 .ant-btn-link[disabled]:focus,
 .ant-btn-link[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: transparent;
   border-color: transparent;
   text-shadow: none;
@@ -739,7 +739,7 @@
 .ant-btn-text[disabled]:hover,
 .ant-btn-text[disabled]:focus,
 .ant-btn-text[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: transparent;
   border-color: transparent;
   text-shadow: none;
@@ -822,7 +822,7 @@
 .ant-btn-dangerous[disabled]:hover,
 .ant-btn-dangerous[disabled]:focus,
 .ant-btn-dangerous[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;
@@ -993,7 +993,7 @@
 .ant-btn-dangerous.ant-btn-link[disabled]:hover,
 .ant-btn-dangerous.ant-btn-link[disabled]:focus,
 .ant-btn-dangerous.ant-btn-link[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;
@@ -1059,7 +1059,7 @@
 .ant-btn-dangerous.ant-btn-link[disabled]:hover,
 .ant-btn-dangerous.ant-btn-link[disabled]:focus,
 .ant-btn-dangerous.ant-btn-link[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--btn-link-hover-bg);
   border-color: transparent;
   text-shadow: none;
@@ -1144,7 +1144,7 @@
 .ant-btn-dangerous.ant-btn-text[disabled]:hover,
 .ant-btn-dangerous.ant-btn-text[disabled]:focus,
 .ant-btn-dangerous.ant-btn-text[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;
@@ -1210,7 +1210,7 @@
 .ant-btn-dangerous.ant-btn-text[disabled]:hover,
 .ant-btn-dangerous.ant-btn-text[disabled]:focus,
 .ant-btn-dangerous.ant-btn-text[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: transparent;
   border-color: transparent;
   text-shadow: none;
@@ -1692,7 +1692,7 @@
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:focus,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;
@@ -1777,7 +1777,7 @@
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus,
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;
@@ -1867,7 +1867,7 @@
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:active {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   text-shadow: none;

@@ -725,7 +725,7 @@
 }
 .ant-menu-item-disabled,
 .ant-menu-submenu-disabled {
-  color: var(--disabled-color) !important;
+  color: var(--ql-state-disabled-color) !important;
   background: none;
   cursor: not-allowed;
 }
@@ -735,12 +735,12 @@
 }
 .ant-menu-item-disabled a,
 .ant-menu-submenu-disabled a {
-  color: var(--disabled-color) !important;
+  color: var(--ql-state-disabled-color) !important;
   pointer-events: none;
 }
 .ant-menu-item-disabled > .ant-menu-submenu-title,
 .ant-menu-submenu-disabled > .ant-menu-submenu-title {
-  color: var(--disabled-color) !important;
+  color: var(--ql-state-disabled-color) !important;
   cursor: not-allowed;
 }
 .ant-menu-item-disabled

@@ -169,7 +169,7 @@ a:focus {
   outline: var(--link-focus-outline);
 }
 a[disabled] {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   cursor: not-allowed;
   pointer-events: none;
 }

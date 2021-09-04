@@ -20,14 +20,14 @@
 }
 .ant-empty-normal {
   margin: 32px 0;
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 .ant-empty-normal .ant-empty-image {
   height: 40px;
 }
 .ant-empty-small {
   margin: 8px 0;
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 .ant-empty-small .ant-empty-image {
   height: 35px;

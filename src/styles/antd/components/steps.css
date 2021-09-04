@@ -115,10 +115,10 @@
 }
 .ant-steps-item-wait .ant-steps-item-icon {
   background-color: var(--ql-color-white);
-  border-color: var(--disabled-color);
+  border-color: var(--ql-state-disabled-color);
 }
 .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 .ant-steps-item-wait
   .ant-steps-item-icon

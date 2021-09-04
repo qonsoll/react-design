@@ -377,7 +377,7 @@
   left: -4px;
   width: inherit;
   height: inherit;
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   border: inherit;
   content: '';
 }

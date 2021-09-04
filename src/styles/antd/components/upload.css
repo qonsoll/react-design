@@ -111,7 +111,7 @@
   font-size: 14px;
 }
 .ant-upload.ant-upload-drag .anticon-plus {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   font-size: 30px;
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);

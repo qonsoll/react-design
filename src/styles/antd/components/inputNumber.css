@@ -59,7 +59,7 @@
   box-shadow: var(--ql-outline-accent1);
 }
 .ant-input-number-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -69,7 +69,7 @@
   border-right-width: 1px !important;
 }
 .ant-input-number[disabled] {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -185,7 +185,7 @@ textarea.ant-input-number {
   box-shadow: var(--ql-outline-accent1);
 }
 .ant-input-number-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -327,7 +327,7 @@ textarea.ant-input-number {
 .ant-input-number-handler-up-disabled:hover .ant-input-number-handler-up-inner,
 .ant-input-number-handler-down-disabled:hover
   .ant-input-number-handler-down-inner {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 .ant-input-number-borderless {
   -webkit-box-shadow: none;

@@ -53,8 +53,8 @@
   border-color: var(--ql-color-success);
 }
 .ant-timeline-item-head-gray {
-  color: var(--disabled-color);
-  border-color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
+  border-color: var(--ql-state-disabled-color);
 }
 .ant-timeline-item-head-custom {
   position: absolute;

@@ -20,7 +20,7 @@ a.ant-typography.ant-typography-danger:hover {
   color: var(--ql-color-danger);
 }
 .ant-typography.ant-typography-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -163,7 +163,7 @@ a.ant-typography[disabled],
 .ant-typography a[disabled],
 a.ant-typography.ant-typography-disabled,
 .ant-typography a.ant-typography-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   cursor: not-allowed;
 }
 a.ant-typography[disabled]:active,
@@ -174,7 +174,7 @@ a.ant-typography[disabled]:hover,
 .ant-typography a[disabled]:hover,
 a.ant-typography.ant-typography-disabled:hover,
 .ant-typography a.ant-typography-disabled:hover {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 a.ant-typography[disabled]:active,
 .ant-typography a[disabled]:active,

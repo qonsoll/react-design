@@ -63,7 +63,7 @@
   box-shadow: var(--ql-outline-accent1);
 }
 .ant-mentions-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -73,7 +73,7 @@
   border-right-width: 1px !important;
 }
 .ant-mentions[disabled] {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -110,7 +110,7 @@ textarea.ant-mentions {
   padding: 0px 7px;
 }
 .ant-mentions-disabled > textarea {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -256,11 +256,11 @@ textarea.ant-mentions {
   border-radius: 0 0 2px 2px;
 }
 .ant-mentions-dropdown-menu-item-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   cursor: not-allowed;
 }
 .ant-mentions-dropdown-menu-item-disabled:hover {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-white);
   cursor: not-allowed;
 }

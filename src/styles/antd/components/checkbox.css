@@ -134,7 +134,7 @@
   cursor: not-allowed;
 }
 .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after {
-  border-color: var(--disabled-color);
+  border-color: var(--ql-state-disabled-color);
   -webkit-animation-name: none;
   animation-name: none;
 }
@@ -152,7 +152,7 @@
   animation-name: none;
 }
 .ant-checkbox-disabled + span {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   cursor: not-allowed;
 }
 .ant-checkbox-disabled:hover::after,
@@ -230,8 +230,8 @@
   content: ' ';
 }
 .ant-checkbox-indeterminate.ant-checkbox-disabled .ant-checkbox-inner::after {
-  background-color: var(--disabled-color);
-  border-color: var(--disabled-color);
+  background-color: var(--ql-state-disabled-color);
+  border-color: var(--ql-state-disabled-color);
 }
 .ant-checkbox-rtl {
   direction: rtl;

@@ -36,7 +36,7 @@
 }
 .ant-list-empty-text {
   padding: 16px;
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   font-size: 14px;
   text-align: center;
 }

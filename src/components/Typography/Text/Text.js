@@ -68,44 +68,45 @@ const StyledText = styled(AntTypography.Text).withConfig({
           h1: {
             fontSize: 'var(--ql-font-size-h1)',
             lineHeight: 'var(--ql-line-height-h1)',
-            fontWeight: 'var(--ql-font-weight-medium)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
             letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h2: {
             fontSize: 'var(--ql-font-size-h2)',
             lineHeight: 'var(--ql-line-height-h2)',
-            fontWeight: 'var(--ql-font-weight-medium)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
             letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h3: {
             fontSize: 'var(--ql-font-size-h3)',
             lineHeight: 'var(--ql-line-height-h3)',
-            fontWeight: 'var(--ql-font-weight-medium)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
             letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h4: {
             fontSize: 'var(--ql-font-size-h4)',
             lineHeight: 'var(--ql-line-height-h4)',
-            fontWeight: 'var(--ql-font-weight-medium)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
             letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h5: {
             fontSize: 'var(--ql-font-size-h5)',
             lineHeight: 'var(--ql-line-height-h5)',
-            fontWeight: 'var(--ql-font-weight-medium)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
             letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h6: {
             fontSize: 'var(--ql-font-size-h6)',
             lineHeight: 'var(--ql-line-height-h6)',
-            fontWeight: 'var(--ql-font-weight-medium)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
             letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           overline: {
             fontSize: 'var(--ql-font-size-overline)',
             lineHeight: 'var(--ql-line-height-overline)',
-            fontWeight: 'var(--ql-font-weight-medium)',
-            letterSpacing: 'var(--ql-letter-spacing-default)'
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
+            letterSpacing: 'var(--ql-letter-spacing-default)',
+            textTransform: 'uppercase'
           },
           body1: {
             fontSize: 'var(--ql-font-size-body1)',

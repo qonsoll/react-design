@@ -249,7 +249,7 @@
 .ant-dropdown-menu-item-disabled > a,
 .ant-dropdown-menu-submenu-title-disabled > a {
   position: relative;
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   pointer-events: none;
 }
 .ant-dropdown-menu-item-disabled > .anticon + span > a::after,
@@ -313,7 +313,7 @@
 .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled
   .ant-dropdown-menu-submenu-title
   .ant-dropdown-menu-submenu-arrow-icon {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-white);
   cursor: not-allowed;
 }

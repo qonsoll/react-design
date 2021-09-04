@@ -134,7 +134,7 @@
   left: 0;
   display: block;
   margin: auto;
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   font-family: var(--pagination-font-family);
   letter-spacing: 2px;
   text-align: center;
@@ -226,7 +226,7 @@
 .ant-pagination-disabled .ant-pagination-item-link,
 .ant-pagination-disabled:hover .ant-pagination-item-link,
 .ant-pagination-disabled:focus .ant-pagination-item-link {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   border-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
 }
@@ -310,7 +310,7 @@
   box-shadow: var(--ql-outline-accent1);
 }
 .ant-pagination-options-quick-jumper input-disabled {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -320,7 +320,7 @@
   border-right-width: 1px !important;
 }
 .ant-pagination-options-quick-jumper input[disabled] {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
   opacity: 1;
@@ -396,7 +396,7 @@ textarea.ant-pagination-options-quick-jumper input {
   border-color: var(--ql-color-accent1);
 }
 .ant-pagination-simple .ant-pagination-simple-pager input[disabled] {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
@@ -462,7 +462,7 @@ textarea.ant-pagination-options-quick-jumper input {
   cursor: not-allowed;
 }
 .ant-pagination.ant-pagination-disabled .ant-pagination-item a {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: transparent;
   border: none;
   cursor: not-allowed;
@@ -475,7 +475,7 @@ textarea.ant-pagination-options-quick-jumper input {
   color: var(--pagination-item-disabled-color-active);
 }
 .ant-pagination.ant-pagination-disabled .ant-pagination-item-link {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
   background: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
@@ -491,7 +491,7 @@ textarea.ant-pagination-options-quick-jumper input {
   opacity: 1;
 }
 .ant-pagination.ant-pagination-disabled .ant-pagination-simple-pager {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 @media only screen and (max-width: 992px) {
   .ant-pagination-item-after-jump-prev,

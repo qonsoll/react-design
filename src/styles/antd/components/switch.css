@@ -16,7 +16,7 @@
   height: var(--switch-height);
   line-height: var(--switch-height);
   vertical-align: middle;
-  background-color: var(--disabled-color);
+  background-color: var(--ql-state-disabled-color);
   border: 0;
   border-radius: 100px;
   cursor: pointer;

@@ -879,7 +879,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   text-align: center;
 }
 .ant-table-empty .ant-table-tbody > tr.ant-table-placeholder {
-  color: var(--disabled-color);
+  color: var(--ql-state-disabled-color);
 }
 .ant-table-tbody > tr.ant-table-placeholder:hover > td {
   background: var(--table-hover-bg);
