@@ -587,7 +587,7 @@
   margin: 0;
   padding: 0;
   color: var(--ql-typography-text-color-primary);
-  font-size: 14px;
+  font-size: var(--ql-typography-font-size-md);
   font-variant: var(--ql-typography-font-variant-default);
   line-height: var(--ql-typography-line-height-md);
   list-style: none;
