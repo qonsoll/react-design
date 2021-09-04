@@ -141,6 +141,7 @@ textarea.ant-input-affix-wrapper {
   padding: 0;
   border: none;
   outline: none;
+  background-color: unset; /* Test */
 }
 .ant-input-affix-wrapper > input.ant-input:focus {
   -webkit-box-shadow: none;
