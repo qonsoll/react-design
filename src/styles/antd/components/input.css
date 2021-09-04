@@ -865,3 +865,43 @@ textarea.ant-input {
     height: auto;
   }
 }
+
+/* Autocomplete Fix: disable default autocomplete styles while it works ——— Start */
+
+/* ——— !!! ——— */
+/* Backup construction: don't touch! */
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+input:-internal-autofill-selected,
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  font-family: var(--ql-font-family-main);
+  font-size: var(--ql-typography-font-size-sm);
+  transition: background-color ease-in-out 9999s;
+} */
+
+/* Backup construction: don't touch! */
+/* ——— !!! ——— */
+
+.ant-input:-webkit-autofill {
+  transition: background ease-in-out 9999s, border var(--ql-animation-duration-slow);
+}
+.ant-input:-webkit-autofill::first-line {
+  font-family: var(--ql-font-family-main);
+  font-size: var(--ql-typography-font-size-md);
+}
+.ant-input.ant-input-lg:-webkit-autofill::first-line {
+  font-family: var(--ql-font-family-main);
+  font-size: var(--ql-typography-font-size-lg);
+}
+.ant-input.ant-input-sm:-webkit-autofill::first-line {
+  font-family: var(--ql-font-family-main);
+  font-size: var(--ql-typography-font-size-sm);
+}
+/* Autocomplete Fix: disable default autocomplete styles while it works ——— End */
