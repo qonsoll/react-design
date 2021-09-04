@@ -7,6 +7,7 @@ import { Breadcrumb } from 'antd'
 const PositioningWrapper = (props) => {
   const {
     children,
+    height,
     alignMiddle,
     contentWidth,
     onBack,
@@ -18,7 +19,7 @@ const PositioningWrapper = (props) => {
 
   return (
     <Box
-      height={(alignMiddle || isBottomSticky) && 'inherit'}
+      height={height || ((alignMiddle || isBottomSticky) && 'inherit')} // Quick fix to set height (related to new layout)
       display='flex'
       justifyContent={alignMiddle && 'center'}
       flexDirection='column'

@@ -7,6 +7,7 @@ import Graphic from '../../Media/Graphic'
 const PageWrapper = (props) => {
   const {
     children,
+    height,
     alignMiddle,
     isBottomSticky,
     contentWidth,
@@ -26,6 +27,7 @@ const PageWrapper = (props) => {
 
   return (
     <PositioningWrapper
+      height={height} // Quick fix to set height (related to new layout)
       alignMiddle={alignMiddle}
       isBottomSticky={isBottomSticky}
       contentWidth={contentWidth}
