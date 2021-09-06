@@ -303,14 +303,17 @@
   .ant-form-item-children-icon {
   position: absolute;
   top: 50%;
+  transform: translate(0, -50%);
   right: 0;
   z-index: 1;
   width: 32px;
-  height: 20px;
-  margin-top: -10px;
+  display: flex; /* Test */
+  justify-content: center; /* Test */
+  /* height: 20px; */
+  /* margin-top: -10px; */
   font-size: var(--ql-typography-font-size-md);
-  line-height: var(--ql-typography-line-height-md);
-  text-align: center;
+  /* line-height: var(--ql-typography-line-height-md); */
+  /* text-align: center; */
   visibility: visible;
   -webkit-animation: zoomIn var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-out-back);
   animation: zoomIn var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-out-back);
