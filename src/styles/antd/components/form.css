@@ -671,11 +671,11 @@
   list-style: none;
   -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
-  margin-bottom: var(--form-item-margin-bottom);
+  margin-bottom: var(--ql-form-item-vertical-spacing);
   vertical-align: top;
 }
 .ant-form-item-with-help {
-  margin-bottom: calc(var(--form-item-margin-bottom) - var(--ql-form-message-line-height));
+  margin-bottom: calc(var(--ql-form-item-vertical-spacing) - var(--ql-form-message-line-height));
 }
 .ant-form-item-hidden,
 .ant-form-item-hidden.ant-row {
