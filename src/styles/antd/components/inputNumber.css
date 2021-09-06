@@ -55,8 +55,8 @@
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-input-number-disabled {
   color: var(--ql-state-disabled-color);
@@ -181,8 +181,8 @@ textarea.ant-input-number {
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-input-number-disabled {
   color: var(--ql-state-disabled-color);

@@ -339,8 +339,8 @@
   border-color: var(--ql-color-warning);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-warning);
-  box-shadow: var(--ql-outline-warning);
+  -webkit-box-shadow: var(--ql-outline-warning-2);
+  box-shadow: var(--ql-outline-warning-2);
 }
 .ant-form-item-has-warning .ant-input-disabled {
   background-color: var(--ql-color-dark-t-lighten5);
@@ -360,8 +360,8 @@
   border-color: var(--ql-color-warning);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-warning);
-  box-shadow: var(--ql-outline-warning);
+  -webkit-box-shadow: var(--ql-outline-warning-2);
+  box-shadow: var(--ql-outline-warning-2);
 }
 .ant-form-item-has-warning .ant-input-prefix {
   color: var(--ql-color-warning);
@@ -394,8 +394,8 @@
   border-color: var(--ql-color-warning);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-warning);
-  box-shadow: var(--ql-outline-warning);
+  -webkit-box-shadow: var(--ql-outline-warning-2);
+  box-shadow: var(--ql-outline-warning-2);
 }
 .ant-form-item-has-warning .ant-input-number,
 .ant-form-item-has-warning .ant-picker {
@@ -409,8 +409,8 @@
   border-color: var(--ql-color-warning);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-warning);
-  box-shadow: var(--ql-outline-warning);
+  -webkit-box-shadow: var(--ql-outline-warning-2);
+  box-shadow: var(--ql-outline-warning-2);
 }
 .ant-form-item-has-warning .ant-input-number:not([disabled]):hover,
 .ant-form-item-has-warning .ant-picker:not([disabled]):hover {
@@ -421,8 +421,8 @@
   border-color: var(--ql-color-warning);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-warning);
-  box-shadow: var(--ql-outline-warning);
+  -webkit-box-shadow: var(--ql-outline-warning-2);
+  box-shadow: var(--ql-outline-warning-2);
 }
 .ant-form-item-has-error .ant-form-item-split {
   color: var(--ql-color-danger);
@@ -441,8 +441,8 @@
   border-color: var(--ql-color-danger-t-lighten1);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-danger);
-  box-shadow: var(--ql-outline-danger);
+  -webkit-box-shadow: var(--ql-outline-danger-2);
+  box-shadow: var(--ql-outline-danger-2);
 }
 .ant-form-item-has-error .ant-input-disabled {
   background-color: var(--ql-color-dark-t-lighten5);
@@ -460,8 +460,8 @@
   border-color: var(--ql-color-danger);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-danger);
-  box-shadow: var(--ql-outline-danger);
+  -webkit-box-shadow: var(--ql-outline-danger-2);
+  box-shadow: var(--ql-outline-danger-2);
 }
 .ant-form-item-has-error .ant-input-prefix {
   color: var(--ql-color-danger);
@@ -494,8 +494,8 @@
   border-color: var(--ql-color-danger);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-danger);
-  box-shadow: var(--ql-outline-danger);
+  -webkit-box-shadow: var(--ql-outline-danger-2);
+  box-shadow: var(--ql-outline-danger-2);
 }
 .ant-form-item-has-error
   .ant-input-group-addon
@@ -518,8 +518,8 @@
   border-color: var(--ql-color-danger-t-lighten1);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-danger);
-  box-shadow: var(--ql-outline-danger);
+  -webkit-box-shadow: var(--ql-outline-danger-2);
+  box-shadow: var(--ql-outline-danger-2);
 }
 .ant-form-item-has-error .ant-input-number:not([disabled]):hover,
 .ant-form-item-has-error .ant-picker:not([disabled]):hover {
@@ -542,16 +542,16 @@
   border-color: var(--ql-color-danger-t-lighten1);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-danger);
-  box-shadow: var(--ql-outline-danger);
+  -webkit-box-shadow: var(--ql-outline-danger-2);
+  box-shadow: var(--ql-outline-danger-2);
 }
 .ant-form-item-has-error .ant-cascader-picker:focus .ant-cascader-input {
   background-color: var(--input-bg);
   border-color: var(--ql-color-danger-t-lighten1);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-danger);
-  box-shadow: var(--ql-outline-danger);
+  -webkit-box-shadow: var(--ql-outline-danger-2);
+  box-shadow: var(--ql-outline-danger-2);
 }
 .ant-form-item-has-error .ant-transfer-list {
   border-color: var(--ql-color-danger);
@@ -567,8 +567,8 @@
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-form-item-has-error .ant-radio-button-wrapper {
   border-color: var(--ql-color-danger) !important;

@@ -493,8 +493,8 @@
   content: '';
 }
 .ant-select-tree .ant-select-tree-treenode.drop-container > [draggable] {
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-select-tree-show-line .ant-select-tree-indent-unit {
   position: relative;

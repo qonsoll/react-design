@@ -29,12 +29,12 @@
 }
 .ant-switch:focus {
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-default);
-  box-shadow: var(--ql-outline-default);
+  -webkit-box-shadow: var(--ql-outline-default-2);
+  box-shadow: var(--ql-outline-default-2);
 }
 .ant-switch-checked:focus {
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-switch:focus:hover {
   -webkit-box-shadow: none;

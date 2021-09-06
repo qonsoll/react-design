@@ -1,5 +1,10 @@
 :root {
-  --ql-outline-width-default: 2px;
+  --ql-outline-width-5: 5px;
+  --ql-outline-width-4: 4px;
+  --ql-outline-width-3: 3px;
+  --ql-outline-width-2: 2px;
+  --ql-outline-width-1: 1px;
+  --ql-outline-width-0: 0;
 
   --ql-outline-color-default: var(--ql-color-dark-t-lighten5);
   --ql-outline-color-accent1: var(--ql-color-accent1-t-lighten5);
@@ -7,9 +12,38 @@
   --ql-outline-color-warning: var(--ql-color-warning-t-lighten5);
   --ql-outline-color-danger:  var(--ql-color-danger-t-lighten5);
 
-  --ql-outline-default: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-default);
-  --ql-outline-accent1: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-accent1);
-  --ql-outline-success: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-success);
-  --ql-outline-warning: 0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-warning);
-  --ql-outline-danger:  0 0 0 var(--ql-outline-width-default) var(--ql-outline-color-danger);
+  --ql-outline-default-5: 0 0 0 var(--ql-outline-width-5) var(--ql-outline-color-default);
+  --ql-outline-default-4: 0 0 0 var(--ql-outline-width-4) var(--ql-outline-color-default);
+  --ql-outline-default-3: 0 0 0 var(--ql-outline-width-3) var(--ql-outline-color-default);
+  --ql-outline-default-2: 0 0 0 var(--ql-outline-width-2) var(--ql-outline-color-default);
+  --ql-outline-default-1: 0 0 0 var(--ql-outline-width-1) var(--ql-outline-color-default);
+  --ql-outline-default-0: 0 0 0 var(--ql-outline-width-0) var(--ql-outline-color-default);
+
+  --ql-outline-accent1-5: 0 0 0 var(--ql-outline-width-5) var(--ql-outline-color-accent1);
+  --ql-outline-accent1-4: 0 0 0 var(--ql-outline-width-4) var(--ql-outline-color-accent1);
+  --ql-outline-accent1-3: 0 0 0 var(--ql-outline-width-3) var(--ql-outline-color-accent1);
+  --ql-outline-accent1-2: 0 0 0 var(--ql-outline-width-2) var(--ql-outline-color-accent1);
+  --ql-outline-accent1-1: 0 0 0 var(--ql-outline-width-1) var(--ql-outline-color-accent1);
+  --ql-outline-accent1-0: 0 0 0 var(--ql-outline-width-0) var(--ql-outline-color-accent1);
+
+  --ql-outline-success-5: 0 0 0 var(--ql-outline-width-5) var(--ql-outline-color-success);
+  --ql-outline-success-4: 0 0 0 var(--ql-outline-width-4) var(--ql-outline-color-success);
+  --ql-outline-success-3: 0 0 0 var(--ql-outline-width-3) var(--ql-outline-color-success);
+  --ql-outline-success-2: 0 0 0 var(--ql-outline-width-2) var(--ql-outline-color-success);
+  --ql-outline-success-1: 0 0 0 var(--ql-outline-width-1) var(--ql-outline-color-success);
+  --ql-outline-success-0: 0 0 0 var(--ql-outline-width-0) var(--ql-outline-color-success);
+
+  --ql-outline-warning-5: 0 0 0 var(--ql-outline-width-5) var(--ql-outline-color-warning);
+  --ql-outline-warning-4: 0 0 0 var(--ql-outline-width-4) var(--ql-outline-color-warning);
+  --ql-outline-warning-3: 0 0 0 var(--ql-outline-width-3) var(--ql-outline-color-warning);
+  --ql-outline-warning-2: 0 0 0 var(--ql-outline-width-2) var(--ql-outline-color-warning);
+  --ql-outline-warning-1: 0 0 0 var(--ql-outline-width-1) var(--ql-outline-color-warning);
+  --ql-outline-warning-0: 0 0 0 var(--ql-outline-width-0) var(--ql-outline-color-warning);
+
+  --ql-outline-danger-5: 0 0 0 var(--ql-outline-width-5) var(--ql-outline-color-danger);
+  --ql-outline-danger-4: 0 0 0 var(--ql-outline-width-4) var(--ql-outline-color-danger);
+  --ql-outline-danger-3: 0 0 0 var(--ql-outline-width-3) var(--ql-outline-color-danger);
+  --ql-outline-danger-2: 0 0 0 var(--ql-outline-width-2) var(--ql-outline-color-danger);
+  --ql-outline-danger-1: 0 0 0 var(--ql-outline-width-1) var(--ql-outline-color-danger);
+  --ql-outline-danger-0: 0 0 0 var(--ql-outline-width-0) var(--ql-outline-color-danger);
 }

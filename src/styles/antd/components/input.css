@@ -56,8 +56,8 @@
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-input-outline-accent1-md);
+  box-shadow: var(--ql-input-outline-accent1-md);
 }
 .ant-input-rtl .ant-input-affix-wrapper:focus,
 .ant-input-rtl .ant-input-affix-wrapper-focused {
@@ -118,6 +118,19 @@ textarea.ant-input-affix-wrapper {
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
   border-color: var(--input-hover-border-color);
+  box-shadow: var(--ql-input-outline-accent1-md)
+  border-right-width: 1px !important;
+  z-index: 1;
+}
+.ant-input-affix-wrapper-lg.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: var(--input-hover-border-color);
+  box-shadow: var(--ql-input-outline-accent1-lg)
+  border-right-width: 1px !important;
+  z-index: 1;
+}
+.ant-input-affix-wrapper-sm.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: var(--input-hover-border-color);
+  box-shadow: var(--ql-input-outline-accent1-sm)
   border-right-width: 1px !important;
   z-index: 1;
 }
@@ -263,8 +276,8 @@ textarea.ant-input-affix-wrapper {
   border-color: var(--ql-color-accent1);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-input-outline-accent1-md);
+  box-shadow: var(--ql-input-outline-accent1-md);
 }
 .ant-input-rtl .ant-input:focus,
 .ant-input-rtl .ant-input-focused {

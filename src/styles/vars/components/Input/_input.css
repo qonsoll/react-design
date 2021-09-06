@@ -25,6 +25,10 @@
   --input-border-radius-lg: var(--ql-border-radius-md);
 
   --input-outline-offset: 0 0;
+  
+  --ql-input-outline-accent1-lg: var(--ql-outine-accent1-3);
+  --ql-input-outline-accent1-md: var(--ql-outine-accent1-2);
+  --ql-input-outline-accent1-sm: var(--ql-input-outline-accent1-md);
 
   --input-color: var(--ql-typography-text-color-primary);
   --input-disabled-color: var(--ql-state-disabled-color);

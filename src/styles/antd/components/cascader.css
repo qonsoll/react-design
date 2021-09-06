@@ -57,8 +57,8 @@
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-cascader-picker-borderless .ant-cascader-input {
   border-color: transparent !important;

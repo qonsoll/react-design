@@ -507,8 +507,8 @@
   content: '';
 }
 .ant-tree .ant-tree-treenode.drop-container > [draggable] {
-  -webkit-box-shadow: var(--ql-outline-accent1);
-  box-shadow: var(--ql-outline-accent1);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
 }
 .ant-tree-show-line .ant-tree-indent-unit {
   position: relative;
