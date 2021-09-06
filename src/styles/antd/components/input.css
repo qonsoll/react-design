@@ -118,7 +118,6 @@ textarea.ant-input-affix-wrapper {
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
   border-color: var(--input-hover-border-color);
-  box-shadow: var(--ql-outline-accent1-2);
   border-right-width: 1px !important;
   z-index: 1;
 }
