@@ -431,7 +431,7 @@
 .ant-form-item-has-error .ant-input-affix-wrapper,
 .ant-form-item-has-error .ant-input:hover,
 .ant-form-item-has-error .ant-input-affix-wrapper:hover {
-  background-color: var(--input-bg);
+  background-color: transparent;
   border-color: var(--ql-color-danger);
 }
 .ant-form-item-has-error .ant-input:focus,
