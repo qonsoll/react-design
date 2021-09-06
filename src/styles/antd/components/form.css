@@ -308,11 +308,11 @@
   width: 32px;
   display: flex; /* Test */
   justify-content: center; /* Test */
-  /* height: 20px; */
-  /* margin-top: -10px; */
+  /* height: 20px; */ /* Test */
+  /* margin-top: -10px; */ /* Test */
   font-size: var(--ql-typography-font-size-md);
-  /* line-height: var(--ql-typography-line-height-md); */
-  /* text-align: center; */
+  /* line-height: var(--ql-typography-line-height-md); */ /* Test */
+  /* text-align: center; */ /* Test */
   visibility: visible;
   -webkit-animation: zoomIn var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-out-back);
   animation: zoomIn var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-out-back);
@@ -675,7 +675,7 @@
   vertical-align: top;
 }
 .ant-form-item-with-help {
-  margin-bottom: 0;
+  margin-bottom: calc(var(--form-item-margin-bottom) - var(--ql-form-message-line-height));
 }
 .ant-form-item-hidden,
 .ant-form-item-hidden.ant-row {
@@ -789,9 +789,12 @@
 .ant-form-item-extra {
   clear: both;
   min-height: 24px;
-  color: var(--ql-typography-text-color-secondary);
-  font-size: 14px;
-  line-height: var(--ql-typography-line-height-md);
+  color: var(--ql-form-message-color);
+  font-size: var(--ql-form-message-font-size);
+  line-height: var(--ql-form-message-line-height);
+  font-weight: var(--ql-form-message-font-weight);
+  letter-spacing: var(--ql-form-message-letter-spacing);
+  text-transform: var(--ql-form-message-text-transform);
   -webkit-transition: color var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-out);
   transition: color var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-out);
 }

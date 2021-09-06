@@ -1,6 +1,14 @@
 :root {
   /* --form-item-trailing-colon: true; */
-  --form-item-margin-bottom: 24px;
+  --ql-form-item-vertical-spacing: 40px;
+
+  --ql-form-message-color: var(--ql-typography-text-color-secondary);
+  --ql-form-message-font-size: var(--ql-typography-font-size-md);
+  --ql-form-message-line-height: var(--ql-typography-line-height-md);
+  --ql-form-message-font-weight: initial;
+  --ql-form-message-letter-spacing: var(--ql-letter-spacing-none);
+  --ql-form-message-text-transform: unset;
+  
   --form-vertical-label-padding: 0 0 8px;
   --form-vertical-label-margin: 0;
   --form-item-label-font-size: var(--ql-typography-font-size-md);
