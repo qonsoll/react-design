@@ -1,8 +1,12 @@
 :root {
+  --ql-tooltip-bg: var(--ql-color-dark);
+  --ql-tooltip-color: var(--ql-color-white);
+  --ql-tooltip-border-radius: var(--ql-border-radius-default);
+  --ql-tooltip-padding: 6px 8px;
+  --ql-tooltip-shadow: var(--ql-shadow-default);
+
   --tooltip-max-width: 250px;
-  --tooltip-color: var(--ql-color-white);
-  --tooltip-bg: var(--ql-color-dark);
   --tooltip-arrow-width: 5px;
-  --tooltip-arrow-color: var(--tooltip-bg);
+  --tooltip-arrow-color: var(--ql-tooltip-bg);
   --tooltip-distance: calc(var(--tooltip-arrow-width) - 1px + 4px);
 }

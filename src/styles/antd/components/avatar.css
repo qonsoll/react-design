@@ -15,7 +15,7 @@
   white-space: nowrap;
   text-align: center;
   vertical-align: middle;
-  background: var(--avatar-bg);
+  background: var(--ql-avatar-bg);
   width: var(--avatar-size-base);
   height: var(--avatar-size-base);
   min-width: var(--avatar-size-base);
