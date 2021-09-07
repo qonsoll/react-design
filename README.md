@@ -23,9 +23,25 @@ yarn add @qonsoll/react-design
 ```
 ## Usage
 
-1. Create vars.css files inside styles/ directory. 
+1. In your index.js file insert two imports:
+```jsx
+import "@qonsoll/react-design/dist/styles/styles.css"; 
+import "@qonsoll/react-design/dist/styles/vars/index.css"
 
-2. There is an example how vars.css file should look like. Copy and insert this code to vars.css file. 
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+```
+2. Create folder styles/ in root of project, if you don't already have this folder in your project
+```bash 
+ mkdir styles
+```
+Create vars.css files inside styles/ directory. 
+
+There is an example how vars.css file should look like. Copy and insert this code to vars.css file. You can add own values for vars, they will be override default vars from library
 ```jsx
 :root {
   /* Colors —————————————————————————————— Start */
@@ -39,37 +55,20 @@ yarn add @qonsoll/react-design
 ```
 It is not necessary to use comments, but when your file have a lot of variables better to use comment for grouping
 
-3. In your index.js file insert:
-```jsx
-import { Title, Button } from '@qonsoll/react-design'
-import "@qonsoll/react-design/dist/styles/styles.css"; 
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App>
-     <Title>Hello, world</Title>
-     <Button type="primary">Next</Button>
-    </App>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-```
-
-4. After the previous string (with import) you need to insert it
+3. Add this import in file index.js
 ```jsx
 import './styles/vars.css'
 ```
-Be careful, it string must be only after string with importing default library's vars. Otherwise, your vars will not be used.
+Be careful, it string must be only after string with importing default library's vars. Otherwise, your vars will not be used. 
+### How to override specific property?
 
-5. You can add own values for vars, they will be used instead of defaults vars from library. Try to change any value and see what the project looks like. Buttons should get accent color and typography should get Rubik font-family
+Variables for all components, typography, colors and so on you can see in folder @qonsoll/react-design/dist/styles/vars. There are all vars, that you use. 
 
-6. Variables for other components, typography, colors and so on you can to see in folder @qonsoll/react-design/dist/styles/vars. There are all vars, that you use. 
-
-7. If you need to set variable for specific component, you need to go to folder component and find name of one. In file you will find name of var, that you need. 
+If you need to set variable for specific component, you need to go to component folder and find name of one. In file you will find name of var, that you need. 
 For example, in order to change background for card, you need to: 
 - go in file components/Card/_card.css;
 - find variable --card-background;
-- copy name of var;
+- copy name of this var;
 - go to file /styles/vars.css in your project;
 - insert it
 ```jsx
@@ -77,7 +76,6 @@ For example, in order to change background for card, you need to:
   --card-background:  #a7a7a796;
   /* Card —————————————————————————————— End */
 ```
-
 ### How to import components?
 ```jsx
 import { Container, Row, Col, Button, Text } from "@qonsoll/react-design"
