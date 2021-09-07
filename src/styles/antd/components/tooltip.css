@@ -42,15 +42,15 @@
 .ant-tooltip-inner {
   min-width: 30px;
   min-height: 32px;
-  padding: 6px 8px;
-  color: var(--tooltip-color);
+  padding: var(--ql-tooltip-padding);
+  color: var(--ql-tooltip-color);
   text-align: left;
   text-decoration: none;
   word-wrap: break-word;
-  background-color: var(--tooltip-bg);
-  border-radius: var(--border-radius-xxs);
-  -webkit-box-shadow: var(--ql-shadow-default);
-  box-shadow: var(--ql-shadow-default);
+  background-color: var(--ql-tooltip-bg);
+  border-radius: var(--ql-tooltip-border-radius);
+  -webkit-box-shadow: var(--ql-tooltip-shadow);
+  box-shadow: var(--ql-tooltip-shadow);
 }
 .ant-tooltip-arrow {
   position: absolute;
