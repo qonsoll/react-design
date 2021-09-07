@@ -59,14 +59,14 @@ It is not necessary to use comments, but when your file have a lot of variables 
 ```jsx
 import './styles/vars.css'
 ```
-Be careful, it string must be only after string with importing default library's vars. Otherwise, your vars will not be used. 
+Be careful, it string must be only after string with importing default library's vars. Otherwise, your vars will not work. 
 ### How to override specific property?
 
-Variables for all components, typography, colors and so on you can see in folder @qonsoll/react-design/dist/styles/vars. There are all vars, that you use. 
+Variables for all components, typography, colors and so on you can find in folder @qonsoll/react-design/dist/styles/vars. There are all vars, that you use. 
 
 If you need to set variable for specific component, you need to go to component folder and find name of one. In file you will find name of var, that you need. 
 For example, in order to change background for card, you need to: 
-- go in file components/Card/_card.css;
+- go to file components/Card/_card.css;
 - find variable --card-background;
 - copy name of this var;
 - go to file /styles/vars.css in your project;
