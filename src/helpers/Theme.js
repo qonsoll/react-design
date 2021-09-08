@@ -36,19 +36,13 @@ const Theme = {
     regular: 400
   },
   colors: {
-    accent: 'var(--color-accent)',
-    theme: 'var(--color-theme)',
-    light: 'var(--color-light)',
-    dark: 'var(--color-dark)',
-    danger: 'var(--color-danger)',
-    warning: 'var(--color-warning)',
-    success: 'var(--color-success)',
-    info: 'var(--color-info)',
-    white: 'var(--color-white)',
-    black: 'var(--color-black)',
-    linkedin: 'var(--color-linkedin)',
-    facebook: 'var(--color-facebook)',
-    google: 'var(--color-google)'
+    accent: 'var(--ql-color-accent1)',
+    white: 'var(--ql-color-white)',
+    dark: 'var(--ql-color-dark)',
+    danger: 'var(--ql-color-danger)',
+    warning: 'var(--ql-color-warning)',
+    success: 'var(--ql-color-success)',
+    info: 'var(--ql-color-info)'
   },
   darkenBlending: {
     darken1: 'var(--darken1)'
