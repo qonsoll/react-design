@@ -55,7 +55,25 @@ const Button = styled(AntButton)`
 `
 
 Button.propTypes = {
-  'Default AntD props': PropTypes.object,
+  type: PropTypes.oneOf([
+  'primary', 
+  'secondary', 
+  'text', 
+  'link', 
+  'ghost'
+  ]),
+  danger: PropTypes.bool,
+  disabled: PropTypes.bool,
+  block: PropTypes.bool,
+  ghost: PropTypes.bool,
+  href: PropTypes.string,
+  htmlType: PropTypes.string,
+  icon: PropTypes.node,
+  loading: PropTypes.bool,
+  shape: PropTypes.string,
+  size: PropTypes.string,
+  target: PropTypes.string,
+  onClick: PropTypes.func,
   Packages: PropTypes.oneOf([
     'space',
     'color',
