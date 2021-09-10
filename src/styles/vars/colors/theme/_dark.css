@@ -8,4 +8,14 @@
   --ql-color-dark-t-lighten4: rgb(46, 45, 53, var(--ql-color-blending-lighten4));
   --ql-color-dark-t-lighten5: rgb(46, 45, 53, var(--ql-color-blending-lighten5));
   --ql-color-dark-t-lighten6: rgb(46, 45, 53, var(--ql-color-blending-lighten6));
+
+  /* Solid shades */
+  --ql-color-dark-lighten1: #5b6068;
+  --ql-color-dark-lighten2: #81858b;
+  --ql-color-dark-lighten3: #c0c2c5;
+  --ql-color-dark-lighten4: #d9dbdc;
+  --ql-color-dark-lighten5: #e5e6e7;
+  --ql-color-dark-lighten6: #f2f3f3;
+
+
 }
