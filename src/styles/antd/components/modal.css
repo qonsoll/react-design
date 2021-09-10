@@ -112,7 +112,7 @@
   background: var(--modal-header-bg);
   border-bottom: var(--modal-header-border-width)
     var(--modal-header-border-style) var(--modal-header-border-color-split);
-  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  border-radius: var(--ql-border-radius-lg) var(--ql-border-radius-lg) 0 0;
 }
 .ant-modal-body {
   padding: var(--modal-body-padding);
