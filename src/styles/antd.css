@@ -4556,7 +4556,7 @@ html {
 .ant-menu-submenu-title .ant-menu-item-icon + span,
 .ant-menu-item .anticon + span,
 .ant-menu-submenu-title .anticon + span {
-  flex:1; 
+  flex:1;
   opacity: 1;
   -webkit-transition: opacity var(--animation-duration-slow) var(--ease-in-out),
     width var(--animation-duration-slow) var(--ease-in-out),
@@ -5836,8 +5836,8 @@ html {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.ant-dropdown-hidden,	
-.ant-dropdown-menu-hidden,	
+.ant-dropdown-hidden,
+.ant-dropdown-menu-hidden,
 .ant-dropdown-menu-submenu-hidden {
   display: none;
 }
@@ -23359,7 +23359,7 @@ textarea.ant-mentions {
   background-color: var(--modal-content-bg);
   background-clip: padding-box;
   border: 0;
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--ql-border-radius-lg);
   -webkit-box-shadow: var(--box-shadow-base);
   box-shadow: var(--box-shadow-base);
   pointer-events: auto;

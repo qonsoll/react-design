@@ -68,7 +68,7 @@
   background-color: var(--modal-content-bg);
   background-clip: padding-box;
   border: 0;
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--ql-border-radius-lg);
   -webkit-box-shadow: var(--ql-shadow-default);
   box-shadow: var(--ql-shadow-default);
   pointer-events: auto;
