@@ -2,10 +2,11 @@
   --list-header-background: transparent;
   --list-footer-background: transparent;
   --list-empty-text-padding: 16px;
+  --list-item-color: var(--ql-typography-text-color-primary);
+  --list-item-border-color: var(--ql-color-dark-t-lighten5);
   --list-item-padding: 12px 0;
   --list-item-padding-sm: 8px 16px;
   --list-item-padding-lg: 16px 20px;
-  --list-item-border-color: var(--ql-color-dark-t-lighten5);
   --list-item-meta-margin-bottom: 16px;
   --list-item-meta-avatar-margin-right: 16px;
   --list-item-meta-title-margin-bottom: 12px;

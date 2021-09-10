@@ -1,3 +1,7 @@
 :root {
   --empty-font-size: var(--ql-typography-font-size-md);
+  /* Round coaster in icon*/
+  --empty-ellipse-color: var(--ql-color-dark-lighten6);
+  /* Blank in box */
+  --empty-path3-color: var(--ql-color-dark-lighten6);
 }

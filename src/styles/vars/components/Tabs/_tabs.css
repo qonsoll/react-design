@@ -20,6 +20,7 @@
   --tabs-vertical-margin: 16px 0 0 0;
   --tabs-scrolling-size: 32px;
   --tabs-highlight-color: var(--ql-color-accent1);
+  --tabs-color: var(--ql-typography-text-color-primary);
   --tabs-hover-color: var(--ql-color-accent1-t-lighten5);
   --tabs-active-color: var(--ql-color-accent1);
   --tabs-card-gutter: 2px;

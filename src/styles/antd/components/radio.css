@@ -250,7 +250,7 @@ span.ant-radio+* {
   width: 1px;
   height: 100%;
   padding: 1px 0;
-  background-color: var(--ql-color-accent1);
+  background-color: var(--ql-color-dark-t-lighten5);
   -webkit-transition: background-color var(--ql-animation-duration-slow);
   transition: background-color var(--ql-animation-duration-slow);
   content: '';

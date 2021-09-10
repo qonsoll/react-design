@@ -4,6 +4,7 @@
   --picker-basic-cell-active-with-range-color: var(--ql-color-accent1-t-lighten6);
   /* --picker-basic-cell-hover-with-range-color: lighten(@primary-color, 35%); */
   --picker-basic-cell-disabled-bg: var(--ql-state-disabled-bg);
+  --picker-container-border-radius: var(--ql-border-radius-default);
   --picker-border-color: var(--ql-border-color-default);
   /* --picker-date-hover-range-border-color: lighten(@primary-color, 20%); */
   /* --picker-date-hover-range-color: var(--picker-basic-cell-hover-with-range-color); !*FIXME*!*/
