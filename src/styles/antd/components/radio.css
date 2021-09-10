@@ -300,7 +300,7 @@ span.ant-radio+* {
 }
 
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
-  border-color: var(--radio-button-border-color);
+  border-color: var(--radio-button-checked-border-color);
 }
 
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
