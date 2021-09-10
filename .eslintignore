@@ -1,6 +1,7 @@
-build/
-dist/
-docs-build/
-node_modules/
-.snapshots/
-*.min.js
+**/coverage/**
+**/node_modules/**
+dist/**
+build/**
+src/index.html
+blueprints/**
+src/config.js
