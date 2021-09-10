@@ -1,10 +1,14 @@
 .ant-btn {
   line-height: var(--ql-typography-line-height-md);
   position: relative;
-  /* display: inline-block; */ /* Default AntD display */
-  display: inline-flex; /* Test */
-  align-items: center; /* Test */
-  justify-content: center; /* Test */
+  /* display: inline-block; */
+  /* Default AntD display */
+  display: inline-flex;
+  /* Test */
+  align-items: center;
+  /* Test */
+  justify-content: center;
+  /* Test */
   font-weight: var(--btn-font-weight);
   white-space: nowrap;
   text-align: center;
@@ -28,53 +32,67 @@
   background: var(--btn-default-bg);
   border: var(--btn-border-width) var(--btn-border-style) var(--btn-default-border);
 }
-.ant-btn > .anticon {
-  line-height: 0; /* Test */
-  font-size: var(--btn-icon-size); /* Test */
+
+.ant-btn>.anticon {
+  line-height: 0;
+  /* Test */
+  font-size: var(--btn-icon-size);
+  /* Test */
 }
+
 /* Test ————— Start */
-.ant-btn.ant-btn-sm > .anticon {
+.ant-btn.ant-btn-sm>.anticon {
   font-size: var(--btn-icon-size-sm);
 }
-.ant-btn.ant-btn-lg > .anticon {
+
+.ant-btn.ant-btn-lg>.anticon {
   font-size: var(--btn-icon-size-lg);
 }
+
 /* Test ————— End */
 .ant-btn,
 .ant-btn:active,
 .ant-btn:focus {
   outline: 0;
 }
+
 .ant-btn:not([disabled]):hover {
   text-decoration: none;
 }
+
 .ant-btn:not([disabled]):active {
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .ant-btn[disabled] {
   cursor: not-allowed;
 }
-.ant-btn[disabled] > * {
+
+.ant-btn[disabled]>* {
   pointer-events: none;
 }
+
 .ant-btn-lg {
   height: var(--btn-height-lg);
   padding: 0 var(--btn-padding-horizontal-lg);
   font-size: var(--btn-font-size-lg);
   border-radius: var(--btn-border-radius-lg);
 }
+
 .ant-btn-sm {
   height: var(--btn-height-sm);
   padding: 0 var(--btn-padding-horizontal-sm);
   font-size: var(--btn-font-size-sm);
   border-radius: var(--btn-border-radius-sm);
 }
-.ant-btn > a:only-child {
+
+.ant-btn>a:only-child {
   color: currentColor;
 }
-.ant-btn > a:only-child::after {
+
+.ant-btn>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -83,18 +101,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn:hover,
 .ant-btn:focus {
   color: var(--btn-default-hover-color);
-  background: var(--btn-default-hover-bg );
+  background: var(--btn-default-hover-bg);
   border-color: var(--btn-primary-hover-border);
 }
-.ant-btn:hover > a:only-child,
-.ant-btn:focus > a:only-child {
+
+.ant-btn:hover>a:only-child,
+.ant-btn:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn:hover > a:only-child::after,
-.ant-btn:focus > a:only-child::after {
+
+.ant-btn:hover>a:only-child::after,
+.ant-btn:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -103,15 +124,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn:active {
   color: var(--ql-color-accent1);
   background: var(--ql-color-white);
   border-color: var(--ql-color-accent1);
 }
-.ant-btn:active > a:only-child {
+
+.ant-btn:active>a:only-child {
   color: currentColor;
 }
-.ant-btn:active > a:only-child::after {
+
+.ant-btn:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -120,6 +144,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn[disabled],
 .ant-btn[disabled]:hover,
 .ant-btn[disabled]:focus,
@@ -131,16 +156,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn[disabled] > a:only-child,
-.ant-btn[disabled]:hover > a:only-child,
-.ant-btn[disabled]:focus > a:only-child,
-.ant-btn[disabled]:active > a:only-child {
+
+.ant-btn[disabled]>a:only-child,
+.ant-btn[disabled]:hover>a:only-child,
+.ant-btn[disabled]:focus>a:only-child,
+.ant-btn[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn[disabled] > a:only-child::after,
-.ant-btn[disabled]:hover > a:only-child::after,
-.ant-btn[disabled]:focus > a:only-child::after,
-.ant-btn[disabled]:active > a:only-child::after {
+
+.ant-btn[disabled]>a:only-child::after,
+.ant-btn[disabled]:hover>a:only-child::after,
+.ant-btn[disabled]:focus>a:only-child::after,
+.ant-btn[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -149,15 +176,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn:hover,
 .ant-btn:focus,
 .ant-btn:active {
   text-decoration: none;
   background: var(--btn-default-hover-bg);
 }
-.ant-btn > span {
+
+.ant-btn>span {
   display: inline-block;
 }
+
 .ant-btn-primary {
   color: var(--btn-primary-color);
   background: var(--btn-primary-bg);
@@ -166,10 +196,12 @@
   -webkit-box-shadow: var(--btn-primary-shadow);
   box-shadow: var(--btn-primary-shadow);
 }
-.ant-btn-primary > a:only-child {
+
+.ant-btn-primary>a:only-child {
   color: currentColor;
 }
-.ant-btn-primary > a:only-child::after {
+
+.ant-btn-primary>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -178,18 +210,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-primary:hover,
 .ant-btn-primary:focus {
   color: var(--btn-primary-hover-color);
   background: var(--btn-primary-hover-bg);
   border-color: var(--btn-primary-hover-border);
 }
-.ant-btn-primary:hover > a:only-child,
-.ant-btn-primary:focus > a:only-child {
+
+.ant-btn-primary:hover>a:only-child,
+.ant-btn-primary:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-primary:hover > a:only-child::after,
-.ant-btn-primary:focus > a:only-child::after {
+
+.ant-btn-primary:hover>a:only-child::after,
+.ant-btn-primary:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -198,15 +233,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-primary:active {
   color: var(--ql-color-white);
   background: var(--ql-color-accent1);
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-primary:active > a:only-child {
+
+.ant-btn-primary:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-primary:active > a:only-child::after {
+
+.ant-btn-primary:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -215,6 +253,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-primary[disabled],
 .ant-btn-primary[disabled]:hover,
 .ant-btn-primary[disabled]:focus,
@@ -226,16 +265,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-primary[disabled] > a:only-child,
-.ant-btn-primary[disabled]:hover > a:only-child,
-.ant-btn-primary[disabled]:focus > a:only-child,
-.ant-btn-primary[disabled]:active > a:only-child {
+
+.ant-btn-primary[disabled]>a:only-child,
+.ant-btn-primary[disabled]:hover>a:only-child,
+.ant-btn-primary[disabled]:focus>a:only-child,
+.ant-btn-primary[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-primary[disabled] > a:only-child::after,
-.ant-btn-primary[disabled]:hover > a:only-child::after,
-.ant-btn-primary[disabled]:focus > a:only-child::after,
-.ant-btn-primary[disabled]:active > a:only-child::after {
+
+.ant-btn-primary[disabled]>a:only-child::after,
+.ant-btn-primary[disabled]:hover>a:only-child::after,
+.ant-btn-primary[disabled]:focus>a:only-child::after,
+.ant-btn-primary[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -244,36 +285,45 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-group .ant-btn-primary:not(:first-child):not(:last-child) {
   border-right-color: var(--btn-group-border);
   border-left-color: var(--btn-group-border);
 }
+
 .ant-btn-group .ant-btn-primary:not(:first-child):not(:last-child):disabled {
   border-color: var(--ql-color-dark-t-lighten5);
 }
+
 .ant-btn-group .ant-btn-primary:first-child:not(:last-child) {
   border-right-color: var(--btn-group-border);
 }
+
 .ant-btn-group .ant-btn-primary:first-child:not(:last-child)[disabled] {
   border-right-color: var(--ql-color-dark-t-lighten5);
 }
+
 .ant-btn-group .ant-btn-primary:last-child:not(:first-child),
-.ant-btn-group .ant-btn-primary + .ant-btn-primary {
+.ant-btn-group .ant-btn-primary+.ant-btn-primary {
   border-left-color: var(--btn-group-border);
 }
+
 .ant-btn-group .ant-btn-primary:last-child:not(:first-child)[disabled],
-.ant-btn-group .ant-btn-primary + .ant-btn-primary[disabled] {
+.ant-btn-group .ant-btn-primary+.ant-btn-primary[disabled] {
   border-left-color: var(--ql-color-dark-t-lighten5);
 }
+
 .ant-btn-ghost {
   color: var(--ql-typography-text-color-primary);
   background: transparent;
   border-color: var(--ql-color-dark-t-lighten5);
 }
-.ant-btn-ghost > a:only-child {
+
+.ant-btn-ghost>a:only-child {
   color: currentColor;
 }
-.ant-btn-ghost > a:only-child::after {
+
+.ant-btn-ghost>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -282,18 +332,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-ghost:hover,
 .ant-btn-ghost:focus {
   color: var(--ql-color-accent1-t-lighten1);
   background: transparent;
   border-color: var(--input-hover-border-color);
 }
-.ant-btn-ghost:hover > a:only-child,
-.ant-btn-ghost:focus > a:only-child {
+
+.ant-btn-ghost:hover>a:only-child,
+.ant-btn-ghost:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-ghost:hover > a:only-child::after,
-.ant-btn-ghost:focus > a:only-child::after {
+
+.ant-btn-ghost:hover>a:only-child::after,
+.ant-btn-ghost:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -302,15 +355,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-ghost:active {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-ghost:active > a:only-child {
+
+.ant-btn-ghost:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-ghost:active > a:only-child::after {
+
+.ant-btn-ghost:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -319,6 +375,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-ghost[disabled],
 .ant-btn-ghost[disabled]:hover,
 .ant-btn-ghost[disabled]:focus,
@@ -330,16 +387,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-ghost[disabled] > a:only-child,
-.ant-btn-ghost[disabled]:hover > a:only-child,
-.ant-btn-ghost[disabled]:focus > a:only-child,
-.ant-btn-ghost[disabled]:active > a:only-child {
+
+.ant-btn-ghost[disabled]>a:only-child,
+.ant-btn-ghost[disabled]:hover>a:only-child,
+.ant-btn-ghost[disabled]:focus>a:only-child,
+.ant-btn-ghost[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-ghost[disabled] > a:only-child::after,
-.ant-btn-ghost[disabled]:hover > a:only-child::after,
-.ant-btn-ghost[disabled]:focus > a:only-child::after,
-.ant-btn-ghost[disabled]:active > a:only-child::after {
+
+.ant-btn-ghost[disabled]>a:only-child::after,
+.ant-btn-ghost[disabled]:hover>a:only-child::after,
+.ant-btn-ghost[disabled]:focus>a:only-child::after,
+.ant-btn-ghost[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -348,15 +407,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dashed {
   color: var(--ql-typography-text-color-primary);
   border-color: var(--ql-color-dark-t-lighten5);
   border-style: dashed;
 }
-.ant-btn-dashed > a:only-child {
+
+.ant-btn-dashed>a:only-child {
   color: currentColor;
 }
-.ant-btn-dashed > a:only-child::after {
+
+.ant-btn-dashed>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -365,18 +427,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dashed:hover,
 .ant-btn-dashed:focus {
   color: var(--ql-color-accent1-t-lighten1);
   background: var(--ql-color-white);
   border-color: var(--input-hover-border-color);
 }
-.ant-btn-dashed:hover > a:only-child,
-.ant-btn-dashed:focus > a:only-child {
+
+.ant-btn-dashed:hover>a:only-child,
+.ant-btn-dashed:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dashed:hover > a:only-child::after,
-.ant-btn-dashed:focus > a:only-child::after {
+
+.ant-btn-dashed:hover>a:only-child::after,
+.ant-btn-dashed:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -385,15 +450,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dashed:active {
   color: var(--ql-color-accent1);
   background: var(--ql-color-white);
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-dashed:active > a:only-child {
+
+.ant-btn-dashed:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dashed:active > a:only-child::after {
+
+.ant-btn-dashed:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -402,6 +470,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dashed[disabled],
 .ant-btn-dashed[disabled]:hover,
 .ant-btn-dashed[disabled]:focus,
@@ -413,16 +482,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dashed[disabled] > a:only-child,
-.ant-btn-dashed[disabled]:hover > a:only-child,
-.ant-btn-dashed[disabled]:focus > a:only-child,
-.ant-btn-dashed[disabled]:active > a:only-child {
+
+.ant-btn-dashed[disabled]>a:only-child,
+.ant-btn-dashed[disabled]:hover>a:only-child,
+.ant-btn-dashed[disabled]:focus>a:only-child,
+.ant-btn-dashed[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dashed[disabled] > a:only-child::after,
-.ant-btn-dashed[disabled]:hover > a:only-child::after,
-.ant-btn-dashed[disabled]:focus > a:only-child::after,
-.ant-btn-dashed[disabled]:active > a:only-child::after {
+
+.ant-btn-dashed[disabled]>a:only-child::after,
+.ant-btn-dashed[disabled]:hover>a:only-child::after,
+.ant-btn-dashed[disabled]:focus>a:only-child::after,
+.ant-btn-dashed[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -431,6 +502,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-danger {
   color: var(--btn-danger-color);
   background: var(--btn-danger-bg);
@@ -439,10 +511,12 @@
   -webkit-box-shadow: var(--btn-danger-shadow);
   box-shadow: var(--btn-danger-shadow);
 }
-.ant-btn-danger > a:only-child {
+
+.ant-btn-danger>a:only-child {
   color: currentColor;
 }
-.ant-btn-danger > a:only-child::after {
+
+.ant-btn-danger>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -451,18 +525,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-danger:hover,
 .ant-btn-danger:focus {
   color: var(--ql-color-white);
   background: var(--ql-color-danger-t-lighten1);
   border-color: var(--ql-color-danger-t-lighten1);
 }
-.ant-btn-danger:hover > a:only-child,
-.ant-btn-danger:focus > a:only-child {
+
+.ant-btn-danger:hover>a:only-child,
+.ant-btn-danger:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-danger:hover > a:only-child::after,
-.ant-btn-danger:focus > a:only-child::after {
+
+.ant-btn-danger:hover>a:only-child::after,
+.ant-btn-danger:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -471,15 +548,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-danger:active {
   color: var(--ql-color-white);
   background: var(--btn-danger-bg);
   border-color: var(--btn-danger-border);
 }
-.ant-btn-danger:active > a:only-child {
+
+.ant-btn-danger:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-danger:active > a:only-child::after {
+
+.ant-btn-danger:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -488,6 +568,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-danger[disabled],
 .ant-btn-danger[disabled]:hover,
 .ant-btn-danger[disabled]:focus,
@@ -499,16 +580,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-danger[disabled] > a:only-child,
-.ant-btn-danger[disabled]:hover > a:only-child,
-.ant-btn-danger[disabled]:focus > a:only-child,
-.ant-btn-danger[disabled]:active > a:only-child {
+
+.ant-btn-danger[disabled]>a:only-child,
+.ant-btn-danger[disabled]:hover>a:only-child,
+.ant-btn-danger[disabled]:focus>a:only-child,
+.ant-btn-danger[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-danger[disabled] > a:only-child::after,
-.ant-btn-danger[disabled]:hover > a:only-child::after,
-.ant-btn-danger[disabled]:focus > a:only-child::after,
-.ant-btn-danger[disabled]:active > a:only-child::after {
+
+.ant-btn-danger[disabled]>a:only-child::after,
+.ant-btn-danger[disabled]:hover>a:only-child::after,
+.ant-btn-danger[disabled]:focus>a:only-child::after,
+.ant-btn-danger[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -517,6 +600,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-link {
   color: var(--btn-link-color);
   background: var(--btn-link-bg);
@@ -524,10 +608,12 @@
   -webkit-box-shadow: var(--btn-link-shadow);
   box-shadow: var(--btn-link-shadow);
 }
-.ant-btn-link > a:only-child {
+
+.ant-btn-link>a:only-child {
   color: currentColor;
 }
-.ant-btn-link > a:only-child::after {
+
+.ant-btn-link>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -536,18 +622,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-link:hover,
 .ant-btn-link:focus {
   color: var(--ql-color-accent1-t-lighten1);
   background: var(--btn-link-hover-bg);
   border-color: var(--input-hover-border-color);
 }
-.ant-btn-link:hover > a:only-child,
-.ant-btn-link:focus > a:only-child {
+
+.ant-btn-link:hover>a:only-child,
+.ant-btn-link:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-link:hover > a:only-child::after,
-.ant-btn-link:focus > a:only-child::after {
+
+.ant-btn-link:hover>a:only-child::after,
+.ant-btn-link:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -556,15 +645,18 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-link:active {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-link:active > a:only-child {
+
+.ant-btn-link:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-link:active > a:only-child::after {
+
+.ant-btn-link:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -573,6 +665,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-link[disabled],
 .ant-btn-link[disabled]:hover,
 .ant-btn-link[disabled]:focus,
@@ -584,16 +677,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-link[disabled] > a:only-child,
-.ant-btn-link[disabled]:hover > a:only-child,
-.ant-btn-link[disabled]:focus > a:only-child,
-.ant-btn-link[disabled]:active > a:only-child {
+
+.ant-btn-link[disabled]>a:only-child,
+.ant-btn-link[disabled]:hover>a:only-child,
+.ant-btn-link[disabled]:focus>a:only-child,
+.ant-btn-link[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-link[disabled] > a:only-child::after,
-.ant-btn-link[disabled]:hover > a:only-child::after,
-.ant-btn-link[disabled]:focus > a:only-child::after,
-.ant-btn-link[disabled]:active > a:only-child::after {
+
+.ant-btn-link[disabled]>a:only-child::after,
+.ant-btn-link[disabled]:hover>a:only-child::after,
+.ant-btn-link[disabled]:focus>a:only-child::after,
+.ant-btn-link[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -602,14 +697,17 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-link:hover {
   background: var(--btn-link-hover-bg);
 }
+
 .ant-btn-link:hover,
 .ant-btn-link:focus,
 .ant-btn-link:active {
   border-color: transparent;
 }
+
 .ant-btn-link[disabled],
 .ant-btn-link[disabled]:hover,
 .ant-btn-link[disabled]:focus,
@@ -621,16 +719,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-link[disabled] > a:only-child,
-.ant-btn-link[disabled]:hover > a:only-child,
-.ant-btn-link[disabled]:focus > a:only-child,
-.ant-btn-link[disabled]:active > a:only-child {
+
+.ant-btn-link[disabled]>a:only-child,
+.ant-btn-link[disabled]:hover>a:only-child,
+.ant-btn-link[disabled]:focus>a:only-child,
+.ant-btn-link[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-link[disabled] > a:only-child::after,
-.ant-btn-link[disabled]:hover > a:only-child::after,
-.ant-btn-link[disabled]:focus > a:only-child::after,
-.ant-btn-link[disabled]:active > a:only-child::after {
+
+.ant-btn-link[disabled]>a:only-child::after,
+.ant-btn-link[disabled]:hover>a:only-child::after,
+.ant-btn-link[disabled]:focus>a:only-child::after,
+.ant-btn-link[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -639,6 +739,7 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-text {
   color: var(--btn-text-color);
   background: var(--btn-text-bg);
@@ -646,10 +747,12 @@
   -webkit-box-shadow: var(--btn-text-shadow);
   box-shadow: var(--btn-text-shadow);
 }
-.ant-btn-text > a:only-child {
+
+.ant-btn-text>a:only-child {
   color: currentColor;
 }
-.ant-btn-text > a:only-child::after {
+
+.ant-btn-text>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -658,18 +761,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-text:hover,
 .ant-btn-text:focus {
   color: var(--btn-text-hover-color);
-  background: transparent;
-  border-color: var(--btn-text-hover-bg);
+  background: var(--btn-text-hover-bg);
+  border-color: transparent;
 }
-.ant-btn-text:hover > a:only-child,
-.ant-btn-text:focus > a:only-child {
+
+.ant-btn-text:hover>a:only-child,
+.ant-btn-text:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-text:hover > a:only-child::after,
-.ant-btn-text:focus > a:only-child::after {
+
+.ant-btn-text:hover>a:only-child::after,
+.ant-btn-text:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -678,15 +784,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-text:active {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-text:active > a:only-child {
+
+.ant-btn-text:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-text:active > a:only-child::after {
+
+.ant-btn-text:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -695,6 +804,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-text[disabled],
 .ant-btn-text[disabled]:hover,
 .ant-btn-text[disabled]:focus,
@@ -706,16 +816,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-text[disabled] > a:only-child,
-.ant-btn-text[disabled]:hover > a:only-child,
-.ant-btn-text[disabled]:focus > a:only-child,
-.ant-btn-text[disabled]:active > a:only-child {
+
+.ant-btn-text[disabled]>a:only-child,
+.ant-btn-text[disabled]:hover>a:only-child,
+.ant-btn-text[disabled]:focus>a:only-child,
+.ant-btn-text[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-text[disabled] > a:only-child::after,
-.ant-btn-text[disabled]:hover > a:only-child::after,
-.ant-btn-text[disabled]:focus > a:only-child::after,
-.ant-btn-text[disabled]:active > a:only-child::after {
+
+.ant-btn-text[disabled]>a:only-child::after,
+.ant-btn-text[disabled]:hover>a:only-child::after,
+.ant-btn-text[disabled]:focus>a:only-child::after,
+.ant-btn-text[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -724,17 +836,13 @@
   background: transparent;
   content: '';
 }
-.ant-btn-text:hover,
-.ant-btn-text:focus {
-  color: var(--ql-typography-text-color-primary);
-  background: var(--btn-text-hover-bg);
-  border-color: transparent;
-}
+
 .ant-btn-text:active {
   color: var(--ql-typography-text-color-primary);
   background: rgba(0, 0, 0, 0.028);
   border-color: transparent;
 }
+
 .ant-btn-text[disabled],
 .ant-btn-text[disabled]:hover,
 .ant-btn-text[disabled]:focus,
@@ -746,16 +854,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-text[disabled] > a:only-child,
-.ant-btn-text[disabled]:hover > a:only-child,
-.ant-btn-text[disabled]:focus > a:only-child,
-.ant-btn-text[disabled]:active > a:only-child {
+
+.ant-btn-text[disabled]>a:only-child,
+.ant-btn-text[disabled]:hover>a:only-child,
+.ant-btn-text[disabled]:focus>a:only-child,
+.ant-btn-text[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-text[disabled] > a:only-child::after,
-.ant-btn-text[disabled]:hover > a:only-child::after,
-.ant-btn-text[disabled]:focus > a:only-child::after,
-.ant-btn-text[disabled]:active > a:only-child::after {
+
+.ant-btn-text[disabled]>a:only-child::after,
+.ant-btn-text[disabled]:hover>a:only-child::after,
+.ant-btn-text[disabled]:focus>a:only-child::after,
+.ant-btn-text[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -764,15 +874,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous {
   color: var(--ql-color-danger);
   background: var(--ql-color-white);
   border-color: var(--ql-color-danger);
 }
-.ant-btn-dangerous > a:only-child {
+
+.ant-btn-dangerous>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous > a:only-child::after {
+
+.ant-btn-dangerous>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -781,18 +894,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous:hover,
 .ant-btn-dangerous:focus {
   color: var(--ql-color-danger-t-lighten1);
   background: var(--ql-color-white);
   border-color: var(--ql-color-danger-t-lighten1);
 }
-.ant-btn-dangerous:hover > a:only-child,
-.ant-btn-dangerous:focus > a:only-child {
+
+.ant-btn-dangerous:hover>a:only-child,
+.ant-btn-dangerous:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous:hover > a:only-child::after,
-.ant-btn-dangerous:focus > a:only-child::after {
+
+.ant-btn-dangerous:hover>a:only-child::after,
+.ant-btn-dangerous:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -801,15 +917,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous:active {
   color: var(--ql-color-danger);
   background: var(--ql-color-white);
   border-color: var(--btn-danger-border);
 }
-.ant-btn-dangerous:active > a:only-child {
+
+.ant-btn-dangerous:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous:active > a:only-child::after {
+
+.ant-btn-dangerous:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -818,6 +937,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous[disabled],
 .ant-btn-dangerous[disabled]:hover,
 .ant-btn-dangerous[disabled]:focus,
@@ -829,16 +949,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous[disabled] > a:only-child,
-.ant-btn-dangerous[disabled]:hover > a:only-child,
-.ant-btn-dangerous[disabled]:focus > a:only-child,
-.ant-btn-dangerous[disabled]:active > a:only-child {
+
+.ant-btn-dangerous[disabled]>a:only-child,
+.ant-btn-dangerous[disabled]:hover>a:only-child,
+.ant-btn-dangerous[disabled]:focus>a:only-child,
+.ant-btn-dangerous[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous[disabled] > a:only-child::after,
-.ant-btn-dangerous[disabled]:hover > a:only-child::after,
-.ant-btn-dangerous[disabled]:focus > a:only-child::after,
-.ant-btn-dangerous[disabled]:active > a:only-child::after {
+
+.ant-btn-dangerous[disabled]>a:only-child::after,
+.ant-btn-dangerous[disabled]:hover>a:only-child::after,
+.ant-btn-dangerous[disabled]:focus>a:only-child::after,
+.ant-btn-dangerous[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -847,6 +969,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-primary {
   color: var(--ql-color-white);
   background: var(--ql-color-danger);
@@ -855,10 +978,12 @@
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
-.ant-btn-dangerous.ant-btn-primary > a:only-child {
+
+.ant-btn-dangerous.ant-btn-primary>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-primary > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-primary>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -867,18 +992,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-primary:hover,
 .ant-btn-dangerous.ant-btn-primary:focus {
   color: var(--ql-color-white);
   background: var(--ql-color-danger-t-lighten1);
   border-color: var(--ql-color-danger-t-lighten1);
 }
-.ant-btn-dangerous.ant-btn-primary:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-primary:focus > a:only-child {
+
+.ant-btn-dangerous.ant-btn-primary:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-primary:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-primary:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-primary:focus > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-primary:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-primary:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -887,15 +1015,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-primary:active {
   color: var(--ql-color-white);
   background: var(--btn-danger-bg);
   border-color: var(--btn-danger-border);
 }
-.ant-btn-dangerous.ant-btn-primary:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-primary:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-primary:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-primary:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -904,6 +1035,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-primary[disabled],
 .ant-btn-dangerous.ant-btn-primary[disabled]:hover,
 .ant-btn-dangerous.ant-btn-primary[disabled]:focus,
@@ -915,16 +1047,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-dangerous.ant-btn-primary[disabled] > a:only-child,
-.ant-btn-dangerous.ant-btn-primary[disabled]:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-primary[disabled]:focus > a:only-child,
-.ant-btn-dangerous.ant-btn-primary[disabled]:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-primary[disabled]>a:only-child,
+.ant-btn-dangerous.ant-btn-primary[disabled]:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-primary[disabled]:focus>a:only-child,
+.ant-btn-dangerous.ant-btn-primary[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-primary[disabled] > a:only-child::after,
-.ant-btn-dangerous.ant-btn-primary[disabled]:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-primary[disabled]:focus > a:only-child::after,
-.ant-btn-dangerous.ant-btn-primary[disabled]:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-primary[disabled]>a:only-child::after,
+.ant-btn-dangerous.ant-btn-primary[disabled]:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-primary[disabled]:focus>a:only-child::after,
+.ant-btn-dangerous.ant-btn-primary[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -933,6 +1067,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link {
   color: var(--ql-color-danger);
   background: transparent;
@@ -940,10 +1075,12 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous.ant-btn-link > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -952,18 +1089,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link:hover,
 .ant-btn-dangerous.ant-btn-link:focus {
   color: var(--ql-color-accent1-t-lighten1);
   background: var(--btn-link-hover-bg);
   border-color: var(--input-hover-border-color);
 }
-.ant-btn-dangerous.ant-btn-link:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-link:focus > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-link:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link:focus > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -972,15 +1112,18 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link:active {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-dangerous.ant-btn-link:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -989,6 +1132,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link[disabled],
 .ant-btn-dangerous.ant-btn-link[disabled]:hover,
 .ant-btn-dangerous.ant-btn-link[disabled]:focus,
@@ -1000,16 +1144,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous.ant-btn-link[disabled] > a:only-child,
-.ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child,
-.ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link[disabled]>a:only-child,
+.ant-btn-dangerous.ant-btn-link[disabled]:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-link[disabled]:focus>a:only-child,
+.ant-btn-dangerous.ant-btn-link[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link[disabled] > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link[disabled]>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link[disabled]:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link[disabled]:focus>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1018,18 +1164,21 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link:hover,
 .ant-btn-dangerous.ant-btn-link:focus {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: transparent;
 }
-.ant-btn-dangerous.ant-btn-link:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-link:focus > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-link:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link:focus > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1038,15 +1187,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link:active {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: transparent;
 }
-.ant-btn-dangerous.ant-btn-link:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1055,6 +1207,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-link[disabled],
 .ant-btn-dangerous.ant-btn-link[disabled]:hover,
 .ant-btn-dangerous.ant-btn-link[disabled]:focus,
@@ -1066,16 +1219,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous.ant-btn-link[disabled] > a:only-child,
-.ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child,
-.ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-link[disabled]>a:only-child,
+.ant-btn-dangerous.ant-btn-link[disabled]:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-link[disabled]:focus>a:only-child,
+.ant-btn-dangerous.ant-btn-link[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-link[disabled] > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child::after,
-.ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-link[disabled]>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link[disabled]:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link[disabled]:focus>a:only-child::after,
+.ant-btn-dangerous.ant-btn-link[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1084,6 +1239,7 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text {
   color: var(--ql-color-danger);
   background: transparent;
@@ -1091,10 +1247,12 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous.ant-btn-text > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1103,18 +1261,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text:hover,
 .ant-btn-dangerous.ant-btn-text:focus {
   color: var(--ql-color-accent1-t-lighten1);
   background: transparent;
   border-color: var(--input-hover-border-color);
 }
-.ant-btn-dangerous.ant-btn-text:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-text:focus > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-text:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text:focus > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1123,15 +1284,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text:active {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-dangerous.ant-btn-text:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1140,6 +1304,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text[disabled],
 .ant-btn-dangerous.ant-btn-text[disabled]:hover,
 .ant-btn-dangerous.ant-btn-text[disabled]:focus,
@@ -1151,16 +1316,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous.ant-btn-text[disabled] > a:only-child,
-.ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-text[disabled]:focus > a:only-child,
-.ant-btn-dangerous.ant-btn-text[disabled]:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text[disabled]>a:only-child,
+.ant-btn-dangerous.ant-btn-text[disabled]:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-text[disabled]:focus>a:only-child,
+.ant-btn-dangerous.ant-btn-text[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text[disabled] > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text[disabled]:focus > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text[disabled]:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text[disabled]>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text[disabled]:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text[disabled]:focus>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1169,18 +1336,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text:hover,
 .ant-btn-dangerous.ant-btn-text:focus {
   color: var(--ql-color-danger);
   background: var(--btn-text-hover-bg);
   border-color: transparent;
 }
-.ant-btn-dangerous.ant-btn-text:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-text:focus > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-text:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text:focus > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1189,15 +1359,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text:active {
   color: var(--ql-color-danger);
   background: rgba(0, 0, 0, 0.028);
   border-color: transparent;
 }
-.ant-btn-dangerous.ant-btn-text:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1206,6 +1379,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-dangerous.ant-btn-text[disabled],
 .ant-btn-dangerous.ant-btn-text[disabled]:hover,
 .ant-btn-dangerous.ant-btn-text[disabled]:focus,
@@ -1217,16 +1391,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-dangerous.ant-btn-text[disabled] > a:only-child,
-.ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child,
-.ant-btn-dangerous.ant-btn-text[disabled]:focus > a:only-child,
-.ant-btn-dangerous.ant-btn-text[disabled]:active > a:only-child {
+
+.ant-btn-dangerous.ant-btn-text[disabled]>a:only-child,
+.ant-btn-dangerous.ant-btn-text[disabled]:hover>a:only-child,
+.ant-btn-dangerous.ant-btn-text[disabled]:focus>a:only-child,
+.ant-btn-dangerous.ant-btn-text[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-dangerous.ant-btn-text[disabled] > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text[disabled]:focus > a:only-child::after,
-.ant-btn-dangerous.ant-btn-text[disabled]:active > a:only-child::after {
+
+.ant-btn-dangerous.ant-btn-text[disabled]>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text[disabled]:hover>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text[disabled]:focus>a:only-child::after,
+.ant-btn-dangerous.ant-btn-text[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1235,58 +1411,75 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-icon-only {
   width: var(--btn-square-size);
   height: var(--btn-square-size);
-  padding: 0; /* Test */
+  padding: 0;
+  /* Test */
   font-size: var(--btn-icon-size);
   border-radius: var(--btn-border-radius-base);
-  /* vertical-align: -1px; */ /* Test */
+  /* vertical-align: -1px; */
+  /* Test */
 }
-.ant-btn-icon-only > * {
+
+.ant-btn-icon-only>* {
   font-size: var(--ql-typography-font-size-md);
 }
+
 .ant-btn-icon-only.ant-btn-lg {
   width: var(--btn-square-size-lg);
   height: var(--btn-square-size-lg);
-  padding: 0; /* Test */
+  padding: 0;
+  /* Test */
   font-size: var(--btn-icon-size-lg);
   border-radius: var(--btn-border-radius-lg);
 }
-.ant-btn-icon-only.ant-btn-lg > * {
+
+.ant-btn-icon-only.ant-btn-lg>* {
   font-size: 18px;
 }
+
 .ant-btn-icon-only.ant-btn-sm {
   width: var(--btn-square-size-sm);
   height: var(--btn-square-size-sm);
-  padding: 0; /* Test */
+  padding: 0;
+  /* Test */
   font-size: var(--btn-icon-size-sm);
   border-radius: var(--btn-border-radius-sm);
 }
-.ant-btn-icon-only.ant-btn-sm > * {
+
+.ant-btn-icon-only.ant-btn-sm>* {
   font-size: 14px;
 }
+
 .ant-btn-round {
   height: var(--btn-height-base);
-  padding: 0 20px; /* Test */
+  padding: 0 20px;
+  /* Test */
   font-size: var(--btn-icon-size);
   border-radius: var(--btn-height-base);
 }
+
 .ant-btn-round.ant-btn-lg {
   height: var(--btn-height-lg);
-  padding: 0 32px; /* Test */
+  padding: 0 32px;
+  /* Test */
   font-size: var(--btn-icon-size-lg);
   border-radius: var(--btn-height-lg);
 }
+
 .ant-btn-round.ant-btn-sm {
   height: var(--btn-height-sm);
   padding: 0 8px;
   font-size: var(--btn-icon-size-sm);
   border-radius: var(--btn-height-sm);
 }
+
 .ant-btn-round.ant-btn-icon-only {
   width: auto;
 }
+
 .ant-btn-circle {
   min-width: var(--btn-circle-size);
   padding-right: 0;
@@ -1294,14 +1487,17 @@
   text-align: center;
   border-radius: var(--ql-border-radius-full);
 }
+
 .ant-btn-circle.ant-btn-lg {
   min-width: var(--btn-circle-size-lg);
   border-radius: var(--ql-border-radius-full);
 }
+
 .ant-btn-circle.ant-btn-sm {
   min-width: var(--btn-circle-size-sm);
   border-radius: var(--ql-border-radius-full);
 }
+
 .ant-btn::before {
   position: absolute;
   top: -1px;
@@ -1318,247 +1514,279 @@
   content: '';
   pointer-events: none;
 }
+
 .ant-btn .anticon {
-  -webkit-transition: margin-left var(--ql-animation-duration-slow)
-    var(--ql-animation-cubic-ease-in-out);
+  -webkit-transition: margin-left var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out);
   transition: margin-left var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out);
 }
-.ant-btn .anticon.anticon-plus > svg,
-.ant-btn .anticon.anticon-minus > svg {
+
+.ant-btn .anticon.anticon-plus>svg,
+.ant-btn .anticon.anticon-minus>svg {
   shape-rendering: optimizeSpeed;
 }
+
 .ant-btn.ant-btn-loading {
   position: relative;
 }
+
 .ant-btn.ant-btn-loading:not([disabled]) {
   pointer-events: none;
 }
+
 .ant-btn.ant-btn-loading::before {
   display: block;
 }
-.ant-btn > .ant-btn-loading-icon {
+
+.ant-btn>.ant-btn-loading-icon {
   -webkit-transition: all var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out);
   transition: all var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out);
 }
-.ant-btn > .ant-btn-loading-icon .anticon {
+
+.ant-btn>.ant-btn-loading-icon .anticon {
   padding-right: 8px;
   -webkit-animation: none;
   animation: none;
 }
-.ant-btn > .ant-btn-loading-icon .anticon svg {
+
+.ant-btn>.ant-btn-loading-icon .anticon svg {
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
 }
-.ant-btn > .ant-btn-loading-icon:only-child .anticon {
+
+.ant-btn>.ant-btn-loading-icon:only-child .anticon {
   padding-right: 0;
 }
+
 .ant-btn-group {
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-.ant-btn-group > .ant-btn,
-.ant-btn-group > span > .ant-btn {
+
+.ant-btn-group>.ant-btn,
+.ant-btn-group>span>.ant-btn {
   position: relative;
 }
-.ant-btn-group > .ant-btn:hover,
-.ant-btn-group > span > .ant-btn:hover,
-.ant-btn-group > .ant-btn:focus,
-.ant-btn-group > span > .ant-btn:focus,
-.ant-btn-group > .ant-btn:active,
-.ant-btn-group > span > .ant-btn:active {
+
+.ant-btn-group>.ant-btn:hover,
+.ant-btn-group>span>.ant-btn:hover,
+.ant-btn-group>.ant-btn:focus,
+.ant-btn-group>span>.ant-btn:focus,
+.ant-btn-group>.ant-btn:active,
+.ant-btn-group>span>.ant-btn:active {
   z-index: 2;
 }
-.ant-btn-group > .ant-btn[disabled],
-.ant-btn-group > span > .ant-btn[disabled] {
+
+.ant-btn-group>.ant-btn[disabled],
+.ant-btn-group>span>.ant-btn[disabled] {
   z-index: 0;
 }
+
 .ant-btn-group .ant-btn-icon-only {
   font-size: 14px;
 }
-.ant-btn-group-lg > .ant-btn,
-.ant-btn-group-lg > span > .ant-btn {
+
+.ant-btn-group-lg>.ant-btn,
+.ant-btn-group-lg>span>.ant-btn {
   height: 40px;
   padding: 6.4px 15px;
   font-size: var(--ql-typography-font-size-md);
   border-radius: var(--border-radius-none);
 }
+
 .ant-btn-group-lg .ant-btn.ant-btn-icon-only {
   width: 40px;
   height: 40px;
   padding-right: 0;
   padding-left: 0;
 }
-.ant-btn-group-sm > .ant-btn,
-.ant-btn-group-sm > span > .ant-btn {
+
+.ant-btn-group-sm>.ant-btn,
+.ant-btn-group-sm>span>.ant-btn {
   height: 24px;
   padding: 0px 7px;
   font-size: 14px;
   border-radius: var(--border-radius-none);
 }
-.ant-btn-group-sm > .ant-btn > .anticon,
-.ant-btn-group-sm > span > .ant-btn > .anticon {
+
+.ant-btn-group-sm>.ant-btn>.anticon,
+.ant-btn-group-sm>span>.ant-btn>.anticon {
   font-size: 14px;
 }
+
 .ant-btn-group-sm .ant-btn.ant-btn-icon-only {
   width: 24px;
   height: 24px;
   padding-right: 0;
   padding-left: 0;
 }
-.ant-btn-group .ant-btn + .ant-btn,
-.ant-btn + .ant-btn-group,
-.ant-btn-group span + .ant-btn,
-.ant-btn-group .ant-btn + span,
-.ant-btn-group > span + span,
-.ant-btn-group + .ant-btn,
-.ant-btn-group + .ant-btn-group {
+
+.ant-btn-group .ant-btn+.ant-btn,
+.ant-btn+.ant-btn-group,
+.ant-btn-group span+.ant-btn,
+.ant-btn-group .ant-btn+span,
+.ant-btn-group>span+span,
+.ant-btn-group+.ant-btn,
+.ant-btn-group+.ant-btn-group {
   margin-left: -1px;
 }
-.ant-btn-group
-  .ant-btn-primary
-  + .ant-btn:not(.ant-btn-primary):not([disabled]) {
+
+.ant-btn-group .ant-btn-primary+.ant-btn:not(.ant-btn-primary):not([disabled]) {
   border-left-color: transparent;
 }
+
 .ant-btn-group .ant-btn {
   border-radius: var(--border-radius-none);
 }
-.ant-btn-group > .ant-btn:first-child,
-.ant-btn-group > span:first-child > .ant-btn {
+
+.ant-btn-group>.ant-btn:first-child,
+.ant-btn-group>span:first-child>.ant-btn {
   margin-left: 0;
 }
-.ant-btn-group > .ant-btn:only-child {
+
+.ant-btn-group>.ant-btn:only-child {
   border-radius: var(--border-radius-xxs);
 }
-.ant-btn-group > span:only-child > .ant-btn {
+
+.ant-btn-group>span:only-child>.ant-btn {
   border-radius: var(--border-radius-xxs);
 }
-.ant-btn-group > .ant-btn:first-child:not(:last-child),
-.ant-btn-group > span:first-child:not(:last-child) > .ant-btn {
+
+.ant-btn-group>.ant-btn:first-child:not(:last-child),
+.ant-btn-group>span:first-child:not(:last-child)>.ant-btn {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.ant-btn-group > .ant-btn:last-child:not(:first-child),
-.ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
+
+.ant-btn-group>.ant-btn:last-child:not(:first-child),
+.ant-btn-group>span:last-child:not(:first-child)>.ant-btn {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.ant-btn-group-sm > .ant-btn:only-child {
+
+.ant-btn-group-sm>.ant-btn:only-child {
   border-radius: var(--border-radius-xxs);
 }
-.ant-btn-group-sm > span:only-child > .ant-btn {
+
+.ant-btn-group-sm>span:only-child>.ant-btn {
   border-radius: var(--border-radius-xxs);
 }
-.ant-btn-group-sm > .ant-btn:first-child:not(:last-child),
-.ant-btn-group-sm > span:first-child:not(:last-child) > .ant-btn {
+
+.ant-btn-group-sm>.ant-btn:first-child:not(:last-child),
+.ant-btn-group-sm>span:first-child:not(:last-child)>.ant-btn {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.ant-btn-group-sm > .ant-btn:last-child:not(:first-child),
-.ant-btn-group-sm > span:last-child:not(:first-child) > .ant-btn {
+
+.ant-btn-group-sm>.ant-btn:last-child:not(:first-child),
+.ant-btn-group-sm>span:last-child:not(:first-child)>.ant-btn {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.ant-btn-group > .ant-btn-group {
+
+.ant-btn-group>.ant-btn-group {
   float: left;
 }
-.ant-btn-group > .ant-btn-group:not(:first-child):not(:last-child) > .ant-btn {
+
+.ant-btn-group>.ant-btn-group:not(:first-child):not(:last-child)>.ant-btn {
   border-radius: var(--border-radius-none);
 }
-.ant-btn-group
-  > .ant-btn-group:first-child:not(:last-child)
-  > .ant-btn:last-child {
+
+.ant-btn-group>.ant-btn-group:first-child:not(:last-child)>.ant-btn:last-child {
   padding-right: 8px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.ant-btn-group
-  > .ant-btn-group:last-child:not(:first-child)
-  > .ant-btn:first-child {
+
+.ant-btn-group>.ant-btn-group:last-child:not(:first-child)>.ant-btn:first-child {
   padding-left: 8px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.ant-btn-rtl.ant-btn-group .ant-btn + .ant-btn,
-.ant-btn-rtl.ant-btn + .ant-btn-group,
-.ant-btn-rtl.ant-btn-group span + .ant-btn,
-.ant-btn-rtl.ant-btn-group .ant-btn + span,
-.ant-btn-rtl.ant-btn-group > span + span,
-.ant-btn-rtl.ant-btn-group + .ant-btn,
-.ant-btn-rtl.ant-btn-group + .ant-btn-group,
-.ant-btn-group-rtl.ant-btn-group .ant-btn + .ant-btn,
-.ant-btn-group-rtl.ant-btn + .ant-btn-group,
-.ant-btn-group-rtl.ant-btn-group span + .ant-btn,
-.ant-btn-group-rtl.ant-btn-group .ant-btn + span,
-.ant-btn-group-rtl.ant-btn-group > span + span,
-.ant-btn-group-rtl.ant-btn-group + .ant-btn,
-.ant-btn-group-rtl.ant-btn-group + .ant-btn-group {
+
+.ant-btn-rtl.ant-btn-group .ant-btn+.ant-btn,
+.ant-btn-rtl.ant-btn+.ant-btn-group,
+.ant-btn-rtl.ant-btn-group span+.ant-btn,
+.ant-btn-rtl.ant-btn-group .ant-btn+span,
+.ant-btn-rtl.ant-btn-group>span+span,
+.ant-btn-rtl.ant-btn-group+.ant-btn,
+.ant-btn-rtl.ant-btn-group+.ant-btn-group,
+.ant-btn-group-rtl.ant-btn-group .ant-btn+.ant-btn,
+.ant-btn-group-rtl.ant-btn+.ant-btn-group,
+.ant-btn-group-rtl.ant-btn-group span+.ant-btn,
+.ant-btn-group-rtl.ant-btn-group .ant-btn+span,
+.ant-btn-group-rtl.ant-btn-group>span+span,
+.ant-btn-group-rtl.ant-btn-group+.ant-btn,
+.ant-btn-group-rtl.ant-btn-group+.ant-btn-group {
   margin-right: -1px;
   margin-left: auto;
 }
+
 .ant-btn-group.ant-btn-group-rtl {
   direction: rtl;
 }
-.ant-btn-group-rtl.ant-btn-group > .ant-btn:first-child:not(:last-child),
-.ant-btn-group-rtl.ant-btn-group
-  > span:first-child:not(:last-child)
-  > .ant-btn {
+
+.ant-btn-group-rtl.ant-btn-group>.ant-btn:first-child:not(:last-child),
+.ant-btn-group-rtl.ant-btn-group>span:first-child:not(:last-child)>.ant-btn {
   border-top-left-radius: 0;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 0;
 }
-.ant-btn-group-rtl.ant-btn-group > .ant-btn:last-child:not(:first-child),
-.ant-btn-group-rtl.ant-btn-group
-  > span:last-child:not(:first-child)
-  > .ant-btn {
+
+.ant-btn-group-rtl.ant-btn-group>.ant-btn:last-child:not(:first-child),
+.ant-btn-group-rtl.ant-btn-group>span:last-child:not(:first-child)>.ant-btn {
   border-top-left-radius: 2px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 2px;
 }
-.ant-btn-group-rtl.ant-btn-group-sm > .ant-btn:first-child:not(:last-child),
-.ant-btn-group-rtl.ant-btn-group-sm
-  > span:first-child:not(:last-child)
-  > .ant-btn {
+
+.ant-btn-group-rtl.ant-btn-group-sm>.ant-btn:first-child:not(:last-child),
+.ant-btn-group-rtl.ant-btn-group-sm>span:first-child:not(:last-child)>.ant-btn {
   border-top-left-radius: 0;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 0;
 }
-.ant-btn-group-rtl.ant-btn-group-sm > .ant-btn:last-child:not(:first-child),
-.ant-btn-group-rtl.ant-btn-group-sm
-  > span:last-child:not(:first-child)
-  > .ant-btn {
+
+.ant-btn-group-rtl.ant-btn-group-sm>.ant-btn:last-child:not(:first-child),
+.ant-btn-group-rtl.ant-btn-group-sm>span:last-child:not(:first-child)>.ant-btn {
   border-top-left-radius: 2px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 2px;
 }
-.ant-btn:focus > span,
-.ant-btn:active > span {
+
+.ant-btn:focus>span,
+.ant-btn:active>span {
   position: relative;
 }
-.ant-btn > .anticon + span,
-.ant-btn > span + .anticon {
+
+.ant-btn>.anticon+span,
+.ant-btn>span+.anticon {
   margin-left: 8px;
 }
+
 .ant-btn-background-ghost {
   color: var(--btn-default-ghost-color);
   background: var(--btn-default-ghost-bg) !important;
   border-color: var(--btn-default-ghost-border);
 }
+
 .ant-btn-background-ghost.ant-btn-primary {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
   text-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-primary > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-primary>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-primary > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-primary>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1567,18 +1795,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-primary:hover,
 .ant-btn-background-ghost.ant-btn-primary:focus {
   color: var(--ql-color-accent1-t-lighten1);
   background: transparent;
   border-color: var(--input-hover-border-color);
 }
-.ant-btn-background-ghost.ant-btn-primary:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-primary:focus > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-primary:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-primary:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-primary:hover > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-primary:focus > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-primary:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-primary:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1587,15 +1818,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-primary:active {
   color: var(--ql-color-accent1);
   background: transparent;
   border-color: var(--ql-color-accent1);
 }
-.ant-btn-background-ghost.ant-btn-primary:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-primary:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-primary:active > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-primary:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1604,6 +1838,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-primary[disabled],
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus,
@@ -1615,16 +1850,18 @@
   -webkit-box-shadow: var(--btn-disable-shadow);
   box-shadow: var(--btn-disable-shadow);
 }
-.ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:focus > a:only-child,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-primary[disabled]>a:only-child,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:focus>a:only-child,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:focus > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-primary[disabled]>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:focus>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1633,16 +1870,19 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-danger {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: var(--ql-color-danger);
   text-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-danger > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-danger>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-danger > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-danger>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1651,18 +1891,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-danger:hover,
 .ant-btn-background-ghost.ant-btn-danger:focus {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: var(--ql-color-danger);
 }
-.ant-btn-background-ghost.ant-btn-danger:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-danger:focus > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-danger:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-danger:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-danger:hover > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-danger:focus > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-danger:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-danger:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1671,15 +1914,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-danger:active {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: var(--btn-danger-border);
 }
-.ant-btn-background-ghost.ant-btn-danger:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-danger:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-danger:active > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-danger:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1688,6 +1934,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-danger[disabled],
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:focus,
@@ -1699,17 +1946,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-danger[disabled] > a:only-child,
-.ant-btn-background-ghost.ant-btn-danger[disabled]:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-danger[disabled]:focus > a:only-child,
-.ant-btn-background-ghost.ant-btn-danger[disabled]:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-danger[disabled]>a:only-child,
+.ant-btn-background-ghost.ant-btn-danger[disabled]:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-danger[disabled]:focus>a:only-child,
+.ant-btn-background-ghost.ant-btn-danger[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-danger[disabled] > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-danger[disabled]:hover > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-danger[disabled]:focus > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-danger[disabled]:active
-  > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-danger[disabled]>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-danger[disabled]:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-danger[disabled]:focus>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-danger[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1718,16 +1966,19 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: var(--ql-color-danger);
   text-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-dangerous > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1736,18 +1987,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous:hover,
 .ant-btn-background-ghost.ant-btn-dangerous:focus {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: var(--ql-color-danger);
 }
-.ant-btn-background-ghost.ant-btn-dangerous:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous:focus > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous:hover > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous:focus > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1756,15 +2010,18 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous:active {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: var(--btn-danger-border);
 }
-.ant-btn-background-ghost.ant-btn-dangerous:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous:active > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1773,6 +2030,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous[disabled],
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus,
@@ -1784,19 +2042,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-dangerous[disabled] > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous[disabled]:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous[disabled] > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover
-  > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus
-  > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous[disabled]:active
-  > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1805,16 +2062,19 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: transparent;
   text-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1823,20 +2083,21 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus {
   color: var(--ql-color-danger);
   background: var(--btn-link-hover-bg);
   border-color: transparent;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover
-  > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus
-  > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1845,16 +2106,18 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active {
   color: var(--ql-color-danger);
   background: transparent;
   border-color: transparent;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active
-  > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1863,6 +2126,7 @@
   background: transparent;
   content: '';
 }
+
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled],
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus,
@@ -1874,24 +2138,18 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]
-  > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover
-  > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus
-  > a:only-child,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:active
-  > a:only-child {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus>a:only-child,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:active>a:only-child {
   color: currentColor;
 }
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]
-  > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover
-  > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus
-  > a:only-child::after,
-.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:active
-  > a:only-child::after {
+
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus>a:only-child::after,
+.ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:active>a:only-child::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1900,56 +2158,68 @@
   background: var(--btn-link-hover-bg);
   content: '';
 }
+
 .ant-btn-two-chinese-chars::first-letter {
   letter-spacing: 0.34em;
 }
-.ant-btn-two-chinese-chars > *:not(.anticon) {
+
+.ant-btn-two-chinese-chars>*:not(.anticon) {
   margin-right: -0.34em;
   letter-spacing: 0.34em;
 }
+
 .ant-btn-block {
   width: 100%;
 }
+
 .ant-btn:empty {
   display: inline-block;
   width: 0;
   visibility: hidden;
   content: '\a0';
 }
+
 a.ant-btn {
   padding-top: 0.1px;
   line-height: 30px;
 }
+
 a.ant-btn-lg {
   line-height: 38px;
 }
+
 a.ant-btn-sm {
   line-height: 22px;
 }
+
 .ant-btn-rtl {
   direction: rtl;
 }
+
 .ant-btn-group-rtl.ant-btn-group .ant-btn-primary:last-child:not(:first-child),
-.ant-btn-group-rtl.ant-btn-group .ant-btn-primary + .ant-btn-primary {
+.ant-btn-group-rtl.ant-btn-group .ant-btn-primary+.ant-btn-primary {
   border-right-color: var(--btn-group-border);
   border-left-color: var(--ql-color-dark-t-lighten5);
 }
-.ant-btn-group-rtl.ant-btn-group
-  .ant-btn-primary:last-child:not(:first-child)[disabled],
-.ant-btn-group-rtl.ant-btn-group .ant-btn-primary + .ant-btn-primary[disabled] {
+
+.ant-btn-group-rtl.ant-btn-group .ant-btn-primary:last-child:not(:first-child)[disabled],
+.ant-btn-group-rtl.ant-btn-group .ant-btn-primary+.ant-btn-primary[disabled] {
   border-right-color: var(--ql-color-dark-t-lighten5);
   border-left-color: var(--btn-group-border);
 }
-.ant-btn-rtl.ant-btn > .ant-btn-loading-icon .anticon {
+
+.ant-btn-rtl.ant-btn>.ant-btn-loading-icon .anticon {
   padding-right: 0;
   padding-left: 8px;
 }
-.ant-btn > .ant-btn-loading-icon:only-child .anticon {
+
+.ant-btn>.ant-btn-loading-icon:only-child .anticon {
   padding-right: 0;
   padding-left: 0;
 }
-.ant-btn-rtl.ant-btn > .anticon + span,
-.ant-btn-rtl.ant-btn > span + .anticon {
+
+.ant-btn-rtl.ant-btn>.anticon+span,
+.ant-btn-rtl.ant-btn>span+.anticon {
   margin-right: 8px;
   margin-left: 0;
 }

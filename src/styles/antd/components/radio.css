@@ -13,12 +13,15 @@
   display: inline-block;
   line-height: unset;
 }
+
 .ant-radio-group .ant-badge-count {
   z-index: 1;
 }
-.ant-radio-group > .ant-badge:not(:first-child) > .ant-radio-button-wrapper {
+
+.ant-radio-group>.ant-badge:not(:first-child)>.ant-radio-button-wrapper {
   border-left: none;
 }
+
 .ant-radio-wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -41,6 +44,7 @@
   margin-right: var(--radio-wrapper-margin-right);
   cursor: pointer;
 }
+
 .ant-radio {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -59,15 +63,18 @@
   outline: none;
   cursor: pointer;
 }
+
 .ant-radio-wrapper:hover .ant-radio,
 .ant-radio:hover .ant-radio-inner,
-.ant-radio-input:focus + .ant-radio-inner {
+.ant-radio-input:focus+.ant-radio-inner {
   border-color: var(--ql-color-accent1);
 }
-.ant-radio-input:focus + .ant-radio-inner {
+
+.ant-radio-input:focus+.ant-radio-inner {
   -webkit-box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
 }
+
 .ant-radio-checked::after {
   position: absolute;
   top: 0;
@@ -83,10 +90,12 @@
   animation-fill-mode: both;
   content: '';
 }
+
 .ant-radio:hover::after,
 .ant-radio-wrapper:hover .ant-radio::after {
   visibility: visible;
 }
+
 .ant-radio-inner {
   position: relative;
   top: 0;
@@ -102,6 +111,7 @@
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
+
 .ant-radio-inner::after {
   position: absolute;
   top: 3px;
@@ -120,6 +130,7 @@
   transition: all var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ);
   content: ' ';
 }
+
 .ant-radio-input {
   position: absolute;
   top: 0;
@@ -130,9 +141,11 @@
   cursor: pointer;
   opacity: 0;
 }
+
 .ant-radio-checked .ant-radio-inner {
   border-color: var(--ql-color-accent1);
 }
+
 .ant-radio-checked .ant-radio-inner::after {
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -140,28 +153,35 @@
   -webkit-transition: all var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ);
   transition: all var(--ql-animation-duration-slow) var(--ql-animation-cubic-ease-in-out-circ);
 }
+
 .ant-radio-disabled {
   cursor: not-allowed;
 }
+
 .ant-radio-disabled .ant-radio-inner {
   background-color: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5) !important;
   cursor: not-allowed;
 }
+
 .ant-radio-disabled .ant-radio-inner::after {
   background-color: var(--radio-dot-disabled-color);
 }
+
 .ant-radio-disabled .ant-radio-input {
   cursor: not-allowed;
 }
-.ant-radio-disabled + span {
+
+.ant-radio-disabled+span {
   color: var(--ql-state-disabled-color);
   cursor: not-allowed;
 }
-span.ant-radio + * {
+
+span.ant-radio+* {
   padding-right: 8px;
   padding-left: 8px;
 }
+
 .ant-radio-button-wrapper {
   position: relative;
   display: inline-block;
@@ -171,7 +191,7 @@ span.ant-radio + * {
   font-size: var(--ql-typography-font-size-md);
   background: transparent;
   border: 1px var(--ql-border-style-default) var(--input-border-color);
-  border-top-width: 1.02px;
+  border-top-width: 1px;
   border-left-width: 0;
   padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-md);
   line-height: var(--ql-typography-line-height-md);
@@ -194,10 +214,12 @@ span.ant-radio + * {
     box-shadow var(--ql-animation-duration-slow),
     -webkit-box-shadow var(--ql-animation-duration-slow);
 }
+
 .ant-radio-button-wrapper a {
   color: var(--ql-typography-text-color-primary);
 }
-.ant-radio-button-wrapper > .ant-radio-button {
+
+.ant-radio-button-wrapper>.ant-radio-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -205,16 +227,19 @@ span.ant-radio + * {
   width: 100%;
   height: 100%;
 }
+
 .ant-radio-group-large .ant-radio-button-wrapper {
   height: 40px;
   font-size: var(--ql-typography-font-size-md);
   line-height: 38px;
 }
+
 .ant-radio-group-small .ant-radio-button-wrapper {
   height: 24px;
   padding: 0 7px;
   line-height: 22px;
 }
+
 .ant-radio-button-wrapper:not(:first-child)::before {
   position: absolute;
   top: -1px;
@@ -225,31 +250,35 @@ span.ant-radio + * {
   width: 1px;
   height: 100%;
   padding: 1px 0;
-  background-color: var(--ql-color-dark-t-lighten5);
+  background-color: var(--ql-color-accent1);
   -webkit-transition: background-color var(--ql-animation-duration-slow);
   transition: background-color var(--ql-animation-duration-slow);
   content: '';
 }
+
 .ant-radio-button-wrapper:first-child {
   border-left: 1px solid var(--ql-color-dark-t-lighten5);
-  border-radius: var(--input-border-radius-base) 0 0
-    var(--input-border-radius-base);
+  border-radius: var(--input-border-radius-base) 0 0 var(--input-border-radius-base);
 }
+
 .ant-radio-button-wrapper:last-child {
-  border-radius: 0 var(--input-border-radius-base)
-    var(--input-border-radius-base) 0;
+  border-radius: 0 var(--input-border-radius-base) var(--input-border-radius-base) 0;
 }
+
 .ant-radio-button-wrapper:first-child:last-child {
   border-radius: var(--ql-border-radius-default);
 }
+
 .ant-radio-button-wrapper:hover {
   position: relative;
   color: var(--ql-color-accent1);
 }
+
 .ant-radio-button-wrapper:focus-within {
   -webkit-box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
 }
+
 .ant-radio-button-wrapper .ant-radio-inner,
 .ant-radio-button-wrapper input[type='checkbox'],
 .ant-radio-button-wrapper input[type='radio'] {
@@ -258,36 +287,45 @@ span.ant-radio + * {
   opacity: 0;
   pointer-events: none;
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
   z-index: 1;
   color: var(--ql-color-accent1);
   background: var(--ql-color-white);
   border-color: var(--ql-color-accent1);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
-  background-color: var(--radio-button-checked-bg);
+  background-color: var(--ql-color-accent1);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
   border-color: var(--radio-button-border-color);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-  color: var(--radio-button-hover-color);
-  border-color: var(--radio-button-hover-border-color);
+  color: var(--radio-button-checked-hover-color);
+  border-color: var(--radio-button-checked-hover-border-color);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
-  background-color: var(--radio-button-hover-bg);
+  background-color: var(--radio-button-checked-hover-border-color);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
   color: var(--radio-button-checked-active-color);
   border-color: var(--radio-button-checked-active-border-color);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active::before {
   background-color: var(--radio-button-checked-active-bg);
 }
+
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
   -webkit-box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
 }
+
 .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
   color: var(--ql-color-white);
   background: var(--radio-button-checked-bg);
@@ -299,32 +337,36 @@ span.ant-radio + * {
   background: var(--radio-button-checked-hover-bg);
   border-color: var(--radio-button-checked-hover-border-color);
 }
-.ant-radio-group-solid
-  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
   color: var(--ql-color-white);
   background: var(--ql-color-accent1);
   border-color: var(--ql-color-accent1);
 }
-.ant-radio-group-solid
-  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
   -webkit-box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
 }
+
 .ant-radio-button-wrapper-disabled {
   color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
   cursor: not-allowed;
 }
+
 .ant-radio-button-wrapper-disabled:first-child,
 .ant-radio-button-wrapper-disabled:hover {
   color: var(--ql-state-disabled-color);
   background-color: var(--ql-color-dark-t-lighten5);
   border-color: var(--ql-color-dark-t-lighten5);
 }
+
 .ant-radio-button-wrapper-disabled:first-child {
   border-left-color: var(--ql-color-dark-t-lighten5);
 }
+
 .ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked {
   color: var(--ql-state-disabled-color);
   background-color: #e6e6e6;
@@ -332,50 +374,60 @@ span.ant-radio + * {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 @-webkit-keyframes antRadioEffect {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 0.5;
   }
+
   100% {
     -webkit-transform: scale(1.6);
     transform: scale(1.6);
     opacity: 0;
   }
 }
+
 @keyframes antRadioEffect {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 0.5;
   }
+
   100% {
     -webkit-transform: scale(1.6);
     transform: scale(1.6);
     opacity: 0;
   }
 }
+
 .ant-radio-group.ant-radio-group-rtl {
   direction: rtl;
 }
+
 .ant-radio-wrapper.ant-radio-wrapper-rtl {
   margin-right: 0;
   margin-left: 8px;
   direction: rtl;
 }
+
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl {
   border-right-width: 0;
   border-left-width: 1px;
 }
+
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:not(:first-child)::before {
   right: -1px;
   left: 0;
 }
+
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:first-child {
   border-right: var(--ql-border-width-default) var(--ql-border-style-default);
   border-radius: 0 var(--ql-border-width-default) var(--ql-border-width-default) 0;
 }
+
 .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
   border-right-color: var(--radio-button-checked-border-color);
 }
@@ -383,9 +435,11 @@ span.ant-radio + * {
 .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child:hover {
   border-right-color: var(--radio-button-checked-hover-border-color);
 }
+
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:last-child {
   border-radius: var(--ql-border-width-default) 0 0 var(--ql-border-width-default);
 }
+
 .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper-disabled:first-child {
   border-right-color: var(--ql-color-dark-t-lighten5);
 }

@@ -1,32 +1,75 @@
 :root {
-  --select-border-color: transparent;
-  --select-item-selected-color: var(--ql-typography-text-color-primary);
-  --select-item-selected-font-weight: 600;
-  --select-item-hover: var(--ql-color-dark-t-lighten5);
-  --select-dropdown-bg: var(--ql-color-white);
-  --select-item-selected-bg: var(--ql-color-accent1-t-lighten5);
-  --select-item-active-bg: var(--ql-color-dark-t-lighten5);
-  --select-dropdown-vertical-padding: var(--dropdown-vertical-padding);
-  --select-dropdown-font-size: var(--dropdown-font-size);
-  --select-dropdown-line-height: var(--dropdown-line-height);
+  --ql-select-bg: var(--input-bg);
+  --ql-select-color: var(--input-color);
+  --ql-select-height: var(--input-height-base);
+  --ql-select-border-color: var(--input-hover-border-color);
+  --ql-select-border-radius: var(--input-border-radius-base);
+  --ql-select-border: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-select-border-color);
+
+  --ql-select-shadow: var(--ql-outline-accent1-2);
+
+  --ql-select-padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
+
+  --ql-select-font-size: var(--ql-typography-font-size-md);
+  --ql-select-line-height: var(--ql-typography-line-height-md);
+
+  /* Select icon*/
+  --ql-select-icon-color: var(--ql-state-disabled-color);
+  --ql-select-icon-bg: transparent;
+
+  --ql-select-clear-hover-color: var(--ql-typography-text-color-primary);
+
+  /* Select item*/
+  --ql-select-item-hover: var(--ql-color-dark-t-lighten5);
+
+  --ql-select-item-color: var(--ql-typography-text-color-primary);
+
+  --ql-select-item-font-size: var(--ql-typography-font-size-md);
+  --ql-select-item-line-height: var(--dropdown-line-height);
+
+  /* --select-item-active-bg: var(--ql-color-dark-t-lighten5); */
+  --ql-select-item-selected-bg: var(--ql-color-accent1-t-lighten5);
+  --ql-select-item-selected-color: var(--ql-typography-text-color-primary);
+
+  --ql-select-item-selected-font-weight: 600;
+  --ql-select-item-group-color: var(--ql-typography-text-color-secondary);
+  --ql-select-item-empty-color: var(--disabled-color);
+
+  --select-single-item-height-lg: var(--ql-component-height-lg);
+
+  /* Select dropdown*/
+  --ql-select-dropdown-bg: var(--ql-color-white);
+
   --select-dropdown-height: 32px;
-  --select-background: var(--gray-1);
-  --select-clear-background: var(--select-background);
+
+  --ql-select-dropdown-vertical-padding: var(--dropdown-vertical-padding);
+  --ql-select-dropdown-zindex: var(--ql-zindex-dropdown);
+  --ql-select-dropdown-shadow: var(--ql-shadow-default);
+
+  --ql-select-dropdown-line-height: var(--ql-typography-line-height-md);
+  --ql-select-dropdown-font-feature: var(--ql-typography-font-feature-settings-default);
+  --ql-select-dropdown-font-size: var(--ql-typography-font-size-sm);
+  --ql-select-dropdown-font-variant: var(--ql-typography-font-variant-default);
+  --ql-select-dropdown-border-radius: var(--ql-border-radius-default);
+
+  /* Select selection*/
   --select-selection-item-bg: var(--ql-color-dark-t-lighten5);
   --select-selection-item-border-color: var(--ql-border-color-default);
-  --select-single-item-height-lg: var(--ql-component-height-lg);
-  /* --select-multiple-item-height: @input-height-base - @input-padding-vertical-base * 2; */
-  --select-multiple-item-height-lg: 40px;
-  /* --select-multiple-item-spacing-half: ceil((@input-padding-vertical-base / 2)); */
-  --select-multiple-disabled-background: var(--input-disabled-bg);
-  --select-multiple-item-disabled-color: #bfbfbf;
-  --select-multiple-item-disabled-border-color: var(--select-border-color);
+
   --select-open-selection-item-color: var(--ql-typography-text-color-secondary);
 
   /* Select with search*/
   --ql-select-with-search-bg: transparent;
   --ql-select-with-search-border: unset;
 
-  /* Select multiple */
- --ql-select-multiple-item-border-radius: var(--border-radius-default);
+  /* Select multiple*/
+  --select-multiple-disabled-background: var(--input-disabled-bg);
+
+  --ql-select-multiple-item-border-radius: var(--border-radius-default);
+  /* --select-multiple-item-height: @input-height-base - @input-padding-vertical-base * 2; */
+  --select-multiple-item-height-lg: 40px;
+  /* --select-multiple-item-spacing-half: ceil((@input-padding-vertical-base / 2)); */
+  --select-multiple-item-disabled-color: #bfbfbf;
+  --select-multiple-item-disabled-border-color: var(--select-border-color);
+
 }

@@ -6,12 +6,21 @@
   --radio-dot-color: var(--ql-color-accent1);
   --radio-dot-disabled-color: rgba(0, 0, 0, 0.2);
   --radio-solid-checked-color: var(--ql-color-white);
+
   --radio-button-bg: var(--btn-default-bg);
-  --radio-button-checked-bg: var(--btn-default-bg);
   --radio-button-color: var(--btn-default-color);
-  --radio-button-checked-color: var(--btn-default-color);
+  --radio-button-border-color: var(--btn-default-border);
+
   --radio-button-hover-bg: var(--ql-color-accent1-t-lighten5);
+
+  --radio-button-checked-bg: var(--ql-color-accent1);
+  --radio-button-checked-color: var(--ql-color-accent1);
+  --radio-button-checked-border-color: var(--ql-color-accent1);
+
   --radio-button-checked-hover-bg: var(--ql-color-accent1-t-lighten5);
+  --radio-button-checked-hover-color: var(--ql-color-accent1-t-lighten1);
+  --radio-button-checked-hover-border-color: var(--ql-color-accent1-t-lighten1);
+
   --radio-button-active-bg: var(--ql-color-accent1);
   --radio-button-checked-active-bg: var(--ql-color-accent1);
   --radio-disabled-button-checked-bg: rgba(0 0 0, 0.1);
