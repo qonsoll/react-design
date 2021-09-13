@@ -34,35 +34,36 @@ export default {
       description: 'Set the danger status of button',
       control: { type: 'boolean' }
     },
-    disabled: { 
+    disabled: {
       table: {
         category: 'Default AntD props'
       },
       description: 'Disabled state of button',
       control: { type: 'boolean' }
     },
-    block: { 
+    block: {
       table: {
         category: 'Default AntD props'
       },
       description: 'Option to fit button width to its parent width',
       control: { type: 'boolean' }
     },
-    ghost: { 
+    ghost: {
       table: {
         category: 'Default AntD props'
       },
-      description: 'Make background transparent and invert text and border colors',
+      description:
+        'Make background transparent and invert text and border colors',
       control: { type: 'boolean' }
     },
-    href: { 
+    href: {
       table: {
         category: 'Default AntD props'
       },
       description: 'Redirect url of link button',
       control: { type: 'text' }
     },
-    htmlType: { 
+    htmlType: {
       table: {
         category: 'Default AntD props'
       },
@@ -70,21 +71,21 @@ export default {
       options: ['submit', 'reset', 'button'],
       control: { type: 'select' }
     },
-    icon: { 
+    icon: {
       table: {
         category: 'Default AntD props'
       },
       description: 'Set the icon component of button',
-      control: { type: 'object' }
+      control: { disable: true }
     },
-    loading: { 
+    loading: {
       table: {
         category: 'Default AntD props'
       },
       description: 'Set the loading status of button',
       control: { type: 'boolean' }
     },
-    shape: { 
+    shape: {
       table: {
         category: 'Default AntD props'
       },
@@ -92,7 +93,7 @@ export default {
       options: ['circle', 'round'],
       control: { type: 'radio' }
     },
-    size: { 
+    size: {
       table: {
         category: 'Default AntD props'
       },
@@ -100,18 +101,19 @@ export default {
       options: ['large', 'middle', 'small'],
       control: { type: 'radio' }
     },
-    target: { 
+    target: {
       table: {
         category: 'Default AntD props'
       },
-      description: 'Same as target attribute of a, works when href is specified',
+      description:
+        'Same as target attribute of a, works when href is specified',
       control: { type: 'text' }
     },
-    onClick: { 
+    onClick: {
       table: {
         category: 'Default AntD props'
       },
-      description: 'Set the handler to handle click event',
+      description: 'Set the handler to handle click event'
     },
     ...spaceArgTypes,
     ...colorArgTypes,
@@ -123,7 +125,6 @@ export default {
     ...positionArgTypes,
     ...shadowArgTypes,
     ...extraArgTypes,
-
     Packages: {
       table: {
         category: 'Extensions'
@@ -150,7 +151,7 @@ export default {
 }
 
 export const Template = (args) => (
-  <Button type='primary' {...args}>
+  <Button type="primary" {...args}>
     Button
   </Button>
 )
