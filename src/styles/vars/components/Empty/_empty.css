@@ -4,4 +4,10 @@
   --empty-ellipse-color: var(--ql-color-dark-lighten6);
   /* Blank in box */
   --empty-path3-color: var(--ql-color-dark-lighten6);
+  /* Box */
+  --empty-simple-path: var(--ql-color-dark-lighten6);
+
+  --empty-simple-ellipse: var(--ql-color-dark-t-lighten5);
+
+  --empty-simple-g: var(--ql-color-dark-lighten5);
 }

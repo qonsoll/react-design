@@ -9,6 +9,7 @@
 
   --radio-button-bg: var(--btn-default-bg);
   --radio-button-color: var(--btn-default-color);
+  --radio-button-link-color: var(--link-color);
   --radio-button-border-color: var(--btn-default-border);
 
   --radio-button-hover-bg: var(--ql-color-accent1-t-lighten5);

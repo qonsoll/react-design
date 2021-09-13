@@ -2,11 +2,11 @@
   --ql-select-bg: var(--input-bg);
   --ql-select-color: var(--input-color);
   --ql-select-height: var(--input-height-base);
-  --ql-select-border-color: var(--input-hover-border-color);
+  --ql-select-border-color: var(--input-border-color);
   --ql-select-border-radius: var(--input-border-radius-base);
   --ql-select-border: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-select-border-color);
 
-  --ql-select-shadow: var(--ql-outline-accent1-2);
+  --ql-select-outline: var(--ql-outline-accent1-2);
 
   --ql-select-padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
 

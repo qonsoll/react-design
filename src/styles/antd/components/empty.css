@@ -71,15 +71,15 @@
 }
 
 .ant-empty-img-simple-ellipse {
-  fill: var(--ql-color-dark-t-lighten5);
+  fill: var(--empty-simple-ellipse);
 }
 
 .ant-empty-img-simple-g {
-  stroke: var(--ql-color-dark-t-lighten5);
+  stroke: var(--empty-simple-g);
 }
 
 .ant-empty-img-simple-path {
-  fill: var(--ql-color-dark-t-lighten6);
+  fill: var(--empty-simple-path);
 }
 
 .ant-empty-rtl {

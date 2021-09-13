@@ -187,7 +187,7 @@ span.ant-radio+* {
   display: inline-block;
   margin: 0;
   padding: 0;
-  color: var(--ql-typography-text-color-primary);
+  color: var(--radio-button-color);
   font-size: var(--ql-typography-font-size-md);
   background: transparent;
   border: 1px var(--ql-border-style-default) var(--input-border-color);
