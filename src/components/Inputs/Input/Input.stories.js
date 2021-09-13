@@ -1,28 +1,157 @@
 import React from 'react'
 import Input from './Input'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes,
+  extraArgTypes
+} from '../../../helpers/arg-types'
 
 export default {
   title: 'Components/Inputs/Input',
   component: Input,
   argTypes: {
-    'Default AntD props': {
-      description:
-        'Component absolutely maintain default AntD input properties (check Ant documentation: https://ant.design/components/input/#Input).',
-      control: { disable: true }
-    },
-    Packages: {
+    addonAfter: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
       description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
+        'The label text displayed after (on the right side of) the input field',
+      control: {
+        type: 'object'
+      }
+    },
+    addonBefore: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description:
+        'The label text displayed before (on the left side of) the input field',
+      control: {
+        type: 'object'
+      }
+    },
+    allowClear: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'If allow to remove input content with clear icon',
+      control: { type: 'boolean' }
+    },
+    bordered: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Whether has border style',
+      control: { type: 'boolean' }
+    },
+    defaultValue: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Whether has border style',
+      control: { type: 'text' }
+    },
+    disabled: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Whether the input is disabled',
+      control: { type: 'boolean' }
+    },
+    id: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The ID for input',
+      control: { type: 'text' }
+    },
+    maxLength: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The max length',
+      control: { type: 'number' }
+    },
+    prefix: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The prefix icon for the Input',
+      control: { type: 'object' }
+    },
+    size: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description:
+        'The size of the input box. Note: in the context of a form, the large size is used',
+      options: ['large', 'middle', 'small'],
+      control: { type: 'radio' }
+    },
+    suffix: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The suffix icon for the Input',
+      control: { type: 'object' }
+    },
+    type: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The type of input',
+      control: { type: 'text' }
+    },
+    value: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The input content value',
+      control: { type: 'text' }
+    },
+    onChange: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Callback when user input'
+    },
+    onPressEnter: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description:
+        'The callback function that is triggered when Enter key is pressed'
+    },
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    ...extraArgTypes,
+    Packages: {
+      table: {
+        category: 'Extensions'
+      },
+      description:
+        'Applied styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
       control: { disable: true }
     },
     'Extra CSS props': {
       table: {
-        category: 'Extentions'
+        category: 'Extensions'
       },
-      description: 'Additional CSS properties which could be applyed.',
+      description: 'Additional CSS properties which could be applied.',
       control: { disable: true }
     }
   }
