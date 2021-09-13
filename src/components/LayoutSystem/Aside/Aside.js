@@ -5,8 +5,12 @@ import { useLayoutSystem } from '../LayoutSystem'
 import { buildAsideLayoutStyles, overlayStyles } from './Aside.styles'
 
 const collapseMap = {
-  full: { width: '0' },
-  short: { width: 'var(--ql-aside-collapsed-width)' }
+  full: { width: '0', display: 'none', padding: 'var(--ql-aside-padding)' },
+  short: {
+    width: 'var(--ql-aside-collapsed-width)',
+    display: 'flex',
+    padding: 0
+  }
 }
 
 const AsideLayout = (props) => {
