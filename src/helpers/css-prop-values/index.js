@@ -18,6 +18,9 @@ import verticalAlign from './verticalAlign'
 import whiteSpace from './whiteSpace'
 import cursor from './cursor'
 import wordBreak from './wordBreak'
+import zoom from './zoom'
+import transition from './transition'
+import transform from './transform'
 
 const CSSPropValues = {
   alignContent,
@@ -39,7 +42,10 @@ const CSSPropValues = {
   verticalAlign,
   whiteSpace,
   cursor,
-  wordBreak
+  wordBreak,
+  zoom,
+  transform,
+  transition
 }
 
 export default CSSPropValues

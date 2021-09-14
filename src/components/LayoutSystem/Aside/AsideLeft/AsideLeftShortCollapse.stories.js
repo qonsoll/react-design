@@ -62,7 +62,7 @@ export default {
       table: {
         category: 'Props for Layout System Provider'
       },
-      description: 'Use to set variant for aside, FULL is now.',
+      description: 'Use to set variant for aside, SHORT is now.',
       control: { disable: true }
     },
     asideLeftOuter: {
