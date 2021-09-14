@@ -16,7 +16,7 @@
   --ql-menu-horizontal-main-item-color-hover: var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
   --ql-menu-horizontal-main-item-box-shadow-hover: inset 0 -2px var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
   --ql-menu-horizontal-main-item-danger-color-hover: var(--ql-color-danger); /* Changed key name: added prefix "ql" — 14.09.21*/
-  --menu-horizontal-main-item-danger-box-shadow-hover: inset 0 -2px var(--ql-color-danger); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-horizontal-main-item-danger-box-shadow-hover: inset 0 -2px var(--ql-color-danger); /* Changed key name: added prefix "ql" — 14.09.21*/
 
   /* ITEM */
   --ql-menu-item-height: 48px; /* Changed key name: added prefix "ql" — 14.09.21*/
@@ -69,7 +69,7 @@
 
   /* Config for dark theme (antd native workaround) */
 
-  /* --menu-dark-color: var(--ql-typography-text-color-secondary);
+  --menu-dark-color: var(--ql-typography-text-color-secondary);
   --menu-dark-danger-color: var(--ql-color-danger);
   --menu-dark-bg: var(--ql-menu-bg);
   --menu-dark-arrow-color: var(--ql-color-white);
@@ -79,5 +79,5 @@
   --menu-dark-item-active-danger-bg: var(--ql-color-danger);
   --menu-dark-selected-item-icon-color: var(--ql-color-white);
   --menu-dark-selected-item-text-color: var(--ql-color-white);
-  --menu-dark-item-hover-bg: transparent; */
+  --menu-dark-item-hover-bg: transparent;
 }
