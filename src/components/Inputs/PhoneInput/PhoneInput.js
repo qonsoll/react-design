@@ -126,19 +126,8 @@ StyledPhoneInput.propTypes = {
   isValid: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
   defaultErrorMessage: PropTypes.string,
   specialLabel: PropTypes.string,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
   size: PropTypes.oneOf(['sm', 'lg']),
-  'Extra CSS props': PropTypes.oneOf(['transform'])
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
 export default StyledPhoneInput

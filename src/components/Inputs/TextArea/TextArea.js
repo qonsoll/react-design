@@ -53,18 +53,7 @@ TextArea.propTypes = {
   value: PropTypes.string,
   onPressEnter: PropTypes.func,
   onResize: PropTypes.func,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf(['transform'])
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
 export default TextArea

@@ -9,9 +9,9 @@ import {
   backgroundArgTypes,
   borderArgTypes,
   positionArgTypes,
-  shadowArgTypes,
-  extraArgTypes
+  shadowArgTypes
 } from '../../../helpers/arg-types'
+import CSSPropValues from '../../../helpers/css-prop-values'
 
 export default {
   title: 'Components/Inputs/PhoneInput',
@@ -31,13 +31,11 @@ export default {
     ...borderArgTypes,
     ...positionArgTypes,
     ...shadowArgTypes,
-    ...extraArgTypes,
-    'Extra CSS props': {
+    transform: {
       table: {
-        category: 'Extentions'
+        category: 'Extra CSS props'
       },
-      description: 'Additional CSS properties which could be applied.',
-      control: { disable: true }
+      control: CSSPropValues.transform
     }
   }
 }
