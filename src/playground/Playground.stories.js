@@ -13,7 +13,11 @@ import Box from '../components/Box'
 import Text from '../components/Typography/Text'
 import Divider from '../components/Divider'
 import Img from '../components/Media/Img'
-import { Menu, Select, Input, Card, Button } from 'antd'
+import Menu from '../components/Menus/Menu'
+import MenuItem from '../components/Menus/MenuItem'
+import Group from '../components/Menus/Group'
+import Submenu from '../components/Menus/Submenu'
+import { Select, Input, Card, Button } from 'antd'
 import {
   TeamOutlined,
   FormatPainterOutlined,
@@ -74,9 +78,9 @@ const headerLayout = (
         </Col>
         <Col>
           <Menu mode='horizontal'>
-            <Menu.Item icon={<TeamOutlined />}>Roles</Menu.Item>
-            <Menu.Item icon={<FormatPainterOutlined />}>Styling</Menu.Item>
-            <Menu.Item icon={<DatabaseOutlined />}>DB structure</Menu.Item>
+            <MenuItem icon={<TeamOutlined />}>Roles</MenuItem>
+            <MenuItem icon={<FormatPainterOutlined />}>Styling</MenuItem>
+            <MenuItem icon={<DatabaseOutlined />}>DB structure</MenuItem>
           </Menu>
         </Col>
         <Col cw='auto'>
@@ -130,11 +134,23 @@ const asideLayoutLeft = (
       <Divider my={24} />
     </Box>
 
-    <Box mx={-48}>
-      <Menu>
-        <Menu.Item icon={<TeamOutlined />}>Roles</Menu.Item>
-        <Menu.Item icon={<FormatPainterOutlined />}>Styling</Menu.Item>
-        <Menu.Item icon={<DatabaseOutlined />}>DB structure</Menu.Item>
+    <Box>
+      <Menu mode='vertical'>
+        <MenuItem icon={<TeamOutlined />}>Roles</MenuItem>
+        <MenuItem icon={<FormatPainterOutlined />}>Styling</MenuItem>
+        <MenuItem icon={<DatabaseOutlined />}>DB structure</MenuItem>
+        <Submenu key='sub2' icon={<BellOutlined />} title='Submenu'>
+          <MenuItem key='5'>Option 5</MenuItem>
+          <MenuItem key='6'>Option 6</MenuItem>
+          {/* <SubMenu key="sub3" title="Submenu">
+                <MenuItem key="7">Option 7</MenuItem>
+                <MenuItem key="8">Option 8</MenuItem>
+              </SubMenu> */}
+        </Submenu>
+        <Group title='Group title'>
+          <MenuItem>Menu item #2</MenuItem>
+          <MenuItem>Menu item #3</MenuItem>
+        </Group>
       </Menu>
     </Box>
   </>
@@ -142,11 +158,11 @@ const asideLayoutLeft = (
 
 const asideLayoutRight = (
   <>
-    <Box mx={-48}>
+    <Box>
       <Menu mode='inline'>
-        <Menu.Item icon={<TeamOutlined />}>Roles</Menu.Item>
-        <Menu.Item icon={<FormatPainterOutlined />}>Styling</Menu.Item>
-        <Menu.Item icon={<DatabaseOutlined />}>DB structure</Menu.Item>
+        <MenuItem icon={<TeamOutlined />}>Roles</MenuItem>
+        <MenuItem icon={<FormatPainterOutlined />}>Styling</MenuItem>
+        <MenuItem icon={<DatabaseOutlined />}>DB structure</MenuItem>
       </Menu>
     </Box>
   </>

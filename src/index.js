@@ -32,6 +32,12 @@ import Graphic from './components/Media/Graphic'
 import Img from './components/Media/Img'
 import Avatar from './components/Media/Avatar'
 
+// Menu
+import Menu from './components/Menus/Menu'
+import MenuItem from './components/Menus/MenuItem'
+import Submenu from './components/Menus/Submenu'
+import Group from './components/Menus/Group'
+
 import Button from './components/Button'
 import Card from './components/Card'
 import HeadingPrimary from './components/Heading/HeadingPrimary'
@@ -53,8 +59,6 @@ import Title from './components/Typography/Title'
 import Divider from './components/Divider'
 import NoData from './components/NoData'
 import Dropdown from './components/Dropdown'
-import Menu from './components/Menus/Menu'
-import MenuItem from './components/Menus/MenuItem'
 import Badge from './components/Badge'
 import Notification from './components/Notification'
 import AppWrapper from './components/Wrappers/AppWrapper'
@@ -108,6 +112,8 @@ export {
   Dropdown,
   Menu,
   MenuItem,
+  Submenu,
+  Group,
   Badge,
   Notification,
   AppWrapper,
@@ -163,6 +169,8 @@ export default {
   Dropdown,
   Menu,
   MenuItem,
+  Submenu,
+  Group,
   Badge,
   Notification,
   AppWrapper,

@@ -1,56 +1,75 @@
 :root {
-  --menu-bg: transparent;
-  --menu-padding: 8px 0;
-  --menu-highlight-color: var(--ql-color-accent1);
-  --menu-highlight-danger-color: var(--ql-color-danger);
+  --ql-menu-bg: transparent; /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-padding: 8px 0; /* Changed key name: added prefix "ql" — 14.09.21*/
+  /* DEPRECATED: --menu-highlight-color */
+  /* DEPRECATED: --menu-highlight-danger-color */
 
-  --menu-inline-collapsed-width: calc(var(--ql-aside-collapsed-width) - var(--ql-aside-border-width));
-  --menu-inline-submenu-bg: var(--ql-color-dark-t-lighten5);
+  --ql-menu-inline-collapsed-width: calc(var(--ql-aside-collapsed-width) - var(--ql-aside-border-width)); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-inline-submenu-bg: var(--ql-color-dark-t-lighten5); /* Changed key name: added prefix "ql" — 14.09.21*/
 
-  --menu-horizontal-height: var(--ql-header-height);
-  --menu-horizontal-border-bottom: unset;
+  --ql-menu-horizontal-height: var(--ql-header-height); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-horizontal-border-bottom: unset; /* Changed key name: added prefix "ql" — 14.09.21*/
 
-  --menu-horizontal-main-item-spacing: 0 0;
-  --menu-horizontal-main-item-padding: 0 16px;
-  --menu-horizontal-main-item-color-hover: var(--menu-highlight-color);
-  --menu-horizontal-main-item-box-shadow-hover: inset 0 -2px var(--menu-highlight-color);
-  --menu-horizontal-main-item-danger-color-hover: var(--menu-highlight-danger-color);
-  --menu-horizontal-main-item-danger-box-shadow-hover: inset 0 -2px var(--menu-highlight-danger-color);
+  /* ITEM (for horizontal menu) */
+  --ql-menu-horizontal-main-item-spacing: 0 0; /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-horizontal-main-item-padding: 0 16px; /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-horizontal-main-item-color-hover: var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-horizontal-main-item-box-shadow-hover: inset 0 -2px var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-horizontal-main-item-danger-color-hover: var(--ql-color-danger); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --menu-horizontal-main-item-danger-box-shadow-hover: inset 0 -2px var(--ql-color-danger); /* Changed key name: added prefix "ql" — 14.09.21*/
 
-  --menu-item-height: 48px;
-  --menu-item-font-size: var(--ql-typography-font-size-md);
-  --menu-item-line-height: var(--ql-typography-line-height-md);
-  --menu-item-color: var(--ql-typography-text-color-secondary);
-  --menu-item-padding: calc((var(--menu-item-height) - var(--ql-typography-line-height-md)) / 2) 20px;
-  --menu-vertical-inline-item-padding: 0 48px;
-  --menu-item-vertical-margin: 0;
-  --menu-item-boundary-margin: 0;
-  --menu-item-icon-size: var(--menu-item-font-size);
-  --menu-item-icon-margin-right: 24px;
-  --menu-item-color-hover: var(--menu-highlight-color);
+  /* ITEM */
+  --ql-menu-item-height: 48px; /* Changed key name: added prefix "ql" — 14.09.21*/
+  /* DEPRECATED: --menu-vertical-inline-item-padding */
+  /* DEPRECATED: --menu-item-padding */
+  --ql-menu-item-padding-vertical: calc((var(--ql-menu-item-height) - var(--ql-typography-line-height-md)) / 2); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-vertical-margin: 0; /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-boundary-margin: 0;
 
-  --menu-item-active-color: var(--ql-color-white);
-  --menu-item-active-bg: var(--ql-color-accent1);
-  --menu-item-active-border-right: 3px solid var(--menu-highlight-color);
+  /* ---: typography */
+  --ql-menu-item-font-size: var(--ql-typography-font-size-md); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-line-height: var(--ql-typography-line-height-md); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-color: var(--ql-typography-text-color-secondary); /* Changed key name: added prefix "ql" — 14.09.21*/
+
+
+  /* ---: iconography */
+  --ql-menu-item-icon-size: var(--menu-item-font-size); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-icon-margin-right: 24px; /* Changed key name: added prefix "ql" — 14.09.21*/
+
+  /* ---: hover state */
+  --ql-menu-item-bg-hover: var(--ql-color-accent1-t-lighten5); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-color-hover: var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
+
+  /* ---: default active state */
+  --ql-menu-item-active-color: var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-active-bg: var(--ql-color-accent1-t-lighten5); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-active-border-right: 3px solid var(--ql-color-accent1); /* Changed key name: added prefix "ql" — 14.09.21*/
   
-  --menu-item-active-danger-bg: var(--ql-color-danger-t-lighten6);
-  
-  --menu-submenu-bg: var(--ql-color-white);
-  --menu-submenu-border-radius: var(--ql-border-radius-sm);
-  
-  --menu-group-title-font-size: var(--ql-font-size-caption1);
-  --menu-group-title-line-height: var(--ql-line-height-caption1);
-  --menu-group-title-font-weight: var(--ql-font-weight-medium);
-  --menu-group-title-letter-spacing: var(--ql-letter-spacing-default);
-  --menu-group-title-text-transform: uppercase;
-  --menu-group-title-color: var(--ql-state-disabled-color);
-  --menu-group-title-padding: var(--menu-item-padding);
-  
-  --menu-item-group-height: var(--ql-typography-line-height-md);
-  --menu-item-active-border-width: 3px;
-  --menu-inline-toplevel-item-height: 40px;
+  /* ---: danger active state */
+  --ql-menu-item-active-danger-bg: var(--ql-color-danger-t-lighten6); /* Changed key name: added prefix "ql" — 14.09.21*/
 
-  --menu-dark-color: var(--ql-typography-text-color-secondary);
+  /* SUBMENU */
+  --ql-menu-submenu-bg: var(--ql-color-white); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-submenu-border-radius: var(--ql-border-radius-sm); /* Changed key name: added prefix "ql" — 14.09.21*/
+  
+  /* GROUP */
+
+  /* ---: title */
+  --ql-menu-group-title-font-size: var(--ql-font-size-caption1); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-group-title-line-height: var(--ql-line-height-caption1); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-group-title-font-weight: var(--ql-font-weight-medium); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-group-title-letter-spacing: var(--ql-letter-spacing-default); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-group-title-text-transform: uppercase; /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-group-title-color: var(--ql-state-disabled-color); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-group-title-padding: 8px 16px; /* Changed key name: added prefix "ql" — 14.09.21*/
+  
+  /* --menu-item-group-height: var(--ql-typography-line-height-md); */ /* Not used */
+  /* --menu-item-active-border-width: 3px; */ /* Not used */
+  /* --menu-inline-toplevel-item-height: 40px; */ /* Not used */
+
+  /* Config for dark theme (antd native workaround) */
+
+  /* --menu-dark-color: var(--ql-typography-text-color-secondary);
   --menu-dark-danger-color: var(--ql-color-danger);
   --menu-dark-bg: var(--ql-menu-bg);
   --menu-dark-arrow-color: var(--ql-color-white);
@@ -60,5 +79,5 @@
   --menu-dark-item-active-danger-bg: var(--ql-color-danger);
   --menu-dark-selected-item-icon-color: var(--ql-color-white);
   --menu-dark-selected-item-text-color: var(--ql-color-white);
-  --menu-dark-item-hover-bg: transparent;
+  --menu-dark-item-hover-bg: transparent; */
 }
