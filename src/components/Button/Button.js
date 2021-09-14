@@ -55,13 +55,7 @@ const Button = styled(AntButton)`
 `
 
 Button.propTypes = {
-  type: PropTypes.oneOf([
-  'primary', 
-  'secondary', 
-  'text', 
-  'link', 
-  'ghost'
-  ]),
+  type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),
   danger: PropTypes.bool,
   disabled: PropTypes.bool,
   block: PropTypes.bool,
@@ -71,20 +65,9 @@ Button.propTypes = {
   icon: PropTypes.node,
   loading: PropTypes.bool,
   shape: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'middle', 'large']),
   target: PropTypes.string,
   onClick: PropTypes.func,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
   'Extra CSS props': PropTypes.oneOf([
     'whiteSpace',
     'cursor',
