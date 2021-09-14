@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from './Input'
+import { UserOutlined } from '@ant-design/icons'
 import {
   spaceArgTypes,
   colorArgTypes,
@@ -17,6 +18,12 @@ export default {
   title: 'Components/Inputs/Input',
   component: Input,
   argTypes: {
+    withIcon: {
+      description: 'Show icon',
+      control: {
+        type: 'boolean'
+      }
+    },
     addonAfter: {
       table: {
         category: 'Default AntD props'
@@ -24,7 +31,7 @@ export default {
       description:
         'The label text displayed after (on the right side of) the input field',
       control: {
-        type: 'object'
+        disable: true
       }
     },
     addonBefore: {
@@ -34,7 +41,7 @@ export default {
       description:
         'The label text displayed before (on the left side of) the input field',
       control: {
-        type: 'object'
+        disable: true
       }
     },
     allowClear: {
@@ -84,7 +91,7 @@ export default {
         category: 'Default AntD props'
       },
       description: 'The prefix icon for the Input',
-      control: { type: 'object' }
+      control: { disable: true }
     },
     size: {
       table: {
@@ -100,7 +107,7 @@ export default {
         category: 'Default AntD props'
       },
       description: 'The suffix icon for the Input',
-      control: { type: 'object' }
+      control: { disable: true }
     },
     type: {
       table: {
@@ -129,6 +136,13 @@ export default {
       description:
         'The callback function that is triggered when Enter key is pressed'
     },
+    placeholder: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The placeholder for input',
+      control: { type: 'text' }
+    },
     ...spaceArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,
@@ -147,4 +161,14 @@ export default {
   }
 }
 
-export const Template = (args) => <Input {...args} />
+export const Template = (args) => {
+  const { withIcon, ...rest } = args
+
+  return (
+    <Input
+      placeholder="Placeholder..."
+      prefix={withIcon && <UserOutlined />}
+      {...rest}
+    />
+  )
+}

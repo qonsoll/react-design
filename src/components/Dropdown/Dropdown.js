@@ -42,25 +42,22 @@ const Dropdown = (props) => {
 }
 
 Dropdown.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  arrow: PropTypes.bool,
+  disabled: PropTypes.bool,
+  destroyPopupOnHide: PropTypes.bool,
+  getPopupContainer: PropTypes.func,
+  overlay: PropTypes.func,
+  overlayClassName: PropTypes.string,
+  overlayStyle: PropTypes.object,
+  placement: PropTypes.string,
+  trigger: PropTypes.string,
+  visible: PropTypes.bool,
+  onVisibleChange: PropTypes.func,
+  whiteSpace: PropTypes.string,
+  cursor: PropTypes.string,
+  wordBreak: PropTypes.string,
+  zoom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
 export default Dropdown
