@@ -68,14 +68,12 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'middle', 'large']),
   target: PropTypes.string,
   onClick: PropTypes.func,
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform',
-    'transition'
-  ]),
+  whiteSpace: PropTypes.string,
+  cursor: PropTypes.string,
+  wordBreak: PropTypes.string,
+  zoom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  transition: PropTypes.string,
   variant: PropTypes.oneOf(['white'])
 }
 

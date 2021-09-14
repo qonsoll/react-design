@@ -38,25 +38,21 @@ const Avatar = styled(AntAvatar)(
 )
 
 Avatar.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  alt: PropTypes.string,
+  gap: PropTypes.number,
+  icon: PropTypes.node,
+  shape: PropTypes.oneOf(['circle', 'square']),
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  src: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  srcSet: PropTypes.string,
+  draggable: PropTypes.bool,
+  crossOrigin: PropTypes.oneOf(['anonymous', 'use-credentials', '']),
+  onError: PropTypes.func,
+  whiteSpace: PropTypes.string,
+  cursor: PropTypes.string,
+  wordBreak: PropTypes.string,
+  zoom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
 export default Avatar

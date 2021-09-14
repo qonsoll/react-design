@@ -125,21 +125,6 @@ export default {
     ...positionArgTypes,
     ...shadowArgTypes,
     ...extraArgTypes,
-    Packages: {
-      table: {
-        category: 'Extensions'
-      },
-      description:
-        'Applied styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
-    },
-    'Extra CSS props': {
-      table: {
-        category: 'Extensions'
-      },
-      description: 'Additional CSS properties which could be applied.',
-      control: { disable: true }
-    },
     variant: {
       table: {
         category: 'Custom properties'
