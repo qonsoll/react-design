@@ -52,8 +52,7 @@ const Layout = (props) => {
       header={header}
       asideLeft={asideLeftExtended}
       asideRight={asideRightExtended}
-      footer={footer}
-    >
+      footer={footer}>
       {children}
     </CompositionLayout>
   )
@@ -61,8 +60,7 @@ const Layout = (props) => {
   return (
     <BaseLayout
       direction={isOuterLayoutExists ? 'row' : 'column'}
-      bg={layoutBg || 'var(--ql-layout-background)'}
-    >
+      bg={layoutBg || 'var(--ql-layout-background)'}>
       {isOuterLayoutExists ? (
         <>
           {/* Aside left */}
@@ -70,13 +68,12 @@ const Layout = (props) => {
             React.cloneElement(asideLeft, { side: 'left' })}
 
           <DirectionLayout
-            direction='column'
-            maxHeight='100vh'
-            overflow='auto'
+            direction="column"
+            maxHeight="100vh"
+            overflow="auto"
             ml={ml}
             mr={mr}
-            boxShadow='var(--ql-content-shadow)'
-          >
+            boxShadow="var(--ql-content-shadow)">
             {compositionLayout}
           </DirectionLayout>
 

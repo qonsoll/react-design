@@ -61,15 +61,14 @@ export const Template = (args) => {
         <Layout
           header={
             <Header
-              color='#fff'
-              alignItems='center'
-              justifyContent='center'
-              {...args}
-            >
-              Hi!👋 I'm header.
+              color="#fff"
+              alignItems="center"
+              justifyContent="center"
+              {...args}>
+              Hi!<span>👋</span>I'm header.
             </Header>
           }
-          footer={<Footer bg='#f2f2f2' />}
+          footer={<Footer bg="#f2f2f2" />}
         />
       </LayoutSystemProvider>
     </ThemeProvider>
