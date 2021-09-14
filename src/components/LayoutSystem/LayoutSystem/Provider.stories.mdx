@@ -3,5 +3,22 @@ import { Meta } from '@storybook/addon-docs';
 <Meta title="Layout system/Provider" />
 
 # Layout Provider
+LayoutProvider is used for manage content display on page. It receives config for control header, footer, aside and content. 
 
-FIXME: here we should describe how to setup and use provider. 
+Available values: 
+
+| Property | Description | Type | Default |
+| --- | ---- | ---- | ---- |
+| <b>layoutBg</b>    |   <i>set background for layout</i>    |    string |    white |
+| <b>isAsideLeft</b>    |   <i>show the left aside </i>    |    boolean |    false |
+| <b>isAsideRight</b>    |  <i>show the right aside</i>     |    boolean |    false |
+| <b>asideLeftOuter</b>    |   <i>set the left aside under the header (use with isAsideLeft: true)</i>   |    boolean |    false |
+| <b>asideRightOuter</b>    |   <i>set the right aside under the header (use with isAsideRight: true)</i>    |    boolean |    false |
+| <b>asideLeftOverlay</b>    |   <i>use for left drawer</i>    |    boolean |    false |
+| <b>asideRightOverlay</b>    |   <i>use for right drawer</i>    |    boolean |    false |
+| <b>isHeaderSticky</b>    |   <i>attach the header to the top when scrolling</i>    |    boolean |    false |
+| <b>isFooterSticky</b>    |   <i>attach the footer to the bottom when scrolling</i>    |    boolean |    false |
+| <b>contentHorizontalPadding</b>    |   <i>add horizontal padding for content</i>    |    boolean |    false |
+| <b>contentVerticalPadding</b>    |   <i>add vertical padding for content</i>    |    boolean |    false |
+| <b>asideRightCollapsed</b>    |   <i>apply possibility to collapse right aside</i>    |    boolean |    false |
+| <b>asideLeftCollapsed</b>    |   <i>apply possibility to collapse left aside</i>    |    boolean |    false |
