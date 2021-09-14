@@ -51,7 +51,7 @@ export default {
       },
       description: 'The initial input content',
       control: {
-        type: 'string'
+        type: 'text'
       }
     },
     maxLength: {
@@ -78,7 +78,7 @@ export default {
       },
       description: 'The input content value',
       control: {
-        type: 'string'
+        type: 'text'
       }
     },
     onPressEnter: {
