@@ -15,14 +15,17 @@
   border-bottom: 0;
   border-radius: var(--collapse-panel-border-radius);
 }
-.ant-collapse > .ant-collapse-item {
+
+.ant-collapse>.ant-collapse-item {
   border-bottom: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
 }
-.ant-collapse > .ant-collapse-item:last-child,
-.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+
+.ant-collapse>.ant-collapse-item:last-child,
+.ant-collapse>.ant-collapse-item:last-child>.ant-collapse-header {
   border-radius: 0 0 var(--collapse-panel-border-radius) var(--collapse-panel-border-radius);
 }
-.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header {
   position: relative;
   padding: var(--collapse-header-padding);
   padding-left: var(--collapse-header-padding-extra);
@@ -32,16 +35,19 @@
   -webkit-transition: all var(--ql-animation-duration-slow), visibility 0s;
   transition: all var(--ql-animation-duration-slow), visibility 0s;
 }
-.ant-collapse > .ant-collapse-item > .ant-collapse-header::before {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header::before {
   display: table;
   content: '';
 }
-.ant-collapse > .ant-collapse-item > .ant-collapse-header::after {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header::after {
   display: table;
   clear: both;
   content: '';
 }
-.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
   color: inherit;
   font-style: normal;
   line-height: 0;
@@ -52,168 +58,154 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
-  top: 5.0005px;
+  /* top: 5.0005px; test fix */
   left: var(--collapse-header-arrow-left);
   display: inline-block;
-  padding: var(--collapse-header-padding);
+  padding: var(--collapse-header-arrow-padding);
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
   font-size: 12px;
 }
-.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow
-  > * {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow>* {
   line-height: 1;
 }
-.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow
-  svg {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg {
   display: inline-block;
 }
-.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow::before {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow::before {
   display: none;
 }
-.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow
-  .ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow-icon {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow .ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow-icon {
   display: block;
 }
-.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow
-  svg {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg {
   -webkit-transition: -webkit-transform 0.24s;
   transition: -webkit-transform 0.24s;
   transition: transform 0.24s;
   transition: transform 0.24s, -webkit-transform 0.24s;
 }
-.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-extra {
   float: right;
 }
-.ant-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header:focus {
   outline: none;
 }
-.ant-collapse > .ant-collapse-item .ant-collapse-header-collapsible-only {
+
+.ant-collapse>.ant-collapse-item .ant-collapse-header-collapsible-only {
   cursor: default;
 }
-.ant-collapse
-  > .ant-collapse-item
-  .ant-collapse-header-collapsible-only
-  .ant-collapse-header-text {
+
+.ant-collapse>.ant-collapse-item .ant-collapse-header-collapsible-only .ant-collapse-header-text {
   cursor: pointer;
 }
-.ant-collapse
-  > .ant-collapse-item.ant-collapse-no-arrow
-  > .ant-collapse-header {
+
+.ant-collapse>.ant-collapse-item.ant-collapse-no-arrow>.ant-collapse-header {
   padding-left: 12px;
 }
-.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+
+.ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header {
   padding: var(--collapse-header-padding);
   padding-right: var(--collapse-header-padding-extra);
 }
-.ant-collapse-icon-position-right
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow {
+
+.ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
   right: 16px;
   left: auto;
 }
+
 .ant-collapse-content {
   color: var(--ql-typography-text-color-primary);
   background-color: var(--collapse-content-bg);
   border-top: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
 }
-.ant-collapse-content > .ant-collapse-content-box {
+
+.ant-collapse-content>.ant-collapse-content-box {
   padding: var(--collapse-content-padding);
 }
+
 .ant-collapse-content-hidden {
   display: none;
 }
-.ant-collapse-item:last-child > .ant-collapse-content {
+
+.ant-collapse-item:last-child>.ant-collapse-content {
   border-radius: 0 0 var(--collapse-panel-border-radius) var(--collapse-panel-border-radius);
 }
+
 .ant-collapse-borderless {
   background-color: var(--ql-color-dark-t-lighten6);
   border: 0;
 }
-.ant-collapse-borderless > .ant-collapse-item {
+
+.ant-collapse-borderless>.ant-collapse-item {
   border-bottom: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
 }
-.ant-collapse-borderless > .ant-collapse-item:last-child,
-.ant-collapse-borderless > .ant-collapse-item:last-child .ant-collapse-header {
+
+.ant-collapse-borderless>.ant-collapse-item:last-child,
+.ant-collapse-borderless>.ant-collapse-item:last-child .ant-collapse-header {
   border-radius: var(--border-radius-none);
 }
-.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content {
+
+.ant-collapse-borderless>.ant-collapse-item>.ant-collapse-content {
   background-color: transparent;
   border-top: 0;
 }
-.ant-collapse-borderless
-  > .ant-collapse-item
-  > .ant-collapse-content
-  > .ant-collapse-content-box {
+
+.ant-collapse-borderless>.ant-collapse-item>.ant-collapse-content>.ant-collapse-content-box {
   padding-top: 4px;
 }
+
 .ant-collapse-ghost {
   background-color: transparent;
   border: 0;
 }
-.ant-collapse-ghost > .ant-collapse-item {
+
+.ant-collapse-ghost>.ant-collapse-item {
   border-bottom: 0;
 }
-.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content {
+
+.ant-collapse-ghost>.ant-collapse-item>.ant-collapse-content {
   background-color: transparent;
   border-top: 0;
 }
-.ant-collapse-ghost
-  > .ant-collapse-item
-  > .ant-collapse-content
-  > .ant-collapse-content-box {
+
+.ant-collapse-ghost>.ant-collapse-item>.ant-collapse-content>.ant-collapse-content-box {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.ant-collapse .ant-collapse-item-disabled > .ant-collapse-header,
-.ant-collapse .ant-collapse-item-disabled > .ant-collapse-header > .arrow {
+
+.ant-collapse .ant-collapse-item-disabled>.ant-collapse-header,
+.ant-collapse .ant-collapse-item-disabled>.ant-collapse-header>.arrow {
   color: var(--ql-state-disabled-color);
   cursor: not-allowed;
 }
+
 .ant-collapse-rtl {
   direction: rtl;
 }
-.ant-collapse-rtl .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+
+.ant-collapse-rtl .ant-collapse>.ant-collapse-item>.ant-collapse-header {
   padding: var(--collapse-header-padding);
   padding-right: var(--collapse-header-padding-extra);
 }
-.ant-collapse-rtl.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-arrow
-  svg {
+
+.ant-collapse-rtl.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.ant-collapse-rtl.ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header
-  .ant-collapse-extra {
+
+.ant-collapse-rtl.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-extra {
   float: left;
 }
-.ant-collapse-rtl.ant-collapse
-  > .ant-collapse-item.ant-collapse-no-arrow
-  > .ant-collapse-header {
+
+.ant-collapse-rtl.ant-collapse>.ant-collapse-item.ant-collapse-no-arrow>.ant-collapse-header {
   padding-right: 12px;
   padding-left: 0;
 }
