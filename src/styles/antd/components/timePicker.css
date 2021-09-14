@@ -501,7 +501,7 @@ textarea.ant-picker-input>input {
   text-align: center;
   background: var(--ql-color-white);
   border: 1px solid var(--ql-color-dark-t-lighten5);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-md);
   outline: none;
 }
 
@@ -647,7 +647,7 @@ textarea.ant-picker-input>input {
 
 .ant-picker-content th {
   height: 30px;
-  color: var(--ql-typography-text-color-primary);
+  color: var(--picker-panel-cell-color);
   line-height: 30px;
 }
 
@@ -658,7 +658,7 @@ textarea.ant-picker-input>input {
 }
 
 .ant-picker-cell-in-view {
-  color: var(--ql-typography-text-color-primary);
+  color: var(--picker-cell-color);
 }
 
 .ant-picker-cell-disabled {
@@ -684,7 +684,7 @@ textarea.ant-picker-input>input {
   min-width: 24px;
   height: 24px;
   line-height: 24px;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-md);
   -webkit-transition: background var(--ql-animation-duration-slow),
     border var(--ql-animation-duration-slow);
   transition: background var(--ql-animation-duration-slow),
@@ -704,7 +704,7 @@ textarea.ant-picker-input>input {
   left: 0;
   z-index: 1;
   border: 1px solid var(--ql-color-accent1);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-md);
   content: '';
 }
 
@@ -1208,7 +1208,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   min-width: 24px;
   height: 24px;
   line-height: 24px;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-md);
   -webkit-transition: background var(--ql-animation-duration-slow),
     border var(--ql-animation-duration-slow);
   transition: background var(--ql-animation-duration-slow),
@@ -1297,7 +1297,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   left: 6px;
   border-right: 1px dashed #7ec1ff;
   border-left: 1px dashed #7ec1ff;
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-md);
 }
 
 .ant-picker-dropdown-rtl .ant-picker-footer-extra {

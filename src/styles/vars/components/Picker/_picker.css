@@ -15,4 +15,6 @@
   --picker-panel-cell-width: 36px;
   --picker-text-height: 40px;
   --picker-panel-without-time-cell-height: 66px;
+  --picker-panel-cell-color: var(--ql-typography-text-color-primary);
+  --picker-cell-color: var(--ql-typography-text-color-primary);
 }
