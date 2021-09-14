@@ -1,3 +1,6 @@
 :root {
+  --upload-color: var(--ql-typography-text-color-primary);
   --upload-actions-color: var(--ql-typography-text-color-secondary);
+
+  --upload-picture-card-type-bg: var(--ql-color-dark-t-lighten6);
 }

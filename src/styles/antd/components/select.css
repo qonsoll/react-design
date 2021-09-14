@@ -147,7 +147,7 @@
 }
 
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
-  padding: 0 var(--input-padding-horizontal-lg);
+  padding: var(--input-padding-vertical-lg) var(--input-padding-horizontal-lg);
 }
 
 /**
