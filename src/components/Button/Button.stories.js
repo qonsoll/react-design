@@ -1,4 +1,5 @@
 import React from 'react'
+import { UserOutlined } from '@ant-design/icons'
 import Button from './Button'
 import {
   spaceArgTypes,
@@ -21,10 +22,10 @@ export default {
       table: {
         category: 'Default AntD props'
       },
-      description: 'Can be set to primary ghost dashed link text default',
-      options: ['primary', 'secondary', 'text', 'link', 'ghost'],
+      description:
+        'Can be set to primary, secondary, ghost, dashed, link, text',
       control: {
-        type: 'select'
+        disable: true
       }
     },
     danger: {
@@ -85,14 +86,6 @@ export default {
       description: 'Set the loading status of button',
       control: { type: 'boolean' }
     },
-    shape: {
-      table: {
-        category: 'Default AntD props'
-      },
-      description: 'Can be set button shape',
-      options: ['circle', 'round'],
-      control: { type: 'radio' }
-    },
     size: {
       table: {
         category: 'Default AntD props'
@@ -135,8 +128,139 @@ export default {
   }
 }
 
-export const Template = (args) => (
-  <Button type="primary" {...args}>
-    Button
-  </Button>
-)
+const Template = (args) => {
+  const { icon } = args
+
+  return (
+    <Button type="primary" {...args}>
+      {!icon && 'Button'}
+    </Button>
+  )
+}
+
+export const primary = Template.bind({})
+primary.args = {
+  type: 'primary'
+}
+primary.argTypes = {
+  type: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. PRIMARY is now',
+    control: {
+      disable: true
+    }
+  }
+}
+
+export const Default = Template.bind({})
+Default.args = {
+  type: 'secondary'
+}
+Default.argTypes = {
+  type: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. DEFAULT is now',
+    control: {
+      disable: true
+    }
+  }
+}
+
+export const ghost = Template.bind({})
+ghost.args = {
+  type: 'ghost'
+}
+ghost.argTypes = {
+  type: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. GHOST is now',
+    control: {
+      disable: true
+    }
+  }
+}
+
+export const dashed = Template.bind({})
+dashed.args = {
+  type: 'dashed'
+}
+dashed.argTypes = {
+  type: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. DASHED is now',
+    control: {
+      disable: true
+    }
+  }
+}
+
+export const link = Template.bind({})
+link.args = {
+  type: 'link'
+}
+link.argTypes = {
+  type: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. LINK is now',
+    control: {
+      disable: true
+    }
+  }
+}
+
+export const text = Template.bind({})
+text.args = {
+  type: 'text'
+}
+text.argTypes = {
+  type: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. TEXT is now',
+    control: {
+      disable: true
+    }
+  }
+}
+
+export const buttonWithIcon = Template.bind({})
+buttonWithIcon.args = {
+  icon: <UserOutlined />,
+  type: 'primary'
+}
+buttonWithIcon.argTypes = {
+  shape: {
+    table: {
+      category: 'Default AntD props'
+    },
+    description: 'Can be set button shape',
+    options: ['circle', 'round'],
+    control: { type: 'radio' }
+  },
+  type: {
+    description:
+      'Can be set to primary, default, ghost, dashed, link, text. PRIMARY is now',
+    options: ['primary', 'default', 'text', 'link', 'ghost', 'dashed'],
+    control: {
+      type: 'select',
+      disable: false
+    }
+  }
+}

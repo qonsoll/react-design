@@ -18,11 +18,17 @@ export default {
   title: 'Components/Inputs/Input',
   component: Input,
   argTypes: {
-    withIcon: {
-      description: 'Show icon',
-      control: {
-        type: 'boolean'
-      }
+    prefix: {
+      table: {
+        disable: true
+      },
+      control: { disable: true }
+    },
+    suffix: {
+      table: {
+        disable: true
+      },
+      control: { disable: true }
     },
     addonAfter: {
       table: {
@@ -86,13 +92,6 @@ export default {
       description: 'The max length',
       control: { type: 'number' }
     },
-    prefix: {
-      table: {
-        category: 'Default AntD props'
-      },
-      description: 'The prefix icon for the Input',
-      control: { disable: true }
-    },
     size: {
       table: {
         category: 'Default AntD props'
@@ -101,13 +100,6 @@ export default {
         'The size of the input box. Note: in the context of a form, the large size is used',
       options: ['large', 'middle', 'small'],
       control: { type: 'radio' }
-    },
-    suffix: {
-      table: {
-        category: 'Default AntD props'
-      },
-      description: 'The suffix icon for the Input',
-      control: { disable: true }
     },
     type: {
       table: {
@@ -161,14 +153,21 @@ export default {
   }
 }
 
-export const Template = (args) => {
-  const { withIcon, ...rest } = args
+const Template = (args) => <Input placeholder="Placeholder..." {...args} />
 
-  return (
-    <Input
-      placeholder="Placeholder..."
-      prefix={withIcon && <UserOutlined />}
-      {...rest}
-    />
-  )
+export const input = Template.bind({})
+
+export const inputWithIcon = Template.bind({})
+inputWithIcon.argTypes = {
+  prefix: {
+    description: 'The prefix icon for the Input. PREFIX is now',
+    table: { category: 'Default AntD props', disable: false }
+  },
+  suffix: {
+    description: 'The suffix icon for the Input',
+    table: { category: 'Default AntD props', disable: false }
+  }
+}
+inputWithIcon.args = {
+  prefix: <UserOutlined />
 }
