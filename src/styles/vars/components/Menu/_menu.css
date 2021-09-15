@@ -33,7 +33,7 @@
 
 
   /* ---: iconography */
-  --ql-menu-item-icon-size: var(--menu-item-font-size); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-item-icon-size: var(--ql-menu-item-font-size); /* Changed key name: added prefix "ql" — 14.09.21*/
   --ql-menu-item-icon-margin-right: 24px; /* Changed key name: added prefix "ql" — 14.09.21*/
 
   /* ---: hover state */
