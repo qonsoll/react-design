@@ -7,11 +7,10 @@ const Icon = (props) => {
 
   return (
     <Box
-      display='flex'
+      display="flex"
       fontSize={size || 24}
       color={color || 'inherit'}
-      {...arg}
-    >
+      {...arg}>
       {component}
     </Box>
   )

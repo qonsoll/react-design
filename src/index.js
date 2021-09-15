@@ -66,6 +66,7 @@ import AppNavbarWrapper from './components/Wrappers/AppNavbarWrapper'
 import AppHeaderWrapper from './components/Wrappers/AppHeaderWrapper'
 import Icon from './components/Icon'
 import Account from './components/Account'
+import Switch from './components/Switch'
 
 export {
   LayoutOld,
@@ -122,7 +123,8 @@ export {
   Button,
   Icon,
   Account,
-  LayoutSystemProvider
+  LayoutSystemProvider,
+  Switch
 }
 
 export default {
@@ -179,5 +181,6 @@ export default {
   Button,
   Icon,
   Account,
-  LayoutSystemProvider
+  LayoutSystemProvider,
+  Switch
 }

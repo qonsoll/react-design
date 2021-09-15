@@ -44,19 +44,16 @@ const TextArea = forwardRef((props, ref) => {
 })
 
 TextArea.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf(['transform'])
+  allowClear: PropTypes.bool,
+  autoSize: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
+  bordered: PropTypes.bool,
+  defaultValue: PropTypes.string,
+  maxLength: PropTypes.number,
+  showCount: PropTypes.bool,
+  value: PropTypes.string,
+  onPressEnter: PropTypes.func,
+  onResize: PropTypes.func,
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
 export default TextArea

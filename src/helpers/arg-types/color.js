@@ -6,14 +6,14 @@ const colorArgTypes = {
       category: 'Color'
     },
     description: 'Text color. Theme field: colors',
-    control: { type: 'select', options: Object.keys(Theme.colors) }
+    control: { type: 'select', options: Theme.colors }
   },
   bg: {
     table: {
       category: 'Color'
     },
     description: 'Background color. Theme field: colors',
-    control: { type: 'select', options: Object.keys(Theme.colors) }
+    control: { type: 'select', options: Theme.colors }
   },
   opacity: {
     table: {

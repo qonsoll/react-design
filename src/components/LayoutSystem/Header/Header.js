@@ -32,11 +32,10 @@ const Header = (props) => {
         ]
       }
       boxShadow={shadow || 'var(--ql-header-shadow)'}
-      display='flex'
-      alignItems='center'
-      zIndex='var(--ql-header-z-index)'
-      {...rest}
-    >
+      display="flex"
+      alignItems="center"
+      zIndex="var(--ql-header-z-index)"
+      {...rest}>
       {asideToggleBtnLeft}
       {children}
       {asideToggleBtnRight}

@@ -31,19 +31,22 @@ const Input = styled(AntInput)(
 )
 
 Input.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf(['transform'])
+  addonAfter: PropTypes.node,
+  addonBefore: PropTypes.node,
+  allowClear: PropTypes.bool,
+  bordered: PropTypes.bool,
+  defaultValue: PropTypes.string,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  maxLength: PropTypes.number,
+  prefix: PropTypes.node,
+  size: PropTypes.oneOf(['large', 'middle', 'small']),
+  suffix: PropTypes.node,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onPressEnter: PropTypes.func,
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
 export default Input

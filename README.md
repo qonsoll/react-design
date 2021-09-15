@@ -23,11 +23,10 @@ yarn add @qonsoll/react-design
 ```
 ## Usage
 
-1. Create vars.css files inside styles/ directory. Here is an example how vars.css file should look like https://github.com/qonsoll/react-design/blob/main/src/styles/vars.css
-
-2. In your index.js file insert:
+1. In your index.js file insert two imports:
 ```jsx
-import "@qonsoll/react-design/dist/styles/styles.css"; // Insert this line
+import "@qonsoll/react-design/dist/styles/styles.css"; 
+import "@qonsoll/react-design/dist/styles/vars/index.css"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -36,7 +35,47 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+2. Create folder styles/ in root of project, if you don't already have this folder in your project
+```bash 
+ mkdir styles
+```
+Create vars.css files inside styles/ directory. 
 
+There is an example how vars.css file should look like. Copy and insert this code to vars.css file. You can add own values for vars, they will be override default vars from library
+```jsx
+:root {
+  /* Colors —————————————————————————————— Start */
+  --ql-color-accent1: rgb(102, 72, 191);
+  /* Colors —————————————————————————————— End */
+
+  /* Typography —————————————————————————————— Start */
+  --ql-font-family-main:  "Rubik";
+  /* Typography —————————————————————————————— End */
+}
+```
+It is not necessary to use comments, but when your file have a lot of variables better to use comment for grouping
+
+3. Add this import in file index.js
+```jsx
+import './styles/vars.css'
+```
+Be careful, it string must be only after string with importing default library's vars. Otherwise, your vars will not work. 
+### How to override specific property?
+
+Variables for all components, typography, colors and so on you can find in folder @qonsoll/react-design/dist/styles/vars. There are all vars, that you use. 
+
+If you need to set variable for specific component, you need to go to component folder and find name of one. In file you will find name of var, that you need. 
+For example, in order to change background for card, you need to: 
+- go to file components/Card/_card.css;
+- find variable --card-background;
+- copy name of this var;
+- go to file /styles/vars.css in your project;
+- insert it
+```jsx
+  /* Card —————————————————————————————— Start */
+  --card-background:  #a7a7a796;
+  /* Card —————————————————————————————— End */
+```
 ### How to import components?
 ```jsx
 import { Container, Row, Col, Button, Text } from "@qonsoll/react-design"

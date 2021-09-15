@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Avatar as AntAvatar } from 'antd'
+import PropTypes, { func } from 'prop-types'
+import { Switch as AntSwitch } from 'antd'
 import styled from 'styled-components'
 import {
   compose,
@@ -16,7 +16,7 @@ import {
   system
 } from 'styled-system'
 
-const Avatar = styled(AntAvatar)(
+const StyledSwitch = styled(AntSwitch)(
   compose(
     space,
     color,
@@ -37,17 +37,22 @@ const Avatar = styled(AntAvatar)(
   )
 )
 
-Avatar.propTypes = {
-  alt: PropTypes.string,
-  gap: PropTypes.number,
-  icon: PropTypes.node,
-  shape: PropTypes.oneOf(['circle', 'square']),
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  src: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  srcSet: PropTypes.string,
-  draggable: PropTypes.bool,
-  crossOrigin: PropTypes.oneOf(['anonymous', 'use-credentials', '']),
-  onError: PropTypes.func,
+const Switch = (props) => {
+  return <StyledSwitch {...props} />
+}
+
+Switch.propTypes = {
+  autoFocus: PropTypes.bool,
+  checked: PropTypes.bool,
+  checkedChildren: PropTypes.node,
+  className: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  size: PropTypes.oneOf(['default', 'small']),
+  unCheckedChildren: PropTypes.node,
+  onChange: PropTypes.func,
+  onClick: PropTypes.func,
   whiteSpace: PropTypes.string,
   cursor: PropTypes.string,
   wordBreak: PropTypes.string,
@@ -55,4 +60,4 @@ Avatar.propTypes = {
   transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 }
 
-export default Avatar
+export default Switch

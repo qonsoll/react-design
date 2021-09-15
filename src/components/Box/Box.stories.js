@@ -31,5 +31,5 @@ export default {
 }
 
 export const Template = (args) => (
-  <Box {...args} width={200} height={200} bg='#e9e9e9' borderRadius={12} />
+  <Box width={200} height={200} bg='#e9e9e9' borderRadius={12} {...args} />
 )

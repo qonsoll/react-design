@@ -120,32 +120,30 @@ export default {
   args: {
     header: (
       <Header
-        bg='#6648bf'
-        color='#fff'
-        alignItems='center'
-        justifyContent='center'
-      >
-        Good afternoon! I'm header. 🥸
+        bg="#6648bf"
+        color="#fff"
+        alignItems="center"
+        justifyContent="center">
+        Good afternoon! I'm header.<span>🥸</span>
       </Header>
     ),
     asideLeft: (
-      <Aside collapse bg='#e2e2e2' alignItems='center' justifyContent='center'>
-        Hi!👋 I'm aside (currently left).
+      <Aside collapse bg="#e2e2e2" alignItems="center" justifyContent="center">
+        Hi!<span>👋</span> I'm aside (currently left).
       </Aside>
     ),
     asideRight: (
-      <Aside bg='#e2e2e2' alignItems='center' justifyContent='center'>
-        Hello!🤟 I'm right aside.
+      <Aside bg="#e2e2e2" alignItems="center" justifyContent="center">
+        Hello!<span>🤟</span> I'm right aside.
       </Aside>
     ),
     footer: (
       <Footer
-        bg='#2e2d35'
-        color='#fff'
-        alignItems='center'
-        justifyContent='center'
-      >
-        Ola! I'm footer. 😎
+        bg="#2e2d35"
+        color="#fff"
+        alignItems="center"
+        justifyContent="center">
+        Ola! I'm footer. <span>😎</span>
       </Footer>
     ),
     isAsideLeft: true,
@@ -164,11 +162,10 @@ export const Template = (args) => {
         <Layout
           header={
             <Header
-              bg='#6648bf'
-              color='#fff'
-              alignItems='center'
-              justifyContent='center'
-            >
+              bg="#6648bf"
+              color="#fff"
+              alignItems="center"
+              justifyContent="center">
               Good afternoon! I'm header. 🥸
             </Header>
           }
@@ -176,10 +173,9 @@ export const Template = (args) => {
             <Aside
               collapse={layoutConfig.isAsideLeftCollapsed}
               drawer={layoutConfig.asideLeftOverlay}
-              bg='#e2e2e2'
-              alignItems='center'
-              justifyContent='center'
-            >
+              bg="#e2e2e2"
+              alignItems="center"
+              justifyContent="center">
               Hi!👋 I'm aside (currently left).
             </Aside>
           }
@@ -187,24 +183,21 @@ export const Template = (args) => {
             <Aside
               collapse={layoutConfig.isAsideRightCollapsed}
               drawer={layoutConfig.asideRightOverlay}
-              bg='#e2e2e2'
-              alignItems='center'
-              justifyContent='center'
-            >
+              bg="#e2e2e2"
+              alignItems="center"
+              justifyContent="center">
               Hello!🤟 I'm right aside.
             </Aside>
           }
           footer={
             <Footer
-              bg='#2e2d35'
-              color='#fff'
-              alignItems='center'
-              justifyContent='center'
-            >
+              bg="#2e2d35"
+              color="#fff"
+              alignItems="center"
+              justifyContent="center">
               Ola! I'm footer. 😎
             </Footer>
-          }
-        >
+          }>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus
           commodo viverra maecenas accumsan lacus vel. Varius sit amet mattis

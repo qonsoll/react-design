@@ -55,26 +55,25 @@ const Button = styled(AntButton)`
 `
 
 Button.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform',
-    'transition'
-  ]),
+  type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),
+  danger: PropTypes.bool,
+  disabled: PropTypes.bool,
+  block: PropTypes.bool,
+  ghost: PropTypes.bool,
+  href: PropTypes.string,
+  htmlType: PropTypes.string,
+  icon: PropTypes.node,
+  loading: PropTypes.bool,
+  shape: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'middle', 'large']),
+  target: PropTypes.string,
+  onClick: PropTypes.func,
+  whiteSpace: PropTypes.string,
+  cursor: PropTypes.string,
+  wordBreak: PropTypes.string,
+  zoom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  transition: PropTypes.string,
   variant: PropTypes.oneOf(['white'])
 }
 

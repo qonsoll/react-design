@@ -37,7 +37,7 @@ const borderArgTypes = {
     description: 'Border color. Theme property: colors',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   borderRadius: {
@@ -86,7 +86,7 @@ const borderArgTypes = {
     description: 'Border top color. Theme property: colors',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   borderTopLeftRadius: {
@@ -145,7 +145,7 @@ const borderArgTypes = {
     description: 'Border right color. Theme property: colors',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   borderBottom: {
@@ -184,7 +184,7 @@ const borderArgTypes = {
     description: 'Border bottom color. Theme property: colors',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   borderBottomLeftRadius: {
@@ -243,7 +243,7 @@ const borderArgTypes = {
     description: 'Border left color. Theme property: colors',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   borderX: {

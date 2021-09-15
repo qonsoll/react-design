@@ -1,5 +1,17 @@
 import React from 'react'
 import PhoneInput from './PhoneInput'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes
+} from '../../../helpers/arg-types'
+import CSSPropValues from '../../../helpers/css-prop-values'
 
 export default {
   title: 'Components/Inputs/PhoneInput',
@@ -10,20 +22,20 @@ export default {
         'Component absolutely maintain default react-phone-input-2 input properties (check documentation: https://github.com/bl00mber/react-phone-input-2).',
       control: { disable: true }
     },
-    Packages: {
+    ...typographyArgTypes,
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    transform: {
       table: {
-        category: 'Extentions'
+        category: 'Extra CSS props'
       },
-      description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
-    },
-    'Extra CSS props': {
-      table: {
-        category: 'Extentions'
-      },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
+      control: CSSPropValues.transform
     }
   }
 }

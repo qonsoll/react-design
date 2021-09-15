@@ -12,14 +12,14 @@ const hoverArgTypes = {
     description: 'Hover state background',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   hoverColor: {
     description: 'Hover state background',
     control: {
       type: 'select',
-      options: Object.keys(Theme.colors)
+      options: Theme.colors
     }
   },
   hoverBorder: {
