@@ -25,6 +25,7 @@ import {
   SearchOutlined,
   BellOutlined
 } from '@ant-design/icons'
+import QLLogo from '../assets/ql-logo-full-primary.svg'
 
 export default {
   title: '@Playground',
@@ -46,8 +47,7 @@ export const Template = (args) => {
         <Layout
           header={<Header>{headerLayout}</Header>}
           asideLeft={<Aside>{asideLayoutLeft}</Aside>}
-          asideRight={<Aside>{asideLayoutRight}</Aside>}
-        >
+          asideRight={<Aside>{asideLayoutRight}</Aside>}>
           <PageWrapper
             headingProps={{
               title: 'Roles',
@@ -55,8 +55,7 @@ export const Template = (args) => {
               titleMarginBottom: '8px',
               textAlign: 'left',
               subTitle: ''
-            }}
-          >
+            }}>
             {contentLayout}
           </PageWrapper>
         </Layout>
@@ -68,23 +67,23 @@ export const Template = (args) => {
 const headerLayout = (
   <>
     <Container>
-      <Row noOuterGutters v='center'>
+      <Row noOuterGutters v="center">
         <Col cw={3}>
           <Input
             prefix={<SearchOutlined />}
-            placeholder='Enter querues here...'
+            placeholder="Enter querues here..."
             bordered={false}
           />
         </Col>
         <Col>
-          <Menu mode='horizontal'>
+          <Menu mode="horizontal">
             <MenuItem icon={<TeamOutlined />}>Roles</MenuItem>
             <MenuItem icon={<FormatPainterOutlined />}>Styling</MenuItem>
             <MenuItem icon={<DatabaseOutlined />}>DB structure</MenuItem>
           </Menu>
         </Col>
-        <Col cw='auto'>
-          <Button type='text' shape='circle' icon={<BellOutlined />} />
+        <Col cw="auto">
+          <Button type="text" shape="circle" icon={<BellOutlined />} />
         </Col>
       </Row>
     </Container>
@@ -94,39 +93,37 @@ const headerLayout = (
 const asideLayoutLeft = (
   <>
     <Box mb={48}>
-      <Img src='ql-logo-full-primary.svg' alt='Qonsoll App' height={48} />
+      <Img src={QLLogo} alt="Qonsoll App" height={48} />
     </Box>
 
-    <Box display='flex' flexDirection='column' mb={24}>
+    <Box display="flex" flexDirection="column" mb={24}>
       <Text
-        variant='caption1'
-        type='secondary'
+        variant="caption1"
+        type="secondary"
         fontWeight={500}
-        textTransform='uppercase'
-        mb={1}
-      >
+        textTransform="uppercase"
+        mb={1}>
         Application
       </Text>
-      <Select defaultValue='3'>
-        <Select.Option value='1'>Admin-app</Select.Option>
-        <Select.Option value='2'>Buyer-app</Select.Option>
-        <Select.Option value='3'>Customer-app</Select.Option>
+      <Select defaultValue="3">
+        <Select.Option value="1">Admin-app</Select.Option>
+        <Select.Option value="2">Buyer-app</Select.Option>
+        <Select.Option value="3">Customer-app</Select.Option>
       </Select>
     </Box>
-    <Box display='flex' flexDirection='column'>
+    <Box display="flex" flexDirection="column">
       <Text
-        variant='caption1'
-        type='secondary'
+        variant="caption1"
+        type="secondary"
         fontWeight={500}
-        textTransform='uppercase'
-        mb={1}
-      >
+        textTransform="uppercase"
+        mb={1}>
         Branch
       </Text>
-      <Select defaultValue='3'>
-        <Select.Option value='1'>main</Select.Option>
-        <Select.Option value='2'>staging</Select.Option>
-        <Select.Option value='3'>promotion-form</Select.Option>
+      <Select defaultValue="3">
+        <Select.Option value="1">main</Select.Option>
+        <Select.Option value="2">staging</Select.Option>
+        <Select.Option value="3">promotion-form</Select.Option>
       </Select>
     </Box>
 
@@ -135,19 +132,19 @@ const asideLayoutLeft = (
     </Box>
 
     <Box>
-      <Menu mode='vertical'>
+      <Menu mode="vertical">
         <MenuItem icon={<TeamOutlined />}>Roles</MenuItem>
         <MenuItem icon={<FormatPainterOutlined />}>Styling</MenuItem>
         <MenuItem icon={<DatabaseOutlined />}>DB structure</MenuItem>
-        <Submenu key='sub2' icon={<BellOutlined />} title='Submenu'>
-          <MenuItem key='5'>Option 5</MenuItem>
-          <MenuItem key='6'>Option 6</MenuItem>
+        <Submenu key="sub2" icon={<BellOutlined />} title="Submenu">
+          <MenuItem key="5">Option 5</MenuItem>
+          <MenuItem key="6">Option 6</MenuItem>
           {/* <SubMenu key="sub3" title="Submenu">
                 <MenuItem key="7">Option 7</MenuItem>
                 <MenuItem key="8">Option 8</MenuItem>
               </SubMenu> */}
         </Submenu>
-        <Group title='Group title'>
+        <Group title="Group title">
           <MenuItem>Menu item #2</MenuItem>
           <MenuItem>Menu item #3</MenuItem>
         </Group>
@@ -159,7 +156,7 @@ const asideLayoutLeft = (
 const asideLayoutRight = (
   <>
     <Box>
-      <Menu mode='inline'>
+      <Menu mode="inline">
         <MenuItem icon={<TeamOutlined />}>Roles</MenuItem>
         <MenuItem icon={<FormatPainterOutlined />}>Styling</MenuItem>
         <MenuItem icon={<DatabaseOutlined />}>DB structure</MenuItem>
@@ -186,7 +183,7 @@ const contentLayout = (
     </Row>
     <Row>
       <Col>
-        <Button type='primary'>Add role</Button>
+        <Button type="primary">Add role</Button>
       </Col>
     </Row>
   </Container>

@@ -29,6 +29,7 @@ import Aside from '../Aside'
 import Footer from '../../Footer'
 import { useArgs } from '@storybook/client-api'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
+import QLLogo from '../../../../assets/ql-logo-short-primary.svg'
 
 export default {
   title: 'Layout system/Aside/Left/Collapse/Full',
@@ -190,10 +191,7 @@ const Template = (props) => {
                 theme="dark"
                 inlineCollapsed={args?.asideLeftCollapsed}>
                 <Box display="flex" justifyContent="center" py={10}>
-                  <img
-                    src="ql-logo-short-primary.svg"
-                    alt="Qonsoll/React design"
-                  />
+                  <img src={QLLogo} alt="Qonsoll/React design" />
                 </Box>
                 <Menu.Item
                   key="1"

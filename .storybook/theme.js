@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-
+import QLLogo from '../src/assets/ql-logo-full-primary.svg'
 export default create({
   base: 'light',
   
@@ -18,5 +18,5 @@ export default create({
   // Brand
   brandTitle: 'Qonsoll/React design',
   brandUrl: 'https://https://qonsoll.no/',
-  brandImage: 'ql-logo-full-primary.svg',
+  brandImage: QLLogo,
 });
