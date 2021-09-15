@@ -15,7 +15,9 @@ import {
   system
 } from 'styled-system'
 
-const Input = styled(AntInput)(
+const Input = styled(AntInput).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})(
   compose(
     typography,
     space,
