@@ -1,5 +1,5 @@
 :root {
-  --ql-font-family-main: 'Poppins';
+  --ql-font-family-main: 'Poppins', sans-serif;
   --ql-font-family-headings: var(--ql-font-family-main);
   --ql-font-family-code: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
