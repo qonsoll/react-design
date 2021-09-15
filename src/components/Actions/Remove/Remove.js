@@ -52,12 +52,10 @@ const ClinicRemove = (props) => {
       onConfirm={onSubmit}
       onCancel={onCancel}
       okButtonProps={{ danger: true }}
-      okText={`${confirmLabel || DEFAULT_PROPS.confirmLabel} ${
-        itemName || DEFAULT_PROPS.itemName
-      }`}
-      cancelText={`${cancelLabel || DEFAULT_PROPS.cancelLabel} ${
-        itemName || DEFAULT_PROPS.itemName
-      }`}
+      okText={`${confirmLabel || DEFAULT_PROPS.confirmLabel} ${itemName || DEFAULT_PROPS.itemName
+        }`}
+      cancelText={`${cancelLabel || DEFAULT_PROPS.cancelLabel} ${itemName || DEFAULT_PROPS.itemName
+        }`}
       placement={popconfirmPlacement}
       disabled={disabled}
     >
@@ -65,7 +63,7 @@ const ClinicRemove = (props) => {
         <Tooltip
           title={tooltip}
           placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
-          // visible={!disabled} вона тепер завжди видима... навіть якщо тексту нема
+        // visible={!disabled} вона тепер завжди видима... навіть якщо тексту нема
         >
           <Button
             {...props}
@@ -102,7 +100,7 @@ ClinicRemove.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   iconLeft: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   iconRight: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  shape: PropTypes.oneOf(['default', 'circle', 'round']),
+  shape: PropTypes.oneOf(['default', 'circle', 'rounded']),
   tooltip: PropTypes.string,
   tooltipPlacement: PropTypes.oneOf([
     'top',
