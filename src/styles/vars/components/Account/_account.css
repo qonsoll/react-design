@@ -1,5 +1,4 @@
 :root {
-
   --ql-account-height: var(--ql-header-height);
   --ql-account-color: var(--ql-typography-text-color-secondary);
   --ql-account-transition: all var(--ql-animation-duration-default) var(--ql-animation-cubic-ease-in-out);

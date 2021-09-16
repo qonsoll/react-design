@@ -20,7 +20,7 @@ const HeadingPrimary = (props) => {
 }
 
 HeadingPrimary.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   titleSize: PropTypes.oneOf([1, 2, 3, 4, 5]),
   titleMarginBottom: PropTypes.number,
   subTitle: PropTypes.string,

@@ -16,7 +16,24 @@ import {
   variant
 } from 'styled-system'
 
-const Button = styled(AntButton)`
+const ANTD_BUTTON_PROPS = [
+  'block',
+  'danger',
+  'disabled',
+  'ghost',
+  'href',
+  'htmlType',
+  'icon',
+  'loading',
+  'shape',
+  'size',
+  'target',
+  'type'
+]
+const Button = styled(AntButton).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_BUTTON_PROPS.includes(prop) || defaultValidatorFn(prop)
+})`
   &&& {
     ${compose(
       space,

@@ -59,8 +59,7 @@ const ClinicRemove = (props) => {
         itemName || DEFAULT_PROPS.itemName
       }`}
       placement={popconfirmPlacement}
-      disabled={disabled}
-    >
+      disabled={disabled}>
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
@@ -79,8 +78,7 @@ const ClinicRemove = (props) => {
           {...props}
           type={type || DEFAULT_PROPS.type}
           icon={iconNode || iconNodeLeft}
-          danger
-        >
+          danger>
           {text}
           {iconNodeRight}
         </Button>
@@ -102,7 +100,7 @@ ClinicRemove.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   iconLeft: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   iconRight: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  shape: PropTypes.oneOf(['default', 'circle', 'round']),
+  shape: PropTypes.oneOf(['default', 'circle', 'rounded']),
   tooltip: PropTypes.string,
   tooltipPlacement: PropTypes.oneOf([
     'top',

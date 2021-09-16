@@ -40,37 +40,35 @@ const Back = (props) => {
   return (
     <Fragment>
       {!text ? (
-        <Box display='flex' alignItems='center'>
+        <Box display="flex" alignItems="center">
           <Tooltip
             title={tooltip}
-            placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
-          >
+            placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}>
             <Button
               onClick={onClick}
-              type='text'
+              type="text"
               icon={iconNode || iconNodeLeft || iconNodeRight}
               {...props}
               danger={false}
             />
           </Tooltip>
           {!divided ? null : (
-            <Divider type='vertical' mr={3} height={24} top='unset' />
+            <Divider type="vertical" mr={3} height={24} top="unset" />
           )}
         </Box>
       ) : (
-        <Box display='flex' alignItems='center'>
+        <Box display="flex" alignItems="center">
           <Button
             onClick={onClick}
-            type='text'
+            type="text"
             icon={iconNode || iconNodeLeft}
             {...props}
-            danger={false}
-          >
+            danger={false}>
             {text}
             {iconNodeRight}
           </Button>
           {!divided ? null : (
-            <Divider type='vertical' mr={3} height={24} top='unset' />
+            <Divider type="vertical" mr={3} height={24} top="unset" />
           )}
         </Box>
       )}
