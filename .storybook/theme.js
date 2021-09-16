@@ -9,7 +9,7 @@ export default create({
   appBg: '#f9f9fb',
 
   // Typography
-  fontBase: 'Poppins',
+  fontBase: "'Poppins', sans-serif",
 
   // Text colors
   textColor: '#2E2D35',

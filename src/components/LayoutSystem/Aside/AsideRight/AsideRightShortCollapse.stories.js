@@ -96,13 +96,6 @@ export default {
       description: 'Use it to place component which will collapse aside.',
       control: { disable: true }
     },
-    asideToggleBtnRight: {
-      table: {
-        category: 'Props for Header'
-      },
-      description: 'Use it to place component which will uncollapse aside.',
-      control: { disable: true }
-    },
     collapse: {
       table: {
         disable: true
@@ -169,17 +162,7 @@ const Template = (props) => {
     <ThemeProvider theme={breakpoints}>
       <LayoutSystemProvider {...args}>
         <Layout
-          header={
-            <Header
-              asideToggleBtnRight={
-                args.asideRightCollapsed && (
-                  <LeftOutlined onClick={toggleAsideRight} />
-                )
-              }
-              bg="#f2f2f2">
-              {headerLayout}
-            </Header>
-          }
+          header={<Header bg="#f2f2f2">{headerLayout}</Header>}
           asideRight={
             <Aside
               onClose={toggleAsideRight}
@@ -196,7 +179,13 @@ const Template = (props) => {
                 <Menu.Item
                   key="1"
                   onClick={toggleAsideRight}
-                  icon={<RightOutlined />}>
+                  icon={
+                    args?.asideRightCollapsed ? (
+                      <LeftOutlined />
+                    ) : (
+                      <RightOutlined />
+                    )
+                  }>
                   Collapse
                 </Menu.Item>
                 <Menu.Item key="2" icon={<PieChartOutlined />}>

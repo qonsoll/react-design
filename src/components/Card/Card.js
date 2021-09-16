@@ -67,20 +67,23 @@ const Card = (props) => {
 }
 
 Card.propTypes = {
-  'Default AntD props': PropTypes.object,
-  shadowless: PropTypes.bool,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf(['transform'])
+  actions: PropTypes.array,
+  activeTabKey: PropTypes.string,
+  bodyStyle: PropTypes.shape,
+  bordered: PropTypes.bool,
+  cover: PropTypes.node,
+  defaultActiveTabKey: PropTypes.string,
+  extra: PropTypes.node,
+  headStyle: PropTypes.shape,
+  hoverable: PropTypes.bool,
+  loading: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'default']),
+  tabBarExtraContent: PropTypes.node,
+  tabList: PropTypes.array,
+  title: PropTypes.node,
+  type: PropTypes.string,
+  onTabChange: PropTypes.func,
+  shadowless: PropTypes.bool
 }
 Card.defaultProps = {
   shadowless: false

@@ -36,19 +36,12 @@ const StyledAntDivider = styled(AntDivider)`
 const Divider = (props) => <StyledAntDivider {...props} />
 
 Divider.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf(['transform'])
+  className: PropTypes.string,
+  dashed: PropTypes.bool,
+  orientation: PropTypes.oneOf(['left', 'right', 'center']),
+  plain: PropTypes.bool,
+  style: PropTypes.shape,
+  type: PropTypes.oneOf(['horizontal', 'vertical'])
 }
 
 export default Divider
