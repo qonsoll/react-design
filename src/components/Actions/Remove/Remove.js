@@ -52,18 +52,19 @@ const ClinicRemove = (props) => {
       onConfirm={onSubmit}
       onCancel={onCancel}
       okButtonProps={{ danger: true }}
-      okText={`${confirmLabel || DEFAULT_PROPS.confirmLabel} ${itemName || DEFAULT_PROPS.itemName
-        }`}
-      cancelText={`${cancelLabel || DEFAULT_PROPS.cancelLabel} ${itemName || DEFAULT_PROPS.itemName
-        }`}
+      okText={`${confirmLabel || DEFAULT_PROPS.confirmLabel} ${
+        itemName || DEFAULT_PROPS.itemName
+      }`}
+      cancelText={`${cancelLabel || DEFAULT_PROPS.cancelLabel} ${
+        itemName || DEFAULT_PROPS.itemName
+      }`}
       placement={popconfirmPlacement}
-      disabled={disabled}
-    >
+      disabled={disabled}>
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
           placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
-        // visible={!disabled} вона тепер завжди видима... навіть якщо тексту нема
+          // visible={!disabled} вона тепер завжди видима... навіть якщо тексту нема
         >
           <Button
             {...props}
@@ -77,8 +78,7 @@ const ClinicRemove = (props) => {
           {...props}
           type={type || DEFAULT_PROPS.type}
           icon={iconNode || iconNodeLeft}
-          danger
-        >
+          danger>
           {text}
           {iconNodeRight}
         </Button>

@@ -16,7 +16,22 @@ import {
   system
 } from 'styled-system'
 
-const Avatar = styled(AntAvatar)(
+const ANTD_AVATAR_PROPS = [
+  'alt',
+  'gap',
+  'icon',
+  'shape',
+  'size',
+  'src',
+  'srcSet',
+  'draggable',
+  'crossOrigin',
+  'onError'
+]
+const Avatar = styled(AntAvatar).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_AVATAR_PROPS.includes(prop) || defaultValidatorFn(prop)
+})(
   compose(
     space,
     color,
