@@ -43,25 +43,13 @@ const NoData = (props) => {
 }
 
 NoData.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  description: PropTypes.string,
+  image: PropTypes.node,
+  imageStyle: PropTypes.shape
+}
+
+NoData.defaultProps = {
+  description: 'No Data'
 }
 
 export default NoData

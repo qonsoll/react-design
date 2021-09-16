@@ -10,7 +10,9 @@ const buildAsideLayoutStyles = ({
   isAsideRight
 }) => {
   return {
-    display: collapse && collapseMap[collapseVariant]?.display,
+    display: collapse
+      ? collapseMap[collapseVariant]?.display || 'flex'
+      : 'flex',
     flexDirection: 'column',
     flexBasis: collapse
       ? collapseMap[collapseVariant]?.width || 'var(--ql-aside-collapsed-width)'
@@ -22,7 +24,9 @@ const buildAsideLayoutStyles = ({
     bg: 'var(--ql-aside-background)',
     borderLeft: isAsideRight && 'var(--ql-aside-border-left)',
     borderRight: isAsideLeft && 'var(--ql-aside-border-right)',
-    p: collapse && collapseMap[collapseVariant]?.padding,
+    p: collapse
+      ? collapseMap[collapseVariant]?.padding || 'var(--ql-aside-padding)'
+      : 'var(--ql-aside-padding)',
     overflow: 'auto',
     wordBreak: 'break-word',
     position: isNotCollapsedOverlay && 'fixed',

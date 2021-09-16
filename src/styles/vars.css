@@ -750,6 +750,7 @@
   /* + */ --list-item-meta-title-margin-bottom: var(--padding-sm);
   /* + */--list-item-meta-description-font-size: var(--font-size-base);
   --list-customize-card-bg: var(--component-background);
+  --list-item-border-color: var(--gray-4);
 
   /* List —————————————————————————————— End */
 

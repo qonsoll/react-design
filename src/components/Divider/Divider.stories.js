@@ -1,38 +1,84 @@
 import React from 'react'
 import Box from '../Box'
 import Divider from './Divider'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes
+} from '../../helpers/arg-types'
+import CSSPropValues from '../../helpers/css-prop-values'
 
 export default {
   title: 'Components/Divider',
   component: Divider,
   argTypes: {
-    'Default AntD props': {
-      description:
-        'Component absolutely maintain default AntD divider properties (check Ant documentation: https://ant.design/components/divider/#API).',
-      control: { disable: true }
-    },
-    Packages: {
+    className: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
+      description: 'The className of container'
     },
-    'Extra CSS props': {
+    dashed: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
+      description: 'Whether line is dashed'
+    },
+    orientation: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The position of title inside divider'
+    },
+    plain: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Divider text show as plain style'
+    },
+    style: {
+      table: {
+        category: 'Default AntD props'
+      },
+      control: { disable: true },
+      description: 'The style object of container'
+    },
+    type: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'The direction type of divider'
+    },
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    transform: {
+      table: {
+        category: 'Extra CSS props'
+      },
+      control: CSSPropValues.transform
     }
+  },
+  args: {
+    width: '320px',
+    minWidth: '320px'
   }
 }
 
 export const Template = (args) => (
-  <Box display='flex' alignItems='center' flexDirection='column'>
-    <Divider {...args} width={320} minWidth={320}>
-      Or
-    </Divider>
+  <Box display="flex" alignItems="center" flexDirection="column">
+    <Divider {...args}>Or</Divider>
   </Box>
 )

@@ -1,30 +1,94 @@
 import React from 'react'
 import NoData from './NoData'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes
+} from '../../helpers/arg-types'
+import CSSPropValues from '../../helpers/css-prop-values'
 
 export default {
   title: 'Components/NoData',
   component: NoData,
   argTypes: {
-    'Default AntD props': {
-      description:
-        'Component absolutely maintain default AntD empty properties (check Ant documentation: https://ant.design/components/empty/#API).',
-      control: { disable: true }
-    },
-    Packages: {
+    description: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
+      },
+      description: 'Customize description',
+      control: {
+        type: 'text'
+      }
+    },
+    image: {
+      table: {
+        category: 'Default AntD props'
       },
       description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
+        'Customize image. Will treat as image url when string provided',
+      control: {
+        disable: true
+      }
     },
-    'Extra CSS props': {
+    imageStyle: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
+      description: 'The style of image',
+      control: {
+        disable: true
+      }
+    },
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    whiteSpace: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.whiteSpace
+    },
+    cursor: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.cursor
+    },
+    wordBreak: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.wordBreak
+    },
+    zoom: {
+      table: {
+        category: 'Extra'
+      },
+      description: CSSPropValues.zoom.description,
+      control: { type: CSSPropValues.zoom.type }
+    },
+    transform: {
+      table: {
+        category: 'Extra'
+      },
+      description: CSSPropValues.transform.description,
+      control: { type: CSSPropValues.transform.type }
     }
+  },
+  args: {
+    description: 'No Data'
   }
 }
 
