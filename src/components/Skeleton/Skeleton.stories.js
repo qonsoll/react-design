@@ -1,31 +1,80 @@
 import React from 'react'
 import Skeleton from './Skeleton'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes,
+  extraArgTypes
+} from '../../helpers/arg-types'
 
 export default {
   title: 'Components/Skeleton',
   component: Skeleton,
   argTypes: {
-    'Default AntD props': {
-      description:
-        'Component absolutely maintain default AntD skeleton properties (check Ant documentation: https://ant.design/components/skeleton/#Skeleton).',
-      control: { disable: true }
-    },
-    Packages: {
+    active: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
+      description: 'Show animation effect'
     },
-    'Extra CSS props': {
+    avatar: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
+      description: 'Show avatar placeholder'
+    },
+    loading: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Display the skeleton when true'
+    },
+    paragraph: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Show paragraph placeholder'
+    },
+    round: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Show paragraph and title radius when true'
+    },
+    title: {
+      table: {
+        category: 'Default AntD props'
+      },
+      description: 'Show title placeholder'
+    },
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    ...extraArgTypes
+  },
+  args: {
+    round: true,
+    paragraph: { rows: 5 },
+    loading: true,
+    title: { width: 100 },
+    active: true,
+    avatar: {
+      active: true,
+      size: 'default'
     }
   }
 }
 
-export const Template = (args) => <Skeleton width={400} round {...args} />
+export const Template = (args) => <Skeleton width={400} {...args} />

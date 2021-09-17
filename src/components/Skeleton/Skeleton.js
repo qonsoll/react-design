@@ -37,27 +37,40 @@ const StyledAntSkeleton = styled(AntSkeleton)(
   )
 )
 
-const Skeleton = (props) => <StyledAntSkeleton {...props} active />
+const Skeleton = (props) => <StyledAntSkeleton {...props} />
 
 Skeleton.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
+  active: PropTypes.bool,
+  avatar: PropTypes.oneOfType([
+    PropTypes.shape({
+      active: PropTypes.bool,
+      shape: PropTypes.oneOf(['circle', 'square']),
+      size: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.oneOf(['large', 'small', 'default'])
+      ])
+    }),
+    PropTypes.bool
   ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
+  loading: PropTypes.bool,
+  paragraph: PropTypes.oneOfType([
+    PropTypes.shape({
+      rows: PropTypes.number,
+      width: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.number),
+        PropTypes.arrayOf(PropTypes.string)
+      ])
+    }),
+    PropTypes.bool
+  ]),
+  round: PropTypes.bool,
+  title: PropTypes.oneOfType([
+    PropTypes.shape({
+      width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    }),
+    PropTypes.bool
   ])
 }
 
