@@ -342,7 +342,7 @@
   top: 50%;
   right: 16px;
   width: 10px;
-  color: var(--ql-typography-text-color-primary);
+  color: var(--ql-menu-submenu-arrow-color);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: -webkit-transform var(--ql-animation-duration-slow)

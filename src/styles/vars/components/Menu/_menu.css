@@ -51,6 +51,7 @@
   /* SUBMENU */
   --ql-menu-submenu-bg: var(--ql-color-white); /* Changed key name: added prefix "ql" — 14.09.21*/
   --ql-menu-submenu-border-radius: var(--ql-border-radius-sm); /* Changed key name: added prefix "ql" — 14.09.21*/
+  --ql-menu-submenu-arrow-color: var(--ql-menu-item-color);
   
   /* GROUP */
 
