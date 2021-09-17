@@ -42,25 +42,22 @@ const Badge = (props) => {
 }
 
 Badge.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
+  color: PropTypes.string,
+  count: PropTypes.string,
+  dot: PropTypes.bool,
+  offset: PropTypes.any,
+  overflowCount: PropTypes.number,
+  showZero: PropTypes.bool,
+  size: PropTypes.oneOf(['default', 'small']),
+  status: PropTypes.oneOf([
+    'success',
+    'processing',
+    'default',
+    'error',
+    'warning'
   ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  text: PropTypes.node,
+  title: PropTypes.string
 }
 
 export default Badge
