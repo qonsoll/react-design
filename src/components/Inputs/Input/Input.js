@@ -15,22 +15,46 @@ import {
   system
 } from 'styled-system'
 
+const ANTD_INPUT_PROPS = [
+  'addonAfter',
+  'addonBefore',
+  'allowClear',
+  'bordered',
+  'defaultValue',
+  'disabled',
+  'id',
+  'maxLength',
+  'prefix',
+  'size',
+  'suffix',
+  'type',
+  'value'
+]
 const Input = styled(AntInput).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
-})(
-  compose(
-    typography,
-    space,
-    color,
-    layout,
-    flexbox,
-    background,
-    border,
-    position,
-    shadow,
-    system({ transform: true })
-  )
-)
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_INPUT_PROPS.includes(prop) || defaultValidatorFn(prop)
+})`
+  &&&& {
+    ${({ allowClear }) =>
+      allowClear &&
+      `
+      &>input{
+        box-shadow: unset;
+     } `}
+    ${compose(
+      typography,
+      space,
+      color,
+      layout,
+      flexbox,
+      background,
+      border,
+      position,
+      shadow,
+      system({ transform: true })
+    )}
+  }
+`
 
 Input.propTypes = {
   addonAfter: PropTypes.node,
