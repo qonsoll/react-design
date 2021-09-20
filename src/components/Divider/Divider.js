@@ -15,8 +15,18 @@ import {
   shadow,
   system
 } from 'styled-system'
-
-const StyledAntDivider = styled(AntDivider)`
+const ANTD_DIVIDER_PROPS = [
+  'className',
+  'dashed',
+  'orientation',
+  'plain',
+  'style',
+  'type'
+]
+const StyledAntDivider = styled(AntDivider).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_DIVIDER_PROPS.includes(prop) || defaultValidatorFn(prop)
+})`
   && {
     ${compose(
       space,
@@ -40,7 +50,7 @@ Divider.propTypes = {
   dashed: PropTypes.bool,
   orientation: PropTypes.oneOf(['left', 'right', 'center']),
   plain: PropTypes.bool,
-  style: PropTypes.shape,
+  style: PropTypes.object,
   type: PropTypes.oneOf(['horizontal', 'vertical'])
 }
 
