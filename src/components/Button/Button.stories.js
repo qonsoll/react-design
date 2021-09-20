@@ -42,6 +42,11 @@ export default {
       description: 'Disabled state of button',
       control: { type: 'boolean' }
     },
+    shape: {
+      table: {
+        disable: true
+      }
+    },
     block: {
       table: {
         category: 'Default AntD props'
@@ -248,7 +253,8 @@ buttonWithIcon.args = {
 buttonWithIcon.argTypes = {
   shape: {
     table: {
-      category: 'Default AntD props'
+      category: 'Default AntD props',
+      disable: false
     },
     description: 'Can be set button shape',
     options: ['circle', 'round'],

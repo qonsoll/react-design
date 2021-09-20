@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Button as AntButton } from 'antd'
 import styled from 'styled-components'
@@ -30,7 +31,7 @@ const ANTD_BUTTON_PROPS = [
   'target',
   'type'
 ]
-const Button = styled(AntButton).withConfig({
+const StyledButton = styled(AntButton).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     ANTD_BUTTON_PROPS.includes(prop) || defaultValidatorFn(prop)
 })`
@@ -70,6 +71,7 @@ const Button = styled(AntButton).withConfig({
     )}
   }
 `
+const Button = (props) => <StyledButton {...props} />
 
 Button.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),

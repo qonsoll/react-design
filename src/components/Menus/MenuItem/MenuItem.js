@@ -39,30 +39,14 @@ const StyledMenuItem = styled(AntMenu.Item)(
   )
 )
 
-const MenuItem = (props) => {
-  return <StyledMenuItem key={props.key1} {...props} />
-}
+const MenuItem = (props) => <StyledMenuItem {...props} />
 
 MenuItem.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  danger: PropTypes.bool,
+  disabled: PropTypes.bool,
+  icon: PropTypes.node,
+  key: PropTypes.string,
+  title: PropTypes.string
 }
 
 export default MenuItem

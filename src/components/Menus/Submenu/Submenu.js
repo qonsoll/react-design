@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Menu as AntMenu } from 'antd'
+import MenuItem from '../MenuItem'
 import styled from 'styled-components'
 import {
   compose,
@@ -37,30 +38,20 @@ const StyledSubmenu = styled(AntMenu.SubMenu)(
   )
 )
 
-const Submenu = (props) => {
-  return <StyledSubmenu key={props.key1} {...props} />
-}
+const Submenu = (props) => <StyledSubmenu {...props} />
 
 Submenu.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.instanceOf(MenuItem)),
+    PropTypes.arrayOf(PropTypes.instanceOf(Submenu))
   ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  disabled: PropTypes.bool,
+  icon: PropTypes.node,
+  key: PropTypes.string,
+  popupClassName: PropTypes.string,
+  popupOffset: PropTypes.arrayOf(PropTypes.number),
+  title: PropTypes.node,
+  onTitleClick: PropTypes.func
 }
 
 export default Submenu
