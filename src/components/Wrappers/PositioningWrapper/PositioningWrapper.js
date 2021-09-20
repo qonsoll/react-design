@@ -20,13 +20,13 @@ const PositioningWrapper = (props) => {
   return (
     <Box
       height={height || ((alignMiddle || isBottomSticky) && 'inherit')} // Quick fix to set height (related to new layout)
-      display='flex'
+      display="flex"
       justifyContent={alignMiddle && 'center'}
-      flexDirection='column'
+      flexDirection="column"
       // minHeight='fit-content'
     >
       {onBack && (
-        <Box mb={[2, 2, 2, 0, 0]} display='flex' alignItems='center'>
+        <Box mb={[2, 2, 2, 0, 0]} display="flex" alignItems="center">
           <Back onClick={onBack} {...backBtnProps} divided={divided} />
           {breadcrumb && (
             <Breadcrumb {...breadcrumb?.props}>
@@ -43,8 +43,7 @@ const PositioningWrapper = (props) => {
         // minHeight='fit-content'
         width={alignMiddle && contentWidth}
         ml={alignMiddle && contentWidth && 'auto'}
-        mr={alignMiddle && contentWidth && 'auto'}
-      >
+        mr={alignMiddle && contentWidth && 'auto'}>
         {children}
       </Box>
     </Box>
@@ -59,11 +58,11 @@ PositioningWrapper.propTypes = {
     PropTypes.number,
     PropTypes.array
   ]),
-  onBack: PropTypes.func,
+  onBack: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
   isBottomSticky: PropTypes.bool,
-  breadcrumb: PropTypes.object
+  breadcrumb: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 }
 
 export default PositioningWrapper

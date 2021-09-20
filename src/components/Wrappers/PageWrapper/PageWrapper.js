@@ -68,14 +68,14 @@ PageWrapper.propTypes = {
     PropTypes.number,
     PropTypes.array
   ]),
-  onBack: PropTypes.func,
+  onBack: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
   graphicProps: PropTypes.object,
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object,
   action: PropTypes.node,
-  breadcrumb: PropTypes.object
+  breadcrumb: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 }
 PageWrapper.defaultProps = {
   alignMiddle: false,

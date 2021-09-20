@@ -25,23 +25,21 @@ const ContentWrapperTest = (props) => {
   return (
     <Box
       height={!alignMiddle && 'inherit'}
-      display='flex'
-      flexDirection='column'
-      flexGrow={alignMiddle && 1}
-    >
+      display="flex"
+      flexDirection="column"
+      flexGrow={alignMiddle && 1}>
       {!firstLevelHidden && (
         <Box
-          display='flex'
+          display="flex"
           alignItems={
             headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
           }
           mb={
             (headingProps && headingProps.marginBottom) ||
             DEFAULT_PROPS.marginBottom
-          }
-        >
+          }>
           <Box
-            display='flex'
+            display="flex"
             flex={1}
             alignItems={
               headingProps && !headingProps.subTitle && !breadcrumb
@@ -51,14 +49,12 @@ const ContentWrapperTest = (props) => {
             justifyContent={
               onBack || action || !alignMiddle ? 'flex-start' : 'center'
             }
-            flexDirection={breadcrumb ? 'column' : 'row'}
-          >
+            flexDirection={breadcrumb ? 'column' : 'row'}>
             {onBack && (
               <Box
                 mb={breadcrumb ? [2, 2, 3, 3, 3] : []}
-                display='flex'
-                alignItems='center'
-              >
+                display="flex"
+                alignItems="center">
                 <Back
                   onClick={onBack}
                   {...backBtnProps}
@@ -76,7 +72,7 @@ const ContentWrapperTest = (props) => {
           {action && <Box>{action}</Box>}
         </Box>
       )}
-      <Box flex={1} height='100%'>
+      <Box flex={1} height="100%">
         {children}
       </Box>
     </Box>
@@ -92,7 +88,7 @@ ContentWrapperTest.propTypes = {
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
   alignMiddle: PropTypes.bool,
-  breadcrumb: PropTypes.object
+  breadcrumb: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 }
 
 export default ContentWrapperTest

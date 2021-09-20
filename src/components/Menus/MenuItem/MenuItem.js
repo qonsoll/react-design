@@ -16,6 +16,8 @@ import {
   system
 } from 'styled-system'
 
+// const ANTD_MENU_ITEM_PROPS = ['danger', 'disabled', 'icon', 'key', 'title']
+
 const StyledMenuItem = styled(AntMenu.Item)(
   compose(
     space,

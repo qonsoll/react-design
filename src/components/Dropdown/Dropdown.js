@@ -46,7 +46,7 @@ Dropdown.propTypes = {
   disabled: PropTypes.bool,
   destroyPopupOnHide: PropTypes.bool,
   getPopupContainer: PropTypes.func,
-  overlay: PropTypes.func,
+  overlay: PropTypes.object,
   overlayClassName: PropTypes.string,
   overlayStyle: PropTypes.object,
   placement: PropTypes.string,
