@@ -31,8 +31,7 @@ const Edit = (props) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
-          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
-        >
+          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}>
           <Button
             {...props}
             icon={iconNode || iconNodeLeft || iconNodeRight}
@@ -45,8 +44,7 @@ const Edit = (props) => {
           {...props}
           icon={iconNode || iconNodeLeft}
           danger={false}
-          onClick={onClick}
-        >
+          onClick={onClick}>
           {text}
           {iconNodeRight}
         </Button>
@@ -77,7 +75,20 @@ Edit.propTypes = {
     'rightTop',
     'rightBottom'
   ]),
-  props: PropTypes.object
+  props: PropTypes.shape({
+    danger: PropTypes.bool,
+    disabled: PropTypes.bool,
+    block: PropTypes.bool,
+    ghost: PropTypes.bool,
+    href: PropTypes.string,
+    htmlType: PropTypes.string,
+    loading: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({ delay: PropTypes.number })
+    ]),
+    size: PropTypes.oneOf(['small', 'middle', 'large']),
+    target: PropTypes.string
+  })
 }
 Edit.defaultProps = {
   tooltipPlacement: 'bottom',

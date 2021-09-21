@@ -39,32 +39,11 @@ const StyledLink = styled(AntTypography.Link)(
   )
 )
 
-const Link = (props) => {
-  return <StyledLink {...props} />
-}
+const Link = (props) => <StyledLink {...props} />
 
 Link.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform',
-    'textTransform',
-    'textOverflow'
-  ])
+  href: PropTypes.string,
+  target: PropTypes.string
 }
 
 export default Link

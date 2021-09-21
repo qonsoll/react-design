@@ -135,6 +135,12 @@ export default {
       },
       description: 'Use to disable card shadow.'
     },
+    style: {
+      table: {
+        category: 'Custom properties'
+      },
+      description: 'Style for card'
+    },
     ...spaceArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,

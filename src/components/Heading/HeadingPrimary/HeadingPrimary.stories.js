@@ -4,6 +4,9 @@ import HeadingPrimary from './HeadingPrimary.template'
 export default {
   title: 'Components/Headings/HeadingPrimary',
   component: HeadingPrimary,
+  parameters: {
+    layout: 'fullscreen'
+  },
   argTypes: {
     title: {
       description: 'Use to specify title text.'
@@ -11,7 +14,10 @@ export default {
     },
     titleSize: {
       description: 'Use to set title size.',
-      control: { disable: true }
+      control: {
+        type: 'select',
+        options: [1, 2, 3, 4, 5]
+      }
     },
     titleMarginBottom: {
       description: 'Use to specify offset between title and subtitle.'
@@ -22,6 +28,9 @@ export default {
     textAlign: {
       description: 'Use to set text align.'
     }
+  },
+  args: {
+    title: 'Heading'
   }
 }
 

@@ -82,8 +82,11 @@ Button.propTypes = {
   href: PropTypes.string,
   htmlType: PropTypes.string,
   icon: PropTypes.node,
-  loading: PropTypes.bool,
-  shape: PropTypes.string,
+  loading: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({ delay: PropTypes.number })
+  ]),
+  shape: PropTypes.oneOf(['circle', 'round']),
   size: PropTypes.oneOf(['small', 'middle', 'large']),
   target: PropTypes.string,
   onClick: PropTypes.func,

@@ -54,7 +54,7 @@ const List = (props) => {
     items &&
     items.map((item) =>
       grid && !horizontal ? (
-        <Col key={item.id} {...colProps} display='flex' flexDirection='column'>
+        <Col key={item.id} {...colProps} display="flex" flexDirection="column">
           {renderItem(item)}
         </Col>
       ) : (
@@ -89,8 +89,7 @@ const List = (props) => {
             span={24}
             {...listLayoutProps}
             {...scrollProps}
-            maxHeight={maxHeight}
-          >
+            maxHeight={maxHeight}>
             {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
             {isLoaded && isEmpty && showEmpty && (
               <Empty description={false} image={Empty.PRESENTED_IMAGE_SIMPLE} />
@@ -130,5 +129,7 @@ List.propTypes = {
   isEmpty: PropTypes.bool,
   showEmpty: PropTypes.bool
 }
-
+List.defaultProps = {
+  isLoaded: true
+}
 export default List

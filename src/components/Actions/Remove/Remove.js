@@ -136,7 +136,21 @@ ClinicRemove.propTypes = {
     'rightBottom'
   ]),
   itemName: PropTypes.string,
-  props: PropTypes.object
+  props: PropTypes.shape({
+    danger: PropTypes.bool,
+    disabled: PropTypes.bool,
+    block: PropTypes.bool,
+    ghost: PropTypes.bool,
+    href: PropTypes.string,
+    htmlType: PropTypes.string,
+    loading: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({ delay: PropTypes.number })
+    ]),
+    size: PropTypes.oneOf(['small', 'middle', 'large']),
+    target: PropTypes.string,
+    onClick: PropTypes.func
+  })
 }
 ClinicRemove.defaultProps = {
   tooltipPlacement: 'bottom',

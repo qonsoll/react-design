@@ -59,32 +59,63 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
   }
 `
 
-const Title = (props) => {
-  return <StyledTitle {...props} />
-}
+const Title = (props) => <StyledTitle {...props} />
 
 Title.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
+  code: PropTypes.bool,
+  copyable: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      icon: PropTypes.node,
+      text: PropTypes.string,
+      onCopy: PropTypes.func,
+      tooltips: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.arrayOf(PropTypes.node)
+      ])
+    })
   ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform',
-    'textTransform',
-    'textOverflow'
-  ])
+  delete: PropTypes.bool,
+  disabled: PropTypes.bool,
+  editable: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      icon: PropTypes.node,
+      tooltip: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
+      editing: PropTypes.bool,
+      maxLength: PropTypes.number,
+      autoSize: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.shape({
+          minRows: PropTypes.number,
+          maxRows: PropTypes.number
+        })
+      ]),
+      onStart: PropTypes.func,
+      onChange: PropTypes.func,
+      onCancel: PropTypes.func,
+      onEnd: PropTypes.func
+    })
+  ]),
+  ellipsis: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      rows: PropTypes.number,
+      expandable: PropTypes.bool,
+      suffix: PropTypes.string,
+      symbol: PropTypes.node,
+      tooltip: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
+      onExpand: PropTypes.func,
+      onEllipsis: PropTypes.func
+    })
+  ]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5]),
+  mark: PropTypes.bool,
+  onClick: PropTypes.func,
+  strong: PropTypes.bool,
+  italic: PropTypes.bool,
+  type: PropTypes.oneOf(['secondary', 'success', 'warning', 'danger']),
+  underline: PropTypes.bool
 }
 
 export default Title

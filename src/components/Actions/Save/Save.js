@@ -32,8 +32,7 @@ const Save = (props) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
-          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
-        >
+          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}>
           <Button
             {...props}
             type={type}
@@ -48,8 +47,7 @@ const Save = (props) => {
           type={type}
           icon={iconNode || iconNodeLeft}
           danger={false}
-          onClick={onClick}
-        >
+          onClick={onClick}>
           {text || 'Save'}
           {iconNodeRight}
         </Button>
@@ -88,7 +86,20 @@ Save.propTypes = {
     'rightTop',
     'rightBottom'
   ]),
-  props: PropTypes.object
+  props: PropTypes.shape({
+    danger: PropTypes.bool,
+    disabled: PropTypes.bool,
+    block: PropTypes.bool,
+    ghost: PropTypes.bool,
+    href: PropTypes.string,
+    htmlType: PropTypes.string,
+    loading: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({ delay: PropTypes.number })
+    ]),
+    size: PropTypes.oneOf(['small', 'middle', 'large']),
+    target: PropTypes.string
+  })
 }
 Save.defaultProps = {
   tooltipPlacement: 'bottom'

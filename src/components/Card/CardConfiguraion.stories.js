@@ -23,6 +23,38 @@ export default {
   title: 'Components/Card/CardConfiguration',
   component: Card,
   argTypes: {
+    avatar: {
+      table: {
+        category: 'Default AntD props for Card.Meta'
+      },
+      description: 'Avatar or icon'
+    },
+    className: {
+      table: {
+        category: 'Default AntD props for Card.Meta'
+      },
+      description: 'The className of container'
+    },
+    description: {
+      table: {
+        category: 'Default AntD props for Card.Meta'
+      },
+      description: 'Description content',
+      control: { type: 'text' }
+    },
+    style: {
+      table: {
+        category: 'Default AntD props for Card.Meta'
+      },
+      description: 'The style object of container'
+    },
+    title: {
+      table: {
+        category: 'Default AntD props for Card.Meta'
+      },
+      description: 'Title content',
+      control: { type: 'text' }
+    },
     actions: {
       table: {
         disable: true
@@ -108,38 +140,7 @@ export default {
         disable: true
       }
     },
-    avatar: {
-      table: {
-        category: 'Default AntD props for Card.Meta'
-      },
-      description: 'Avatar or icon'
-    },
-    className: {
-      table: {
-        category: 'Default AntD props for Card.Meta'
-      },
-      description: 'The className of container'
-    },
-    description: {
-      table: {
-        category: 'Default AntD props for Card.Meta'
-      },
-      description: 'Description content',
-      control: { type: 'text' }
-    },
-    style: {
-      table: {
-        category: 'Default AntD props for Card.Meta'
-      },
-      description: 'The style object of container'
-    },
-    title: {
-      table: {
-        category: 'Default AntD props for Card.Meta'
-      },
-      description: 'Title content',
-      control: { type: 'text' }
-    },
+
     shadowless: {
       table: {
         category: 'Custom properties'

@@ -1,8 +1,9 @@
 import React from 'react'
 import List from './List'
+import Text from '../../Typography/Text'
 
 export default {
-  title: 'Components/List',
+  title: 'Components/List/List',
   component: List,
   argTypes: {
     items: {
@@ -82,6 +83,19 @@ export default {
       description: '[FIXME] Very interesting property :)'
       //   control: { disable: true }
     }
+  },
+  args: {
+    grid: true,
+    isListHeader: true,
+    title: 'Header',
+    items: [
+      'Racing car sprays burning fuel into crowd.',
+      'Japanese princess to wed commoner.',
+      'Australian walks 100km after outback crash.',
+      'Man charged over missing wedding girl.',
+      'Los Angeles battles huge wildfires.'
+    ],
+    renderItem: (item) => <Text>{item}</Text>
   }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Remove from './Remove'
+import { DeleteOutlined } from '@ant-design/icons'
 
 export default {
   title: 'Components/Actions/Remove',
@@ -63,9 +64,12 @@ export default {
     },
     props: {
       description:
-        'Rest of the button properties are similar as in default AntD button (check Ant documentation: https://ant.design/components/button/).',
+        'Rest of the button properties are similar as in default button',
       control: { disable: true }
     }
+  },
+  args: {
+    icon: <DeleteOutlined />
   }
 }
 

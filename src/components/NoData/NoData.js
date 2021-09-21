@@ -45,7 +45,7 @@ const NoData = (props) => {
 NoData.propTypes = {
   description: PropTypes.string,
   image: PropTypes.node,
-  imageStyle: PropTypes.shape
+  imageStyle: PropTypes.object
 }
 
 NoData.defaultProps = {

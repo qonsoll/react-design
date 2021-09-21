@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../../Box'
-import { Typography } from 'antd'
+import Title from '../../Typography/Title'
+import Text from '../../Typography/Text'
 import { DEFAULT_PROPS } from './constants'
 
 const HeadingPrimary = (props) => {
@@ -10,11 +11,10 @@ const HeadingPrimary = (props) => {
   return (
     <Box textAlign={textAlign || DEFAULT_PROPS.textAlign}>
       <Box
-        mb={subTitle && (titleMarginBottom || DEFAULT_PROPS.titleMarginBottom)}
-      >
-        <Typography.Title level={titleSize}>{title}</Typography.Title>
+        mb={subTitle && (titleMarginBottom || DEFAULT_PROPS.titleMarginBottom)}>
+        <Title level={titleSize}>{title}</Title>
       </Box>
-      {subTitle && <Typography.Text>{subTitle}</Typography.Text>}
+      {subTitle && <Text>{subTitle}</Text>}
     </Box>
   )
 }

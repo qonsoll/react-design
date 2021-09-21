@@ -98,7 +98,22 @@ Back.propTypes = {
     'rightBottom'
   ]),
   divided: PropTypes.bool,
-  props: PropTypes.object
+  props: PropTypes.shape({
+    type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),
+    danger: PropTypes.bool,
+    disabled: PropTypes.bool,
+    block: PropTypes.bool,
+    ghost: PropTypes.bool,
+    href: PropTypes.string,
+    htmlType: PropTypes.string,
+    loading: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({ delay: PropTypes.number })
+    ]),
+    shape: PropTypes.oneOf(['circle', 'round']),
+    size: PropTypes.oneOf(['small', 'middle', 'large']),
+    target: PropTypes.string
+  })
 }
 
 export default Back
