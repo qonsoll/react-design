@@ -53,11 +53,11 @@
   line-height: 0;
   text-align: center;
   text-transform: none;
-  vertical-align: -0.125em;
+  /* vertical-align: -0.125em; test fix*/
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: absolute;
+  /* position: absolute; test fix */
   /* top: 5.0005px; test fix */
   left: var(--collapse-header-arrow-left);
   display: inline-block;
