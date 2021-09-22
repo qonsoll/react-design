@@ -462,7 +462,7 @@ textarea.ant-picker-input>input {
 .ant-picker-panel-container {
   overflow: hidden;
   vertical-align: top;
-  background: var(--ql-color-white);
+  background: var(--picker-bg);
   border-radius: var(--picker-container-border-radius);
   -webkit-box-shadow: var(--ql-shadow-default);
   box-shadow: var(--ql-shadow-default);
