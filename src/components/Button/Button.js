@@ -86,7 +86,7 @@ Button.propTypes = {
     PropTypes.bool,
     PropTypes.shape({ delay: PropTypes.number })
   ]),
-  shape: PropTypes.oneOf(['circle', 'round']),
+  shape: PropTypes.oneOf(['default', 'circle', 'round']),
   size: PropTypes.oneOf(['small', 'middle', 'large']),
   target: PropTypes.string,
   onClick: PropTypes.func,
