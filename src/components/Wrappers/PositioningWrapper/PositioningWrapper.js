@@ -36,12 +36,12 @@ const PositioningWrapper = (props) => {
         </Box>
       )}
       <Box
-        display={(alignMiddle && onBack && 'flex').toString()}
+        display={(alignMiddle && onBack && 'flex')?.toString()}
         alignItems={alignMiddle && onBack && 'center'}
         flex={(!alignMiddle || (alignMiddle && onBack)) && 1}
         height={(!alignMiddle || (alignMiddle && onBack)) && '100%'}
         // minHeight='fit-content'
-        width={(alignMiddle && contentWidth).toString()}
+        width={(alignMiddle && contentWidth)?.toString()}
         ml={alignMiddle && contentWidth && 'auto'}
         mr={alignMiddle && contentWidth && 'auto'}>
         {children}
