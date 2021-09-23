@@ -16,7 +16,7 @@ const PositioningWrapper = (props) => {
     isBottomSticky,
     breadcrumb
   } = props
-  console.log((!alignMiddle || (alignMiddle && onBack)) && '100%')
+
   return (
     <Box
       height={height || ((alignMiddle || isBottomSticky) && 'inherit')} // Quick fix to set height (related to new layout)
