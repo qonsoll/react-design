@@ -36,7 +36,7 @@ const PositioningWrapper = (props) => {
         </Box>
       )}
       <Box
-        display={(alignMiddle && onBack && 'flex')?.toString()}
+        display={(alignMiddle && onBack ? 'flex' : 'block')?.toString()}
         alignItems={alignMiddle && onBack && 'center'}
         flex={(!alignMiddle || (alignMiddle && onBack)) && 1}
         height={(!alignMiddle || (alignMiddle && onBack)) && '100%'}
