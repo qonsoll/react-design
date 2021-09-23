@@ -43,11 +43,11 @@ const Submenu = (props) => <StyledSubmenu {...props} />
 Submenu.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.instanceOf(MenuItem)),
-    PropTypes.arrayOf(PropTypes.instanceOf(Submenu))
+    PropTypes.arrayOf(PropTypes.instanceOf(Submenu)),
+    PropTypes.node
   ]),
   disabled: PropTypes.bool,
   icon: PropTypes.node,
-  key: PropTypes.string,
   popupClassName: PropTypes.string,
   popupOffset: PropTypes.arrayOf(PropTypes.number),
   title: PropTypes.node,

@@ -24,7 +24,7 @@ const ContentWrapperTest = (props) => {
 
   return (
     <Box
-      height={!alignMiddle && 'inherit'}
+      height={!alignMiddle ? 'inherit' : undefined}
       display="flex"
       flexDirection="column"
       flexGrow={alignMiddle && 1}>

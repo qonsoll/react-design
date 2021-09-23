@@ -61,7 +61,7 @@ Input.propTypes = {
   addonBefore: PropTypes.node,
   allowClear: PropTypes.bool,
   bordered: PropTypes.bool,
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   id: PropTypes.string,
   maxLength: PropTypes.number,
