@@ -51,7 +51,10 @@ Menu.propTypes = {
   openKeys: PropTypes.arrayOf(PropTypes.string),
   overflowedIndicator: PropTypes.node,
   selectable: PropTypes.bool,
-  selectedKeys: PropTypes.arrayOf(PropTypes.string),
+  selectedKeys: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]),
   style: PropTypes.object,
   subMenuCloseDelay: PropTypes.number,
   subMenuOpenDelay: PropTypes.number,

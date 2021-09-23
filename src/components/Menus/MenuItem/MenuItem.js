@@ -16,9 +16,12 @@ import {
   system
 } from 'styled-system'
 
-// const ANTD_MENU_ITEM_PROPS = ['danger', 'disabled', 'icon', 'key', 'title']
+const ANTD_MENU_ITEM_PROPS = ['danger', 'disabled', 'icon', 'title']
 
-const StyledMenuItem = styled(AntMenu.Item)(
+const StyledMenuItem = styled(AntMenu.Item).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    ANTD_MENU_ITEM_PROPS.includes(prop) || defaultValidatorFn(prop)
+})(
   compose(
     space,
     color,
@@ -45,7 +48,6 @@ MenuItem.propTypes = {
   danger: PropTypes.bool,
   disabled: PropTypes.bool,
   icon: PropTypes.node,
-  key: PropTypes.string,
   title: PropTypes.string
 }
 
