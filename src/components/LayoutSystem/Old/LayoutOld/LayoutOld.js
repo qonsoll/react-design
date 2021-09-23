@@ -17,8 +17,7 @@ import {
 } from 'styled-system'
 
 const StyledAntLayout = styled(AntLayout).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    !['minHeight', 'backgroundImage'].includes(prop)
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
 })(
   compose(
     space,

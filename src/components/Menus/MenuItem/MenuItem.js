@@ -16,11 +16,9 @@ import {
   system
 } from 'styled-system'
 
-const ANTD_MENU_ITEM_PROPS = ['danger', 'disabled', 'icon', 'title']
-
 const StyledMenuItem = styled(AntMenu.Item).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
-    ANTD_MENU_ITEM_PROPS.includes(prop) || defaultValidatorFn(prop)
+    !['borderRadius', 'alignItems'].includes(prop)
 })(
   compose(
     space,
