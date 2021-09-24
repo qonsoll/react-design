@@ -26,7 +26,7 @@ const ANTD_TEXT_PROPS = [
   'ellipsis',
   'keyboard',
   'mark',
-  'onClick',
+  'strong',
   'italic',
   'type',
   'underline',
@@ -141,13 +141,14 @@ const Text = forwardRef((props, ref) => {
   const { isEllipsis } = props
 
   return (
-    <StyledText
-      textOverflow={isEllipsis && 'ellipsis'}
-      whiteSpace={isEllipsis && 'nowrap'}
-      overflow={isEllipsis && 'hidden'}
-      {...props}
-      ref={ref}
-    />
+    <span ref={ref}>
+      <StyledText
+        textOverflow={isEllipsis && 'ellipsis'}
+        whiteSpace={isEllipsis && 'nowrap'}
+        overflow={isEllipsis && 'hidden'}
+        {...props}
+      />
+    </span>
   )
 })
 
