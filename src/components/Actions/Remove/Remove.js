@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Typography, Tooltip, Popconfirm } from 'antd'
 import Button from '../../Button'
@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   itemName: 'it'
 }
 
-const Remove = (props) => {
+const Remove = forwardRef((props, ref) => {
   const {
     text,
     type,
@@ -71,6 +71,7 @@ const Remove = (props) => {
             type={type || DEFAULT_PROPS.type}
             icon={iconNode || iconNodeLeft || iconNodeRight}
             danger
+            ref={ref}
           />
         </Tooltip>
       ) : (
@@ -78,14 +79,15 @@ const Remove = (props) => {
           {...props}
           type={type || DEFAULT_PROPS.type}
           icon={iconNode || iconNodeLeft}
-          danger>
+          danger
+          ref={ref}>
           {text}
           {iconNodeRight}
         </Button>
       )}
     </Popconfirm>
   )
-}
+})
 
 Remove.propTypes = {
   text: PropTypes.string,

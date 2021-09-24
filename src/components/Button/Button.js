@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Button as AntButton } from 'antd'
 import styled from 'styled-components'
@@ -71,7 +71,7 @@ const StyledButton = styled(AntButton).withConfig({
     )}
   }
 `
-const Button = (props) => <StyledButton {...props} />
+const Button = forwardRef((props, ref) => <StyledButton {...props} ref={ref} />)
 
 Button.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),

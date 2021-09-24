@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../Button'
 import { Tooltip } from 'antd'
@@ -8,7 +8,7 @@ const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom'
 }
 
-const Save = (props) => {
+const Save = forwardRef((props, ref) => {
   const {
     text,
     type,
@@ -39,6 +39,7 @@ const Save = (props) => {
             icon={iconNode || iconNodeLeft || iconNodeRight}
             danger={false}
             onClick={onClick}
+            ref={ref}
           />
         </Tooltip>
       ) : (
@@ -47,14 +48,15 @@ const Save = (props) => {
           type={type}
           icon={iconNode || iconNodeLeft}
           danger={false}
-          onClick={onClick}>
+          onClick={onClick}
+          ref={ref}>
           {text || 'Save'}
           {iconNodeRight}
         </Button>
       )}
     </Fragment>
   )
-}
+})
 
 Save.propTypes = {
   text: PropTypes.string,
