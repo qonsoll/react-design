@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Typography as AntTypography } from 'antd'
 import styled from 'styled-components'
@@ -137,7 +137,7 @@ const StyledText = styled(AntTypography.Text).withConfig({
     )}
   }
 `
-const Text = (props) => {
+const Text = forwardRef((props, ref) => {
   const { isEllipsis } = props
 
   return (
@@ -146,9 +146,10 @@ const Text = (props) => {
       whiteSpace={isEllipsis && 'nowrap'}
       overflow={isEllipsis && 'hidden'}
       {...props}
+      ref={ref}
     />
   )
-}
+})
 
 Text.propTypes = {
   code: PropTypes.bool,
