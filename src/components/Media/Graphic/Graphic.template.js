@@ -19,7 +19,7 @@ const Graphic = (props) => {
     right,
     objectFit
   } = props
-  console.log('Graphic',props)
+
   return (
     <Box display={hidden || DEFAULT_PROPS.hidden}>
       <Img
