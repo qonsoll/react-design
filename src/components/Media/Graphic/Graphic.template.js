@@ -19,7 +19,7 @@ const Graphic = (props) => {
     right,
     objectFit
   } = props
-
+  console.log('Graphic',props)
   return (
     <Box display={hidden || DEFAULT_PROPS.hidden}>
       <Img
@@ -57,10 +57,10 @@ Graphic.propTypes = {
     'sticky',
     'unset'
   ]),
-  top: PropTypes.number,
-  bottom: PropTypes.number,
-  left: PropTypes.number,
-  right: PropTypes.number,
+  top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  bottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  right: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   objectFit: PropTypes.oneOf([
     'contain',
     'cover',
