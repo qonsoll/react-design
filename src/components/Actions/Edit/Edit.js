@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../Button'
 import { Tooltip } from 'antd'
@@ -8,7 +8,7 @@ const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom'
 }
 
-const Edit = (props) => {
+const Edit = forwardRef((props, ref) => {
   const {
     text,
     icon,
@@ -37,6 +37,7 @@ const Edit = (props) => {
             icon={iconNode || iconNodeLeft || iconNodeRight}
             danger={false}
             onClick={onClick}
+            ref={ref}
           />
         </Tooltip>
       ) : (
@@ -44,14 +45,15 @@ const Edit = (props) => {
           {...props}
           icon={iconNode || iconNodeLeft}
           danger={false}
-          onClick={onClick}>
+          onClick={onClick}
+          ref={ref}>
           {text}
           {iconNodeRight}
         </Button>
       )}
     </Fragment>
   )
-}
+})
 
 Edit.propTypes = {
   text: PropTypes.string,
