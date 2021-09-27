@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Badge as AntBadge } from 'antd'
 import styled from 'styled-components'
@@ -36,10 +36,7 @@ const StyledBadge = styled(AntBadge)(
     })
   )
 )
-
-const Badge = (props) => {
-  return <StyledBadge {...props} />
-}
+const Badge = (props) => <StyledBadge {...props} />
 
 Badge.propTypes = {
   color: PropTypes.string,

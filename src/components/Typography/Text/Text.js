@@ -141,14 +141,14 @@ const Text = forwardRef((props, ref) => {
   const { isEllipsis } = props
 
   return (
-    <span ref={ref}>
+    <div ref={ref}>
       <StyledText
         textOverflow={isEllipsis && 'ellipsis'}
         whiteSpace={isEllipsis && 'nowrap'}
         overflow={isEllipsis && 'hidden'}
         {...props}
       />
-    </span>
+    </div>
   )
 })
 
