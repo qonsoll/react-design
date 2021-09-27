@@ -1,4 +1,6 @@
 :root {
+  --collapse-item-border: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
+
   --collapse-panel-border-radius: var(--ql-border-radius-md);
 
   --collapse-header-padding: 12px 16px;

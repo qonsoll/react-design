@@ -17,7 +17,7 @@
 }
 
 .ant-collapse>.ant-collapse-item {
-  border-bottom: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--collapse-item-border);
 }
 
 .ant-collapse>.ant-collapse-item:last-child,
@@ -145,7 +145,7 @@
 }
 
 .ant-collapse-borderless>.ant-collapse-item {
-  border-bottom: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--collapse-item-border);
 }
 
 .ant-collapse-borderless>.ant-collapse-item:last-child,
