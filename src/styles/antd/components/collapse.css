@@ -34,6 +34,8 @@
   cursor: pointer;
   -webkit-transition: all var(--ql-animation-duration-slow), visibility 0s;
   transition: all var(--ql-animation-duration-slow), visibility 0s;
+  display: flex;
+  align-items: center;
 }
 
 .ant-collapse>.ant-collapse-item>.ant-collapse-header::before {
