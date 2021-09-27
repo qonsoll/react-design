@@ -60,9 +60,9 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
 `
 
 const Title = forwardRef((props, ref) => (
-  <span ref={ref}>
+  <div ref={ref}>
     <StyledTitle {...props} />
-  </span>
+  </div>
 ))
 
 Title.propTypes = {
