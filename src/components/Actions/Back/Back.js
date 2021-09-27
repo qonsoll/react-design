@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Tooltip } from 'antd'
 import Button from '../../Button'
@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   tooltipPlacement: 'topLeft'
 }
 
-const Back = (props) => {
+const Back = forwardRef((props, ref) => {
   const {
     text,
     icon,
@@ -50,6 +50,7 @@ const Back = (props) => {
               icon={iconNode || iconNodeLeft || iconNodeRight}
               {...props}
               danger={false}
+              ref={ref}
             />
           </Tooltip>
           {!divided ? null : (
@@ -63,7 +64,8 @@ const Back = (props) => {
             type="text"
             icon={iconNode || iconNodeLeft}
             {...props}
-            danger={false}>
+            danger={false}
+            ref={ref}>
             {text}
             {iconNodeRight}
           </Button>
@@ -74,7 +76,7 @@ const Back = (props) => {
       )}
     </Fragment>
   )
-}
+})
 
 Back.propTypes = {
   text: PropTypes.string,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Typography as AntTypography } from 'antd'
 import styled from 'styled-components'
@@ -59,7 +59,11 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
   }
 `
 
-const Title = (props) => <StyledTitle {...props} />
+const Title = forwardRef((props, ref) => (
+  <div ref={ref}>
+    <StyledTitle {...props} />
+  </div>
+))
 
 Title.propTypes = {
   code: PropTypes.bool,
