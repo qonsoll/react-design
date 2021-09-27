@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import MenuItem from '../MenuItem'
 import { Menu as AntMenu } from 'antd'
 import styled from 'styled-components'
 import {
@@ -37,30 +38,11 @@ const StyledGroup = styled(AntMenu.ItemGroup)(
   )
 )
 
-const Group = (props) => {
-  return <StyledGroup key={props.key1} {...props} />
-}
+const Group = (props) => <StyledGroup {...props} />
 
 Group.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
-  ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform'
-  ])
+  children: PropTypes.arrayOf(PropTypes.instanceOf(MenuItem)),
+  title: PropTypes.node
 }
 
 export default Group

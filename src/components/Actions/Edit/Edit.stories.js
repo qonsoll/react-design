@@ -41,9 +41,12 @@ export default {
     },
     props: {
       description:
-        'Rest of the button properties are similar as in default AntD button (check Ant documentation: https://ant.design/components/button/).',
+        'Rest of the button properties are similar as in default button',
       control: { disable: true }
     }
+  },
+  args: {
+    text: 'Edit'
   }
 }
 

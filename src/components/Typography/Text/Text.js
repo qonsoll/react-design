@@ -151,30 +151,61 @@ const Text = (props) => {
 }
 
 Text.propTypes = {
-  'Default AntD props': PropTypes.object,
-  Packages: PropTypes.oneOf([
-    'space',
-    'color',
-    'typography',
-    'layout',
-    'flexbox',
-    'background',
-    'border',
-    'position',
-    'shadow'
+  code: PropTypes.bool,
+  copyable: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      icon: PropTypes.node,
+      text: PropTypes.string,
+      onCopy: PropTypes.func,
+      tooltips: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.arrayOf(PropTypes.node)
+      ])
+    })
   ]),
-  'Extra CSS props': PropTypes.oneOf([
-    'whiteSpace',
-    'cursor',
-    'wordBreak',
-    'zoom',
-    'transform',
-    'textTransform',
-    'textOverflow',
-    'webkitLineClamp',
-    'webkitBoxOrient'
+  delete: PropTypes.bool,
+  disabled: PropTypes.bool,
+  editable: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      icon: PropTypes.node,
+      tooltip: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
+      editing: PropTypes.bool,
+      maxLength: PropTypes.number,
+      autoSize: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.shape({
+          minRows: PropTypes.number,
+          maxRows: PropTypes.number
+        })
+      ]),
+      onStart: PropTypes.func,
+      onChange: PropTypes.func,
+      onCancel: PropTypes.func,
+      onEnd: PropTypes.func
+    })
   ]),
-  variants: PropTypes.oneOf([
+  ellipsis: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      rows: PropTypes.number,
+      expandable: PropTypes.bool,
+      suffix: PropTypes.string,
+      symbol: PropTypes.node,
+      tooltip: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
+      onExpand: PropTypes.func,
+      onEllipsis: PropTypes.func
+    })
+  ]),
+  keyboard: PropTypes.bool,
+  mark: PropTypes.bool,
+  onClick: PropTypes.func,
+  strong: PropTypes.bool,
+  italic: PropTypes.bool,
+  type: PropTypes.oneOf(['secondary', 'success', 'warning', 'danger']),
+  underline: PropTypes.bool,
+  variant: PropTypes.oneOf([
     'h1',
     'h2',
     'h3',

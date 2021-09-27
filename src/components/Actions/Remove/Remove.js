@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   itemName: 'it'
 }
 
-const ClinicRemove = (props) => {
+const Remove = (props) => {
   const {
     text,
     type,
@@ -87,7 +87,7 @@ const ClinicRemove = (props) => {
   )
 }
 
-ClinicRemove.propTypes = {
+Remove.propTypes = {
   text: PropTypes.string,
   type: PropTypes.oneOf([
     'default',
@@ -100,7 +100,7 @@ ClinicRemove.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   iconLeft: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   iconRight: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  shape: PropTypes.oneOf(['default', 'circle', 'rounded']),
+  shape: PropTypes.oneOf(['default', 'circle', 'round']),
   tooltip: PropTypes.string,
   tooltipPlacement: PropTypes.oneOf([
     'top',
@@ -136,9 +136,23 @@ ClinicRemove.propTypes = {
     'rightBottom'
   ]),
   itemName: PropTypes.string,
-  props: PropTypes.object
+  props: PropTypes.shape({
+    danger: PropTypes.bool,
+    disabled: PropTypes.bool,
+    block: PropTypes.bool,
+    ghost: PropTypes.bool,
+    href: PropTypes.string,
+    htmlType: PropTypes.string,
+    loading: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({ delay: PropTypes.number })
+    ]),
+    size: PropTypes.oneOf(['small', 'middle', 'large']),
+    target: PropTypes.string,
+    onClick: PropTypes.func
+  })
 }
-ClinicRemove.defaultProps = {
+Remove.defaultProps = {
   tooltipPlacement: 'bottom',
   question: 'Are you sure you want to remove',
   confirmLabel: 'Yes, remove',
@@ -147,4 +161,4 @@ ClinicRemove.defaultProps = {
   shape: 'default'
 }
 
-export default ClinicRemove
+export default Remove

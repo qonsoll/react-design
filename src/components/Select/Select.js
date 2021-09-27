@@ -61,7 +61,11 @@ Select.propTypes = {
   ]),
   dropdownRender: PropTypes.func,
   dropdownStyle: PropTypes.object,
-  fieldNames: PropTypes.object,
+  fieldNames: PropTypes.shape({
+    label: PropTypes.string,
+    key: PropTypes.string,
+    options: PropTypes.any
+  }),
   filterOption: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
   filterSort: PropTypes.func,
   getPopupContainer: PropTypes.func,

@@ -2,39 +2,86 @@ import React from 'react'
 import Menu from '../Menu'
 import Group from './Group'
 import MenuItem from '../MenuItem'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes
+} from '../../../helpers/arg-types'
+import CSSPropValues from '../../../helpers/css-prop-values'
 
 export default {
   title: 'Components/Menus/Group',
   component: Group,
   argTypes: {
-    'Default AntD props': {
-      description:
-        'Component absolutely maintain default AntD menu item properties (check Ant documentation: https://ant.design/components/menu/#Menu.ItemGroup).',
-      control: { disable: true }
-    },
-    Packages: {
+    children: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
+      description: 'Sub-menu items	'
     },
-    'Extra CSS props': {
+    title: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
+      description: 'The title of the group	'
+    },
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    whiteSpace: {
+      table: {
+        category: 'Extra CSS props'
+      },
+      control: CSSPropValues.whiteSpace
+    },
+    cursor: {
+      table: {
+        category: 'Extra CSS props'
+      },
+      control: CSSPropValues.cursor
+    },
+    wordBreak: {
+      table: {
+        category: 'Extra CSS props'
+      },
+      control: CSSPropValues.wordBreak
+    },
+    zoom: {
+      table: {
+        category: 'Extra CSS props'
+      },
+      control: CSSPropValues.zoom
+    },
+    transform: {
+      table: {
+        category: 'Extra CSS props'
+      },
+      control: CSSPropValues.transform
     }
+  },
+  args: {
+    children: [
+      <MenuItem key="1">Menu item #2</MenuItem>,
+      <MenuItem key="2">Menu item #3</MenuItem>
+    ],
+    title: 'Group title'
   }
 }
 
 export const Template = (args) => (
   <Menu>
-    <Group title='Group title' {...args}>
-      <MenuItem>Menu item #2</MenuItem>
-      <MenuItem>Menu item #3</MenuItem>
-    </Group>
+    <Group {...args} />
   </Menu>
 )

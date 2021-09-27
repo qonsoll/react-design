@@ -15,7 +15,7 @@ const AppWrapper = (props) => {
   } = props
 
   return (
-    <LayoutOld height='inherit' flexDirection={horizontal && 'row'} {...rest}>
+    <LayoutOld height="inherit" flexDirection={horizontal && 'row'} {...rest}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
       <ContentOld
@@ -27,10 +27,9 @@ const AppWrapper = (props) => {
           'var(--ql-layout-padding-xl)',
           'var(--ql-layout-padding-xxl)'
         ]}
-        height='100%'
-        overflow='auto'
-        {...contentProps}
-      >
+        height="100%"
+        overflow="auto"
+        {...contentProps}>
         {children}
       </ContentOld>
       {!horizontal && bottomNavbar}

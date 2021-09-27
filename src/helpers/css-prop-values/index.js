@@ -21,6 +21,8 @@ import wordBreak from './wordBreak'
 import zoom from './zoom'
 import transition from './transition'
 import transform from './transform'
+import textTransform from './textTransform'
+import textOverflow from './textOverflow'
 
 const CSSPropValues = {
   alignContent,
@@ -45,7 +47,9 @@ const CSSPropValues = {
   wordBreak,
   zoom,
   transform,
-  transition
+  transition,
+  textTransform,
+  textOverflow
 }
 
 export default CSSPropValues

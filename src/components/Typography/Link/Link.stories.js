@@ -1,29 +1,86 @@
 import React from 'react'
 import Link from './Link'
+import {
+  spaceArgTypes,
+  colorArgTypes,
+  typographyArgTypes,
+  layoutArgTypes,
+  flexboxArgTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  positionArgTypes,
+  shadowArgTypes
+} from '../../../helpers/arg-types'
+import CSSPropValues from '../../../helpers/css-prop-values'
 
 export default {
   title: 'Components/Typography/Link',
   component: Link,
   argTypes: {
-    'Default AntD props': {
-      description:
-        'Component absolutely maintain default AntD link properties (check Ant documentation: https://ant.design/components/typography/#Typography.Link).',
-      control: { disable: true }
-    },
-    Packages: {
+    href: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description:
-        'Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).',
-      control: { disable: true }
+      description: 'Redirect url of link button'
     },
-    'Extra CSS props': {
+    target: {
       table: {
-        category: 'Extentions'
+        category: 'Default AntD props'
       },
-      description: 'Additional CSS properties which could be applyed.',
-      control: { disable: true }
+      description: 'Same as target attribute of a, works when href is specified'
+    },
+    ...spaceArgTypes,
+    ...colorArgTypes,
+    ...typographyArgTypes,
+    ...layoutArgTypes,
+    ...flexboxArgTypes,
+    ...backgroundArgTypes,
+    ...borderArgTypes,
+    ...positionArgTypes,
+    ...shadowArgTypes,
+    whiteSpace: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.whiteSpace
+    },
+    cursor: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.cursor
+    },
+    wordBreak: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.wordBreak
+    },
+    zoom: {
+      table: {
+        category: 'Extra'
+      },
+      description: CSSPropValues.zoom.description,
+      control: { type: CSSPropValues.zoom.type }
+    },
+    transform: {
+      table: {
+        category: 'Extra'
+      },
+      description: CSSPropValues.transform.description,
+      control: { type: CSSPropValues.transform.type }
+    },
+    textTransform: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.textTransform
+    },
+    textOverflow: {
+      table: {
+        category: 'Extra'
+      },
+      control: CSSPropValues.textOverflow
     }
   }
 }
