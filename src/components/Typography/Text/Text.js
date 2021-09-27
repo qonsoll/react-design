@@ -141,7 +141,7 @@ const Text = forwardRef((props, ref) => {
   const { isEllipsis } = props
 
   return (
-    <div ref={ref}>
+    <div ref={ref} style={{ display: 'flex' }}>
       <StyledText
         textOverflow={isEllipsis && 'ellipsis'}
         whiteSpace={isEllipsis && 'nowrap'}
