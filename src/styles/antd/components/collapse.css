@@ -119,8 +119,12 @@
 }
 
 .ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
+  position: absolute;
+  top: 50%;
   right: 16px;
   left: auto;
+  margin: 0;
+  transform: translateY(-50%);
 }
 
 .ant-collapse-content {
