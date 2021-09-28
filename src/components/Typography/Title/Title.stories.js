@@ -100,6 +100,12 @@ export default {
       },
       description: 'Underlined style	'
     },
+    variant: {
+      table: {
+        category: 'Custom properties'
+      },
+      description: 'Use to change title type.'
+    },
     ...spaceArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,
@@ -155,7 +161,7 @@ export default {
     }
   },
   args: {
-    level: 1
+    variant: 'h1'
   }
 }
 
