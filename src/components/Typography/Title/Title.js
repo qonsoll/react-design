@@ -13,7 +13,8 @@ import {
   border,
   position,
   shadow,
-  system
+  system,
+  variant
 } from 'styled-system'
 
 const ANTD_TITLE_PROPS = [
@@ -37,25 +38,71 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
 })`
   && {
     ${compose(
-      space,
-      color,
-      typography,
-      layout,
-      flexbox,
-      background,
-      border,
-      position,
-      shadow,
-      system({
-        whiteSpace: true,
-        cursor: true,
-        wordBreak: true,
-        zoom: true,
-        transform: true,
-        textTransform: true,
-        textOverflow: true
-      })
-    )}
+  space,
+  color,
+  typography,
+  layout,
+  flexbox,
+  background,
+  border,
+  position,
+  shadow,
+  system({
+    whiteSpace: true,
+    cursor: true,
+    wordBreak: true,
+    zoom: true,
+    transform: true,
+    textTransform: true,
+    textOverflow: true
+  }),
+  variant({
+    variants: {
+      h1: {
+        fontFamily: 'var(--ql-font-family-headings)',
+        fontSize: 'var(--ql-font-size-h1)',
+        lineHeight: 'var(--ql-line-height-h1)',
+        fontWeight: 'var(--ql-typography-heading-font-weight)',
+        letterSpacing: 'var(--ql-letter-spacing-none)'
+      },
+      h2: {
+        fontFamily: 'var(--ql-font-family-headings)',
+        fontSize: 'var(--ql-font-size-h2)',
+        lineHeight: 'var(--ql-line-height-h2)',
+        fontWeight: 'var(--ql-typography-heading-font-weight)',
+        letterSpacing: 'var(--ql-letter-spacing-none)'
+      },
+      h3: {
+        fontFamily: 'var(--ql-font-family-headings)',
+        fontSize: 'var(--ql-font-size-h3)',
+        lineHeight: 'var(--ql-line-height-h3)',
+        fontWeight: 'var(--ql-typography-heading-font-weight)',
+        letterSpacing: 'var(--ql-letter-spacing-none)'
+      },
+      h4: {
+        fontFamily: 'var(--ql-font-family-headings)',
+        fontSize: 'var(--ql-font-size-h4)',
+        lineHeight: 'var(--ql-line-height-h4)',
+        fontWeight: 'var(--ql-typography-heading-font-weight)',
+        letterSpacing: 'var(--ql-letter-spacing-none)'
+      },
+      h5: {
+        fontFamily: 'var(--ql-font-family-headings)',
+        fontSize: 'var(--ql-font-size-h5)',
+        lineHeight: 'var(--ql-line-height-h5)',
+        fontWeight: 'var(--ql-typography-heading-font-weight)',
+        letterSpacing: 'var(--ql-letter-spacing-none)'
+      },
+      h6: {
+        fontFamily: 'var(--ql-font-family-headings)',
+        fontSize: 'var(--ql-font-size-h6)',
+        lineHeight: 'var(--ql-line-height-h6)',
+        fontWeight: 'var(--ql-typography-heading-font-weight)',
+        letterSpacing: 'var(--ql-letter-spacing-none)'
+      }
+    }
+  })
+)}
   }
 `
 
@@ -119,7 +166,15 @@ Title.propTypes = {
   strong: PropTypes.bool,
   italic: PropTypes.bool,
   type: PropTypes.oneOf(['secondary', 'success', 'warning', 'danger']),
-  underline: PropTypes.bool
+  underline: PropTypes.bool,
+  variant: PropTypes.oneOfType([PropTypes.array, PropTypes.oneOf([
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6'
+  ])]),
 }
 
 export default Title
