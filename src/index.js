@@ -67,7 +67,9 @@ import AppHeaderWrapper from './components/Wrappers/AppHeaderWrapper'
 import Icon from './components/Icon'
 import Account from './components/Account'
 import Switch from './components/Switch'
-import Select from './components/Select'
+import Select from './components/Select/Select'
+import Option from './components/Select/Option'
+import OptGroup from './components/Select/OptGroup'
 
 export {
   LayoutOld,
@@ -126,7 +128,9 @@ export {
   Account,
   LayoutSystemProvider,
   Switch,
-  Select
+  Select,
+  Option,
+  OptGroup
 }
 
 export default {
@@ -185,5 +189,7 @@ export default {
   Account,
   LayoutSystemProvider,
   Switch,
-  Select
+  Select,
+  Option,
+  OptGroup
 }

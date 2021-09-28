@@ -40,6 +40,7 @@ const StyledSelect = styled(AntSelect)(
 
 const Select = (props) => <StyledSelect {...props} />
 
+Select.OptGroup = AntSelect.OptGroup
 Select.propTypes = {
   allowClear: PropTypes.bool,
   autoClearSearchValue: PropTypes.bool,
