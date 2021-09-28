@@ -54,7 +54,7 @@ const StyledAntCard = styled(AntCard).withConfig({
     border,
     position,
     shadow,
-    system({ transform: true })
+    system({ transform: true, cursor: true })
   )
 )
 
