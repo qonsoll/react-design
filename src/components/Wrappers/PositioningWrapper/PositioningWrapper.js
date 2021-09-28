@@ -41,7 +41,11 @@ const PositioningWrapper = (props) => {
         flex={(!alignMiddle || (alignMiddle && onBack)) && 1}
         height={(!alignMiddle || (alignMiddle && onBack)) && '100%'}
         // minHeight='fit-content'
-        width={(alignMiddle && contentWidth)?.toString()}
+        width={
+          Array.isArray(contentWidth)
+            ? alignMiddle && contentWidth
+            : (alignMiddle && contentWidth)?.toString()
+        }
         ml={alignMiddle && contentWidth && 'auto'}
         mr={alignMiddle && contentWidth && 'auto'}>
         {children}

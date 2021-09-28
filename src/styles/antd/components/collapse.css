@@ -17,7 +17,7 @@
 }
 
 .ant-collapse>.ant-collapse-item {
-  border-bottom: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--collapse-item-border);
 }
 
 .ant-collapse>.ant-collapse-item:last-child,
@@ -34,6 +34,8 @@
   cursor: pointer;
   -webkit-transition: all var(--ql-animation-duration-slow), visibility 0s;
   transition: all var(--ql-animation-duration-slow), visibility 0s;
+  display: flex;
+  align-items: center;
 }
 
 .ant-collapse>.ant-collapse-item>.ant-collapse-header::before {
@@ -117,8 +119,12 @@
 }
 
 .ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
+  position: absolute;
+  top: 50%;
   right: 16px;
   left: auto;
+  margin: 0;
+  transform: translateY(-50%);
 }
 
 .ant-collapse-content {
@@ -145,7 +151,7 @@
 }
 
 .ant-collapse-borderless>.ant-collapse-item {
-  border-bottom: var(--ql-border-width-default) var(--ql-border-style-default) var(--ql-color-dark-t-lighten5);
+  border-bottom: var(--collapse-item-border);
 }
 
 .ant-collapse-borderless>.ant-collapse-item:last-child,
