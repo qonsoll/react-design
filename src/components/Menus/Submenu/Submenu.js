@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Menu as AntMenu } from 'antd'
-import MenuItem from '../MenuItem'
 import styled from 'styled-components'
 import {
   compose,
@@ -41,11 +40,7 @@ const StyledSubmenu = styled(AntMenu.SubMenu)(
 const Submenu = (props) => <StyledSubmenu {...props} />
 
 Submenu.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.instanceOf(MenuItem)),
-    PropTypes.arrayOf(PropTypes.instanceOf(Submenu)),
-    PropTypes.node
-  ]),
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   disabled: PropTypes.bool,
   icon: PropTypes.node,
   popupClassName: PropTypes.string,
