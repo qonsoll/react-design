@@ -1,6 +1,7 @@
 .ant-typography {
   color: var(--ql-typography-text-color-primary);
   overflow-wrap: break-word;
+  display: inline-block; /* Test */
 }
 .ant-typography.ant-typography-secondary {
   color: var(--ql-typography-text-color-secondary);
