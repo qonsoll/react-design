@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Menu as AntMenu } from 'antd'
+import { Select as AntdSelect } from 'antd'
 import styled from 'styled-components'
 import {
   compose,
@@ -16,7 +16,8 @@ import {
   system
 } from 'styled-system'
 
-const StyledSubmenu = styled(AntMenu.SubMenu)(
+/** FIXME component doesn`t work with styled-component */
+const StyledOptGroup = styled(AntdSelect.OptGroup)(
   compose(
     space,
     color,
@@ -32,21 +33,18 @@ const StyledSubmenu = styled(AntMenu.SubMenu)(
       cursor: true,
       wordBreak: true,
       zoom: true,
-      transform: true
+      transform: true,
+      transition: true
     })
   )
 )
 
-const Submenu = (props) => <StyledSubmenu {...props} />
+const OptGroup = (props) => <StyledOptGroup {...props} />
 
-Submenu.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  disabled: PropTypes.bool,
-  icon: PropTypes.node,
-  popupClassName: PropTypes.string,
-  popupOffset: PropTypes.arrayOf(PropTypes.number),
-  title: PropTypes.node,
-  onTitleClick: PropTypes.func
+OptGroup.isSelectOptGroup = true
+OptGroup.propTypes = {
+  key: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 }
 
-export default Submenu
+export default OptGroup
