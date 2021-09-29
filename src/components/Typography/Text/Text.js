@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Typography as AntTypography } from 'antd'
 import styled from 'styled-components'
@@ -39,82 +39,80 @@ const StyledText = styled(AntTypography.Text).withConfig({
 })`
   && {
     ${compose(
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
-  background,
-  border,
-  position,
-  shadow,
-  system({
-    whiteSpace: true,
-    cursor: true,
-    wordBreak: true,
-    zoom: true,
-    transform: true,
-    textTransform: true,
-    textOverflow: true,
-    webkitLineClamp: {
-      property: '-webkit-line-clamp'
-    },
-    webkitBoxOrient: {
-      property: '-webkit-box-orient'
-    }
-  }),
-  variant({
-    variants: {
-      overline: {
-        fontSize: 'var(--ql-font-size-overline)',
-        lineHeight: 'var(--ql-line-height-overline)',
-        fontWeight: 'var(--ql-typography-heading-font-weight)',
-        letterSpacing: 'var(--ql-letter-spacing-default)',
-        textTransform: 'uppercase'
-      },
-      body1: {
-        fontSize: 'var(--ql-font-size-body1)',
-        lineHeight: 'var(--ql-line-height-body1)',
-        fontWeight: 'var(--ql-font-weight-regular)',
-        letterSpacing: 'var(--ql-letter-spacing-none)'
-      },
-      body2: {
-        fontSize: 'var(--ql-font-size-body2)',
-        lineHeight: 'var(--ql-line-height-body2)',
-        fontWeight: 'var(--ql-font-weight-regular)',
-        letterSpacing: 'var(--ql-letter-spacing-none)'
-      },
-      caption1: {
-        fontSize: 'var(--ql-font-size-caption1)',
-        lineHeight: 'var(--ql-line-height-caption1)',
-        fontWeight: 'var(--ql-font-weight-regular)',
-        letterSpacing: 'var(--ql-letter-spacing-none)'
-      },
-      caption2: {
-        fontSize: 'var(--ql-font-size-caption2)',
-        lineHeight: 'var(--ql-line-height-caption2)',
-        fontWeight: 'var(--ql-font-weight-regular)',
-        letterSpacing: 'var(--ql-letter-spacing-none)'
-      }
-    }
-  })
-)}
+      space,
+      color,
+      typography,
+      layout,
+      flexbox,
+      background,
+      border,
+      position,
+      shadow,
+      system({
+        whiteSpace: true,
+        cursor: true,
+        wordBreak: true,
+        zoom: true,
+        transform: true,
+        textTransform: true,
+        textOverflow: true,
+        webkitLineClamp: {
+          property: '-webkit-line-clamp'
+        },
+        webkitBoxOrient: {
+          property: '-webkit-box-orient'
+        }
+      }),
+      variant({
+        variants: {
+          overline: {
+            fontSize: 'var(--ql-font-size-overline)',
+            lineHeight: 'var(--ql-line-height-overline)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
+            letterSpacing: 'var(--ql-letter-spacing-default)',
+            textTransform: 'uppercase'
+          },
+          body1: {
+            fontSize: 'var(--ql-font-size-body1)',
+            lineHeight: 'var(--ql-line-height-body1)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
+          },
+          body2: {
+            fontSize: 'var(--ql-font-size-body2)',
+            lineHeight: 'var(--ql-line-height-body2)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
+          },
+          caption1: {
+            fontSize: 'var(--ql-font-size-caption1)',
+            lineHeight: 'var(--ql-line-height-caption1)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
+          },
+          caption2: {
+            fontSize: 'var(--ql-font-size-caption2)',
+            lineHeight: 'var(--ql-line-height-caption2)',
+            fontWeight: 'var(--ql-font-weight-regular)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
+          }
+        }
+      })
+    )}
   }
 `
-const Text = forwardRef((props, ref) => {
+const Text = (props) => {
   const { isEllipsis } = props
 
   return (
-    <div ref={ref}>
-      <StyledText
-        textOverflow={isEllipsis && 'ellipsis'}
-        whiteSpace={isEllipsis && 'nowrap'}
-        overflow={isEllipsis && 'hidden'}
-        {...props}
-      />
-    </div>
+    <StyledText
+      textOverflow={isEllipsis && 'ellipsis'}
+      whiteSpace={isEllipsis && 'nowrap'}
+      overflow={isEllipsis && 'hidden'}
+      {...props}
+    />
   )
-})
+}
 
 Text.propTypes = {
   code: PropTypes.bool,
