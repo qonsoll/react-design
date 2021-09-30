@@ -197,7 +197,7 @@ export default {
       control: CSSPropValues.transform
     }
   },
-  args: { defaultSelectedKeys: 'mail' }
+  args: { defaultSelectedKeys: ['mail'] }
 }
 
 const Template = (args) => (

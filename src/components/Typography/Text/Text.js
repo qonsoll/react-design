@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Typography as AntTypography } from 'antd'
 import styled from 'styled-components'
@@ -65,42 +65,6 @@ const StyledText = styled(AntTypography.Text).withConfig({
       }),
       variant({
         variants: {
-          h1: {
-            fontSize: 'var(--ql-font-size-h1)',
-            lineHeight: 'var(--ql-line-height-h1)',
-            fontWeight: 'var(--ql-typography-heading-font-weight)',
-            letterSpacing: 'var(--ql-letter-spacing-none)'
-          },
-          h2: {
-            fontSize: 'var(--ql-font-size-h2)',
-            lineHeight: 'var(--ql-line-height-h2)',
-            fontWeight: 'var(--ql-typography-heading-font-weight)',
-            letterSpacing: 'var(--ql-letter-spacing-none)'
-          },
-          h3: {
-            fontSize: 'var(--ql-font-size-h3)',
-            lineHeight: 'var(--ql-line-height-h3)',
-            fontWeight: 'var(--ql-typography-heading-font-weight)',
-            letterSpacing: 'var(--ql-letter-spacing-none)'
-          },
-          h4: {
-            fontSize: 'var(--ql-font-size-h4)',
-            lineHeight: 'var(--ql-line-height-h4)',
-            fontWeight: 'var(--ql-typography-heading-font-weight)',
-            letterSpacing: 'var(--ql-letter-spacing-none)'
-          },
-          h5: {
-            fontSize: 'var(--ql-font-size-h5)',
-            lineHeight: 'var(--ql-line-height-h5)',
-            fontWeight: 'var(--ql-typography-heading-font-weight)',
-            letterSpacing: 'var(--ql-letter-spacing-none)'
-          },
-          h6: {
-            fontSize: 'var(--ql-font-size-h6)',
-            lineHeight: 'var(--ql-line-height-h6)',
-            fontWeight: 'var(--ql-typography-heading-font-weight)',
-            letterSpacing: 'var(--ql-letter-spacing-none)'
-          },
           overline: {
             fontSize: 'var(--ql-font-size-overline)',
             lineHeight: 'var(--ql-line-height-overline)',
@@ -137,20 +101,18 @@ const StyledText = styled(AntTypography.Text).withConfig({
     )}
   }
 `
-const Text = forwardRef((props, ref) => {
+const Text = (props) => {
   const { isEllipsis } = props
 
   return (
-    <div ref={ref} style={{ display: 'flex' }}>
-      <StyledText
-        textOverflow={isEllipsis && 'ellipsis'}
-        whiteSpace={isEllipsis && 'nowrap'}
-        overflow={isEllipsis && 'hidden'}
-        {...props}
-      />
-    </div>
+    <StyledText
+      textOverflow={isEllipsis && 'ellipsis'}
+      whiteSpace={isEllipsis && 'nowrap'}
+      overflow={isEllipsis && 'hidden'}
+      {...props}
+    />
   )
-})
+}
 
 Text.propTypes = {
   code: PropTypes.bool,
@@ -208,12 +170,6 @@ Text.propTypes = {
   type: PropTypes.oneOf(['secondary', 'success', 'warning', 'danger']),
   underline: PropTypes.bool,
   variant: PropTypes.oneOf([
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'h6',
     'overline',
     'body1',
     'body2',

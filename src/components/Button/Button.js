@@ -29,7 +29,8 @@ const ANTD_BUTTON_PROPS = [
   'shape',
   'size',
   'target',
-  'type'
+  'type',
+  'boxShadow'
 ]
 const StyledButton = styled(AntButton).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>

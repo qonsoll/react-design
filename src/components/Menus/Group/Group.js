@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MenuItem from '../MenuItem'
 import { Menu as AntMenu } from 'antd'
 import styled from 'styled-components'
 import {
@@ -41,7 +40,7 @@ const StyledGroup = styled(AntMenu.ItemGroup)(
 const Group = (props) => <StyledGroup {...props} />
 
 Group.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.instanceOf(MenuItem)),
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   title: PropTypes.node
 }
 

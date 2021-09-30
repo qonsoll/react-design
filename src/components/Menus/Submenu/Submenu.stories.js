@@ -110,9 +110,10 @@ export default {
   },
   args: {
     children: [
-      <MenuItem>Menu item #2</MenuItem>,
-      <MenuItem>Menu item #3</MenuItem>
+      <MenuItem key="1">Menu item #2</MenuItem>,
+      <MenuItem key="2">Menu item #3</MenuItem>
     ],
+    key: 'submenu',
     title: 'Submenu title'
   }
 }

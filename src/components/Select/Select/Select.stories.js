@@ -1,5 +1,6 @@
 import React from 'react'
 import Select from './Select'
+import Option from '../Option/Option'
 import {
   spaceArgTypes,
   colorArgTypes,
@@ -11,10 +12,10 @@ import {
   positionArgTypes,
   shadowArgTypes,
   extraArgTypes
-} from '../../helpers/arg-types'
+} from '../../../helpers/arg-types'
 
 export default {
-  title: 'Components/Select',
+  title: 'Components/Select/Select',
   component: Select,
   argTypes: {
     allowClear: {
@@ -369,7 +370,16 @@ export default {
   }
 }
 
-const Template = (args) => <Select style={{ minWidth: 150 }} {...args} />
+const Template = (args) => (
+  <Select defaultOpen style={{ minWidth: 150 }} {...args}>
+    <Option value={1} key="1">
+      Ann
+    </Option>
+    <Option value={2} key="2">
+      Luccy
+    </Option>
+  </Select>
+)
 
 export const basicSelect = Template.bind({})
 basicSelect.args = {

@@ -64,9 +64,6 @@
   left: var(--collapse-header-arrow-left);
   display: inline-block;
   padding: var(--collapse-header-arrow-padding);
-  /* padding-right: 0;
-  padding-bottom: 0; test fix
-  padding-left: 0; */
   font-size: 12px;
 }
 

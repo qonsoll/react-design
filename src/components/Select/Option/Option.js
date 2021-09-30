@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Menu as AntMenu } from 'antd'
+import { Select as AntSelect } from 'antd'
 import styled from 'styled-components'
 import {
   compose,
@@ -16,7 +16,7 @@ import {
   system
 } from 'styled-system'
 
-const StyledSubmenu = styled(AntMenu.SubMenu)(
+const StyledOption = styled(AntSelect.Option)(
   compose(
     space,
     color,
@@ -32,21 +32,20 @@ const StyledSubmenu = styled(AntMenu.SubMenu)(
       cursor: true,
       wordBreak: true,
       zoom: true,
-      transform: true
+      transform: true,
+      transition: true
     })
   )
 )
 
-const Submenu = (props) => <StyledSubmenu {...props} />
+const Option = (props) => <StyledOption {...props} />
 
-Submenu.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+Option.isSelectOption = true
+Option.propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
-  icon: PropTypes.node,
-  popupClassName: PropTypes.string,
-  popupOffset: PropTypes.arrayOf(PropTypes.number),
-  title: PropTypes.node,
-  onTitleClick: PropTypes.func
+  title: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
-export default Submenu
+export default Option
