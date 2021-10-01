@@ -106,6 +106,18 @@ export default {
       },
       description: 'Use to change title type.'
     },
+    isEllipsis: {
+      table: {
+        category: 'Custom properties'
+      },
+      description: 'Use to truncate text.'
+    },
+    clamp: {
+      table: {
+        category: 'Custom properties'
+      },
+      description: 'Use to clamp text for few lines.'
+    },
     ...spaceArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,
