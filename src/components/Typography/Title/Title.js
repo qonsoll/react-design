@@ -54,7 +54,13 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
         zoom: true,
         transform: true,
         textTransform: true,
-        textOverflow: true
+        textOverflow: true,
+        webkitLineClamp: {
+          property: '-webkit-line-clamp'
+        },
+        webkitBoxOrient: {
+          property: '-webkit-box-orient'
+        }
       }),
       variant({
         variants: {
@@ -106,7 +112,20 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
   }
 `
 
-const Title = (props) => <StyledTitle {...props} />
+const Title = (props) => {
+  const { isEllipsis, clamp } = props
+  return (
+    <StyledTitle
+      textOverflow={isEllipsis && 'ellipsis'}
+      whiteSpace={isEllipsis && 'nowrap'}
+      overflow={(isEllipsis || clamp) && 'hidden'}
+      display={clamp && '-webkit-box'}
+      webkitLineClamp={clamp}
+      webkitBoxOrient={clamp && 'vertical'}
+      {...props}
+    />
+  )
+}
 
 Title.propTypes = {
   code: PropTypes.bool,

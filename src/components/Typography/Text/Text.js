@@ -102,13 +102,16 @@ const StyledText = styled(AntTypography.Text).withConfig({
   }
 `
 const Text = (props) => {
-  const { isEllipsis } = props
+  const { isEllipsis, clamp } = props
 
   return (
     <StyledText
       textOverflow={isEllipsis && 'ellipsis'}
       whiteSpace={isEllipsis && 'nowrap'}
-      overflow={isEllipsis && 'hidden'}
+      overflow={(isEllipsis || clamp) && 'hidden'}
+      display={clamp && '-webkit-box'}
+      webkitLineClamp={clamp}
+      webkitBoxOrient={clamp && 'vertical'}
       {...props}
     />
   )
