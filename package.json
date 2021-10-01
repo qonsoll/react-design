@@ -1,6 +1,6 @@
 {
   "name": "@qonsoll/react-design",
-  "version": "2.1.65",
+  "version": "2.1.66",
   "description": "React-components and design system for enterprise-level products.",
   "author": "qonsoll",
   "license": "MIT",
@@ -95,7 +95,11 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "styled-components": "^5.3.1",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-standard": "^22.0.0"
   },
   "files": [
     "dist"

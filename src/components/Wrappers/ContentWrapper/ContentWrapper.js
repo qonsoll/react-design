@@ -27,7 +27,8 @@ const ContentWrapperTest = (props) => {
       height={!alignMiddle ? 'inherit' : undefined}
       display="flex"
       flexDirection="column"
-      flexGrow={alignMiddle && 1}>
+      flexGrow={alignMiddle && 1}
+    >
       {!firstLevelHidden && (
         <Box
           display="flex"
@@ -37,7 +38,8 @@ const ContentWrapperTest = (props) => {
           mb={
             (headingProps && headingProps.marginBottom) ||
             DEFAULT_PROPS.marginBottom
-          }>
+          }
+        >
           <Box
             display="flex"
             flex={1}
@@ -49,12 +51,14 @@ const ContentWrapperTest = (props) => {
             justifyContent={
               onBack || action || !alignMiddle ? 'flex-start' : 'center'
             }
-            flexDirection={breadcrumb ? 'column' : 'row'}>
+            flexDirection={breadcrumb ? 'column' : 'row'}
+          >
             {onBack && (
               <Box
                 mb={breadcrumb ? [2, 2, 3, 3, 3] : []}
                 display="flex"
-                alignItems="center">
+                alignItems="center"
+              >
                 <Back
                   onClick={onBack}
                   {...backBtnProps}

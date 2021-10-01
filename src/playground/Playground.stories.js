@@ -17,7 +17,7 @@ import Menu from '../components/Menus/Menu'
 import MenuItem from '../components/Menus/MenuItem'
 import Group from '../components/Menus/Group'
 import Submenu from '../components/Menus/Submenu'
-import { Select, Input, Card, Button } from 'antd'
+import { Select, Input, Card, Button, Table } from 'antd'
 import {
   TeamOutlined,
   FormatPainterOutlined,
@@ -41,13 +41,45 @@ export const Template = (args) => {
     isAsideRight: true
   }
 
+  const columns = [
+    {
+      title: 'Variable',
+      dataIndex: 'variable',
+      key: 'variable'
+    },
+    {
+      title: 'Value',
+      dataIndex: 'value',
+      key: 'value'
+    }
+  ]
+
+  const data = [
+    {
+      key: '1',
+      variable: '--ql-color-accent1',
+      value: 'rgb(102, 72, 191)'
+    },
+    {
+      key: '2',
+      variable: '--ql-color-dark',
+      value: 'rgb(46, 45, 53)'
+    },
+    {
+      key: '3',
+      variable: '--ql-font-family-main',
+      value: 'Poppins'
+    }
+  ]
+
   return (
     <ThemeProvider theme={breakpoints}>
       <LayoutSystemProvider {...layoutConfig}>
         <Layout
           header={<Header>{headerLayout}</Header>}
           asideLeft={<Aside>{asideLayoutLeft}</Aside>}
-          asideRight={<Aside>{asideLayoutRight}</Aside>}>
+          asideRight={<Aside>{asideLayoutRight}</Aside>}
+        >
           <PageWrapper
             headingProps={{
               title: 'Roles',
@@ -55,8 +87,15 @@ export const Template = (args) => {
               titleMarginBottom: '8px',
               textAlign: 'left',
               subTitle: ''
-            }}>
+            }}
+          >
             {contentLayout}
+            <Table
+              columns={columns}
+              dataSource={data}
+              title={() => 'General settings'}
+              pagination={false}
+            />
           </PageWrapper>
         </Layout>
       </LayoutSystemProvider>
@@ -102,7 +141,8 @@ const asideLayoutLeft = (
         type="secondary"
         fontWeight={500}
         textTransform="uppercase"
-        mb={1}>
+        mb={1}
+      >
         Application
       </Text>
       <Select defaultValue="3">
@@ -117,7 +157,8 @@ const asideLayoutLeft = (
         type="secondary"
         fontWeight={500}
         textTransform="uppercase"
-        mb={1}>
+        mb={1}
+      >
         Branch
       </Text>
       <Select defaultValue="3">

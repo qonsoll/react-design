@@ -1,6 +1,6 @@
 .ant-input-affix-wrapper {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
   min-width: 0;
   padding: var(--input-padding-vertical-base)
@@ -15,8 +15,8 @@
   border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  /* display: -webkit-inline-box; */
+  /* display: -ms-inline-flexbox; */
   display: inline-flex;
 }
 .ant-input-affix-wrapper::-moz-placeholder {
@@ -27,6 +27,7 @@
 }
 .ant-input-affix-wrapper:-ms-input-placeholder {
   color: var(--input-placeholder-color);
+  text-overflow: ellipsis;
 }
 .ant-input-affix-wrapper::-ms-input-placeholder {
   color: var(--input-placeholder-color);
@@ -37,9 +38,9 @@
 .ant-input-affix-wrapper:-moz-placeholder-shown {
   text-overflow: ellipsis;
 }
-.ant-input-affix-wrapper:-ms-input-placeholder {
+/* .ant-input-affix-wrapper:-ms-input-placeholder {
   text-overflow: ellipsis;
-}
+} */
 .ant-input-affix-wrapper:placeholder-shown {
   text-overflow: ellipsis;
 }
@@ -58,6 +59,7 @@
   outline: 0;
   -webkit-box-shadow: var(--ql-outline-accent1-2);
   box-shadow: var(--ql-outline-accent1-2);
+  z-index: 1;
 }
 .ant-input-rtl .ant-input-affix-wrapper:focus,
 .ant-input-rtl .ant-input-affix-wrapper-focused {
@@ -122,18 +124,18 @@ textarea.ant-input-affix-wrapper {
   z-index: 1;
 }
 .ant-input-rtl
-  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
   border-right-width: 0;
   border-left-width: 1px !important;
 }
 .ant-input-search-with-button
-  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
   z-index: 0;
 }
-.ant-input-affix-wrapper-focused,
+/* .ant-input-affix-wrapper-focused,
 .ant-input-affix-wrapper:focus {
   z-index: 1;
-}
+} */
 .ant-input-affix-wrapper-disabled .ant-input[disabled] {
   background: transparent;
 }
@@ -234,6 +236,7 @@ textarea.ant-input-affix-wrapper {
 }
 .ant-input:-ms-input-placeholder {
   color: var(--input-placeholder-color);
+  text-overflow: ellipsis;
 }
 .ant-input::-ms-input-placeholder {
   color: var(--input-placeholder-color);
@@ -244,9 +247,9 @@ textarea.ant-input-affix-wrapper {
 .ant-input:-moz-placeholder-shown {
   text-overflow: ellipsis;
 }
-.ant-input:-ms-input-placeholder {
+/* .ant-input:-ms-input-placeholder {
   text-overflow: ellipsis;
-}
+} */
 .ant-input:placeholder-shown {
   text-overflow: ellipsis;
 }
@@ -394,11 +397,11 @@ textarea.ant-input {
   padding: 0 11px;
   color: var(--ql-typography-text-color-primary);
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--ql-typography-font-size-md);
   text-align: center;
   background-color: var(--input-addon-bg);
   border: 1px solid var(--ql-color-dark-t-lighten5);
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
@@ -406,8 +409,8 @@ textarea.ant-input {
   margin: -5px -11px;
 }
 .ant-input-group-addon
-  .ant-select.ant-select-single:not(.ant-select-customize-input)
-  .ant-select-selector {
+.ant-select.ant-select-single:not(.ant-select-customize-input)
+.ant-select-selector {
   background-color: var(--input-bg);
   border: var(--ql-border-width-default) var(--ql-border-style-default)
     var(--input-border-color);
@@ -495,19 +498,19 @@ textarea.ant-input {
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child),
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child),
 .ant-input-group.ant-input-group-compact
-  > .ant-input:not(:first-child):not(:last-child) {
+> .ant-input:not(:first-child):not(:last-child) {
   border-right-width: 1px;
 }
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):hover,
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):hover,
 .ant-input-group.ant-input-group-compact
-  > .ant-input:not(:first-child):not(:last-child):hover {
+> .ant-input:not(:first-child):not(:last-child):hover {
   z-index: 1;
 }
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):focus,
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):focus,
 .ant-input-group.ant-input-group-compact
-  > .ant-input:not(:first-child):not(:last-child):focus {
+> .ant-input:not(:first-child):not(:last-child):focus {
   z-index: 1;
 }
 .ant-input-group.ant-input-group-compact > * {
@@ -541,31 +544,31 @@ textarea.ant-input {
   border-radius: var(--border-radius-none);
 }
 .ant-input-group.ant-input-group-compact
-  > .ant-select
-  > .ant-select-selector:hover,
+> .ant-select
+> .ant-select-selector:hover,
 .ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete
-  .ant-input:hover,
+> .ant-select-auto-complete
+.ant-input:hover,
 .ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker
-  .ant-input:hover,
+> .ant-cascader-picker
+.ant-input:hover,
 .ant-input-group.ant-input-group-compact
-  > .ant-input-group-wrapper
-  .ant-input:hover {
+> .ant-input-group-wrapper
+.ant-input:hover {
   z-index: 1;
 }
 .ant-input-group.ant-input-group-compact
-  > .ant-select
-  > .ant-select-selector:focus,
+> .ant-select
+> .ant-select-selector:focus,
 .ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete
-  .ant-input:focus,
+> .ant-select-auto-complete
+.ant-input:focus,
 .ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker
-  .ant-input:focus,
+> .ant-cascader-picker
+.ant-input:focus,
 .ant-input-group.ant-input-group-compact
-  > .ant-input-group-wrapper
-  .ant-input:focus {
+> .ant-input-group-wrapper
+.ant-input:focus {
   z-index: 1;
 }
 .ant-input-group.ant-input-group-compact > .ant-select-focused {
@@ -576,58 +579,58 @@ textarea.ant-input {
 }
 .ant-input-group.ant-input-group-compact > *:first-child,
 .ant-input-group.ant-input-group-compact
-  > .ant-select:first-child
-  > .ant-select-selector,
+> .ant-select:first-child
+> .ant-select-selector,
 .ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete:first-child
-  .ant-input,
+> .ant-select-auto-complete:first-child
+.ant-input,
 .ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:first-child
-  .ant-input {
+> .ant-cascader-picker:first-child
+.ant-input {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 .ant-input-group.ant-input-group-compact > *:last-child,
 .ant-input-group.ant-input-group-compact
-  > .ant-select:last-child
-  > .ant-select-selector,
+> .ant-select:last-child
+> .ant-select-selector,
 .ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:last-child
-  .ant-input,
+> .ant-cascader-picker:last-child
+.ant-input,
 .ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker-focused:last-child
-  .ant-input {
+> .ant-cascader-picker-focused:last-child
+.ant-input {
   border-right-width: 1px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 .ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete
-  .ant-input {
+> .ant-select-auto-complete
+.ant-input {
   vertical-align: top;
 }
 .ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper
-  + .ant-input-group-wrapper {
+.ant-input-group-wrapper
++ .ant-input-group-wrapper {
   margin-left: -1px;
 }
 .ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper
-  + .ant-input-group-wrapper
-  .ant-input-affix-wrapper {
+.ant-input-group-wrapper
++ .ant-input-group-wrapper
+.ant-input-affix-wrapper {
   border-radius: var(--border-radius-none);
 }
 .ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper:not(:last-child).ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon
-  > .ant-input-search-button {
+.ant-input-group-wrapper:not(:last-child).ant-input-search
+> .ant-input-group
+> .ant-input-group-addon
+> .ant-input-search-button {
   border-radius: var(--border-radius-none);
 }
 .ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper:not(:last-child).ant-input-search
-  > .ant-input-group
-  > .ant-input {
+.ant-input-group-wrapper:not(:last-child).ant-input-search
+> .ant-input-group
+> .ant-input {
   border-radius: 2px 0 0 2px;
 }
 .ant-input-group > .ant-input-rtl:first-child,
@@ -647,56 +650,56 @@ textarea.ant-input {
   border-radius: 2px 0 0 2px;
 }
 .ant-input-group-rtl.ant-input-group
-  .ant-input-affix-wrapper:not(:first-child) {
+.ant-input-affix-wrapper:not(:first-child) {
   border-radius: 2px 0 0 2px;
 }
 .ant-input-group-rtl.ant-input-group .ant-input-affix-wrapper:not(:last-child) {
   border-radius: 0 2px 2px 0;
 }
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > *:not(:last-child) {
+> *:not(:last-child) {
   margin-right: 0;
   margin-left: -1px;
   border-left-width: 1px;
 }
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:first-child,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select:first-child
-  > .ant-select-selector,
+> .ant-select:first-child
+> .ant-select-selector,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete:first-child
-  .ant-input,
+> .ant-select-auto-complete:first-child
+.ant-input,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:first-child
-  .ant-input {
+> .ant-cascader-picker:first-child
+.ant-input {
   border-radius: 0 2px 2px 0;
 }
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:last-child,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select:last-child
-  > .ant-select-selector,
+> .ant-select:last-child
+> .ant-select-selector,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete:last-child
-  .ant-input,
+> .ant-select-auto-complete:last-child
+.ant-input,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:last-child
-  .ant-input,
+> .ant-cascader-picker:last-child
+.ant-input,
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker-focused:last-child
-  .ant-input {
+> .ant-cascader-picker-focused:last-child
+.ant-input {
   border-left-width: 1px;
   border-radius: 2px 0 0 2px;
 }
 .ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper-rtl
-  + .ant-input-group-wrapper-rtl {
+.ant-input-group-wrapper-rtl
++ .ant-input-group-wrapper-rtl {
   margin-right: -1px;
   margin-left: 0;
 }
 .ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper-rtl:not(:last-child).ant-input-search
-  > .ant-input-group
-  > .ant-input {
+.ant-input-group-wrapper-rtl:not(:last-child).ant-input-search
+> .ant-input-group
+> .ant-input {
   border-radius: 0 2px 2px 0;
 }
 .ant-input-group-wrapper {
@@ -737,13 +740,13 @@ textarea.ant-input {
   border-color: var(--input-hover-border-color);
 }
 .ant-input-search
-  .ant-input:hover
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary),
+.ant-input:hover
++ .ant-input-group-addon
+.ant-input-search-button:not(.ant-btn-primary),
 .ant-input-search
-  .ant-input:focus
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary) {
+.ant-input:focus
++ .ant-input-group-addon
+.ant-input-search-button:not(.ant-btn-primary) {
   border-left-color: var(--ql-color-accent1-t-lighten1);
 }
 .ant-input-search .ant-input-affix-wrapper {
@@ -758,23 +761,23 @@ textarea.ant-input {
   border: 0;
 }
 .ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button {
+> .ant-input-group
+> .ant-input-group-addon:last-child
+.ant-input-search-button {
   padding-top: 0;
   padding-bottom: 0;
   border-radius: 0 2px 2px 0;
 }
 .ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button:not(.ant-btn-primary) {
+> .ant-input-group
+> .ant-input-group-addon:last-child
+.ant-input-search-button:not(.ant-btn-primary) {
   color: var(--ql-typography-text-color-secondary);
 }
 .ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button:not(.ant-btn-primary).ant-btn-loading::before {
+> .ant-input-group
+> .ant-input-group-addon:last-child
+.ant-input-search-button:not(.ant-btn-primary).ant-btn-loading::before {
   top: 0;
   right: 0;
   bottom: 0;
@@ -827,13 +830,13 @@ textarea.ant-input {
   direction: rtl;
 }
 .ant-input-search-rtl
-  .ant-input:hover
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary),
+.ant-input:hover
++ .ant-input-group-addon
+.ant-input-search-button:not(.ant-btn-primary),
 .ant-input-search-rtl
-  .ant-input:focus
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary) {
+.ant-input:focus
++ .ant-input-group-addon
+.ant-input-search-button:not(.ant-btn-primary) {
   border-right-color: var(--ql-color-accent1-t-lighten1);
   border-left-color: var(--ql-color-dark-t-lighten5);
 }
@@ -846,9 +849,9 @@ textarea.ant-input {
   left: auto;
 }
 .ant-input-search-rtl
-  > .ant-input-group
-  > .ant-input-group-addon
-  .ant-input-search-button {
+> .ant-input-group
+> .ant-input-group-addon
+.ant-input-search-button {
   border-radius: 2px 0 0 2px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

@@ -14,8 +14,7 @@ module.exports = {
     }
   },
   rules: {
-    semi: [2, 'never'],
-    // 'no-console': 'error',
+    semi: ['error', 'never'],
     'react/forbid-prop-types': 0,
     'react/require-default-props': 0,
     'react/jsx-filename-extension': 0,
@@ -26,14 +25,15 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        singleQuote: true,
-        trailingComma: 'none',
-        semi: false,
-        bracketSpacing: true,
-        jsxBracketSameLine: true,
-        printWidth: 80,
         tabWidth: 2,
-        useTabs: false
+        useTabs: false,
+        printWidth: 80,
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'none',
+        quoteProps: 'as-needed',
+        bracketSameLine: false,
+        bracketSpacing: true
       }
     ]
   }

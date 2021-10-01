@@ -44,8 +44,8 @@ const AccountAvatar = (props) => {
   return (
     <AccountAvatarStyled ref={ref}>
       <Box
-        boxShadow='inherit'
-        p='3px'
+        boxShadow="inherit"
+        p="3px"
         borderRadius={avatarShape === 'square' ? 0 : '50%'}
         mr={short ? 'unset' : 3}
       >
@@ -57,11 +57,11 @@ const AccountAvatar = (props) => {
         />
       </Box>
       {!short && (
-        <Box display='flex' flexDirection='column' minWidth={isEllipsis && 0}>
-          <Text variant='h5' color='inherit' isEllipsis={isEllipsis}>
+        <Box display="flex" flexDirection="column" minWidth={isEllipsis && 0}>
+          <Text variant="h5" color="inherit" isEllipsis={isEllipsis}>
             {title}
           </Text>
-          <Text variant='caption1' color='inherit' isEllipsis={isEllipsis}>
+          <Text variant="caption1" color="inherit" isEllipsis={isEllipsis}>
             {caption}
           </Text>
         </Box>
