@@ -958,6 +958,26 @@ select:-webkit-autofill:focus {
 
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--input-color) !important;
+  font-size: var(--ql-typography-font-size-md);
+  font-weight: normal;
+}
+
+input:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--input-color) !important;
+  font-size: var(--ql-typography-font-size-md);
+  font-weight: normal;
+}
+
+input:-webkit-autofill:focus input:-webkit-autofill {
+  -webkit-text-fill-color: var(--input-color) !important;
+  font-size: var(--ql-typography-font-size-md);
+  font-weight: normal;
+}
+
+input:-internal-autofill-selected {
+  -webkit-text-fill-color: var(--input-color) !important;
+  font-size: var(--ql-typography-font-size-md);
+  font-weight: normal;
 }
 
 input:-webkit-autofill::first-line {
