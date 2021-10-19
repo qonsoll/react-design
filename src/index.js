@@ -70,6 +70,7 @@ import Switch from './components/Switch'
 import Select from './components/Select/Select'
 import Option from './components/Select/Option'
 import OptGroup from './components/Select/OptGroup'
+import Spin from './components/Spin'
 
 export {
   LayoutOld,
@@ -130,7 +131,8 @@ export {
   Switch,
   Select,
   Option,
-  OptGroup
+  OptGroup,
+  Spin
 }
 
 export default {
@@ -191,5 +193,6 @@ export default {
   Switch,
   Select,
   Option,
-  OptGroup
+  OptGroup,
+  Spin
 }
