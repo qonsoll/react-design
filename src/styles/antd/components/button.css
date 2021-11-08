@@ -106,7 +106,7 @@
 .ant-btn:focus {
   color: var(--btn-default-hover-color);
   background: var(--btn-default-hover-bg);
-  border-color: var(--btn-primary-hover-border);
+  border-color: var(--btn-default-hover-border);
 }
 
 .ant-btn:hover>a:only-child,
@@ -1655,34 +1655,34 @@
 
 .ant-btn-group>.ant-btn:first-child:not(:last-child),
 .ant-btn-group>span:first-child:not(:last-child)>.ant-btn {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: var(--ql-border-radius-default);
+  border-bottom-left-radius: var(--ql-border-radius-default);
 }
 
 .ant-btn-group>.ant-btn:last-child:not(:first-child),
 .ant-btn-group>span:last-child:not(:first-child)>.ant-btn {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: var(--ql-border-radius-default);
+  border-bottom-right-radius: var(--ql-border-radius-default);
 }
 
 .ant-btn-group-sm>.ant-btn:only-child {
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-sm);
 }
 
 .ant-btn-group-sm>span:only-child>.ant-btn {
-  border-radius: var(--border-radius-xxs);
+  border-radius: var(--ql-border-radius-sm);
 }
 
 .ant-btn-group-sm>.ant-btn:first-child:not(:last-child),
 .ant-btn-group-sm>span:first-child:not(:last-child)>.ant-btn {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: var(--ql-border-radius-sm);
+  border-bottom-left-radius: var(--ql-border-radius-sm);
 }
 
 .ant-btn-group-sm>.ant-btn:last-child:not(:first-child),
 .ant-btn-group-sm>span:last-child:not(:first-child)>.ant-btn {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: var(--ql-border-radius-sm);
+  border-bottom-right-radius: var(--ql-border-radius-sm);
 }
 
 .ant-btn-group>.ant-btn-group {
@@ -1730,33 +1730,33 @@
 .ant-btn-group-rtl.ant-btn-group>.ant-btn:first-child:not(:last-child),
 .ant-btn-group-rtl.ant-btn-group>span:first-child:not(:last-child)>.ant-btn {
   border-top-left-radius: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: var(--ql-border-radius-default);
+  border-bottom-right-radius: var(--ql-border-radius-default);
   border-bottom-left-radius: 0;
 }
 
 .ant-btn-group-rtl.ant-btn-group>.ant-btn:last-child:not(:first-child),
 .ant-btn-group-rtl.ant-btn-group>span:last-child:not(:first-child)>.ant-btn {
-  border-top-left-radius: 2px;
+  border-top-left-radius: var(--ql-border-radius-default);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
+  border-bottom-left-radius: var(--ql-border-radius-default);
 }
 
 .ant-btn-group-rtl.ant-btn-group-sm>.ant-btn:first-child:not(:last-child),
 .ant-btn-group-rtl.ant-btn-group-sm>span:first-child:not(:last-child)>.ant-btn {
   border-top-left-radius: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: var(--ql-border-radius-sm);
+  border-bottom-right-radius: var(--ql-border-radius-sm);
   border-bottom-left-radius: 0;
 }
 
 .ant-btn-group-rtl.ant-btn-group-sm>.ant-btn:last-child:not(:first-child),
 .ant-btn-group-rtl.ant-btn-group-sm>span:last-child:not(:first-child)>.ant-btn {
-  border-top-left-radius: 2px;
+  border-top-left-radius: var(--ql-border-radius-sm);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
+  border-bottom-left-radius: var(--ql-border-radius-sm);
 }
 
 .ant-btn:focus>span,
