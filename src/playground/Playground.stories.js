@@ -90,12 +90,49 @@ export const Template = (args) => {
             }}
           >
             {contentLayout}
-            <Table
+            {/* <Table
               columns={columns}
               dataSource={data}
               title={() => 'General settings'}
               pagination={false}
-            />
+            /> */}
+            <Box my={4}>
+              <Divider />
+            </Box>
+            <Box display="flex" flexDirection="column" style={{ gap: '16px' }}>
+              <Box display="flex" style={{ gap: '16px' }}>
+                <Button type="default">Text</Button>
+                <Button type="default">Text</Button>
+                <Button type="default">Text</Button>
+              </Box>
+              <Box display="flex" style={{ gap: '16px' }}>
+                <Button type="default" danger>
+                  Text
+                </Button>
+                <Button type="default" danger>
+                  Text
+                </Button>
+                <Button type="default" danger>
+                  Text
+                </Button>
+              </Box>
+              <Box display="flex" style={{ gap: '16px' }}>
+                <Button type="primary">Text</Button>
+                <Button type="primary">Text</Button>
+                <Button type="primary">Text</Button>
+              </Box>
+              <Box display="flex" style={{ gap: '16px' }}>
+                <Button type="primary" danger>
+                  Text
+                </Button>
+                <Button type="primary" danger>
+                  Text
+                </Button>
+                <Button type="primary" danger>
+                  Text
+                </Button>
+              </Box>
+            </Box>
           </PageWrapper>
         </Layout>
       </LayoutSystemProvider>

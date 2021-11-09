@@ -508,7 +508,7 @@
   position: relative;
 }
 html {
-  --antd-wave-shadow-color: var(--ql-color-accent1);
+  --antd-wave-shadow-color: var(--ql-color-dark);
   --scroll-bar: 0;
 }
 [ant-click-animating-without-extra-node='true']::after,
@@ -520,8 +520,8 @@ html {
   left: 0;
   display: block;
   border-radius: inherit;
-  -webkit-box-shadow: 0 0 0 0 var(--ql-color-accent1);
-  box-shadow: 0 0 0 0 var(--ql-color-accent1);
+  /* -webkit-box-shadow: 0 0 0 0 var(--ql-color-accent1); */
+  /* box-shadow: 0 0 0 0 var(--ql-color-accent1); */
   -webkit-box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
   box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
   opacity: 0.2;
@@ -536,16 +536,16 @@ html {
 }
 @-webkit-keyframes waveEffect {
   100% {
-    -webkit-box-shadow: 0 0 0 var(--ql-color-accent1);
-    box-shadow: 0 0 0 var(--ql-color-accent1);
+    /* -webkit-box-shadow: 0 0 0 var(--ql-color-accent1); */
+    /* box-shadow: 0 0 0 var(--ql-color-accent1); */
     -webkit-box-shadow: 0 0 0 6px var(--antd-wave-shadow-color);
     box-shadow: 0 0 0 6px var(--antd-wave-shadow-color);
   }
 }
 @keyframes waveEffect {
   100% {
-    -webkit-box-shadow: 0 0 0 var(--ql-color-accent1);
-    box-shadow: 0 0 0 var(--ql-color-accent1);
+    /* -webkit-box-shadow: 0 0 0 var(--ql-color-accent1); */
+    /* box-shadow: 0 0 0 var(--ql-color-accent1); */
     -webkit-box-shadow: 0 0 0 6px var(--antd-wave-shadow-color);
     box-shadow: 0 0 0 6px var(--antd-wave-shadow-color);
   }
