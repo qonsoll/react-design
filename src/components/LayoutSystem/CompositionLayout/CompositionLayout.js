@@ -25,13 +25,14 @@ const CompositionLayout = (props) => {
         ? React.cloneElement(header, { position: 'sticky', top: 0 })
         : header}
 
-      <DirectionLayout direction='row'>
+      <DirectionLayout direction="row">
         {/* Aside left */}
         {asideLeftNotOuterExists &&
           React.cloneElement(asideLeft, { side: 'left' })}
 
         <Box
           flexGrow={1}
+          maxWidth="100%"
           py={contentVerticalPadding || 'var(--ql-content-py)'}
           px={
             contentHorizontalPadding || [
