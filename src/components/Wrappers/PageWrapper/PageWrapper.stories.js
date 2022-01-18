@@ -11,6 +11,12 @@ export default {
       description: 'Use to place smth. under the title (second level).',
       control: { disable: true }
     },
+    height: {
+      description: 'Use to add height.',
+      control: {
+        type: 'text'
+      }
+    },
     alignMiddle: {
       description: 'Use to make everything centered.'
     },
@@ -59,10 +65,10 @@ export default {
 export const Template = (args) => (
   <AppWrapper
     horizontal
-    bg='#f2f2f2'
-    width='90vw'
-    height='90vh'
-    appNavbar={<AppNavbarWrapper width={200} bg='#4c4c4c' />}
+    bg="#f2f2f2"
+    width="90vw"
+    height="90vh"
+    appNavbar={<AppNavbarWrapper width={200} bg="#4c4c4c" />}
   >
     <PageWrapper
       headingProps={{

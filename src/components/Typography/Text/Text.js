@@ -165,6 +165,7 @@ Text.propTypes = {
       onEllipsis: PropTypes.func
     })
   ]),
+  clamp: PropTypes.string,
   keyboard: PropTypes.bool,
   mark: PropTypes.bool,
   onClick: PropTypes.func,

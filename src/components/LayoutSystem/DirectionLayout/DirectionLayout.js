@@ -8,7 +8,7 @@ const DirectionLayout = (props) => {
   return (
     <Box
       flexGrow={1}
-      display='flex'
+      display="flex"
       flexDirection={direction}
       maxHeight={maxHeight}
       overflow={overflow}

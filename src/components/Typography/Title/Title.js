@@ -175,6 +175,7 @@ Title.propTypes = {
       onEllipsis: PropTypes.func
     })
   ]),
+  clamp: PropTypes.string,
   level: PropTypes.oneOf([1, 2, 3, 4, 5]),
   mark: PropTypes.bool,
   onClick: PropTypes.func,

@@ -33,7 +33,10 @@ const Box = styled('div').withConfig({
       wordBreak: true,
       zoom: true,
       transform: true,
-      transition: true
+      transition: true,
+      gap: true,
+      columnGap: true,
+      rowGap: true
     })
   )
 )

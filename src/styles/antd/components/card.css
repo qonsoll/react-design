@@ -162,7 +162,7 @@
   width: 100%;
 }
 .ant-card-cover img {
-  border-radius: 2px 2px 0 0;
+  border-radius: var(--ql-border-radius-default) var(--ql-border-radius-default) 0 0;
 }
 .ant-card-actions {
   margin: 0;

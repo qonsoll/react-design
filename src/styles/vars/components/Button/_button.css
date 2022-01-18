@@ -39,12 +39,35 @@
   --btn-icon-size: 20px;
   --btn-icon-size-lg: 24px;
 
-  --btn-default-color: var(--ql-typography-text-color-primary);
-  --btn-default-bg: transparent;
-  --btn-default-border: var(--btn-border-color);
-  --btn-default-hover-bg: var(--ql-color-white);
-  --btn-default-hover-color: var(--ql-color-accent1-t-lighten1);
-  --btn-default-hover-border: var(--ql-color-accent1);
+  --btn-default-bg: var(--ql-color-dark-t-lighten5);
+  --btn-default-color: var(--ql-typography-text-color-secondary);
+  --btn-default-border: transparent;
+  --btn-default-hover-bg: var(--ql-color-dark-t-lighten4);
+  --btn-default-hover-color: var(--ql-typography-text-color-primary);
+  --btn-default-hover-border: transparent;
+  --btn-default-active-bg: var(--ql-color-dark-t-lighten3);
+  --btn-default-active-color: var(--btn-default-hover-color);
+  --btn-default-active-border: transparent;
+
+  --btn-default-danger-bg: var(--ql-color-danger-t-lighten5);
+  --btn-default-danger-color: var(--ql-color-danger);
+  --btn-default-danger-border: transparent;
+  --btn-default-danger-hover-bg: var(--ql-color-danger-t-lighten4);
+  --btn-default-danger-hover-color: var(--btn-default-danger-color);
+  --btn-default-danger-hover-border: transparent;
+  --btn-default-danger-active-bg: var(--ql-color-danger-t-lighten3);
+  --btn-default-danger-active-color: var(--btn-default-danger-color);
+  --btn-default-danger-active-border: transparent;
+
+  --btn-default-ghost-color: var(--ql-color-white);
+  --btn-default-ghost-bg: transparent;
+  --btn-default-ghost-border: var(--ql-color-white);
+  /* --btn-default-ghost-hover-bg: var(--ql-color-accent1-t-lighten1); */
+  /* --btn-default-ghost-hover-color: var(--ql-color-white); */
+  /* --btn-default-ghost-hover-border: var(--ql-color-accent1-t-lighten1); */
+  /* --btn-default-ghost-active-bg: var(--btn-default-ghost-hover-bg); */
+  /* --btn-default-ghost-active-color: var(--btn-default-ghost-hover-color); */
+  /* --btn-default-ghost-active-border: var(--btn-default-ghost-hover-border); */
 
   --btn-primary-color: var(--ql-color-white);
   --btn-primary-bg: var(--ql-color-accent1);
@@ -53,11 +76,20 @@
   --btn-primary-hover-bg: var(--ql-color-accent1-t-lighten1);
   --btn-primary-hover-color: var(--ql-color-white);
   --btn-primary-hover-border: var(--ql-color-accent1-t-lighten1);
+  --btn-primary-active-bg: var(--btn-primary-hover-bg);
+  --btn-primary-active-color: var(--btn-primary-hover-color);
+  --btn-primary-active-border: var(--btn-primary-hover-border);
 
   --btn-danger-color: var(--ql-color-white);
   --btn-danger-bg: var(--ql-color-danger);
   --btn-danger-border: var(--ql-color-danger);
   --btn-danger-shadow: var(--btn-shadow);
+  --btn-danger-hover-bg: var(--ql-color-danger-t-lighten1);
+  --btn-danger-hover-color: var(--btn-danger-color);
+  --btn-danger-hover-border: var(--ql-color-danger-t-lighten1);
+  --btn-danger-active-bg: var(--btn-danger-hover-bg);
+  --btn-danger-active-color: var(--btn-danger-hover-color);
+  --btn-danger-active-border: var(--btn-danger-hover-border);
 
   --btn-white-color: var(--ql-typography-text-color-secondary);
   --btn-white-bg: var(--ql-color-white);
@@ -72,10 +104,6 @@
   --btn-text-shadow: var(--btn-shadow);
   --btn-text-hover-bg: var(--ql-color-dark-t-lighten6);
   --btn-text-hover-color: var(--ql-color-accent1-t-lighten1);
-
-  --btn-default-ghost-color: var(--ql-color-white);
-  --btn-default-ghost-bg: transparent;
-  --btn-default-ghost-border: var(--ql-color-white);
 
   --btn-link-color: var(--ql-color-accent1);
   --btn-link-bg: transparent;
