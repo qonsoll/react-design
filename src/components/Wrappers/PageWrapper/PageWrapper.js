@@ -18,7 +18,7 @@ const PageWrapper = (props) => {
     firstLevelHidden,
     headingProps,
     action,
-    breadcrumb
+    breadcrumbs
   } = props
 
   const DEFAULT_BACK_BUTTON_PROPS = {
@@ -40,7 +40,8 @@ const PageWrapper = (props) => {
           ? DEFAULT_BACK_BUTTON_PROPS.divided
           : true
       }
-      breadcrumb={alignMiddle && breadcrumb}>
+      breadcrumbs={alignMiddle && breadcrumbs}
+    >
       {graphicProps && graphicProps.src && graphicProps.alt && (
         <Graphic {...graphicProps} />
       )}
@@ -53,7 +54,8 @@ const PageWrapper = (props) => {
         onBack={!alignMiddle && onBack}
         backBtnProps={backBtnProps}
         divided={divided !== undefined ? divided : true}
-        breadcrumb={!alignMiddle && breadcrumb}>
+        breadcrumbs={!alignMiddle && breadcrumbs}
+      >
         {children}
       </ContentWrapper>
     </PositioningWrapper>
@@ -75,7 +77,7 @@ PageWrapper.propTypes = {
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object,
   action: PropTypes.node,
-  breadcrumb: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
+  breadcrumbs: PropTypes.node
 }
 PageWrapper.defaultProps = {
   alignMiddle: false,
