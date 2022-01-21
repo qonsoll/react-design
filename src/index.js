@@ -71,6 +71,7 @@ import Select from './components/Select/Select'
 import Option from './components/Select/Option'
 import OptGroup from './components/Select/OptGroup'
 import Spin from './components/Spin'
+import Ribbon from './components/Ribbon'
 
 export {
   LayoutOld,
