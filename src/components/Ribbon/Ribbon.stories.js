@@ -3,7 +3,7 @@ import Box from '../Box/Box'
 import Ribbon from './Ribbon'
 
 export default {
-  title: 'Comments/Ribbon',
+  title: 'Components/Ribbon',
   component: Ribbon,
   argTypes: {
     color: {
