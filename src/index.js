@@ -133,7 +133,8 @@ export {
   Select,
   Option,
   OptGroup,
-  Spin
+  Spin,
+  Ribbon
 }
 
 export default {
@@ -195,5 +196,6 @@ export default {
   Select,
   Option,
   OptGroup,
-  Spin
+  Spin,
+  Ribbon
 }
