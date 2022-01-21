@@ -1064,6 +1064,13 @@
   /* Radio —————————————————————————————— End */
 
 
+  /* Ribbon —————————————————————————————— Start */
+
+  /* + */ --ql-ribbon-bg: var(--ql-color-dark);
+  /* + */ --ql-ribbon-color: var(--ql-color-white);
+
+  /* Ribbon —————————————————————————————— End */
+
 
   /* Breakpoints —————————————————————————————— Start */
 

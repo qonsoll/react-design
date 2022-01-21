@@ -14,9 +14,17 @@ export default {
       description: 'Use to set ribbon background color',
       control: { type: 'text' }
     },
-    offset: {
-      description: 'Use to set ribbon popsition ([vertical, horisontal])',
-      control: { disable: true }
+    top: {
+      description: 'Top position',
+      control: { type: 'text' }
+    },
+    bottom: {
+      description: 'Bottom position',
+      control: { type: 'text' }
+    },
+    display: {
+      description: 'Dislay property',
+      control: { type: 'text' }
     },
     placement: {
       description: 'Use to set side of ribbon placement',
@@ -25,6 +33,11 @@ export default {
     text: {
       description: 'Use to add text into ribbon',
       control: { type: 'text' }
+    },
+    children: {
+      description:
+        'Component, that will contain ribbon, needs to be wrapped in it',
+      control: { disabled: true }
     }
   },
   args: {
@@ -32,7 +45,8 @@ export default {
     color: 'var(--ql-color-white)',
     bg: 'var(--ql-color-dark)',
     placement: 'end',
-    offset: ['20px', '-8px']
+    top: '20%',
+    display: 'block'
   }
 }
 

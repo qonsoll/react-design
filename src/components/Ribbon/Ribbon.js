@@ -4,19 +4,35 @@ import styled from 'styled-components'
 import { Badge as AntBadge } from 'antd'
 
 const StyledRibbon = styled(AntBadge.Ribbon)`
-  ${({ textColor, offset, placement }) => `
-  color: ${textColor};
-  top: ${offset?.[0]};
-  left: ${placement === 'start' && offset?.[1]};
-  right: ${placement === 'end' && offset?.[1]};
+  ${({ textColor, display, top, bottom, color }) => ` 
+  display: ${display};
+
+  .ant-ribbon {
+    top: ${top};
+    bottom: ${bottom};
+    background-color: ${'var(--ql-ribbon-bg)' || color}
+  }
+  .ant-ribbon-text {
+    color: ${'var(--ql-ribbon-color)' || textColor};
+  }
 `}
 `
 
 const Ribbon = (props) => {
-  const { color, bg, offset, children, ...rest } = props
+  const { color, bg, top, bottom, children, display, ...rest } = props
+
+  const computedTop = typeof top === 'number' ? top + 'px' : top
+  const computedBottom = typeof bottom === 'number' ? bottom + 'px' : bottom
 
   return (
-    <StyledRibbon {...rest} color={bg} offset={offset} textColor={color}>
+    <StyledRibbon
+      {...rest}
+      color={bg}
+      display={display}
+      textColor={color}
+      top={computedTop}
+      bottom={computedBottom}
+    >
       {children}
     </StyledRibbon>
   )
@@ -25,8 +41,10 @@ const Ribbon = (props) => {
 Ribbon.propTypes = {
   bg: PropTypes.string,
   color: PropTypes.string,
-  offset: PropTypes.array,
-  children: PropTypes.node
+  children: PropTypes.node,
+  display: PropTypes.string,
+  top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  bottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 export default Ribbon
