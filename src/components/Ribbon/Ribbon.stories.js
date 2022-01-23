@@ -6,10 +6,10 @@ export default {
   title: 'Components/Ribbon',
   component: Ribbon,
   argTypes: {
-    color: {
-      description: 'Use to set ribbon text color',
-      control: { type: 'text' }
-    },
+    // color: {
+    //   description: 'Use to set ribbon text color',
+    //   control: { type: 'text' }
+    // },
     bg: {
       description: 'Use to set ribbon background color',
       control: { type: 'text' }

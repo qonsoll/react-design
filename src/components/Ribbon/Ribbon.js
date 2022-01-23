@@ -19,7 +19,15 @@ const StyledRibbon = styled(AntBadge.Ribbon)`
 `
 
 const Ribbon = (props) => {
-  const { color, bg, top, bottom, children, display, ...rest } = props
+  const {
+    // color,
+    bg,
+    top,
+    bottom,
+    children,
+    display,
+    ...rest
+  } = props
 
   // const computedTop = typeof top === 'number' ? top + 'px' : top
   // const computedBottom = typeof bottom === 'number' ? bottom + 'px' : bottom
@@ -29,7 +37,7 @@ const Ribbon = (props) => {
       {...rest}
       color={bg}
       display={display}
-      textColor={color}
+      // textColor={color}
       top={top}
       bottom={bottom}
     >
