@@ -6,23 +6,23 @@ import { Badge as AntBadge } from 'antd'
 const StyledRibbon = styled(AntBadge.Ribbon)`
   ${({ textColor, display, top, bottom, color }) => ` 
   display: ${display};
+  top: ${top};
+  bottom: ${bottom};
 
   .ant-ribbon {
-    top: ${top};
-    bottom: ${bottom};
     background-color: ${'var(--ql-ribbon-bg)' || color}
   }
-  .ant-ribbon-text {
-    color: ${'var(--ql-ribbon-color)' || textColor};
-  }
+  // .ant-ribbon-text {
+  //   color: ${'var(--ql-ribbon-color)' || textColor};
+  // }
 `}
 `
 
 const Ribbon = (props) => {
   const { color, bg, top, bottom, children, display, ...rest } = props
 
-  const computedTop = typeof top === 'number' ? top + 'px' : top
-  const computedBottom = typeof bottom === 'number' ? bottom + 'px' : bottom
+  // const computedTop = typeof top === 'number' ? top + 'px' : top
+  // const computedBottom = typeof bottom === 'number' ? bottom + 'px' : bottom
 
   return (
     <StyledRibbon
@@ -30,8 +30,8 @@ const Ribbon = (props) => {
       color={bg}
       display={display}
       textColor={color}
-      top={computedTop}
-      bottom={computedBottom}
+      top={top}
+      bottom={bottom}
     >
       {children}
     </StyledRibbon>
