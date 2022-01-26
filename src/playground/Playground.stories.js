@@ -10,6 +10,7 @@ import Container from '../components/Grid/Container'
 import Row from '../components/Grid/Row'
 import Col from '../components/Grid/Col'
 import Box from '../components/Box'
+import Input from '../components/Inputs/Input'
 import Text from '../components/Typography/Text'
 import Divider from '../components/Divider'
 import Img from '../components/Media/Img'
@@ -17,7 +18,7 @@ import Menu from '../components/Menus/Menu'
 import MenuItem from '../components/Menus/MenuItem'
 import Group from '../components/Menus/Group'
 import Submenu from '../components/Menus/Submenu'
-import { Select, Input, Card, Button, Table } from 'antd'
+import { Select, Card, Button, Table } from 'antd'
 import {
   TeamOutlined,
   FormatPainterOutlined,
@@ -96,6 +97,7 @@ export const Template = (args) => {
               title={() => 'General settings'}
               pagination={false}
             /> */}
+            <Input placeholder="Enter email" />
             <Box my={4}>
               <Divider />
             </Box>

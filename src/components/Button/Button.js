@@ -53,7 +53,8 @@ const StyledButton = styled(AntButton).withConfig({
         wordBreak: true,
         zoom: true,
         transform: true,
-        transition: true
+        transition: true,
+        textTransform: true
       }),
       variant({
         variants: {
@@ -97,6 +98,7 @@ Button.propTypes = {
   zoom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   transition: PropTypes.string,
+  textTransform: PropTypes.string,
   variant: PropTypes.oneOf(['white'])
 }
 

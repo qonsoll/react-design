@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Default theme" />
+
+# Default theme
+
+For setting responsive web page and reset default offset values you need to pass default theme config to ThemeProvider. 
+
+1. Create file theme.js in folder styles/
+
+2. Insert this code to theme.js
+```jsx
+const theme = {}
+
+// Specify custom breakpoints
+theme.breakpoints = [
+  //           mobile (portrait): 0 - 576px
+  '576px',   // mobile (landscape): 576px - 768px
+  '768px',   // tablet (portrait): 768px - 1024px
+  '1024px',  // tablet (landscape): 1024px - 1280px
+  '1280px',  // desktop: 1280px - 1440px
+  '1440px',  // desktop: 1440px - 1680px
+  '1600px',  // desktop: 1680px - 1920px
+  '1920px'   // desktop: over 1920px
+]
+theme.breakpointNames = ['sm', 'md', 'lg', 'xl', 'xxl', 'xxxl', 'xxxxl']
+
+// Reset default values
+theme.space = []
+
+export default theme
+```
+
+3. Go to index.js file and add import ThemeProvider and pass theme to provider
+```jsx
+import ReactDOM from 'react-dom'
+import { ThemeProvider } from 'styled-components'
+import theme from '../styles/theme'
+
+ReactDOM.render(
+    <ThemeProvider theme={theme}>
+       <App />
+    </ThemeProvider>,
+    document.getElementById('root')
+)
+```
