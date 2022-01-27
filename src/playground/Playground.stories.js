@@ -18,7 +18,7 @@ import Menu from '../components/Menus/Menu'
 import MenuItem from '../components/Menus/MenuItem'
 import Group from '../components/Menus/Group'
 import Submenu from '../components/Menus/Submenu'
-import { Select, Card, Button, Table } from 'antd'
+import { Select, Card, Button, Table, Form } from 'antd'
 import {
   TeamOutlined,
   FormatPainterOutlined,
@@ -73,6 +73,14 @@ export const Template = (args) => {
     }
   ]
 
+  const onFinish = (values) => {
+    console.log('Success:', values)
+  }
+
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo)
+  }
+
   return (
     <ThemeProvider theme={breakpoints}>
       <LayoutSystemProvider {...layoutConfig}>
@@ -97,7 +105,50 @@ export const Template = (args) => {
               title={() => 'General settings'}
               pagination={false}
             /> */}
-            <Input placeholder="Enter email" />
+
+            <Form
+              // size="small"
+              // size="large"
+              layout="vertical"
+              style={{ padding: '64px 0' }}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              initialValues={{ remember: true }}
+            >
+              <Form.Item
+                //
+                label="Email"
+                name="label"
+                rules={[
+                  {
+                    required: true,
+                    message:
+                      'Please input your email!Please input your email!Please input your email!Please input your email!'
+                  }
+                ]}
+              >
+                <Input placeholder="Enter email" />
+              </Form.Item>
+              <Form.Item
+                //
+                label="Password"
+                name="password"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please input your password!'
+                  }
+                ]}
+              >
+                <Input placeholder="Enter password" />
+              </Form.Item>
+              <Form.Item>
+                <Button type="primary" htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+
             <Box my={4}>
               <Divider />
             </Box>

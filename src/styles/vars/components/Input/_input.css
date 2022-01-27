@@ -33,7 +33,7 @@
   --input-icon-hover-color: var(--ql-color-dark);
   --input-icon-margin-right: 12px;
   --input-icon-margin-left: 12px;
-  --input-placeholder-color: var(--ql-state-disabled-color);
+  --input-placeholder-color: var(--ql-color-dark-t-lighten2);
 
   --input-number-hover-border-color: var(--input-hover-border-color);
   --input-number-handler-active-bg: #f4f4f4;

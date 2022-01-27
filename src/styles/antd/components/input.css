@@ -1,5 +1,6 @@
 .ant-input-affix-wrapper {
   position: relative;
+
   /* display: inline-block; */
   width: 100%;
   min-width: 0;
@@ -11,27 +12,28 @@
   background-image: none;
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
-  -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
+
   /* display: -webkit-inline-box; */
   /* display: -ms-inline-flexbox; */
   display: inline-flex;
 }
 
-.ant-input-affix-wrapper::-moz-placeholder {
+.antaffix-wrapper::placeholder {
   opacity: 1;
 }
 
-.ant-input-affix-wrapper::-webkit-input-placeholder {
+.antaffix-wrapper::input-placeholder {
   color: var(--input-placeholder-color);
 }
 
-.ant-input-affix-wrapper:-ms-input-placeholder {
+.antaffix-wrapper:input-placeholder {
   color: var(--input-placeholder-color);
   text-overflow: ellipsis;
 }
 
-.ant-input-affix-wrapper::-ms-input-placeholder {
+.antaffix-wrapper::input-placeholder {
   color: var(--input-placeholder-color);
 }
 
@@ -39,13 +41,14 @@
   color: var(--input-placeholder-color);
 }
 
-.ant-input-affix-wrapper:-moz-placeholder-shown {
+.antaffix-wrapper:placeholder-shown {
   text-overflow: ellipsis;
 }
 
 /* .ant-input-affix-wrapper:-ms-input-placeholder {
   text-overflow: ellipsis;
 } */
+
 .ant-input-affix-wrapper:placeholder-shown {
   text-overflow: ellipsis;
 }
@@ -65,7 +68,7 @@
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
   box-shadow: var(--ql-outline-accent1-2);
   z-index: 1;
 }
@@ -110,7 +113,7 @@
   padding-left: 0;
   padding-right: 0;
   border: none;
-  -webkit-box-shadow: none;
+  box-shadow: none;
   box-shadow: none;
 }
 
@@ -120,7 +123,7 @@ textarea.ant-input-affix-wrapper {
   min-height: 32px;
   line-height: var(--ql-typography-line-height-md);
   vertical-align: bottom;
-  -webkit-transition: all var(--ql-animation-duration-slow), height 0s;
+  transition: all var(--ql-animation-duration-slow), height 0s;
   transition: all var(--ql-animation-duration-slow), height 0s;
 }
 
@@ -156,6 +159,7 @@ textarea.ant-input-affix-wrapper {
 .ant-input-affix-wrapper:focus {
   z-index: 1;
 } */
+
 .ant-input-affix-wrapper-disabled .ant-input[disabled] {
   background: transparent;
 }
@@ -165,11 +169,12 @@ textarea.ant-input-affix-wrapper {
   border: none;
   outline: none;
   background-color: unset;
+
   /* Test */
 }
 
 .ant-input-affix-wrapper>input.ant-input:focus {
-  -webkit-box-shadow: none;
+  box-shadow: none;
   box-shadow: none;
 }
 
@@ -181,11 +186,11 @@ textarea.ant-input-affix-wrapper {
 
 .ant-input-prefix,
 .ant-input-suffix {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: box;
+  display: flexbox;
   display: flex;
   -webkit-box-flex: 0;
-  -ms-flex: none;
+  flex: none;
   flex: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -206,7 +211,7 @@ textarea.ant-input-affix-wrapper {
   font-size: 12px;
   vertical-align: -1px;
   cursor: pointer;
-  -webkit-transition: color var(--ql-animation-duration-slow);
+  transition: color var(--ql-animation-duration-slow);
   transition: color var(--ql-animation-duration-slow);
 }
 
@@ -239,18 +244,19 @@ textarea.ant-input-affix-wrapper {
 }
 
 .ant-input {
-  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   font-variant: var(--ql-typography-font-variant-default);
   list-style: none;
-  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
   position: relative;
   display: inline-block;
   width: 100%;
   min-width: 0;
   padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
+
   /* 4px 11px; */
   color: var(--input-color);
   font-size: var(--ql-typography-font-size-md);
@@ -259,24 +265,24 @@ textarea.ant-input-affix-wrapper {
   background-image: none;
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
-  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
 
-.ant-input::-moz-placeholder {
+.ant-input::placeholder {
   opacity: 1;
 }
 
-.ant-input::-webkit-input-placeholder {
+.ant-input::input-placeholder {
   color: var(--input-placeholder-color);
 }
 
-.ant-input:-ms-input-placeholder {
+.ant-input:input-placeholder {
   color: var(--input-placeholder-color);
   text-overflow: ellipsis;
 }
 
-.ant-input::-ms-input-placeholder {
+.ant-input::input-placeholder {
   color: var(--input-placeholder-color);
 }
 
@@ -284,13 +290,14 @@ textarea.ant-input-affix-wrapper {
   color: var(--input-placeholder-color);
 }
 
-.ant-input:-moz-placeholder-shown {
+.ant-input:placeholder-shown {
   text-overflow: ellipsis;
 }
 
 /* .ant-input:-ms-input-placeholder {
   text-overflow: ellipsis;
 } */
+
 .ant-input:placeholder-shown {
   text-overflow: ellipsis;
 }
@@ -310,7 +317,7 @@ textarea.ant-input-affix-wrapper {
   border-color: var(--ql-color-accent1);
   border-right-width: 1px !important;
   outline: 0;
-  -webkit-box-shadow: var(--ql-outline-accent1-2);
+  box-shadow: var(--ql-outline-accent1-2);
   box-shadow: var(--ql-outline-accent1-2);
 }
 
@@ -352,7 +359,7 @@ textarea.ant-input-affix-wrapper {
 .ant-input-borderless[disabled] {
   background-color: transparent;
   border: none;
-  -webkit-box-shadow: none;
+  box-shadow: none;
   box-shadow: none;
 }
 
@@ -362,7 +369,7 @@ textarea.ant-input {
   min-height: 32px;
   line-height: var(--ql-typography-line-height-md);
   vertical-align: bottom;
-  -webkit-transition: all var(--ql-animation-duration-slow), height 0s;
+  transition: all var(--ql-animation-duration-slow), height 0s;
   transition: all var(--ql-animation-duration-slow), height 0s;
 }
 
@@ -383,7 +390,7 @@ textarea.ant-input {
 }
 
 .ant-input-group {
-  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -392,7 +399,7 @@ textarea.ant-input {
   font-variant: var(--ql-typography-font-variant-default);
   line-height: var(--ql-typography-line-height-md);
   list-style: none;
-  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
   position: relative;
   display: table;
@@ -469,7 +476,7 @@ textarea.ant-input {
   background-color: var(--input-addon-bg);
   border: 1px solid var(--ql-color-dark-t-lighten5);
   border-radius: var(--input-border-radius-base);
-  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
 
@@ -481,7 +488,7 @@ textarea.ant-input {
   background-color: var(--input-bg);
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
-  -webkit-box-shadow: none;
+  box-shadow: none;
   box-shadow: none;
 }
 
@@ -607,14 +614,14 @@ textarea.ant-input {
 }
 
 .ant-input-group.ant-input-group-compact>.ant-input-affix-wrapper {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flexbox;
   display: inline-flex;
 }
 
 .ant-input-group.ant-input-group-compact>.ant-picker-range {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flexbox;
   display: inline-flex;
 }
 
@@ -763,7 +770,7 @@ textarea.ant-input {
 .ant-input-password-icon {
   color: var(--ql-typography-text-color-secondary);
   cursor: pointer;
-  -webkit-transition: all var(--ql-animation-duration-slow);
+  transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
 
@@ -915,7 +922,7 @@ textarea.ant-input {
 }
 
 @media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
+  (-ms-high-contrast: none) {
   .ant-input {
     height: 32px;
   }
@@ -955,7 +962,6 @@ select:-webkit-autofill:focus {
 
 /* Backup construction: don't touch! */
 /* ——— !!! ——— */
-
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--input-color) !important;
   font-size: var(--ql-typography-font-size-md);

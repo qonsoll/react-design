@@ -1,20 +1,50 @@
 :root {
-  /* --form-item-trailing-colon: true; */
-  --ql-form-item-vertical-spacing: 40px;
+  --ql-form-item-vertical-spacing: 24px; /* Refactored */
+  --ql-form-item-vertical-spacing-with-message: var(--ql-form-item-vertical-spacing);
+  --ql-form-item-vertical-spacing-without-message: calc(var(--ql-form-item-vertical-spacing-with-message) + var(--ql-typography-line-height-sm) + var(--ql-form-item-message-margin-top));
 
-  --ql-form-message-color: var(--ql-typography-text-color-secondary);
-  --ql-form-message-font-size: var(--ql-typography-font-size-md);
-  --ql-form-message-line-height: var(--ql-typography-line-height-md);
-  --ql-form-message-font-weight: initial;
-  --ql-form-message-letter-spacing: var(--ql-letter-spacing-none);
-  --ql-form-message-text-transform: unset;
+  --ql-form-item-message-margin-top: 4px;
+  --ql-form-item-message-color: var(--ql-typography-text-color-secondary);
+  --ql-form-item-message-font-size: var(--ql-typography-font-size-sm);
+  --ql-form-item-message-line-height: var(--ql-typography-line-height-sm);
+  --ql-form-item-message-font-weight: initial;
+  --ql-form-item-message-letter-spacing: var(--ql-letter-spacing-none);
+  --ql-form-item-message-text-transform: unset;
+
+  --ql-form-item-label-height-sm: var(--ql-form-item-label-height-base);
+  --ql-form-item-label-height-base: auto;
+  --ql-form-item-label-height-lg: var(--ql-form-item-label-height-base);
+
+  --ql-form-item-label-padding: 0 0 4px 0; /* Deprecated: --form-vertical-label-padding */
+  --ql-form-item-label-margin: 0; /* Deprecated: --form-vertical-label-margin */
+
+  --ql-form-item-label-font-size-sm: var(--ql-form-item-label-font-size-base);
+  --ql-form-item-label-font-size-base: var(--ql-typography-font-size-sm);
+  --ql-form-item-label-font-size-lg: var(--ql-typography-font-size-md);
+
+  --ql-form-item-label-line-height-sm: var(--ql-form-item-label-line-height-base);
+  --ql-form-item-label-line-height-base: var(--ql-typography-line-height-sm);
+  --ql-form-item-label-line-height-lg: var(--ql-typography-line-height-md);
+
+  --ql-form-item-label-color: var(--ql-typography-text-color-secondary);
+
+  --ql-form-item-label-content: '*';
+  --ql-form-item-label-content-display: flex;
+  --ql-form-item-label-content-margin: 0 4px 0 0;
+  --ql-form-item-label-content-color: var(--ql-color-danger);
+  --ql-form-item-label-content-font-family: var(--ql-font-family-main);
+  --ql-form-item-label-content-font-size: var(--ql-form-item-label-font-size-base);
+  --ql-form-item-label-content-line-height: var(--ql-form-item-label-line-height-base);
+
+  /* --ql-form-item-label-content-width: var(); */
+  /* --ql-form-item-label-content-height: var(); */
   
-  --form-vertical-label-padding: 0 0 8px;
-  --form-vertical-label-margin: 0;
-  --form-item-label-font-size: var(--ql-typography-font-size-md);
-  --form-item-label-height: var(--input-height-base);
-  --form-item-label-colon-margin-right: 8px;
-  --form-item-label-colon-margin-left: 2px;
-  --form-error-input-bg: var(--input-bg);
-  --form-warning-input-bg: var(--input-bg);
+  /* Deprecated: --form-item-label-font-size */
+  /* Deprecated: --form-item-label-height */
+
+  /* --form-item-trailing-colon: true; */
+  /* --form-item-label-colon-margin-right: 8px; */
+  /* --form-item-label-colon-margin-left: 2px; */
+  /* --form-error-input-bg: var(--input-bg); */
+  /* --form-warning-input-bg: var(--input-bg); */
 }
