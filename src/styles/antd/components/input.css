@@ -12,7 +12,7 @@
   background-image: none;
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
-  transition: all var(--ql-animation-duration-slow);
+  -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 
   /* display: -webkit-inline-box; */
@@ -20,20 +20,20 @@
   display: inline-flex;
 }
 
-.antaffix-wrapper::placeholder {
+.ant-input-affix-wrapper::-moz-placeholder {
   opacity: 1;
 }
 
-.antaffix-wrapper::input-placeholder {
+.ant-input-affix-wrapper::-webkit-input-placeholder {
   color: var(--input-placeholder-color);
 }
 
-.antaffix-wrapper:input-placeholder {
+.ant-input-affix-wrapper:-ms-input-placeholder {
   color: var(--input-placeholder-color);
   text-overflow: ellipsis;
 }
 
-.antaffix-wrapper::input-placeholder {
+.ant-input-affix-wrapper::-ms-input-placeholder {
   color: var(--input-placeholder-color);
 }
 
@@ -41,7 +41,7 @@
   color: var(--input-placeholder-color);
 }
 
-.antaffix-wrapper:placeholder-shown {
+.ant-input-affix-wrapper:-moz-placeholder-shown {
   text-overflow: ellipsis;
 }
 
@@ -68,7 +68,7 @@
   border-color: var(--input-hover-border-color);
   border-right-width: 1px !important;
   outline: 0;
-  box-shadow: var(--ql-outline-accent1-2);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
   box-shadow: var(--ql-outline-accent1-2);
   z-index: 1;
 }
@@ -113,7 +113,7 @@
   padding-left: 0;
   padding-right: 0;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -123,7 +123,7 @@ textarea.ant-input-affix-wrapper {
   min-height: 32px;
   line-height: var(--ql-typography-line-height-md);
   vertical-align: bottom;
-  transition: all var(--ql-animation-duration-slow), height 0s;
+  -webkit-transition: all var(--ql-animation-duration-slow), height 0s;
   transition: all var(--ql-animation-duration-slow), height 0s;
 }
 
@@ -174,7 +174,7 @@ textarea.ant-input-affix-wrapper {
 }
 
 .ant-input-affix-wrapper>input.ant-input:focus {
-  box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -186,11 +186,11 @@ textarea.ant-input-affix-wrapper {
 
 .ant-input-prefix,
 .ant-input-suffix {
-  display: box;
-  display: flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-  flex: none;
+  -ms-flex: none;
   flex: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -211,7 +211,7 @@ textarea.ant-input-affix-wrapper {
   font-size: 12px;
   vertical-align: -1px;
   cursor: pointer;
-  transition: color var(--ql-animation-duration-slow);
+  -webkit-transition: color var(--ql-animation-duration-slow);
   transition: color var(--ql-animation-duration-slow);
 }
 
@@ -244,20 +244,18 @@ textarea.ant-input-affix-wrapper {
 }
 
 .ant-input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   font-variant: var(--ql-typography-font-variant-default);
   list-style: none;
-  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
   position: relative;
   display: inline-block;
   width: 100%;
   min-width: 0;
-  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
-
-  /* 4px 11px; */
+  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base); /* 4px 11px; */
   color: var(--input-color);
   font-size: var(--ql-typography-font-size-md);
   line-height: var(--ql-typography-line-height-md);
@@ -265,24 +263,24 @@ textarea.ant-input-affix-wrapper {
   background-image: none;
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
-  transition: all var(--ql-animation-duration-slow);
+  -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
 
-.ant-input::placeholder {
+.ant-input::-moz-placeholder {
   opacity: 1;
 }
 
-.ant-input::input-placeholder {
+.ant-input::-webkit-input-placeholder {
   color: var(--input-placeholder-color);
 }
 
-.ant-input:input-placeholder {
+.ant-input:-ms-input-placeholder {
   color: var(--input-placeholder-color);
   text-overflow: ellipsis;
 }
 
-.ant-input::input-placeholder {
+.ant-input::-ms-input-placeholder {
   color: var(--input-placeholder-color);
 }
 
@@ -290,7 +288,7 @@ textarea.ant-input-affix-wrapper {
   color: var(--input-placeholder-color);
 }
 
-.ant-input:placeholder-shown {
+.ant-input:-moz-placeholder-shown {
   text-overflow: ellipsis;
 }
 
@@ -317,7 +315,7 @@ textarea.ant-input-affix-wrapper {
   border-color: var(--ql-color-accent1);
   border-right-width: 1px !important;
   outline: 0;
-  box-shadow: var(--ql-outline-accent1-2);
+  -webkit-box-shadow: var(--ql-outline-accent1-2);
   box-shadow: var(--ql-outline-accent1-2);
 }
 
@@ -359,7 +357,7 @@ textarea.ant-input-affix-wrapper {
 .ant-input-borderless[disabled] {
   background-color: transparent;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -369,7 +367,7 @@ textarea.ant-input {
   min-height: 32px;
   line-height: var(--ql-typography-line-height-md);
   vertical-align: bottom;
-  transition: all var(--ql-animation-duration-slow), height 0s;
+  -webkit-transition: all var(--ql-animation-duration-slow), height 0s;
   transition: all var(--ql-animation-duration-slow), height 0s;
 }
 
@@ -390,7 +388,7 @@ textarea.ant-input {
 }
 
 .ant-input-group {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -399,7 +397,7 @@ textarea.ant-input {
   font-variant: var(--ql-typography-font-variant-default);
   line-height: var(--ql-typography-line-height-md);
   list-style: none;
-  font-feature-settings: var(--ql-typography-font-feature-settings-default);
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
   position: relative;
   display: table;
@@ -476,7 +474,7 @@ textarea.ant-input {
   background-color: var(--input-addon-bg);
   border: 1px solid var(--ql-color-dark-t-lighten5);
   border-radius: var(--input-border-radius-base);
-  transition: all var(--ql-animation-duration-slow);
+  -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
 
@@ -488,7 +486,7 @@ textarea.ant-input {
   background-color: var(--input-bg);
   border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
-  box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -614,14 +612,14 @@ textarea.ant-input {
 }
 
 .ant-input-group.ant-input-group-compact>.ant-input-affix-wrapper {
-  display: inline-box;
-  display: inline-flexbox;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .ant-input-group.ant-input-group-compact>.ant-picker-range {
-  display: inline-box;
-  display: inline-flexbox;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -770,7 +768,7 @@ textarea.ant-input {
 .ant-input-password-icon {
   color: var(--ql-typography-text-color-secondary);
   cursor: pointer;
-  transition: all var(--ql-animation-duration-slow);
+  -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
 }
 
@@ -1009,5 +1007,3 @@ input:-webkit-autofill::first-line {
   font-family: var(--ql-font-family-main);
   font-size: var(--ql-typography-font-size-sm);
 }
-
-/* Autocomplete Fix: disable default autocomplete styles while it works ——— End */

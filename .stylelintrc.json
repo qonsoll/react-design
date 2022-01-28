@@ -32,14 +32,12 @@
     ],
     "font-family-no-missing-generic-family-keyword": null,
     "font-family-name-quotes": "always-unless-keyword",
-    "declaration-block-no-duplicate-properties": [
-      true,
-      {
-        "ignore": [
-          "consecutive-duplicates"
-        ]
-      }
-    ],
-    "no-duplicate-selectors": null
+    "no-duplicate-selectors": null,
+    "selector-pseudo-element-no-unknown": null,
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null,
+    "value-keyword-case": null,
+    "at-rule-no-vendor-prefix": null
   }
 }
