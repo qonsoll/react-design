@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import LayoutOld from '../../LayoutSystem/Old/LayoutOld'
 import ContentOld from '../../LayoutSystem/Old/ContentOld'
 
+/** styles config for wrapper when footer is exists */
+const FOOTER_STYLES_CONFIG = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between'
+}
+
 const AppWrapper = (props) => {
   const {
     horizontal,
@@ -11,6 +18,7 @@ const AppWrapper = (props) => {
     bottomNavbar,
     appHeader,
     contentProps,
+    footer,
     ...rest
   } = props
 
@@ -29,8 +37,11 @@ const AppWrapper = (props) => {
         ]}
         height="100%"
         overflow="auto"
-        {...contentProps}>
+        {...(footer && FOOTER_STYLES_CONFIG)}
+        {...contentProps}
+      >
         {children}
+        {footer && footer}
       </ContentOld>
       {!horizontal && bottomNavbar}
     </LayoutOld>
@@ -42,7 +53,8 @@ AppWrapper.propTypes = {
   children: PropTypes.node,
   appNavbar: PropTypes.node,
   bottomNavbar: PropTypes.node,
-  appHeader: PropTypes.node
+  appHeader: PropTypes.node,
+  footer: PropTypes.node
 }
 AppWrapper.defaultProps = {
   horizontal: false
