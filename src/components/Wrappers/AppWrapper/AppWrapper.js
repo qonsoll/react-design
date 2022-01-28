@@ -11,8 +11,15 @@ const AppWrapper = (props) => {
     bottomNavbar,
     appHeader,
     contentProps,
+    footer,
     ...rest
   } = props
+
+  const FOOTER_STYLES_CONFIG = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+  }
 
   return (
     <LayoutOld height="inherit" flexDirection={horizontal && 'row'} {...rest}>
@@ -29,8 +36,11 @@ const AppWrapper = (props) => {
         ]}
         height="100%"
         overflow="auto"
-        {...contentProps}>
+        {...(footer && FOOTER_STYLES_CONFIG)}
+        {...contentProps}
+      >
         {children}
+        {footer && footer}
       </ContentOld>
       {!horizontal && bottomNavbar}
     </LayoutOld>
