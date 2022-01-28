@@ -53,7 +53,8 @@ AppWrapper.propTypes = {
   children: PropTypes.node,
   appNavbar: PropTypes.node,
   bottomNavbar: PropTypes.node,
-  appHeader: PropTypes.node
+  appHeader: PropTypes.node,
+  footer: PropTypes.node
 }
 AppWrapper.defaultProps = {
   horizontal: false
