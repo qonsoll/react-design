@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import LayoutOld from '../../LayoutSystem/Old/LayoutOld'
 import ContentOld from '../../LayoutSystem/Old/ContentOld'
 
+/** styles config for wrapper when footer is exists */
+const FOOTER_STYLES_CONFIG = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between'
+}
+
 const AppWrapper = (props) => {
   const {
     horizontal,
@@ -14,12 +21,6 @@ const AppWrapper = (props) => {
     footer,
     ...rest
   } = props
-
-  const FOOTER_STYLES_CONFIG = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between'
-  }
 
   return (
     <LayoutOld height="inherit" flexDirection={horizontal && 'row'} {...rest}>
