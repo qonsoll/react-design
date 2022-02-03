@@ -18,7 +18,8 @@ import Menu from '../components/Menus/Menu'
 import MenuItem from '../components/Menus/MenuItem'
 import Group from '../components/Menus/Group'
 import Submenu from '../components/Menus/Submenu'
-import { Select, Card, Button, Table, Form } from 'antd'
+import Account from '../components/Account'
+import { Select, Card, Button, Form } from 'antd'
 import {
   TeamOutlined,
   FormatPainterOutlined,
@@ -42,36 +43,36 @@ export const Template = (args) => {
     isAsideRight: true
   }
 
-  const columns = [
-    {
-      title: 'Variable',
-      dataIndex: 'variable',
-      key: 'variable'
-    },
-    {
-      title: 'Value',
-      dataIndex: 'value',
-      key: 'value'
-    }
-  ]
+  // const columns = [
+  //   {
+  //     title: 'Variable',
+  //     dataIndex: 'variable',
+  //     key: 'variable'
+  //   },
+  //   {
+  //     title: 'Value',
+  //     dataIndex: 'value',
+  //     key: 'value'
+  //   }
+  // ]
 
-  const data = [
-    {
-      key: '1',
-      variable: '--ql-color-accent1',
-      value: 'rgb(102, 72, 191)'
-    },
-    {
-      key: '2',
-      variable: '--ql-color-dark',
-      value: 'rgb(46, 45, 53)'
-    },
-    {
-      key: '3',
-      variable: '--ql-font-family-main',
-      value: 'Poppins'
-    }
-  ]
+  // const data = [
+  //   {
+  //     key: '1',
+  //     variable: '--ql-color-accent1',
+  //     value: 'rgb(102, 72, 191)'
+  //   },
+  //   {
+  //     key: '2',
+  //     variable: '--ql-color-dark',
+  //     value: 'rgb(46, 45, 53)'
+  //   },
+  //   {
+  //     key: '3',
+  //     variable: '--ql-font-family-main',
+  //     value: 'Poppins'
+  //   }
+  // ]
 
   const onFinish = (values) => {
     console.log('Success:', values)
@@ -105,8 +106,19 @@ export const Template = (args) => {
               title={() => 'General settings'}
               pagination={false}
             /> */}
+            <Account
+              avatarText="EB"
+              title="Evgeniy Bogdanov"
+              caption="bogdanov.jn@gmail.com"
+              isEllipsis
+              suffix={
+                <Box>
+                  <BellOutlined />
+                </Box>
+              }
+            />
 
-            <Form
+            {/* <Form
               // size="small"
               // size="large"
               layout="vertical"
@@ -147,7 +159,7 @@ export const Template = (args) => {
                   Submit
                 </Button>
               </Form.Item>
-            </Form>
+            </Form> */}
 
             <Box my={4}>
               <Divider />
@@ -224,6 +236,18 @@ const asideLayoutLeft = (
     <Box mb={48}>
       <Img src={QLLogo} alt="Qonsoll App" height={48} />
     </Box>
+
+    <Account
+      avatarText="EB"
+      title="Evgeniy Bogdanov"
+      caption="bogdanov.jn@gmail.com"
+      isEllipsis
+      suffix={
+        <Box ml={3}>
+          <BellOutlined />
+        </Box>
+      }
+    />
 
     <Box display="flex" flexDirection="column" mb={24}>
       <Text

@@ -9,9 +9,11 @@ import MenuItem from '../Menus/MenuItem'
 import { Dropdown, Menu as AntMenu } from 'antd'
 
 const AccountAvatarStyled = styled.div`
-  height: var(--ql-account-height);
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  height: var(--ql-account-height);
+  min-width: ${(props) => props?.isEllipsis && 0};
   cursor: pointer;
   color: var(--ql-account-color);
   transition: var(--ql-account-transition);
@@ -36,7 +38,6 @@ const AccountAvatar = (props) => {
     avatarShape,
     avatarIcon,
     avatarText,
-    suffix,
     title,
     caption,
     short,
@@ -44,7 +45,7 @@ const AccountAvatar = (props) => {
     ref
   } = props
   return (
-    <AccountAvatarStyled ref={ref}>
+    <AccountAvatarStyled ref={ref} isEllipsis={isEllipsis}>
       <Box
         boxShadow="inherit"
         p="3px"
@@ -65,7 +66,12 @@ const AccountAvatar = (props) => {
         </Avatar>
       </Box>
       {!short && (
-        <Box display="flex" flexDirection="column" minWidth={isEllipsis && 0}>
+        <Box
+          display="flex"
+          flexDirection="column"
+          flexGrow={1}
+          minWidth={isEllipsis && 0}
+        >
           <Text
             variant="h6"
             color="var(--ql-account-title-color)"
@@ -84,7 +90,6 @@ const AccountAvatar = (props) => {
           </Text>
         </Box>
       )}
-      {suffix}
     </AccountAvatarStyled>
   )
 }
@@ -137,29 +142,35 @@ const SubMenu = (props) => {
 }
 
 const Account = (props) => {
-  const { menu, menuPlacement, menuArrow, menuTrigger, ...rest } = props
+  const { menu, menuPlacement, menuArrow, menuTrigger, suffix, ...rest } = props
   return (
-    <>
+    <Box display="flex" alignItems="center">
       {menu ? (
-        <Dropdown
-          overlay={
-            <Menu>
-              <ComplexMenu config={menu} />
-            </Menu>
-          }
-          placement={menuPlacement}
-          arrow={menuArrow}
-          trigger={menuTrigger}
-        >
-          {/* Strange behavior: need additional wrapper (like Box) to render dropdown */}
-          <Box>
-            <AccountAvatar {...rest} />
-          </Box>
-        </Dropdown>
+        <>
+          <Dropdown
+            overlay={
+              <Menu>
+                <ComplexMenu config={menu} />
+              </Menu>
+            }
+            placement={menuPlacement}
+            arrow={menuArrow}
+            trigger={menuTrigger}
+          >
+            {/* Strange behavior: need additional wrapper (like Box) to render dropdown */}
+            <Box>
+              <AccountAvatar {...rest} />
+            </Box>
+          </Dropdown>
+          {suffix}
+        </>
       ) : (
-        <AccountAvatar {...rest} />
+        <>
+          <AccountAvatar {...rest} />
+          {suffix}
+        </>
       )}
-    </>
+    </Box>
   )
 }
 
