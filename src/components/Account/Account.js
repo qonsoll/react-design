@@ -7,7 +7,6 @@ import Text from '../Typography/Text'
 import Menu from '../Menus/Menu'
 import MenuItem from '../Menus/MenuItem'
 import { Dropdown, Menu as AntMenu } from 'antd'
-import { UserOutlined } from '@ant-design/icons'
 
 const AccountAvatarStyled = styled.div`
   height: var(--ql-account-height);
@@ -68,7 +67,7 @@ const AccountAvatar = (props) => {
       {!short && (
         <Box display="flex" flexDirection="column" minWidth={isEllipsis && 0}>
           <Text
-            variant="var(--ql-account-title-variant)"
+            variant="h6"
             color="var(--ql-account-title-color)"
             fontWeight="var(--ql-account-title-font-weight)"
             isEllipsis={isEllipsis}
@@ -76,7 +75,7 @@ const AccountAvatar = (props) => {
             {title}
           </Text>
           <Text
-            variant="var(--ql-account-caption-variant)"
+            variant="caption1"
             color="var(--ql-account-caption-color)"
             fontWeight="var(--ql-account-caption-font-weight)"
             isEllipsis={isEllipsis}
