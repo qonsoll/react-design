@@ -247,6 +247,28 @@ const asideLayoutLeft = (
           <BellOutlined />
         </Box>
       }
+      menu={[
+        {
+          type: 'item',
+          text: 'Item #1',
+          // icon: <AppstoreOutlined />,
+          danger: false,
+          disabled: false,
+          onClick: () => {
+            console.log('Item #1')
+          }
+        },
+        {
+          type: 'item',
+          text: 'Item #2',
+          // icon: <AppstoreOutlined />,
+          danger: false,
+          disabled: false,
+          onClick: () => {
+            console.log('Item #2')
+          }
+        }
+      ]}
     />
 
     <Box display="flex" flexDirection="column" mb={24}>

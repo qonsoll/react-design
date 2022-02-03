@@ -8,6 +8,13 @@ import Menu from '../Menus/Menu'
 import MenuItem from '../Menus/MenuItem'
 import { Dropdown, Menu as AntMenu } from 'antd'
 
+const DropdownStyled = styled(Dropdown)`
+  &.ant-dropdown-trigger {
+    flex-grow: 1;
+    min-width: ${(props) => props?.isEllipsis && 0};
+  }
+`
+
 const AccountAvatarStyled = styled.div`
   display: flex;
   align-items: center;
@@ -142,12 +149,20 @@ const SubMenu = (props) => {
 }
 
 const Account = (props) => {
-  const { menu, menuPlacement, menuArrow, menuTrigger, suffix, ...rest } = props
+  const {
+    menu,
+    menuPlacement,
+    menuArrow,
+    menuTrigger,
+    suffix,
+    isEllipsis,
+    ...rest
+  } = props
   return (
     <Box display="flex" alignItems="center">
       {menu ? (
         <>
-          <Dropdown
+          <DropdownStyled
             overlay={
               <Menu>
                 <ComplexMenu config={menu} />
@@ -156,17 +171,18 @@ const Account = (props) => {
             placement={menuPlacement}
             arrow={menuArrow}
             trigger={menuTrigger}
+            isEllipsis={isEllipsis}
           >
-            {/* Strange behavior: need additional wrapper (like Box) to render dropdown */}
+            {/* FIXME: Strange behavior: need additional wrapper (like Box) to render dropdown */}
             <Box>
-              <AccountAvatar {...rest} />
+              <AccountAvatar isEllipsis={isEllipsis} {...rest} />
             </Box>
-          </Dropdown>
+          </DropdownStyled>
           {suffix}
         </>
       ) : (
         <>
-          <AccountAvatar {...rest} />
+          <AccountAvatar isEllipsis={isEllipsis} {...rest} />
           {suffix}
         </>
       )}
