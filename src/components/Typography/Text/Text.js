@@ -102,7 +102,7 @@ const StyledText = styled(AntTypography.Text).withConfig({
   }
 `
 const Text = (props) => {
-  const { isEllipsis, clamp } = props
+  const { isEllipsis, clamp, ...rest } = props
 
   return (
     <StyledText
@@ -112,7 +112,7 @@ const Text = (props) => {
       display={clamp && '-webkit-box'}
       webkitLineClamp={clamp}
       webkitBoxOrient={clamp && 'vertical'}
-      {...props}
+      {...rest}
     />
   )
 }

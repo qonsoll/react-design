@@ -113,7 +113,7 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
 `
 
 const Title = (props) => {
-  const { isEllipsis, clamp } = props
+  const { isEllipsis, clamp, ...rest } = props
   return (
     <StyledTitle
       textOverflow={isEllipsis && 'ellipsis'}
@@ -122,7 +122,7 @@ const Title = (props) => {
       display={clamp && '-webkit-box'}
       webkitLineClamp={clamp}
       webkitBoxOrient={clamp && 'vertical'}
-      {...props}
+      {...rest}
     />
   )
 }
