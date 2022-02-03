@@ -80,7 +80,6 @@ const AccountAvatar = (props) => {
           minWidth={isEllipsis && 0}
         >
           <Text
-            variant="h6"
             color="var(--ql-account-title-color)"
             fontWeight="var(--ql-account-title-font-weight)"
             isEllipsis={isEllipsis}
