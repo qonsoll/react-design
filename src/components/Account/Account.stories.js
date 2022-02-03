@@ -30,6 +30,14 @@ export default {
       description: 'Use it to set avatar shape.',
       control: { type: 'select', options: ['circle', 'square'] }
     },
+    avatarIcon: {
+      description: 'Use it to set avatar icon.',
+      control: { type: 'text' }
+    },
+    avatarText: {
+      description: 'Use it to set avatar text.',
+      control: { type: 'text' }
+    },
     title: {
       description: 'Use it to specify title.',
       control: { type: 'text' }
@@ -46,6 +54,11 @@ export default {
     isEllipsis: {
       description: 'Use it to make title and caption truncated.',
       control: { type: 'boolean' }
+    },
+    suffix: {
+      description:
+        'Use it to insert smth. after title and caption (it could be button/icon/badge/image/etc.).',
+      control: { type: 'text' }
     },
     menu: {
       description: 'Menu structure (data source)',

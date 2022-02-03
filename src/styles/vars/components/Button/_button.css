@@ -25,7 +25,7 @@
 
   --btn-font-weight: 600;
 
-  --btn-font-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  --btn-font-shadow: 0 -1px 0 rgb(0  0 0 / 12%);
 
   --btn-border-width: var(--ql-border-width-default);
   --btn-border-style: var(--ql-border-style-default);
@@ -62,6 +62,7 @@
   --btn-default-ghost-color: var(--ql-color-white);
   --btn-default-ghost-bg: transparent;
   --btn-default-ghost-border: var(--ql-color-white);
+  
   /* --btn-default-ghost-hover-bg: var(--ql-color-accent1-t-lighten1); */
   /* --btn-default-ghost-hover-color: var(--ql-color-white); */
   /* --btn-default-ghost-hover-border: var(--ql-color-accent1-t-lighten1); */

@@ -17,10 +17,12 @@
   width: 100%;
   pointer-events: none;
 }
+
 .ant-message-notice {
   padding: 8px;
   text-align: center;
 }
+
 .ant-message-notice-content {
   display: inline-block;
   padding: var(--message-notice-content-padding);
@@ -30,25 +32,31 @@
   box-shadow: var(--ql-shadow-default);
   pointer-events: all;
 }
+
 .ant-message-success .anticon {
   color: var(--ql-color-success);
 }
+
 .ant-message-error .anticon {
   color: var(--ql-color-danger);
 }
+
 .ant-message-warning .anticon {
   color: var(--ql-color-warning);
 }
+
 .ant-message-info .anticon,
 .ant-message-loading .anticon {
   color: var(--ql-color-info);
 }
+
 .ant-message .anticon {
   position: relative;
   top: 1px;
   margin-right: 8px;
   font-size: var(--ql-typography-font-size-md);
 }
+
 .ant-message-notice.move-up-leave.move-up-leave-active {
   -webkit-animation-name: MessageMoveOut;
   animation-name: MessageMoveOut;
@@ -61,6 +69,7 @@
     padding: 8px;
     opacity: 1;
   }
+
   100% {
     max-height: 0;
     padding: 0;
@@ -73,18 +82,22 @@
     padding: 8px;
     opacity: 1;
   }
+
   100% {
     max-height: 0;
     padding: 0;
     opacity: 0;
   }
 }
+
 .ant-message-rtl {
   direction: rtl;
 }
+
 .ant-message-rtl span {
   direction: rtl;
 }
+
 .ant-message-rtl .anticon {
   margin-right: 0;
   margin-left: 8px;

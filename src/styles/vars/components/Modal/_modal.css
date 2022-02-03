@@ -1,4 +1,7 @@
 :root {
+  --ql-modal-header-title-font-weight: var(--ql-typography-heading-font-weight);
+  --ql-modal-body-bg: var(--modal-content-bg);
+
   --modal-header-padding-vertical: 16px;
   --modal-header-padding-horizontal: 20px;
   --modal-header-padding: var(--modal-header-padding-vertical) var(--modal-header-padding-horizontal);

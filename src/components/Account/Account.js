@@ -35,6 +35,9 @@ const AccountAvatar = (props) => {
     avatar,
     avatarSize,
     avatarShape,
+    avatarIcon,
+    avatarText,
+    suffix,
     title,
     caption,
     short,
@@ -53,19 +56,36 @@ const AccountAvatar = (props) => {
           src={avatar}
           size={avatarSize || 'large'}
           shape={avatarShape}
-          icon={<UserOutlined />}
-        />
+          icon={avatarIcon}
+          bg="var(--ql-account-avatar-bg)"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          {avatarText}
+        </Avatar>
       </Box>
       {!short && (
         <Box display="flex" flexDirection="column" minWidth={isEllipsis && 0}>
-          <Text variant="h5" color="inherit" isEllipsis={isEllipsis}>
+          <Text
+            variant="var(--ql-account-title-variant)"
+            color="var(--ql-account-title-color)"
+            fontWeight="var(--ql-account-title-font-weight)"
+            isEllipsis={isEllipsis}
+          >
             {title}
           </Text>
-          <Text variant="caption1" color="inherit" isEllipsis={isEllipsis}>
+          <Text
+            variant="var(--ql-account-caption-variant)"
+            color="var(--ql-account-caption-color)"
+            fontWeight="var(--ql-account-caption-font-weight)"
+            isEllipsis={isEllipsis}
+          >
             {caption}
           </Text>
         </Box>
       )}
+      {suffix}
     </AccountAvatarStyled>
   )
 }
@@ -148,10 +168,13 @@ Account.propTypes = {
   avatar: PropTypes.string,
   avatarSize: PropTypes.oneOf(['large', 'default', 'small']),
   avatarShape: PropTypes.oneOf(['circle', 'square']),
+  avatarIcon: PropTypes.node,
+  avatarText: PropTypes.node,
   title: PropTypes.string,
   caption: PropTypes.string,
   short: PropTypes.bool,
   isEllipsis: PropTypes.bool,
+  suffix: PropTypes.node,
   menu: PropTypes.array,
   menuPlacement: PropTypes.oneOf([
     'bottomLeft',

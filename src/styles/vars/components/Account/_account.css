@@ -1,9 +1,19 @@
 :root {
   --ql-account-height: var(--ql-header-height);
-  --ql-account-color: var(--ql-typography-text-color-secondary);
   --ql-account-transition: all var(--ql-animation-duration-default) var(--ql-animation-cubic-ease-in-out);
-  --ql-account-avatar-box-shadow: inset 0 0 0 1px var(--ql-color-dark-t-lighten5);
-  
+  --ql-account-color: var(--ql-typography-text-color-secondary);
   --ql-account-color-hover: var(--ql-typography-text-color-primary);
+
+  --ql-account-avatar-bg: var(--ql-avatar-bg);
+  --ql-account-avatar-box-shadow: inset 0 0 0 1px var(--ql-color-dark-t-lighten5);
   --ql-account-avatar-box-shadow-hover: inset 0 0 0 2px var(--ql-color-dark);
+
+  --ql-account-title-variant: 'h5';
+  --ql-account-title-color: inherit;
+  --ql-account-title-font-weight: var(--ql-font-weight-regular);
+
+  --ql-account-caption-variant: 'caption1';
+  --ql-account-caption-color: inherit;
+  --ql-account-caption-font-weight: var(--ql-font-weight-regular);
+  
 }

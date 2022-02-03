@@ -4,8 +4,8 @@
 
   --ql-typography-heading-color: var(--ql-color-dark);
   --ql-typography-heading-font-weight: var(--ql-font-weight-semibold);
-  --ql-typography-typography-heading-margin-top: 0;
-  --ql-typography-typography-heading-margin-bottom: 0;
+  --ql-typography-heading-margin-top: 0;
+  --ql-typography-heading-margin-bottom: 0;
 
   --ql-typography-font-size-lg: var(--ql-font-size-h4);
   --ql-typography-font-size-md: var(--ql-font-size-body1);
