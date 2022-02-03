@@ -156,6 +156,7 @@ const Account = (props) => {
     menuTrigger,
     suffix,
     isEllipsis,
+    onAccountClick,
     ...rest
   } = props
   return (
@@ -175,14 +176,22 @@ const Account = (props) => {
           >
             {/* FIXME: Strange behavior: need additional wrapper (like Box) to render dropdown */}
             <Box>
-              <AccountAvatar isEllipsis={isEllipsis} {...rest} />
+              <AccountAvatar
+                isEllipsis={isEllipsis}
+                onClick={onAccountClick}
+                {...rest}
+              />
             </Box>
           </DropdownStyled>
           {suffix}
         </>
       ) : (
         <>
-          <AccountAvatar isEllipsis={isEllipsis} {...rest} />
+          <AccountAvatar
+            isEllipsis={isEllipsis}
+            onClick={onAccountClick}
+            {...rest}
+          />
           {suffix}
         </>
       )}
@@ -191,6 +200,7 @@ const Account = (props) => {
 }
 
 Account.propTypes = {
+  onAccountClick: PropTypes.func,
   avatar: PropTypes.string,
   avatarSize: PropTypes.oneOf(['large', 'default', 'small']),
   avatarShape: PropTypes.oneOf(['circle', 'square']),

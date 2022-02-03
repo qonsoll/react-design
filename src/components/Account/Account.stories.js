@@ -86,6 +86,10 @@ export default {
       description: 'Use to specify trigger (click/hover).',
       control: { type: 'select', options: ['click', 'hover'] }
     },
+    onAccountClick: {
+      description: 'Use to specify action for component.',
+      control: { type: 'text' }
+    },
     ref: {
       description: 'FIXME: need correct description',
       control: { type: 'text' }
