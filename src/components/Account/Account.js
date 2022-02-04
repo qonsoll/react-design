@@ -49,10 +49,15 @@ const AccountAvatar = (props) => {
     caption,
     short,
     isEllipsis,
+    onAccountClick,
     ref
   } = props
   return (
-    <AccountAvatarStyled ref={ref} isEllipsis={isEllipsis}>
+    <AccountAvatarStyled
+      ref={ref}
+      isEllipsis={isEllipsis}
+      onClick={onAccountClick}
+    >
       <Box
         boxShadow="inherit"
         p="3px"
@@ -177,7 +182,7 @@ const Account = (props) => {
             <Box>
               <AccountAvatar
                 isEllipsis={isEllipsis}
-                onClick={onAccountClick}
+                onAccountClick={onAccountClick} /* FIXME: doesn't work */
                 {...rest}
               />
             </Box>
@@ -188,7 +193,7 @@ const Account = (props) => {
         <>
           <AccountAvatar
             isEllipsis={isEllipsis}
-            onClick={onAccountClick}
+            onAccountClick={onAccountClick} /* FIXME: doesn't work */
             {...rest}
           />
           {suffix}
