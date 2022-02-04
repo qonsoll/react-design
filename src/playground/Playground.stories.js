@@ -249,24 +249,40 @@ const asideLayoutLeft = (
       }
       menu={[
         {
-          type: 'item',
-          text: 'Item #1',
-          // icon: <AppstoreOutlined />,
-          danger: false,
-          disabled: false,
-          onClick: () => {
-            console.log('Item #1')
-          }
-        },
-        {
-          type: 'item',
-          text: 'Item #2',
-          // icon: <AppstoreOutlined />,
-          danger: false,
-          disabled: false,
-          onClick: () => {
-            console.log('Item #2')
-          }
+          type: 'group',
+          text: 'Second group',
+          children: [
+            {
+              type: 'item',
+              text: 'Item #1',
+              icon: <SearchOutlined />,
+              danger: false,
+              disabled: false,
+              onClick: () => {
+                console.log('Second group: Item #1')
+              }
+            },
+            {
+              type: 'item',
+              text: 'Item #2',
+              icon: <SearchOutlined />,
+              danger: true,
+              disabled: false,
+              onClick: () => {
+                console.log('Second group: Item #2')
+              }
+            },
+            {
+              type: 'item',
+              text: 'Item #3',
+              icon: <SearchOutlined />,
+              danger: false,
+              disabled: false,
+              onClick: () => {
+                console.log('Second group: Item #3')
+              }
+            }
+          ]
         }
       ]}
     />

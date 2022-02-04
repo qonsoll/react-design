@@ -182,7 +182,7 @@ const Account = (props) => {
             <Box>
               <AccountAvatar
                 isEllipsis={isEllipsis}
-                onAccountClick={onAccountClick} /* FIXME: doesn't work */
+                onAccountClick={onAccountClick}
                 {...rest}
               />
             </Box>
@@ -193,7 +193,7 @@ const Account = (props) => {
         <>
           <AccountAvatar
             isEllipsis={isEllipsis}
-            onAccountClick={onAccountClick} /* FIXME: doesn't work */
+            onAccountClick={onAccountClick}
             {...rest}
           />
           {suffix}

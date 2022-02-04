@@ -36,13 +36,14 @@
 
   --dropdown-group-margin: 0 0 0 20px;
 
-  --dropdown-group-title-font-size: var(--menu-group-title-font-size);
-  --dropdown-group-title-line-height: var(--menu-group-title-line-height);
-  --dropdown-group-title-font-weight: var(--menu-group-title-font-weight);
-  --dropdown-group-title-letter-spacing: var(--menu-group-title-letter-spacing);
-  --dropdown-group-title-text-transform: var(--menu-group-title-text-transform);
-  --dropdown-group-title-color: var(--menu-group-title-color);
+  --dropdown-group-title-font-size: var(--ql-menu-group-title-font-size);
+  --dropdown-group-title-line-height: var(--ql-menu-group-title-line-height);
+  --dropdown-group-title-font-weight: var(--ql-menu-group-title-font-weight);
+  --dropdown-group-title-letter-spacing: var(--ql-menu-group-title-letter-spacing);
+  --dropdown-group-title-text-transform: var(--ql-menu-group-title-text-transform);
+  --dropdown-group-title-color: var(--ql-menu-group-title-color);
   --dropdown-group-title-padding: var(--dropdown-item-padding);
+
 
   --dropdown-group-item-border-radius: 20px 0 0 20px;
 }
