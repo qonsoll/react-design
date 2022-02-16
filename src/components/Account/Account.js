@@ -86,7 +86,7 @@ const AccountAvatar = (props) => {
         >
           <Text
             color="var(--ql-account-title-color)"
-            fw="var(--ql-account-title-font-weight)"
+            fontWeight="var(--ql-account-title-font-weight)"
             isEllipsis={isEllipsis}
           >
             {title}
@@ -94,7 +94,7 @@ const AccountAvatar = (props) => {
           <Text
             variant="caption1"
             color="var(--ql-account-caption-color)"
-            fw="var(--ql-account-caption-font-weight)"
+            fontWeight="var(--ql-account-caption-font-weight)"
             isEllipsis={isEllipsis}
           >
             {caption}
