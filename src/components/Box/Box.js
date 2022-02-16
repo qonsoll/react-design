@@ -36,7 +36,8 @@ const Box = styled('div').withConfig({
       transition: true,
       gap: true,
       columnGap: true,
-      rowGap: true
+      rowGap: true,
+      filter: true
     })
   )
 )

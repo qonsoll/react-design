@@ -97,7 +97,8 @@ const BoxStyleProps = compose(
         }
         return map[value]
       }
-    }
+    },
+    filter: true
   })
 )
 
@@ -127,7 +128,7 @@ const Row = React.forwardRef((props, ref) => {
     'negative-block-margin': negativeBlockMargin
   })
   return (
-    <Box data-testid='row' className={className} ref={ref} {...props}>
+    <Box data-testid="row" className={className} ref={ref} {...props}>
       {children}
     </Box>
   )

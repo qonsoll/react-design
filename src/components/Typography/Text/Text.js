@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Typography as AntTypography } from 'antd'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   compose,
   space,
@@ -61,7 +61,8 @@ const StyledText = styled(AntTypography.Text).withConfig({
         },
         webkitBoxOrient: {
           property: '-webkit-box-orient'
-        }
+        },
+        filter: true
       }),
       variant({
         variants: {
@@ -99,6 +100,39 @@ const StyledText = styled(AntTypography.Text).withConfig({
         }
       })
     )}
+    ${({ fw }) => {
+      const fontWeightCssMap = {
+        black: css`
+          font-weight: var(--ql-font-weight-black);
+        `,
+        extrabold: css`
+          font-weight: var(--ql-font-weight-extrabold);
+        `,
+        bold: css`
+          font-weight: var(--ql-font-weight-bold);
+        `,
+        semibold: css`
+          font-weight: var(--ql-font-weight-semibold);
+        `,
+        medium: css`
+          font-weight: var(--ql-font-weight-medium);
+        `,
+        regular: css`
+          font-weight: var(--ql-font-weight-regular);
+        `,
+        light: css`
+          font-weight: var(--ql-font-weight-light);
+        `,
+        extralight: css`
+          font-weight: var(--ql-font-weight-extralight);
+        `,
+        thin: css`
+          font-weight: var(--ql-font-weight-thin);
+        `
+      }
+
+      return fw ? fontWeightCssMap[fw] : fontWeightCssMap.regular
+    }}
   }
 `
 const Text = (props) => {
@@ -179,6 +213,18 @@ Text.propTypes = {
     'body2',
     'caption1',
     'caption2'
+  ]),
+  fw: PropTypes.oneOf([
+    'black',
+    'extrabold',
+    'bold',
+    'semibold',
+    'bold',
+    'medium',
+    'regular',
+    'light',
+    'extralight',
+    'thin'
   ]),
   isEllipsis: PropTypes.bool
 }

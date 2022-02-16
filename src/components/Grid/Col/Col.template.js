@@ -103,7 +103,8 @@ const BoxStyleProps = compose(
         }
         return map[value]
       }
-    }
+    },
+    filter: true
   })
 )
 
@@ -124,7 +125,7 @@ const Col = React.forwardRef((props, ref) => {
     'content-space': !!cw
   })
   return (
-    <Box data-testid='col' className={className} ref={ref} {...props}>
+    <Box data-testid="col" className={className} ref={ref} {...props}>
       {children}
     </Box>
   )

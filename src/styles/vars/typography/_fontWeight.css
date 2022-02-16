@@ -1,7 +1,11 @@
 :root {
+  --ql-font-weight-black: 900;
+  --ql-font-weight-extrabold: 800;
   --ql-font-weight-bold: 700;
   --ql-font-weight-semibold: 600;
   --ql-font-weight-medium: 500;
   --ql-font-weight-regular: 400;
   --ql-font-weight-light: 300;
+  --ql-font-weight-extralight: 200;
+  --ql-font-weight-thin: 100;
 }

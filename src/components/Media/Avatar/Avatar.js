@@ -47,7 +47,8 @@ const Avatar = styled(AntAvatar).withConfig({
       cursor: true,
       wordBreak: true,
       zoom: true,
-      transform: true
+      transform: true,
+      filter: true
     })
   )
 )

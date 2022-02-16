@@ -361,17 +361,20 @@ const asideLayoutRight = (
 const contentLayout = (
   <Container>
     <Row noOuterGutters mb={48}>
-      <Col cw={3}>
-        <Card bordered={false}>Admin</Card>
-      </Col>
-      <Col cw={3}>
-        <Card bordered={false}>Buyer</Card>
-      </Col>
-      <Col cw={3}>
-        <Card bordered={false}>Customer</Card>
-      </Col>
-      <Col cw={3}>
-        <Card bordered={false}>Visitor</Card>
+      <Col cw={12}>
+        <Text fw="black" whiteSpace="noWrap">
+          This is text...
+        </Text>
+        <Text fw="extrabold">This is text...</Text>
+        <Text fw="bold">This is text...</Text>
+        <Text fw="semibold">This is text...</Text>
+        <Text fw="medium">This is text...</Text>
+        <Text fw="regular">This is text...</Text>
+        <Text fw="light">This is text...</Text>
+        <Text fw="extralight">This is text...</Text>
+        <Text fw="thin">This is text...</Text>
+
+        {/* <Text variant>This is text...</Text> */}
       </Col>
     </Row>
     <Row>

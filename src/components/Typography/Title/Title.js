@@ -60,7 +60,8 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
         },
         webkitBoxOrient: {
           property: '-webkit-box-orient'
-        }
+        },
+        filter: true
       }),
       variant({
         variants: {
