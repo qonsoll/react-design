@@ -27,6 +27,10 @@ export default {
       description: 'Use to specify content width.',
       control: { disable: true }
     },
+    contentHeightWithoutHeader: {
+      description: 'Use to specify content height without header.',
+      control: { disable: true }
+    },
     onBack: {
       description: 'Back event.',
       control: { disable: true }

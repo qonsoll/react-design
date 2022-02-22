@@ -14,7 +14,8 @@ const ContentWrapperTest = (props) => {
     onBack,
     backBtnProps,
     divided,
-    breadcrumbs
+    breadcrumbs,
+    contentHeightWithoutHeader
   } = props
 
   const DEFAULT_PROPS = {
@@ -72,7 +73,7 @@ const ContentWrapperTest = (props) => {
           {action && <Box>{action}</Box>}
         </Box>
       )}
-      <Box flex={1} height="100%">
+      <Box flex={1} height={contentHeightWithoutHeader || '100%'}>
         {children}
       </Box>
     </Box>
@@ -88,7 +89,12 @@ ContentWrapperTest.propTypes = {
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
   alignMiddle: PropTypes.bool,
-  breadcrumbs: PropTypes.node
+  breadcrumbs: PropTypes.node,
+  contentHeightWithoutHeader: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ])
 }
 
 export default ContentWrapperTest

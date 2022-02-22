@@ -18,7 +18,8 @@ const PageWrapper = (props) => {
     firstLevelHidden,
     headingProps,
     action,
-    breadcrumbs
+    breadcrumbs,
+    contentHeightWithoutHeader
   } = props
 
   const DEFAULT_BACK_BUTTON_PROPS = {
@@ -55,6 +56,7 @@ const PageWrapper = (props) => {
         backBtnProps={backBtnProps}
         divided={divided !== undefined ? divided : true}
         breadcrumbs={!alignMiddle && breadcrumbs}
+        contentHeightWithoutHeader={contentHeightWithoutHeader}
       >
         {children}
       </ContentWrapper>
@@ -66,6 +68,11 @@ PageWrapper.propTypes = {
   children: PropTypes.node,
   alignMiddle: PropTypes.bool,
   contentWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
+  contentHeightWithoutHeader: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
     PropTypes.array
