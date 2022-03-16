@@ -123,7 +123,9 @@ const ComplexMenu = (props) => {
             <SubMenu key={key} text={text} config={children} {...rest} />
           ),
           divider: (key) => <AntMenu.Divider key={key} />,
-          remove: (key)=> <Remove key={key} {...menuItem} />
+          remove: (key) => (
+            <Remove key={key} {...menuItem} type={menuItem?.buttonType} />
+          )
         }
 
         return (
