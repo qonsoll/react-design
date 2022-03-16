@@ -1,12 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import Box from '../Box'
+import { Menu as AntMenu, Dropdown } from 'antd'
+
 import Avatar from '../Media/Avatar'
-import Text from '../Typography/Text'
+import Box from '../Box'
 import Menu from '../Menus/Menu'
 import MenuItem from '../Menus/MenuItem'
-import { Dropdown, Menu as AntMenu } from 'antd'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Remove from '../Actions/Remove'
+import Text from '../Typography/Text'
+import styled from 'styled-components'
 
 const DropdownStyled = styled(Dropdown)`
   &.ant-dropdown-trigger {
@@ -120,7 +122,8 @@ const ComplexMenu = (props) => {
           submenu: (key) => (
             <SubMenu key={key} text={text} config={children} {...rest} />
           ),
-          divider: (key) => <AntMenu.Divider key={key} />
+          divider: (key) => <AntMenu.Divider key={key} />,
+          remove: (key)=> <Remove key={key} {...menuItem} />
         }
 
         return (
