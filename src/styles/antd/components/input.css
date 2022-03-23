@@ -4,15 +4,13 @@
   /* display: inline-block; */
   width: 100%;
   min-width: 0;
-  padding: var(--input-padding-vertical-base)
-    var(--input-padding-horizontal-base);
+  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base);
   color: var(--input-color);
   font-size: var(--ql-typography-font-size-md);
   line-height: var(--ql-typography-line-height-md);
   background-color: var(--input-bg);
   background-image: none;
-  border: var(--ql-border-width-default) var(--ql-border-style-default)
-    var(--input-border-color);
+  border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
@@ -148,14 +146,12 @@ textarea.ant-input-affix-wrapper {
   z-index: 1;
 }
 
-.ant-input-rtl
-  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+.ant-input-rtl .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
   border-right-width: 0;
   border-left-width: 1px !important;
 }
 
-.ant-input-search-with-button
-  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+.ant-input-search-with-button .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
   z-index: 0;
 }
 
@@ -168,7 +164,7 @@ textarea.ant-input-affix-wrapper {
   background: transparent;
 }
 
-.ant-input-affix-wrapper > input.ant-input {
+.ant-input-affix-wrapper>input.ant-input {
   padding: 0;
   border: none;
   outline: none;
@@ -176,7 +172,7 @@ textarea.ant-input-affix-wrapper {
   border-radius: 3px; /* Test */
 }
 
-.ant-input-affix-wrapper > input.ant-input:focus {
+.ant-input-affix-wrapper>input.ant-input:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -184,7 +180,7 @@ textarea.ant-input-affix-wrapper {
 .ant-input-affix-wrapper::before {
   width: 0;
   visibility: hidden;
-  content: "\a0";
+  content: '\a0';
 }
 
 .ant-input-prefix,
@@ -252,23 +248,19 @@ textarea.ant-input-affix-wrapper {
   margin: 0;
   font-variant: var(--ql-typography-font-variant-default);
   list-style: none;
-  -webkit-font-feature-settings: var(
-    --ql-typography-font-feature-settings-default
-  );
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
   position: relative;
   display: inline-block;
   width: 100%;
   min-width: 0;
-  padding: var(--input-padding-vertical-base)
-    var(--input-padding-horizontal-base); /* 4px 11px; */
+  padding: var(--input-padding-vertical-base) var(--input-padding-horizontal-base); /* 4px 11px; */
   color: var(--input-color);
   font-size: var(--ql-typography-font-size-md);
   line-height: var(--ql-typography-line-height-md);
   background-color: var(--input-bg);
   background-image: none;
-  border: var(--ql-border-width-default) var(--ql-border-style-default)
-    var(--input-border-color);
+  border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
   -webkit-transition: all var(--ql-animation-duration-slow);
   transition: all var(--ql-animation-duration-slow);
@@ -382,9 +374,6 @@ textarea.ant-input {
   padding: var(--input-padding-vertical-lg) var(--input-padding-horizontal-lg);
   font-size: var(--ql-typography-font-size-lg);
   border-radius: var(--input-border-radius-lg);
-  line-height: var(
-    --ql-typography-line-height-lg
-  ); /* fixed vertical scroll text , previously used default --ql-typography-line-height-md **/
 }
 
 .ant-input-sm {
@@ -407,9 +396,7 @@ textarea.ant-input {
   font-variant: var(--ql-typography-font-variant-default);
   line-height: var(--ql-typography-line-height-md);
   list-style: none;
-  -webkit-font-feature-settings: var(
-    --ql-typography-font-feature-settings-default
-  );
+  -webkit-font-feature-settings: var(--ql-typography-font-feature-settings-default);
   font-feature-settings: var(--ql-typography-font-feature-settings-default);
   position: relative;
   display: table;
@@ -418,29 +405,29 @@ textarea.ant-input {
   border-spacing: 0;
 }
 
-.ant-input-group[class*="col-"] {
+.ant-input-group[class*='col-'] {
   float: none;
   padding-right: 0;
   padding-left: 0;
 }
 
-.ant-input-group > [class*="col-"] {
+.ant-input-group>[class*='col-'] {
   padding-right: 8px;
 }
 
-.ant-input-group > [class*="col-"]:last-child {
+.ant-input-group>[class*='col-']:last-child {
   padding-right: 0;
 }
 
 .ant-input-group-addon,
 .ant-input-group-wrap,
-.ant-input-group > .ant-input {
+.ant-input-group>.ant-input {
   display: table-cell;
 }
 
 .ant-input-group-addon:not(:first-child):not(:last-child),
 .ant-input-group-wrap:not(:first-child):not(:last-child),
-.ant-input-group > .ant-input:not(:first-child):not(:last-child) {
+.ant-input-group>.ant-input:not(:first-child):not(:last-child) {
   border-radius: var(--border-radius-none);
 }
 
@@ -451,7 +438,7 @@ textarea.ant-input {
   vertical-align: middle;
 }
 
-.ant-input-group-wrap > * {
+.ant-input-group-wrap>* {
   display: block !important;
 }
 
@@ -494,12 +481,9 @@ textarea.ant-input {
   margin: -5px -11px;
 }
 
-.ant-input-group-addon
-  .ant-select.ant-select-single:not(.ant-select-customize-input)
-  .ant-select-selector {
+.ant-input-group-addon .ant-select.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
   background-color: var(--input-bg);
-  border: var(--ql-border-width-default) var(--ql-border-style-default)
-    var(--input-border-color);
+  border: var(--ql-border-width-default) var(--ql-border-style-default) var(--input-border-color);
   border-radius: var(--input-border-radius-base);
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -510,24 +494,24 @@ textarea.ant-input {
   color: var(--ql-color-accent1);
 }
 
-.ant-input-group > .ant-input:first-child,
+.ant-input-group>.ant-input:first-child,
 .ant-input-group-addon:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.ant-input-group > .ant-input:first-child .ant-select .ant-select-selector,
+.ant-input-group>.ant-input:first-child .ant-select .ant-select-selector,
 .ant-input-group-addon:first-child .ant-select .ant-select-selector {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.ant-input-group > .ant-input-affix-wrapper:not(:first-child) .ant-input {
+.ant-input-group>.ant-input-affix-wrapper:not(:first-child) .ant-input {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.ant-input-group > .ant-input-affix-wrapper:not(:last-child) .ant-input {
+.ant-input-group>.ant-input-affix-wrapper:not(:last-child) .ant-input {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -540,26 +524,26 @@ textarea.ant-input {
   border-left: 0;
 }
 
-.ant-input-group > .ant-input:last-child,
+.ant-input-group>.ant-input:last-child,
 .ant-input-group-addon:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.ant-input-group > .ant-input:last-child .ant-select .ant-select-selector,
+.ant-input-group>.ant-input:last-child .ant-select .ant-select-selector,
 .ant-input-group-addon:last-child .ant-select .ant-select-selector {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .ant-input-group-lg .ant-input,
-.ant-input-group-lg > .ant-input-group-addon {
+.ant-input-group-lg>.ant-input-group-addon {
   padding: 6.5px 11px;
   font-size: var(--ql-typography-font-size-md);
 }
 
 .ant-input-group-sm .ant-input,
-.ant-input-group-sm > .ant-input-group-addon {
+.ant-input-group-sm>.ant-input-group-addon {
   padding: 0 7px;
 }
 
@@ -592,56 +576,53 @@ textarea.ant-input {
 
 .ant-input-group.ant-input-group-compact::before {
   display: table;
-  content: "";
+  content: '';
 }
 
 .ant-input-group.ant-input-group-compact::after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child),
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child),
-.ant-input-group.ant-input-group-compact
-  > .ant-input:not(:first-child):not(:last-child) {
+.ant-input-group.ant-input-group-compact>.ant-input:not(:first-child):not(:last-child) {
   border-right-width: 1px;
 }
 
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):hover,
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):hover,
-.ant-input-group.ant-input-group-compact
-  > .ant-input:not(:first-child):not(:last-child):hover {
+.ant-input-group.ant-input-group-compact>.ant-input:not(:first-child):not(:last-child):hover {
   z-index: 1;
 }
 
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child):focus,
 .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child):focus,
-.ant-input-group.ant-input-group-compact
-  > .ant-input:not(:first-child):not(:last-child):focus {
+.ant-input-group.ant-input-group-compact>.ant-input:not(:first-child):not(:last-child):focus {
   z-index: 1;
 }
 
-.ant-input-group.ant-input-group-compact > * {
+.ant-input-group.ant-input-group-compact>* {
   display: inline-block;
   float: none;
   vertical-align: top;
   border-radius: var(--border-radius-none);
 }
 
-.ant-input-group.ant-input-group-compact > .ant-input-affix-wrapper {
+.ant-input-group.ant-input-group-compact>.ant-input-affix-wrapper {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.ant-input-group.ant-input-group-compact > .ant-picker-range {
+.ant-input-group.ant-input-group-compact>.ant-picker-range {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.ant-input-group.ant-input-group-compact > *:not(:last-child) {
+.ant-input-group.ant-input-group-compact>*:not(:last-child) {
   margin-right: -1px;
   border-right-width: 1px;
 }
@@ -650,116 +631,74 @@ textarea.ant-input {
   float: none;
 }
 
-.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selector,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input,
-.ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input,
-.ant-input-group.ant-input-group-compact > .ant-input-group-wrapper .ant-input {
+.ant-input-group.ant-input-group-compact>.ant-select>.ant-select-selector,
+.ant-input-group.ant-input-group-compact>.ant-select-auto-complete .ant-input,
+.ant-input-group.ant-input-group-compact>.ant-cascader-picker .ant-input,
+.ant-input-group.ant-input-group-compact>.ant-input-group-wrapper .ant-input {
   border-right-width: 1px;
   border-radius: var(--border-radius-none);
 }
 
-.ant-input-group.ant-input-group-compact
-  > .ant-select
-  > .ant-select-selector:hover,
-.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete
-  .ant-input:hover,
-.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker
-  .ant-input:hover,
-.ant-input-group.ant-input-group-compact
-  > .ant-input-group-wrapper
-  .ant-input:hover {
+.ant-input-group.ant-input-group-compact>.ant-select>.ant-select-selector:hover,
+.ant-input-group.ant-input-group-compact>.ant-select-auto-complete .ant-input:hover,
+.ant-input-group.ant-input-group-compact>.ant-cascader-picker .ant-input:hover,
+.ant-input-group.ant-input-group-compact>.ant-input-group-wrapper .ant-input:hover {
   z-index: 1;
 }
 
-.ant-input-group.ant-input-group-compact
-  > .ant-select
-  > .ant-select-selector:focus,
-.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete
-  .ant-input:focus,
-.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker
-  .ant-input:focus,
-.ant-input-group.ant-input-group-compact
-  > .ant-input-group-wrapper
-  .ant-input:focus {
+.ant-input-group.ant-input-group-compact>.ant-select>.ant-select-selector:focus,
+.ant-input-group.ant-input-group-compact>.ant-select-auto-complete .ant-input:focus,
+.ant-input-group.ant-input-group-compact>.ant-cascader-picker .ant-input:focus,
+.ant-input-group.ant-input-group-compact>.ant-input-group-wrapper .ant-input:focus {
   z-index: 1;
 }
 
-.ant-input-group.ant-input-group-compact > .ant-select-focused {
+.ant-input-group.ant-input-group-compact>.ant-select-focused {
   z-index: 1;
 }
 
-.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-arrow {
+.ant-input-group.ant-input-group-compact>.ant-select>.ant-select-arrow {
   z-index: 1;
 }
 
-.ant-input-group.ant-input-group-compact > *:first-child,
-.ant-input-group.ant-input-group-compact
-  > .ant-select:first-child
-  > .ant-select-selector,
-.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete:first-child
-  .ant-input,
-.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:first-child
-  .ant-input {
+.ant-input-group.ant-input-group-compact>*:first-child,
+.ant-input-group.ant-input-group-compact>.ant-select:first-child>.ant-select-selector,
+.ant-input-group.ant-input-group-compact>.ant-select-auto-complete:first-child .ant-input,
+.ant-input-group.ant-input-group-compact>.ant-cascader-picker:first-child .ant-input {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
-.ant-input-group.ant-input-group-compact > *:last-child,
-.ant-input-group.ant-input-group-compact
-  > .ant-select:last-child
-  > .ant-select-selector,
-.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:last-child
-  .ant-input,
-.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker-focused:last-child
-  .ant-input {
+.ant-input-group.ant-input-group-compact>*:last-child,
+.ant-input-group.ant-input-group-compact>.ant-select:last-child>.ant-select-selector,
+.ant-input-group.ant-input-group-compact>.ant-cascader-picker:last-child .ant-input,
+.ant-input-group.ant-input-group-compact>.ant-cascader-picker-focused:last-child .ant-input {
   border-right-width: 1px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
-.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete
-  .ant-input {
+.ant-input-group.ant-input-group-compact>.ant-select-auto-complete .ant-input {
   vertical-align: top;
 }
 
-.ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper
-  + .ant-input-group-wrapper {
+.ant-input-group.ant-input-group-compact .ant-input-group-wrapper+.ant-input-group-wrapper {
   margin-left: -1px;
 }
 
-.ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper
-  + .ant-input-group-wrapper
-  .ant-input-affix-wrapper {
+.ant-input-group.ant-input-group-compact .ant-input-group-wrapper+.ant-input-group-wrapper .ant-input-affix-wrapper {
   border-radius: var(--border-radius-none);
 }
 
-.ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper:not(:last-child).ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon
-  > .ant-input-search-button {
+.ant-input-group.ant-input-group-compact .ant-input-group-wrapper:not(:last-child).ant-input-search>.ant-input-group>.ant-input-group-addon>.ant-input-search-button {
   border-radius: var(--border-radius-none);
 }
 
-.ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper:not(:last-child).ant-input-search
-  > .ant-input-group
-  > .ant-input {
+.ant-input-group.ant-input-group-compact .ant-input-group-wrapper:not(:last-child).ant-input-search>.ant-input-group>.ant-input {
   border-radius: 2px 0 0 2px;
 }
 
-.ant-input-group > .ant-input-rtl:first-child,
+.ant-input-group>.ant-input-rtl:first-child,
 .ant-input-group-rtl .ant-input-group-addon:first-child {
   border-radius: 0 2px 2px 0;
 }
@@ -774,13 +713,12 @@ textarea.ant-input {
   border-left: 1px solid var(--ql-color-dark-t-lighten5);
 }
 
-.ant-input-group-rtl.ant-input-group > .ant-input:last-child,
+.ant-input-group-rtl.ant-input-group>.ant-input:last-child,
 .ant-input-group-rtl.ant-input-group-addon:last-child {
   border-radius: 2px 0 0 2px;
 }
 
-.ant-input-group-rtl.ant-input-group
-  .ant-input-affix-wrapper:not(:first-child) {
+.ant-input-group-rtl.ant-input-group .ant-input-affix-wrapper:not(:first-child) {
   border-radius: 2px 0 0 2px;
 }
 
@@ -788,54 +726,34 @@ textarea.ant-input {
   border-radius: 0 2px 2px 0;
 }
 
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > *:not(:last-child) {
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>*:not(:last-child) {
   margin-right: 0;
   margin-left: -1px;
   border-left-width: 1px;
 }
 
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:first-child,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select:first-child
-  > .ant-select-selector,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete:first-child
-  .ant-input,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:first-child
-  .ant-input {
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>*:first-child,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-select:first-child>.ant-select-selector,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-select-auto-complete:first-child .ant-input,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-cascader-picker:first-child .ant-input {
   border-radius: 0 2px 2px 0;
 }
 
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:last-child,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select:last-child
-  > .ant-select-selector,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-select-auto-complete:last-child
-  .ant-input,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker:last-child
-  .ant-input,
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact
-  > .ant-cascader-picker-focused:last-child
-  .ant-input {
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>*:last-child,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-select:last-child>.ant-select-selector,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-select-auto-complete:last-child .ant-input,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-cascader-picker:last-child .ant-input,
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact>.ant-cascader-picker-focused:last-child .ant-input {
   border-left-width: 1px;
   border-radius: 2px 0 0 2px;
 }
 
-.ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper-rtl
-  + .ant-input-group-wrapper-rtl {
+.ant-input-group.ant-input-group-compact .ant-input-group-wrapper-rtl+.ant-input-group-wrapper-rtl {
   margin-right: -1px;
   margin-left: 0;
 }
 
-.ant-input-group.ant-input-group-compact
-  .ant-input-group-wrapper-rtl:not(:last-child).ant-input-search
-  > .ant-input-group
-  > .ant-input {
+.ant-input-group.ant-input-group-compact .ant-input-group-wrapper-rtl:not(:last-child).ant-input-search>.ant-input-group>.ant-input {
   border-radius: 0 2px 2px 0;
 }
 
@@ -857,15 +775,15 @@ textarea.ant-input {
   color: var(--ql-typography-text-color-primary);
 }
 
-.ant-input[type="color"] {
+.ant-input[type='color'] {
   height: 32px;
 }
 
-.ant-input[type="color"].ant-input-lg {
+.ant-input[type='color'].ant-input-lg {
   height: 40px;
 }
 
-.ant-input[type="color"].ant-input-sm {
+.ant-input[type='color'].ant-input-sm {
   height: 24px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -884,14 +802,8 @@ textarea.ant-input {
   border-color: var(--input-hover-border-color);
 }
 
-.ant-input-search
-  .ant-input:hover
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary),
-.ant-input-search
-  .ant-input:focus
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary) {
+.ant-input-search .ant-input:hover+.ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary),
+.ant-input-search .ant-input:focus+.ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {
   border-left-color: var(--ql-color-accent1-t-lighten1);
 }
 
@@ -903,32 +815,23 @@ textarea.ant-input {
   line-height: 1.5713;
 }
 
-.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child {
+.ant-input-search>.ant-input-group>.ant-input-group-addon:last-child {
   left: -1px;
   padding: 0;
   border: 0;
 }
 
-.ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button {
+.ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button {
   padding-top: 0;
   padding-bottom: 0;
   border-radius: 0 2px 2px 0;
 }
 
-.ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button:not(.ant-btn-primary) {
+.ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
   color: var(--ql-typography-text-color-secondary);
 }
 
-.ant-input-search
-  > .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button:not(.ant-btn-primary).ant-btn-loading::before {
+.ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary).ant-btn-loading::before {
   top: 0;
   right: 0;
   bottom: 0;
@@ -960,7 +863,7 @@ textarea.ant-input {
   direction: rtl;
 }
 
-.ant-input-affix-wrapper.ant-input-affix-wrapper-rtl > input.ant-input {
+.ant-input-affix-wrapper.ant-input-affix-wrapper-rtl>input.ant-input {
   border: none;
   outline: none;
 }
@@ -995,36 +898,28 @@ textarea.ant-input {
   direction: rtl;
 }
 
-.ant-input-search-rtl
-  .ant-input:hover
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary),
-.ant-input-search-rtl
-  .ant-input:focus
-  + .ant-input-group-addon
-  .ant-input-search-button:not(.ant-btn-primary) {
+.ant-input-search-rtl .ant-input:hover+.ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary),
+.ant-input-search-rtl .ant-input:focus+.ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {
   border-right-color: var(--ql-color-accent1-t-lighten1);
   border-left-color: var(--ql-color-dark-t-lighten5);
 }
 
-.ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper:hover,
-.ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper-focused {
+.ant-input-search-rtl>.ant-input-group>.ant-input-affix-wrapper:hover,
+.ant-input-search-rtl>.ant-input-group>.ant-input-affix-wrapper-focused {
   border-right-color: var(--ql-color-accent1-t-lighten1);
 }
 
-.ant-input-search-rtl > .ant-input-group > .ant-input-group-addon {
+.ant-input-search-rtl>.ant-input-group>.ant-input-group-addon {
   right: -1px;
   left: auto;
 }
 
-.ant-input-search-rtl
-  > .ant-input-group
-  > .ant-input-group-addon
-  .ant-input-search-button {
+.ant-input-search-rtl>.ant-input-group>.ant-input-group-addon .ant-input-search-button {
   border-radius: 2px 0 0 2px;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
   .ant-input {
     height: 32px;
   }
@@ -1037,7 +932,7 @@ textarea.ant-input {
     height: 24px;
   }
 
-  .ant-input-affix-wrapper > input.ant-input {
+  .ant-input-affix-wrapper>input.ant-input {
     height: auto;
   }
 }
@@ -1094,8 +989,7 @@ input:-webkit-autofill::first-line {
 }
 
 .ant-input:-webkit-autofill {
-  transition: background ease-in-out 9999s,
-    border var(--ql-animation-duration-slow);
+  transition: background ease-in-out 9999s, border var(--ql-animation-duration-slow);
 }
 
 .ant-input:-webkit-autofill::first-line {
