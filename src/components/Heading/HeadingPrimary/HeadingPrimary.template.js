@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import Box from '../../Box'
-import Title from '../../Typography/Title'
-import Text from '../../Typography/Text'
 import { DEFAULT_PROPS } from './constants'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Text from '../../Typography/Text'
+import Title from '../../Typography/Title'
 
 const HeadingPrimary = (props) => {
   const {
@@ -13,11 +13,12 @@ const HeadingPrimary = (props) => {
     textAlign,
     titleSize,
     titleLevel,
-    titleVariant
+    titleVariant,
+    ...rest
   } = props
 
   return (
-    <Box textAlign={textAlign || DEFAULT_PROPS.textAlign}>
+    <Box textAlign={textAlign || DEFAULT_PROPS.textAlign} {...rest}>
       <Box
         mb={subTitle && (titleMarginBottom || DEFAULT_PROPS.titleMarginBottom)}
       >
