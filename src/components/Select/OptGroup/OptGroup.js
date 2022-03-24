@@ -1,20 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Select as AntdSelect } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Select as AntdSelect } from 'antd'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 /** FIXME component doesn`t work with styled-component */
 const StyledOptGroup = styled(AntdSelect.OptGroup)(

@@ -1,21 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Empty } from 'antd'
-// import { Typography as AntTypography } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Empty } from 'antd'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledEmpty = styled(Empty)(
   compose(

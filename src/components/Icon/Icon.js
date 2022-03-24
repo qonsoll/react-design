@@ -1,16 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import Box from '../Box'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const Icon = (props) => {
-  const { component, size, color, ...arg } = props
+  const { component, size, color, ...rest } = props
 
   return (
     <Box
       display="flex"
       fontSize={size || 24}
       color={color || 'inherit'}
-      {...arg}>
+      {...rest}
+    >
       {component}
     </Box>
   )

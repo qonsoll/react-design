@@ -1,20 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Avatar as AntAvatar } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Avatar as AntAvatar } from 'antd'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const ANTD_AVATAR_PROPS = [
   'alt',

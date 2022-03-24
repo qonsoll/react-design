@@ -1,16 +1,16 @@
+import {
+  DEFAULT_LAYOUT_PROPS,
+  DEFAULT_VERTICAL_SCROLL_PROPS,
+  GRID_ITEM_DEFAULT_PROPS,
+  HORIZONTAL_LAYOUT_PROPS
+} from './constants'
+import { Empty, Typography } from 'antd'
 import React, { Fragment } from 'react'
+
+import Col from '../../Grid/Col'
 import PropTypes from 'prop-types'
 import Row from '../../Grid/Row'
-import Col from '../../Grid/Col'
 import Skeleton from '../../Skeleton'
-import { Typography, Empty } from 'antd'
-
-import {
-  HORIZONTAL_LAYOUT_PROPS,
-  DEFAULT_LAYOUT_PROPS,
-  GRID_ITEM_DEFAULT_PROPS,
-  DEFAULT_VERTICAL_SCROLL_PROPS
-} from './constants'
 
 const List = (props) => {
   const {
@@ -89,7 +89,8 @@ const List = (props) => {
             span={24}
             {...listLayoutProps}
             {...scrollProps}
-            maxHeight={maxHeight}>
+            maxHeight={maxHeight}
+          >
             {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
             {isLoaded && isEmpty && showEmpty && (
               <Empty description={false} image={Empty.PRESENTED_IMAGE_SIMPLE} />

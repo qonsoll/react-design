@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import Box from '../Box'
-import Badge from '../Badge'
+
 import Avatar from '../Media/Avatar'
-import Text from '../Typography/Text'
-import Link from '../Typography/Link'
+import Badge from '../Badge'
+import Box from '../Box'
 import Divider from '../Divider'
+import Link from '../Typography/Link'
+import PropTypes from 'prop-types'
+import Text from '../Typography/Text'
 import { UserOutlined } from '@ant-design/icons'
 
 const Notification = (props) => {
@@ -23,9 +24,10 @@ const Notification = (props) => {
     markAsSeenText,
     dateTime
   } = props
+
   return (
-    <Box display='flex' flexGrow={1} alignItems='center'>
-      <Box display='flex' alignSelf='flex-start' mr={3}>
+    <Box display="flex" flexGrow={1} alignItems="center">
+      <Box display="flex" alignSelf="flex-start" mr={3}>
         {status && <Badge status={status || 'default'} />}
         <Avatar
           src={avatarUrl}
@@ -33,7 +35,7 @@ const Notification = (props) => {
           icon={avatarIcon || <UserOutlined />}
         />
       </Box>
-      <Box display='flex' flexDirection='column'>
+      <Box display="flex" flexDirection="column">
         <Text lineHeight={1.5}>
           {userName && onClickUserName ? (
             <Link href={onClickUserName}>{userName} </Link>
@@ -44,13 +46,13 @@ const Notification = (props) => {
         </Text>
         {(redirectButtonText && redirectButtonUrl) ||
           (markAsSeenText && onClickMarkAsSeen && (
-            <Box mt={2} display='flex' alignItems='center'>
+            <Box mt={2} display="flex" alignItems="center">
               {redirectButtonText && redirectButtonUrl && (
                 <Fragment>
                   <Link lineHeight={1.5} onClick={redirectButtonUrl}>
                     {redirectButtonText}
                   </Link>
-                  <Divider type='vertical' />
+                  <Divider type="vertical" />
                 </Fragment>
               )}
               {onClickMarkAsSeen && (
@@ -62,14 +64,14 @@ const Notification = (props) => {
           ))}
       </Box>
       <Box
-        display='flex'
-        justifyContent='flex-end'
-        textAlign='right'
+        display="flex"
+        justifyContent="flex-end"
+        textAlign="right"
         pl={3}
-        ml='auto'
+        ml="auto"
         minWidth={60}
       >
-        <Text type='secondary' fontSize={12} lineHeight='20px' fontWeight={600}>
+        <Text type="secondary" fontSize={12} lineHeight="20px" fontWeight={600}>
           {dateTime}
         </Text>
       </Box>

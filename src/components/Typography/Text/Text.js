@@ -1,21 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Typography as AntTypography } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
+  space,
   system,
+  typography,
   variant
 } from 'styled-system'
+
+import { Typography as AntTypography } from 'antd'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 const ANTD_TEXT_PROPS = [
   'code',

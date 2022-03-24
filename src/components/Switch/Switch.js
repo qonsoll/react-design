@@ -1,20 +1,21 @@
-import React from 'react'
-import PropTypes, { func } from 'prop-types'
-import { Switch as AntSwitch } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Switch as AntSwitch } from 'antd'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledSwitch = styled(AntSwitch)(
   compose(
