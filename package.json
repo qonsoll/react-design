@@ -1,6 +1,6 @@
 {
   "name": "@qonsoll/react-design",
-  "version": "2.1.112",
+  "version": "2.1.113",
   "description": "React-components and design system for enterprise-level products.",
   "author": "qonsoll",
   "license": "MIT",
@@ -102,7 +102,9 @@
     "stylelint-config-recommended": "^6.0.0",
     "stylelint-config-standard": "^24.0.0"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@geometricpanda/storybook-addon-badges": "0.2.1",
     "@storybook/addons": "6.4.14",

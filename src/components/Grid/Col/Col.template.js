@@ -129,7 +129,7 @@ const Col = React.forwardRef((props, ref) => {
   })
 
   return (
-    <Box data-testid="col" className={classes} ref={ref} {...rest}>
+    <Box data-testid="col" className={classes} ref={ref} cw={cw} {...rest}>
       {children}
     </Box>
   )
