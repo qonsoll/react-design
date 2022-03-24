@@ -1,20 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-// import './Row.scss'
-import styled, { css } from 'styled-components'
+import { BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
 import {
-  space,
-  color,
-  layout,
   background,
   border,
-  shadow,
+  color,
   compose,
-  system,
-  flexbox
+  flexbox,
+  layout,
+  shadow,
+  space,
+  system
 } from 'styled-system'
-import { BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
+// import './Row.scss'
+import styled, { css } from 'styled-components'
+
+import PropTypes from 'prop-types'
+import React from 'react'
+import classNames from 'classnames'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -118,17 +119,21 @@ const Row = React.forwardRef((props, ref) => {
     noInnerGutters,
     noOuterGutters,
     negativeBlockMargin,
-    children
+    children,
+    className
   } = props
-  const className = classNames({
+
+  const classes = classNames({
     row: true,
     'no-gutters': noGutters,
     'no-inner-gutters': noInnerGutters,
     'no-outer-gutters': noOuterGutters,
-    'negative-block-margin': negativeBlockMargin
+    'negative-block-margin': negativeBlockMargin,
+    [className]: Boolean(className)
   })
+
   return (
-    <Box data-testid="row" className={className} ref={ref} {...props}>
+    <Box data-testid="row" className={classes} ref={ref} {...props}>
       {children}
     </Box>
   )

@@ -1,19 +1,20 @@
-import React from 'react'
-import classNames from 'classnames'
+import { BREAKPOINTS, GUTTERS_MAP } from '../../../constants'
 import {
-  space,
-  color,
-  layout,
   background,
   border,
-  shadow,
+  color,
   compose,
-  system,
   flexbox,
-  position
+  layout,
+  position,
+  shadow,
+  space,
+  system
 } from 'styled-system'
 import styled, { css } from 'styled-components'
-import { BREAKPOINTS, GUTTERS_MAP } from '../../../constants'
+
+import React from 'react'
+import classNames from 'classnames'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -119,13 +120,16 @@ const Box = styled(StyledDiv).withConfig({
  * Creating Container which returns Box with className (css)
  */
 const Col = React.forwardRef((props, ref) => {
-  const { cw, children } = props
-  const className = classNames({
+  const { cw, children, className, ...rest } = props
+
+  const classes = classNames({
     col: true,
-    'content-space': !!cw
+    'content-space': Boolean(cw),
+    [className]: Boolean(className)
   })
+
   return (
-    <Box data-testid="col" className={className} ref={ref} {...props}>
+    <Box data-testid="col" className={classes} ref={ref} {...rest}>
       {children}
     </Box>
   )
