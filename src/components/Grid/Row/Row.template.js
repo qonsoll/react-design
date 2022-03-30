@@ -120,7 +120,8 @@ const Row = React.forwardRef((props, ref) => {
     noOuterGutters,
     negativeBlockMargin,
     children,
-    className
+    className,
+    ...rest
   } = props
 
   const classes = classNames({
@@ -133,7 +134,7 @@ const Row = React.forwardRef((props, ref) => {
   })
 
   return (
-    <Box data-testid="row" className={classes} ref={ref} {...props}>
+    <Box data-testid="row" className={classes} ref={ref} {...rest}>
       {children}
     </Box>
   )

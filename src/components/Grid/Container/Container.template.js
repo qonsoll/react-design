@@ -7,6 +7,7 @@ import classNames from 'classnames'
  * Creating Container which returns Box with className (css)
  */
 const Container = forwardRef((props, ref) => {
+  const { className, ...rest } = props
   const {
     bounded,
     gutters,
@@ -21,9 +22,8 @@ const Container = forwardRef((props, ref) => {
     gutterLg,
     gutterXl,
     gutterXxl,
-    children,
-    className
-  } = props
+    children
+  } = rest
 
   const classes = classNames({
     container: true,
@@ -48,7 +48,7 @@ const Container = forwardRef((props, ref) => {
       data-testid="container"
       className={classes}
       ref={ref}
-      {...props}
+      {...rest}
     >
       {children}
     </ContainerBase>
