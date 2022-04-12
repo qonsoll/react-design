@@ -67,6 +67,27 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
       }),
       variant({
         variants: {
+          primary: {
+            fontFamily: 'var(--ql-font-family-headings) !important',
+            fontSize: '32px !important',
+            lineHeight: '40px !important',
+            fontWeight: '600 !important',
+            color: 'var(--ql-color-black) !important'
+          },
+          secondary1: {
+            fontFamily: 'var(--ql-font-family-main) !important',
+            fontSize: '20px !important',
+            lineHeight: '28px !important',
+            fontWeight: '600 !important',
+            color: 'var(--ql-color-black) !important'
+          },
+          secondary2: {
+            fontFamily: '(--ql-font-family-main) !important',
+            fontSize: '16px !important',
+            lineHeight: '24px !important',
+            fontWeight: '600 !important',
+            color: 'var(--ql-color-accent1) !important'
+          },
           h1: {
             fontFamily: 'var(--ql-font-family-headings)',
             fontSize: 'var(--ql-font-size-h1)',
@@ -116,36 +137,7 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
 `
 
 const Title = (props) => {
-  const { isEllipsis, clamp, stylesPreset, ...rest } = props
-
-  const primary = {
-    fontFamily: 'var(--ql-font-family-headings) !important',
-    fontSize: '32px !important',
-    lineHeight: '40px !important',
-    fontWeight: '600 !important',
-    color: 'var(--ql-color-black) !important'
-  }
-  const secondary1 = {
-    fontFamily: 'var(--ql-font-family-main) !important',
-    fontSize: '20px !important',
-    lineHeight: '28px !important',
-    fontWeight: '600 !important',
-    color: 'var(--ql-color-black) !important'
-  }
-  const secondary2 = {
-    fontFamily: '(--ql-font-family-main) !important',
-    fontSize: '16px !important',
-    lineHeight: '24px !important',
-    fontWeight: '600 !important',
-    color: 'var(--ql-color-accent1) !important'
-  }
-
-  const computedStyles =
-    stylesPreset === 'primary'
-      ? primary
-      : stylesPreset === 'secondary1'
-      ? secondary1
-      : stylesPreset === 'secondary2' && secondary2
+  const { isEllipsis, clamp, ...rest } = props
 
   return (
     <StyledTitle
@@ -155,7 +147,6 @@ const Title = (props) => {
       display={clamp && '-webkit-box'}
       webkitLineClamp={clamp}
       webkitBoxOrient={clamp && 'vertical'}
-      {...computedStyles}
       {...rest}
     />
   )
@@ -219,7 +210,17 @@ Title.propTypes = {
   underline: PropTypes.bool,
   variant: PropTypes.oneOfType([
     PropTypes.array,
-    PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+    PropTypes.oneOf([
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6',
+      'primary',
+      'secondary1',
+      'secondary2'
+    ])
   ])
 }
 

@@ -18,17 +18,6 @@ export default {
   title: 'Components/Typography/Title',
   component: Title,
   argTypes: {
-    stylesPreset: {
-      table: {
-        category: 'Custom properties'
-      },
-      control: {
-        type: 'select',
-        options: ['primary', 'secondary1', 'secondary2']
-      },
-      description:
-        'You can use one of the title presets to prevent copying the same code multiple times'
-    },
     code: {
       table: {
         category: 'Default AntD props'
@@ -115,6 +104,20 @@ export default {
     variant: {
       table: {
         category: 'Custom properties'
+      },
+      control: {
+        type: 'select',
+        options: [
+          'h1',
+          'h2',
+          'h3',
+          'h4',
+          'h5',
+          'h6',
+          'primary',
+          'secondary1',
+          'secondary2'
+        ]
       },
       description: 'Use to change title type.'
     },
