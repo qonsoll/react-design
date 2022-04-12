@@ -1,22 +1,34 @@
-import React from 'react'
-import Title from './Title'
 import {
-  spaceArgTypes,
-  colorArgTypes,
-  typographyArgTypes,
-  layoutArgTypes,
-  flexboxArgTypes,
   backgroundArgTypes,
   borderArgTypes,
+  colorArgTypes,
+  flexboxArgTypes,
+  layoutArgTypes,
   positionArgTypes,
-  shadowArgTypes
+  shadowArgTypes,
+  spaceArgTypes,
+  typographyArgTypes
 } from '../../../helpers/arg-types'
+
 import CSSPropValues from '../../../helpers/css-prop-values'
+import React from 'react'
+import Title from './Title'
 
 export default {
   title: 'Components/Typography/Title',
   component: Title,
   argTypes: {
+    stylesPreset: {
+      table: {
+        category: 'Custom properties'
+      },
+      control: {
+        type: 'select',
+        options: ['primary', 'secondary1', 'secondary2']
+      },
+      description:
+        'You can use one of the title presets to prevent copying the same code multiple times'
+    },
     code: {
       table: {
         category: 'Default AntD props'

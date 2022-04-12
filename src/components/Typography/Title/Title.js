@@ -16,6 +16,7 @@ import {
 import { Typography as AntTypography } from 'antd'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { fontSize } from 'styled-system'
 import styled from 'styled-components'
 
 const ANTD_TITLE_PROPS = [
@@ -115,7 +116,37 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
 `
 
 const Title = (props) => {
-  const { isEllipsis, clamp, ...rest } = props
+  const { isEllipsis, clamp, stylesPreset, ...rest } = props
+
+  const primary = {
+    fontFamily: 'var(--ql-font-family-headings) !important',
+    fontSize: '32px !important',
+    lineHeight: '40px !important',
+    fontWeight: '600 !important',
+    color: 'var(--ql-color-black) !important'
+  }
+  const secondary1 = {
+    fontFamily: 'var(--ql-font-family-main) !important',
+    fontSize: '20px !important',
+    lineHeight: '28px !important',
+    fontWeight: '600 !important',
+    color: 'var(--ql-color-black) !important'
+  }
+  const secondary2 = {
+    fontFamily: '(--ql-font-family-main) !important',
+    fontSize: '16px !important',
+    lineHeight: '24px !important',
+    fontWeight: '600 !important',
+    color: 'var(--ql-color-accent1) !important'
+  }
+
+  const computedStyles =
+    stylesPreset === 'primary'
+      ? primary
+      : stylesPreset === 'secondary1'
+      ? secondary1
+      : stylesPreset === 'secondary2' && secondary2
+
   return (
     <StyledTitle
       textOverflow={isEllipsis && 'ellipsis'}
@@ -124,6 +155,7 @@ const Title = (props) => {
       display={clamp && '-webkit-box'}
       webkitLineClamp={clamp}
       webkitBoxOrient={clamp && 'vertical'}
+      {...computedStyles}
       {...rest}
     />
   )
