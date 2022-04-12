@@ -1,17 +1,18 @@
-import React from 'react'
-import Title from './Title'
 import {
-  spaceArgTypes,
-  colorArgTypes,
-  typographyArgTypes,
-  layoutArgTypes,
-  flexboxArgTypes,
   backgroundArgTypes,
   borderArgTypes,
+  colorArgTypes,
+  flexboxArgTypes,
+  layoutArgTypes,
   positionArgTypes,
-  shadowArgTypes
+  shadowArgTypes,
+  spaceArgTypes,
+  typographyArgTypes
 } from '../../../helpers/arg-types'
+
 import CSSPropValues from '../../../helpers/css-prop-values'
+import React from 'react'
+import Title from './Title'
 
 export default {
   title: 'Components/Typography/Title',
@@ -103,6 +104,20 @@ export default {
     variant: {
       table: {
         category: 'Custom properties'
+      },
+      control: {
+        type: 'select',
+        options: [
+          'h1',
+          'h2',
+          'h3',
+          'h4',
+          'h5',
+          'h6',
+          'primary',
+          'secondary1',
+          'secondary2'
+        ]
       },
       description: 'Use to change title type.'
     },
