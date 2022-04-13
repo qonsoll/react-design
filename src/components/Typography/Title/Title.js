@@ -68,22 +68,25 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
       variant({
         variants: {
           primary: {
-            fontFamily: 'var(--ql-font-family-headings) !important',
-            fontSize: '32px !important',
+            fontFamily: 'var(--ql-font-family-main) !important',
+            fontSize: 'var(--ql-font-size-h2)',
             lineHeight: '40px !important',
-            fontWeight: '600 !important'
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           secondary1: {
             fontFamily: 'var(--ql-font-family-main) !important',
-            fontSize: '20px !important',
-            lineHeight: '28px !important',
-            fontWeight: '600 !important'
+            fontSize: 'var(--ql-font-size-h4)',
+            lineHeight: 'var(--ql-line-height-h4)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           secondary2: {
             fontFamily: 'var(--ql-font-family-main) !important',
-            fontSize: '16px !important',
-            lineHeight: '24px !important',
-            fontWeight: '700 !important'
+            fontSize: 'var(--ql-font-size-h5)',
+            lineHeight: 'var(--ql-line-height-h5)',
+            fontWeight: 'var(--ql-typography-heading-font-weight)',
+            letterSpacing: 'var(--ql-letter-spacing-none)'
           },
           h1: {
             fontFamily: 'var(--ql-font-family-headings)',
