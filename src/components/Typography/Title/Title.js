@@ -71,22 +71,19 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
             fontFamily: 'var(--ql-font-family-headings) !important',
             fontSize: '32px !important',
             lineHeight: '40px !important',
-            fontWeight: '600 !important',
-            color: 'var(--ql-color-black) !important'
+            fontWeight: '600 !important'
           },
           secondary1: {
             fontFamily: 'var(--ql-font-family-main) !important',
             fontSize: '20px !important',
             lineHeight: '28px !important',
-            fontWeight: '600 !important',
-            color: 'var(--ql-color-black) !important'
+            fontWeight: '600 !important'
           },
           secondary2: {
             fontFamily: 'var(--ql-font-family-main) !important',
             fontSize: '16px !important',
             lineHeight: '24px !important',
-            fontWeight: '600 !important',
-            color: 'var(--ql-color-accent1) !important'
+            fontWeight: '700 !important'
           },
           h1: {
             fontFamily: 'var(--ql-font-family-headings)',
