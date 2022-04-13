@@ -82,7 +82,7 @@ const StyledTitle = styled(AntTypography.Title).withConfig({
             color: 'var(--ql-color-black) !important'
           },
           secondary2: {
-            fontFamily: '(--ql-font-family-main) !important',
+            fontFamily: 'var(--ql-font-family-main) !important',
             fontSize: '16px !important',
             lineHeight: '24px !important',
             fontWeight: '600 !important',
