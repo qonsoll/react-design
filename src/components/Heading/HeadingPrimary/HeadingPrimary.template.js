@@ -1,15 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import Box from '../../Box'
-import Title from '../../Typography/Title'
-import Text from '../../Typography/Text'
 import { DEFAULT_PROPS } from './constants'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Text from '../../Typography/Text'
+import Title from '../../Typography/Title'
 
 const HeadingPrimary = (props) => {
   const {
     title,
     subTitle,
     titleMarginBottom,
+    subtitleMarginBottom,
     textAlign,
     titleSize,
     titleLevel,
@@ -17,9 +18,15 @@ const HeadingPrimary = (props) => {
   } = props
 
   return (
-    <Box textAlign={textAlign || DEFAULT_PROPS.textAlign}>
+    <Box
+      mb={titleMarginBottom}
+      textAlign={textAlign || DEFAULT_PROPS.textAlign}
+      width={textAlign === DEFAULT_PROPS.textAlign && '100%'}
+    >
       <Box
-        mb={subTitle && (titleMarginBottom || DEFAULT_PROPS.titleMarginBottom)}
+        mb={
+          subTitle && (subtitleMarginBottom || DEFAULT_PROPS.titleMarginBottom)
+        }
       >
         {/* titleSize will be deprecated soon. Use titleLevel instead!!! */}
         <Title level={titleLevel || titleSize} variant={titleVariant}>
@@ -40,6 +47,7 @@ HeadingPrimary.propTypes = {
     PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
   ]),
   titleMarginBottom: PropTypes.number,
+  subtitleMarginBottom: PropTypes.number,
   subTitle: PropTypes.string,
   textAlign: PropTypes.oneOf(['left', 'center', 'right', 'inherit', 'unset'])
 }
