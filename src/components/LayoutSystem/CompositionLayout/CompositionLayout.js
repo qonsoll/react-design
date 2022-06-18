@@ -31,6 +31,8 @@ const CompositionLayout = (props) => {
           React.cloneElement(asideLeft, { side: 'left' })}
 
         <Box
+          display='flex'
+          flexDirection='column'
           flexGrow={1}
           maxWidth="100%"
           py={contentVerticalPadding || 'var(--ql-content-py)'}
