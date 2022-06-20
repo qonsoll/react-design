@@ -1,10 +1,11 @@
 import React, { Fragment, forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import { Tooltip } from 'antd'
+
+import { ArrowLeftOutlined } from '@ant-design/icons'
+import Box from '../../Box'
 import Button from '../../Button'
 import Divider from '../../Divider'
-import Box from '../../Box'
-import { ArrowLeftOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
+import { Tooltip } from 'antd'
 
 const DEFAULT_PROPS = {
   tooltipPlacement: 'topLeft'
@@ -43,7 +44,8 @@ const Back = forwardRef((props, ref) => {
         <Box display="flex" alignItems="center">
           <Tooltip
             title={tooltip}
-            placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}>
+            placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
+          >
             <Button
               onClick={onClick}
               type="text"
@@ -65,7 +67,8 @@ const Back = forwardRef((props, ref) => {
             icon={iconNode || iconNodeLeft}
             {...props}
             danger={false}
-            ref={ref}>
+            ref={ref}
+          >
             {text}
             {iconNodeRight}
           </Button>

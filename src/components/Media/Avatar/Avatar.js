@@ -58,7 +58,11 @@ Avatar.propTypes = {
   gap: PropTypes.number,
   icon: PropTypes.node,
   shape: PropTypes.oneOf(['circle', 'square']),
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  size: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
   src: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   srcSet: PropTypes.string,
   draggable: PropTypes.bool,

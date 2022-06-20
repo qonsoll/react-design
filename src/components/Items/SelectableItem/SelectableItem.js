@@ -24,8 +24,12 @@ const SelectableItem = (props) => {
 SelectableItem.propTypes = {
   item: PropTypes.object,
   children: PropTypes.node,
-  mb: PropTypes.number,
-  isSelected: PropTypes.func,
+  mb: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
+  isSelected: PropTypes.bool,
   toggle: PropTypes.func
 }
 

@@ -51,6 +51,7 @@ Select.propTypes = {
   defaultActiveFirstOption: PropTypes.bool,
   defaultOpen: PropTypes.bool,
   defaultValue: PropTypes.oneOfType([
+    PropTypes.object,
     PropTypes.string,
     PropTypes.array,
     PropTypes.number

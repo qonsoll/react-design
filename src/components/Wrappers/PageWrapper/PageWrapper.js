@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import PositioningWrapper from '../PositioningWrapper'
 import ContentWrapper from '../ContentWrapper'
 import Graphic from '../../Media/Graphic'
+import PositioningWrapper from '../PositioningWrapper'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const PageWrapper = (props) => {
   const {
@@ -22,10 +22,6 @@ const PageWrapper = (props) => {
     contentHeightWithoutHeader
   } = props
 
-  const DEFAULT_BACK_BUTTON_PROPS = {
-    divided: true
-  }
-
   return (
     <PositioningWrapper
       height={height} // Quick fix to set height (related to new layout)
@@ -34,19 +30,12 @@ const PageWrapper = (props) => {
       contentWidth={contentWidth}
       onBack={alignMiddle && onBack}
       backBtnProps={backBtnProps}
-      divided={
-        divided !== undefined
-          ? divided
-          : DEFAULT_BACK_BUTTON_PROPS.divided
-          ? DEFAULT_BACK_BUTTON_PROPS.divided
-          : true
-      }
+      divided={divided ?? true}
       breadcrumbs={alignMiddle && breadcrumbs}
     >
       {graphicProps && graphicProps.src && graphicProps.alt && (
         <Graphic {...graphicProps} />
       )}
-      {/* <Graphic {...graphicProps} /> */}
       <ContentWrapper
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
@@ -54,7 +43,7 @@ const PageWrapper = (props) => {
         action={action}
         onBack={!alignMiddle && onBack}
         backBtnProps={backBtnProps}
-        divided={divided !== undefined ? divided : true}
+        divided={divided ?? true}
         breadcrumbs={!alignMiddle && breadcrumbs}
         contentHeightWithoutHeader={contentHeightWithoutHeader}
       >

@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import styled from 'styled-components'
 
 const Box = styled('div').withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
