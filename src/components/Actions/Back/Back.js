@@ -81,6 +81,7 @@ const Back = forwardRef((props, ref) => {
   )
 })
 
+Back.displayName = 'Back'
 Back.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.node,

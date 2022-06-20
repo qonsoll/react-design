@@ -1,20 +1,21 @@
 import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import PhoneInput from 'react-phone-input-2'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import PhoneInput from 'react-phone-input-2'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const StyledReactPhoneInput = styled(PhoneInput)(
   compose(
@@ -48,6 +49,7 @@ const StyledPhoneInput = forwardRef((props, ref) => {
   )
 })
 
+StyledPhoneInput.displayName = 'PhoneInput'
 StyledPhoneInput.propTypes = {
   country: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   value: PropTypes.string,

@@ -1,8 +1,9 @@
 import React, { Fragment, forwardRef } from 'react'
-import PropTypes from 'prop-types'
+
 import Button from '../../Button'
-import { Tooltip } from 'antd'
+import PropTypes from 'prop-types'
 import { SaveOutlined } from '@ant-design/icons'
+import { Tooltip } from 'antd'
 
 const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom'
@@ -32,7 +33,8 @@ const Save = forwardRef((props, ref) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
-          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}>
+          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
+        >
           <Button
             {...props}
             type={type}
@@ -49,7 +51,8 @@ const Save = forwardRef((props, ref) => {
           icon={iconNode || iconNodeLeft}
           danger={false}
           onClick={onClick}
-          ref={ref}>
+          ref={ref}
+        >
           {text || 'Save'}
           {iconNodeRight}
         </Button>
@@ -58,6 +61,7 @@ const Save = forwardRef((props, ref) => {
   )
 })
 
+Save.displayName = 'Save'
 Save.propTypes = {
   text: PropTypes.string,
   type: PropTypes.oneOf([

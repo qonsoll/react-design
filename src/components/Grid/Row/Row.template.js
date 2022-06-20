@@ -140,10 +140,12 @@ const Row = React.forwardRef((props, ref) => {
   )
 })
 
+Row.displayName = 'Row'
 Row.propTypes = {
   noGutters: PropTypes.bool,
   noInnerGutters: PropTypes.bool,
   noOuterGutters: PropTypes.bool,
   negativeBlockMargin: PropTypes.bool
 }
+
 export default Row

@@ -55,4 +55,6 @@ const Container = forwardRef((props, ref) => {
   )
 })
 
+Container.displayName = 'Container'
+
 export default Container

@@ -74,10 +74,11 @@ const StyledButton = styled(AntButton).withConfig({
     )}
   }
 `
-const Button = forwardRef(function ButtonWithRef(props, ref) {
+const Button = forwardRef((props, ref) => {
   return <StyledButton {...props} ref={ref} />
 })
 
+Button.displayName = 'Button'
 Button.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),
   danger: PropTypes.bool,

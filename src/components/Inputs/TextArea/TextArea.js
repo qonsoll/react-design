@@ -1,20 +1,21 @@
 import React, { Fragment, forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import { Input as AntInput } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Input as AntInput } from 'antd'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const StyledTextArea = styled(AntInput.TextArea)(
   compose(
@@ -43,6 +44,7 @@ const TextArea = forwardRef((props, ref) => {
   )
 })
 
+TextArea.displayName = 'TextArea'
 TextArea.propTypes = {
   allowClear: PropTypes.bool,
   autoSize: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),

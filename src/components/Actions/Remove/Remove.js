@@ -1,8 +1,9 @@
+import { Popconfirm, Tooltip, Typography } from 'antd'
 import React, { Fragment, forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import { Typography, Tooltip, Popconfirm } from 'antd'
+
 import Button from '../../Button'
 import { DeleteOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
 
 const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom',
@@ -59,7 +60,8 @@ const Remove = forwardRef((props, ref) => {
         itemName || DEFAULT_PROPS.itemName
       }`}
       placement={popconfirmPlacement}
-      disabled={disabled}>
+      disabled={disabled}
+    >
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
@@ -80,7 +82,8 @@ const Remove = forwardRef((props, ref) => {
           type={type || DEFAULT_PROPS.type}
           icon={iconNode || iconNodeLeft}
           danger
-          ref={ref}>
+          ref={ref}
+        >
           {text}
           {iconNodeRight}
         </Button>
@@ -89,6 +92,7 @@ const Remove = forwardRef((props, ref) => {
   )
 })
 
+Remove.displayName = 'Remove'
 Remove.propTypes = {
   text: PropTypes.string,
   type: PropTypes.oneOf([
