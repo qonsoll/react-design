@@ -1,11 +1,11 @@
 import { Menu as AntMenu, Dropdown } from 'antd'
+import React, { useMemo } from 'react'
 
 import Avatar from '../Media/Avatar'
 import Box from '../Box'
 import Menu from '../Menus/Menu'
 import MenuItem from '../Menus/MenuItem'
 import PropTypes from 'prop-types'
-import React from 'react'
 import Remove from '../Actions/Remove'
 import Text from '../Typography/Text'
 import styled from 'styled-components'
@@ -106,55 +106,52 @@ const AccountAvatar = (props) => {
     </AccountAvatarStyled>
   )
 }
+const ComplexMenuItem = (props) => {
+  const { type, text, children, ...rest } = props
 
-const ComplexMenu = (props) => {
-  const { config } = props
-  return (
-    <>
-      {config.map((menuItem, index) => {
-        const { type, text, children, ...rest } = menuItem
+  const TYPE_TO_COMPONENTS_MAP = {
+    item: <MenuItem {...rest}>{text}</MenuItem>,
+    group: <MenuGroup text={text} config={children} {...rest} />,
+    submenu: <SubMenu text={text} config={children} />,
+    divider: <AntMenu.Divider />,
+    remove: <Remove {...props} type={props?.buttonType} />
+  }
 
-        const TYPE_TO_COMPONENTS_MAP = {
-          item: (key) => <MenuItem key={key} children={text} {...rest} />,
-          group: (key) => (
-            <MenuGroup key={key} text={text} config={children} {...rest} />
-          ),
-          submenu: (key) => (
-            <SubMenu key={key} text={text} config={children} {...rest} />
-          ),
-          divider: (key) => <AntMenu.Divider key={key} />,
-          remove: (key) => (
-            <Remove key={key} {...menuItem} type={menuItem?.buttonType} />
-          )
-        }
-
-        return (
-          TYPE_TO_COMPONENTS_MAP[type] &&
-          TYPE_TO_COMPONENTS_MAP[type](index + type)
-        )
-      })}
-    </>
-  )
+  return TYPE_TO_COMPONENTS_MAP[type] || null
 }
 
 const MenuGroup = (props) => {
   const { config, text } = props
 
-  return (
-    <AntMenu.ItemGroup title={text}>
-      <ComplexMenu key={new Date()} config={config} />
-    </AntMenu.ItemGroup>
+  const menuComputed = useMemo(
+    () => (
+      <AntMenu.ItemGroup title={text}>
+        {config.map((menuItem, index) => (
+          <ComplexMenuItem {...menuItem} key={index} />
+        )) || null}
+      </AntMenu.ItemGroup>
+    ),
+    [config, text]
   )
+
+  return menuComputed
 }
 
 const SubMenu = (props) => {
   const { config, text, ...rest } = props
 
-  return (
-    <AntMenu.SubMenu title={text} {...rest}>
-      <ComplexMenu key={new Date()} config={config} />
-    </AntMenu.SubMenu>
+  const menuComputed = useMemo(
+    () => (
+      <AntMenu.SubMenu title={text} {...rest}>
+        {config.map((menuItem, index) => (
+          <ComplexMenuItem {...menuItem} key={index} />
+        )) || null}
+      </AntMenu.SubMenu>
+    ),
+    [config, rest, text]
   )
+
+  return menuComputed
 }
 
 const Account = (props) => {
@@ -168,16 +165,24 @@ const Account = (props) => {
     onAccountClick,
     ...rest
   } = props
+
+  const menuComputed = useMemo(
+    () => (
+      <Menu>
+        {menu.map((menuItem, index) => (
+          <ComplexMenuItem {...menuItem} key={index} />
+        )) || null}
+      </Menu>
+    ),
+    [menu]
+  )
+
   return (
     <Box display="flex" alignItems="center">
       {menu ? (
         <>
           <DropdownStyled
-            overlay={
-              <Menu>
-                <ComplexMenu config={menu} />
-              </Menu>
-            }
+            overlay={menuComputed}
             placement={menuPlacement}
             arrow={menuArrow}
             trigger={menuTrigger}
@@ -230,7 +235,11 @@ Account.propTypes = {
     'topRight'
   ]),
   menuArrow: PropTypes.bool,
-  menuTrigger: PropTypes.oneOf(['click', 'hover']),
+  menuTrigger: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+    PropTypes.number
+  ]),
   ref: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.any })

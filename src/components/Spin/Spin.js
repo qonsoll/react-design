@@ -12,7 +12,7 @@ const Spin = (props) => {
 }
 
 Spin.propTypes = {
-  opacity: PropTypes.string
+  opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 export default Spin

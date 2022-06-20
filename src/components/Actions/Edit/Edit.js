@@ -1,8 +1,9 @@
 import React, { Fragment, forwardRef } from 'react'
-import PropTypes from 'prop-types'
+
 import Button from '../../Button'
-import { Tooltip } from 'antd'
 import { EditOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
+import { Tooltip } from 'antd'
 
 const DEFAULT_PROPS = {
   tooltipPlacement: 'bottom'
@@ -31,7 +32,8 @@ const Edit = forwardRef((props, ref) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltip}
-          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}>
+          placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
+        >
           <Button
             {...props}
             icon={iconNode || iconNodeLeft || iconNodeRight}
@@ -46,7 +48,8 @@ const Edit = forwardRef((props, ref) => {
           icon={iconNode || iconNodeLeft}
           danger={false}
           onClick={onClick}
-          ref={ref}>
+          ref={ref}
+        >
           {text}
           {iconNodeRight}
         </Button>
@@ -55,6 +58,7 @@ const Edit = forwardRef((props, ref) => {
   )
 })
 
+Edit.displayName = 'Edit'
 Edit.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),

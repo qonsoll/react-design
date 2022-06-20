@@ -1,7 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Box from '../../Box'
+import React, { useMemo } from 'react'
+
 import Back from '../../Actions/Back'
+import Box from '../../Box'
+import PropTypes from 'prop-types'
 
 const PositioningWrapper = (props) => {
   const {
@@ -16,33 +17,66 @@ const PositioningWrapper = (props) => {
     breadcrumbs
   } = props
 
+  // [COMPUTED PROPERTIES]
+  const wrapperHeightComputed = useMemo(
+    () => height || ((alignMiddle || isBottomSticky) && 'inherit') || undefined,
+    [alignMiddle, height, isBottomSticky]
+  )
+  const wrapperJustifyContentComputed = useMemo(
+    () => (alignMiddle && 'center') || undefined,
+    [alignMiddle]
+  )
+  const heightComputed = useMemo(
+    () => ((!alignMiddle || (alignMiddle && onBack)) && '100%') || undefined,
+    [alignMiddle, onBack]
+  )
+  const widthComputed = useMemo(
+    () =>
+      (alignMiddle && contentWidth && Array.isArray(contentWidth)
+        ? contentWidth
+        : contentWidth?.toString()) || undefined,
+    [alignMiddle, contentWidth]
+  )
+  const marginComputed = useMemo(
+    () => (alignMiddle && contentWidth && 'auto') || undefined,
+    [alignMiddle, contentWidth]
+  )
+  const displayComputed = useMemo(
+    () => (alignMiddle && onBack ? 'flex' : 'block'),
+    [alignMiddle, onBack]
+  )
+  const alignItemsComputed = useMemo(
+    () => (alignMiddle && onBack && 'center') || undefined,
+    [alignMiddle, onBack]
+  )
+  const flexComputed = useMemo(
+    () => ((!alignMiddle || (alignMiddle && onBack)) && 1) || undefined,
+    [alignMiddle, onBack]
+  )
+
   return (
     <Box
-      height={height || ((alignMiddle || isBottomSticky) && 'inherit')} // Quick fix to set height (related to new layout)
+      height={wrapperHeightComputed} // Quick fix to set height (related to new layout)
       display="flex"
-      justifyContent={alignMiddle && 'center'}
+      justifyContent={wrapperJustifyContentComputed}
       flexDirection="column"
       // minHeight='fit-content'
     >
       {onBack && (
-        <Box mb={[2, 2, 2, 0, 0]} display="flex" alignItems="center">
+        <Box mb={[2, 2, 2, 0]} display="flex" alignItems="center">
           <Back onClick={onBack} {...backBtnProps} divided={divided} />
           {breadcrumbs}
         </Box>
       )}
       <Box
-        display={(alignMiddle && onBack ? 'flex' : 'block')?.toString()}
-        alignItems={alignMiddle && onBack && 'center'}
-        flex={(!alignMiddle || (alignMiddle && onBack)) && 1}
-        height={(!alignMiddle || (alignMiddle && onBack)) && '100%'}
+        display={displayComputed}
+        alignItems={alignItemsComputed}
+        flex={flexComputed}
+        height={heightComputed}
         // minHeight='fit-content'
-        width={
-          Array.isArray(contentWidth)
-            ? alignMiddle && contentWidth
-            : (alignMiddle && contentWidth)?.toString()
-        }
-        ml={alignMiddle && contentWidth && 'auto'}
-        mr={alignMiddle && contentWidth && 'auto'}
+        width={widthComputed}
+        ml={marginComputed}
+        mr={marginComputed}
       >
         {children}
       </Box>

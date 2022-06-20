@@ -1,21 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Menu as AntMenu } from 'antd'
-import { LoadingOutlined } from '@ant-design/icons'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Menu as AntMenu } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledMenuItem = styled(AntMenu.Item).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
@@ -42,8 +43,14 @@ const StyledMenuItem = styled(AntMenu.Item).withConfig({
 )
 
 const MenuItem = (props) => {
-  const {loading, icon, ...rest} = props
-  return (<StyledMenuItem disabled={loading} icon={loading?<LoadingOutlined />:icon} {...rest} />)
+  const { loading, icon, ...rest } = props
+  return (
+    <StyledMenuItem
+      disabled={loading}
+      icon={loading ? <LoadingOutlined /> : icon}
+      {...rest}
+    />
+  )
 }
 
 MenuItem.propTypes = {
@@ -51,7 +58,7 @@ MenuItem.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.node,
   title: PropTypes.string,
-  loading:PropTypes.bool
+  loading: PropTypes.bool
 }
 
 export default MenuItem

@@ -135,4 +135,6 @@ const Col = React.forwardRef((props, ref) => {
   )
 })
 
+Col.displayName = 'Col'
+
 export default Col

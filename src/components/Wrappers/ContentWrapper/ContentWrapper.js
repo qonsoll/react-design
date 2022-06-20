@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import Back from '../../Actions/Back'
 import Box from '../../Box'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
-import Back from '../../Actions/Back'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const ContentWrapperTest = (props) => {
   const {
@@ -18,9 +18,7 @@ const ContentWrapperTest = (props) => {
     contentHeightWithoutHeader
   } = props
 
-  const DEFAULT_PROPS = {
-    marginBottom: 24
-  }
+  const DEFAULT_PROPS = { marginBottom: 24 }
 
   return (
     <Box
@@ -55,14 +53,14 @@ const ContentWrapperTest = (props) => {
           >
             {onBack && (
               <Box
-                mb={breadcrumbs ? [2, 2, 3, 3, 3] : []}
+                mb={breadcrumbs ? [2, 2, 3, 3, 3] : undefined}
                 display="flex"
                 alignItems="center"
               >
                 <Back
                   onClick={onBack}
                   {...backBtnProps}
-                  divided={divided !== undefined ? divided : true}
+                  divided={divided ?? true}
                 />
 
                 {breadcrumbs}

@@ -1,21 +1,22 @@
 import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import { Button as AntButton } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
+  space,
   system,
+  typography,
   variant
 } from 'styled-system'
+
+import { Button as AntButton } from 'antd'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const ANTD_BUTTON_PROPS = [
   'block',
@@ -73,8 +74,11 @@ const StyledButton = styled(AntButton).withConfig({
     )}
   }
 `
-const Button = forwardRef((props, ref) => <StyledButton {...props} ref={ref} />)
+const Button = forwardRef((props, ref) => {
+  return <StyledButton {...props} ref={ref} />
+})
 
+Button.displayName = 'Button'
 Button.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary', 'text', 'link', 'ghost']),
   danger: PropTypes.bool,

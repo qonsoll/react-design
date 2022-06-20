@@ -1,20 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Dropdown as AntDropdown } from 'antd'
-import styled from 'styled-components'
 import {
-  compose,
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   background,
   border,
+  color,
+  compose,
+  flexbox,
+  layout,
   position,
   shadow,
-  system
+  space,
+  system,
+  typography
 } from 'styled-system'
+
+import { Dropdown as AntDropdown } from 'antd'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledDropdown = styled(AntDropdown)(
   compose(
@@ -50,7 +51,11 @@ Dropdown.propTypes = {
   overlayClassName: PropTypes.string,
   overlayStyle: PropTypes.object,
   placement: PropTypes.string,
-  trigger: PropTypes.string,
+  trigger: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+    PropTypes.number
+  ]),
   visible: PropTypes.bool,
   onVisibleChange: PropTypes.func,
   whiteSpace: PropTypes.string,
