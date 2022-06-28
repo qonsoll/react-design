@@ -56,7 +56,7 @@ const ContentWrapperTest = (props) => {
           >
             {onBack && (
               <Box
-                mb={breadcrumbs ? 2 : undefined}
+                mb={breadcrumbs ? '8px' : undefined}
                 display="flex"
                 alignItems="center"
               >
