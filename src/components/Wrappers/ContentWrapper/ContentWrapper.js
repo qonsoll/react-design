@@ -33,6 +33,9 @@ const ContentWrapperTest = (props) => {
           alignItems={
             headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
           }
+          mt={
+            (headingProps && headingProps.marginTop) 
+          }
           mb={
             (headingProps && headingProps.marginBottom) ||
             DEFAULT_PROPS.marginBottom
@@ -53,7 +56,7 @@ const ContentWrapperTest = (props) => {
           >
             {onBack && (
               <Box
-                mb={breadcrumbs ? [2, 2, 3, 3, 3] : undefined}
+                mb={breadcrumbs ? 2 : undefined}
                 display="flex"
                 alignItems="center"
               >
