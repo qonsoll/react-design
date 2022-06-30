@@ -28,51 +28,59 @@ const ContentWrapperTest = (props) => {
       flexGrow={alignMiddle && 1}
     >
       {!firstLevelHidden && (
-        <Box
-          display="flex"
-          alignItems={
-            headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
-          }
-          mt={
-            (headingProps && headingProps.marginTop) 
-          }
-          mb={
-            (headingProps && headingProps.marginBottom) ||
-            DEFAULT_PROPS.marginBottom
-          }
-        >
+        <>
+          {breadcrumbs && (
+            <Box
+              mb={breadcrumbs ? '8px' : undefined}
+              display="flex"
+              alignItems="center"
+            >
+              <Back
+                onClick={onBack}
+                {...backBtnProps}
+                divided={divided ?? true}
+              />
+
+              {breadcrumbs}
+            </Box>
+          )}
+
           <Box
             display="flex"
-            flex={1}
-            alignItems={
-              headingProps && !headingProps.subTitle && !breadcrumbs
-                ? 'center'
-                : 'flex-start'
+            alignItems={headingProps ? 'center' : 'flex-start'}
+            mt={headingProps && headingProps.marginTop}
+            mb={
+              (headingProps && headingProps.marginBottom) ||
+              DEFAULT_PROPS.marginBottom
             }
-            justifyContent={
-              onBack || action || !alignMiddle ? 'flex-start' : 'center'
-            }
-            flexDirection={breadcrumbs ? 'column' : 'row'}
           >
-            {onBack && (
-              <Box
-                mb={breadcrumbs ? '8px' : undefined}
-                display="flex"
-                alignItems="center"
-              >
+            <Box
+              display="flex"
+              flex={1}
+              alignItems={
+                headingProps && !headingProps.subTitle && !breadcrumbs
+                  ? 'center'
+                  : 'flex-start'
+              }
+              justifyContent={
+                onBack || action || !alignMiddle ? 'flex-start' : 'center'
+              }
+              flexDirection={breadcrumbs ? 'column' : 'row'}
+            >
+              {onBack && !breadcrumbs && (
                 <Back
                   onClick={onBack}
                   {...backBtnProps}
                   divided={divided ?? true}
                 />
+              )}
 
-                {breadcrumbs}
-              </Box>
-            )}
-            <HeadingPrimary {...headingProps} />
+              <HeadingPrimary {...headingProps} />
+            </Box>
+
+            {action && <Box>{action}</Box>}
           </Box>
-          {action && <Box>{action}</Box>}
-        </Box>
+        </>
       )}
       <Box flex={1} height={contentHeightWithoutHeader || '100%'}>
         {children}
