@@ -9,4 +9,5 @@
   --ql-layout-padding-lg: calc(var(--ql-grid-gutter-lg) * 2);
   --ql-layout-padding-xl: calc(var(--ql-grid-gutter-xl) * 2);
   --ql-layout-padding-xxl: calc(var(--ql-grid-gutter-xxl) * 2);
+  --ql-layout-padding-xxxl: calc(var(--ql-grid-gutter-xxl) * 2);
 }
