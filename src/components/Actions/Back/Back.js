@@ -56,7 +56,7 @@ const Back = forwardRef((props, ref) => {
             />
           </Tooltip>
           {!divided ? null : (
-            <Divider type="vertical" mr={3} height={24} top="unset" />
+            <Divider type="vertical" mr="20px" height={24} top="unset" />
           )}
         </Box>
       ) : (
