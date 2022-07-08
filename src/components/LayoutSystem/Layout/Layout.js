@@ -76,6 +76,7 @@ const Layout = (props) => {
             ml={ml}
             mr={mr}
             boxShadow="var(--ql-content-shadow)"
+            id='qonsoll-direct-layout-wrapper'
           >
             {compositionLayout}
           </DirectionLayout>
