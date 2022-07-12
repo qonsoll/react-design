@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import Box from '../../Box'
-import Img from '../Img'
 import { DEFAULT_PROPS } from './constants'
+import Img from '../Img'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const Graphic = (props) => {
   const {
@@ -17,14 +17,17 @@ const Graphic = (props) => {
     bottom,
     left,
     right,
-    objectFit
+    objectFit,
+    zIndex,
+    background
   } = props
 
   return (
-    <Box display={hidden || DEFAULT_PROPS.hidden}>
+    <Box display={hidden || DEFAULT_PROPS.hidden} background={background}>
       <Img
         src={src}
         alt={alt}
+        zIndex={zIndex}
         className={animation || DEFAULT_PROPS.animation}
         width={width}
         height={height || DEFAULT_PROPS.height}
