@@ -169,7 +169,7 @@ const Account = (props) => {
   const menuComputed = useMemo(
     () => (
       <Menu>
-        {menu.map((menuItem, index) => (
+        {menu?.map((menuItem, index) => (
           <ComplexMenuItem {...menuItem} key={index} />
         )) || null}
       </Menu>
