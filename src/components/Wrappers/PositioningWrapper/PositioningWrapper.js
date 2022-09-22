@@ -14,7 +14,9 @@ const PositioningWrapper = (props) => {
     backBtnProps,
     divided,
     isBottomSticky,
-    breadcrumbs
+    breadcrumbs,
+    innerPositionWrapperStyles,
+    positionWrapperStyles
   } = props
 
   // [COMPUTED PROPERTIES]
@@ -60,6 +62,7 @@ const PositioningWrapper = (props) => {
       display="flex"
       justifyContent={wrapperJustifyContentComputed}
       flexDirection="column"
+      {...positionWrapperStyles}
       // minHeight='fit-content'
     >
       {onBack && (
@@ -77,6 +80,7 @@ const PositioningWrapper = (props) => {
         width={widthComputed}
         ml={marginComputed}
         mr={marginComputed}
+        {...innerPositionWrapperStyles}
       >
         {children}
       </Box>

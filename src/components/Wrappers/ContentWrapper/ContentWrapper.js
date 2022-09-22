@@ -15,7 +15,8 @@ const ContentWrapperTest = (props) => {
     backBtnProps,
     divided,
     breadcrumbs,
-    contentHeightWithoutHeader
+    contentHeightWithoutHeader,
+    innerContentWrapperStyles
   } = props
 
   const DEFAULT_PROPS = { marginBottom: 24 }
@@ -82,7 +83,7 @@ const ContentWrapperTest = (props) => {
           </Box>
         </>
       )}
-      <Box flex={1} height={contentHeightWithoutHeader || '100%'}>
+      <Box flex={1} height={contentHeightWithoutHeader || '100%'} {...innerContentWrapperStyles}>
         {children}
       </Box>
     </Box>

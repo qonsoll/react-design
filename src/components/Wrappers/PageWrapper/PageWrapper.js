@@ -19,7 +19,10 @@ const PageWrapper = (props) => {
     headingProps,
     action,
     breadcrumbs,
-    contentHeightWithoutHeader
+    contentHeightWithoutHeader,
+    innerContentWrapperStyles,
+    innerPositionWrapperStyles,
+    positionWrapperStyles
   } = props
 
   return (
@@ -32,11 +35,14 @@ const PageWrapper = (props) => {
       backBtnProps={backBtnProps}
       divided={divided ?? true}
       breadcrumbs={alignMiddle && breadcrumbs}
+      innerPositionWrapperStyles={innerPositionWrapperStyles}
+      positionWrapperStyles={positionWrapperStyles}
     >
       {graphicProps && graphicProps.src && graphicProps.alt && (
         <Graphic {...graphicProps} />
       )}
       <ContentWrapper
+        innerContentWrapperStyles={innerContentWrapperStyles}
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         alignMiddle={alignMiddle}
