@@ -85,9 +85,9 @@
   --btn-danger-bg: var(--ql-color-danger);
   --btn-danger-border: var(--ql-color-danger);
   --btn-danger-shadow: var(--btn-shadow);
-  --btn-danger-hover-bg: var(--ql-color-danger-t-lighten1);
-  --btn-danger-hover-color: var(--btn-danger-color);
-  --btn-danger-hover-border: var(--ql-color-danger-t-lighten1);
+  --btn-danger-hover-bg: var(--error-4);
+  --btn-danger-hover-color: var(--white);
+  --btn-danger-hover-border: var(--error-4);
   --btn-danger-active-bg: var(--btn-danger-hover-bg);
   --btn-danger-active-color: var(--btn-danger-hover-color);
   --btn-danger-active-border: var(--btn-danger-hover-border);
