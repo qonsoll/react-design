@@ -127,7 +127,7 @@ export default {
       table: {
         category: 'Custom properties'
       },
-      control: { type: 'select', options: ['null', 'white'] },
+      control: { type: 'select', options: ['null', 'white', 'dark'] },
       description: 'Use to change button type.'
     }
   }

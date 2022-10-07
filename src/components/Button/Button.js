@@ -68,6 +68,16 @@ const StyledButton = styled(AntButton).withConfig({
               background: 'var(--btn-white-hover-bg)',
               borderColor: 'var(--btn-white-hover-border)'
             }
+          },
+          dark: {
+            color: 'var(--btn-dark-color)',
+            background: 'var(--btn-dark-bg)',
+            borderColor: 'var(--btn-dark-border)',
+            '&:hover': {
+              color: 'var(--btn-dark-hover-color)',
+              background: 'var(--btn-dark-hover-bg)',
+              borderColor: 'var(--btn-dark-hover-border)'
+            }
           }
         }
       })
@@ -103,7 +113,7 @@ Button.propTypes = {
   transform: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   transition: PropTypes.string,
   textTransform: PropTypes.string,
-  variant: PropTypes.oneOf(['white'])
+  variant: PropTypes.oneOf(['white', 'dark'])
 }
 
 export default Button

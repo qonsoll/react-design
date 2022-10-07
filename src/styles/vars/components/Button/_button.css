@@ -99,6 +99,13 @@
   --btn-white-hover-bg: var(--btn-white-bg);
   --btn-white-hover-border: var(--btn-white-border);
 
+  --btn-dark-color: var(--ql-color-white);
+  --btn-dark-bg: var(--ql-color-dark);
+  --btn-dark-border: var(--ql-color-dark);
+  --btn-dark-hover-color: var(--ql-color-white);
+  --btn-dark-hover-bg: var(--ql-color-dark-t-lighten1);
+  --btn-dark-hover-border: var(--ql-color-dark-t-lighten1);
+
   --btn-text-color: var(--btn-default-color);
   --btn-text-bg: transparent;
   --btn-text-border: transparent;
