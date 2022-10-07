@@ -33,10 +33,21 @@ const ANTD_BUTTON_PROPS = [
   'type',
   'boxShadow'
 ]
-const StyledButton = styled(AntButton).withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    ANTD_BUTTON_PROPS.includes(prop) || defaultValidatorFn(prop)
-})`
+/** Attrs prop is used for pass className according to received variant
+ *  in other case it isn't possible know what kind of variant Button got
+ *  in order to rewrite class
+ */
+const StyledButton = styled(AntButton)
+  .withConfig({
+    shouldForwardProp: (prop, defaultValidatorFn) =>
+      ANTD_BUTTON_PROPS.includes(prop) || defaultValidatorFn(prop)
+  })
+  .attrs(
+    ({ variant }) =>
+      variant && {
+        className: `ant-btn-${variant}`
+      }
+  )`
   &&& {
     ${compose(
       space,
