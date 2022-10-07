@@ -528,9 +528,9 @@
 
 .ant-btn-danger:hover,
 .ant-btn-danger:focus {
-  color: var(--ql-color-white);
-  background: var(--ql-color-danger-t-lighten1);
-  border-color: var(--ql-color-danger-t-lighten1);
+  color: var(--btn-danger-hover-color);
+  background: var(--btn-danger-hover-bg);
+  border-color: var(--btn-danger-hover-border);
 }
 
 .ant-btn-danger:hover>a:only-child,
@@ -550,7 +550,7 @@
 }
 
 .ant-btn-danger:active {
-  color: var(--ql-color-white);
+  color: var(--btn-danger-color);
   background: var(--btn-danger-bg);
   border-color: var(--btn-danger-border);
 }
