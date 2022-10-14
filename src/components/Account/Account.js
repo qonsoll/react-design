@@ -167,13 +167,17 @@ const Account = (props) => {
   } = props
 
   const menuComputed = useMemo(
-    () => (
-      <Menu>
-        {menu?.map((menuItem, index) => (
-          <ComplexMenuItem {...menuItem} key={index} />
-        )) || null}
-      </Menu>
-    ),
+    () =>
+      menu &&
+      (Array.isArray(menu) ? (
+        <Menu>
+          {menu?.map((menuItem, index) => (
+            <ComplexMenuItem {...menuItem} key={index} />
+          )) || null}
+        </Menu>
+      ) : (
+        menu
+      )),
     [menu]
   )
 
@@ -225,7 +229,7 @@ Account.propTypes = {
   short: PropTypes.bool,
   isEllipsis: PropTypes.bool,
   suffix: PropTypes.node,
-  menu: PropTypes.array,
+  menu: PropTypes.node,
   menuPlacement: PropTypes.oneOf([
     'bottomLeft',
     'bottomCenter',
