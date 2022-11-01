@@ -7,9 +7,9 @@ const BaseLayout = (props) => {
 
   return (
     <Box
-      minHeight='100vh'
-      width='100vw'
-      display='flex'
+      minHeight="100vh"
+      width="100%" // value was changed from "100vw" to "100%" (fix should prevent horizontal scroll for windows platforms)
+      display="flex"
       flexDirection={direction}
       bg={bg || 'var(--ql-layout-background)'}
     >
