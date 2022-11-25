@@ -15,6 +15,7 @@ const Notification = (props) => {
     avatarUrl,
     avatarSize,
     avatarIcon,
+    avatarMarginRight,
     userName,
     onClickUserName,
     message,
@@ -27,7 +28,7 @@ const Notification = (props) => {
 
   return (
     <Box display="flex" flexGrow={1} alignItems="center">
-      <Box display="flex" alignSelf="flex-start" mr={3}>
+      <Box display="flex" alignSelf="flex-start" mr={avatarMarginRight || 3}>
         {status && <Badge status={status || 'default'} />}
         <Avatar
           src={avatarUrl}
@@ -90,6 +91,7 @@ Notification.propTypes = {
   avatarUrl: PropTypes.string,
   avatarSize: PropTypes.number,
   avatarIcon: PropTypes.node,
+  avatarMarginRight: PropTypes.number,
   userName: PropTypes.string,
   onClickUserName: PropTypes.func,
   message: PropTypes.string,

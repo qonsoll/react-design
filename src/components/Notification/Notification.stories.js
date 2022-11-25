@@ -19,6 +19,9 @@ export default {
     avatarIcon: {
       description: 'Use it to specify avatar icon when avatar url is absent.'
     },
+    avatarMarginRight: {
+      description: 'Use it to specify margin right for avatar.'
+    },
     userName: {
       description: 'Use it to specify user name.'
     },
@@ -49,14 +52,14 @@ export default {
 export const Template = (args) => (
   <Box width={400}>
     <Notification
-      avatarUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQog3HmcERCvKqjE-afKGUJzTsyKTipP7l_2Q&usqp=CAU'
+      avatarUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQog3HmcERCvKqjE-afKGUJzTsyKTipP7l_2Q&usqp=CAU"
       avatarSize={48}
-      userName='Thomas Washington'
-      onClickUserName='https://google.com'
-      message='Notification title could be very very long'
-      redirectButtonUrl='https://facebook.com'
-      redirectButtonText='Open profile'
-      dateTime='17m'
+      userName="Thomas Washington"
+      onClickUserName="https://google.com"
+      message="Notification title could be very very long"
+      redirectButtonUrl="https://facebook.com"
+      redirectButtonText="Open profile"
+      dateTime="17m"
       {...args}
     />
   </Box>
