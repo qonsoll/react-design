@@ -1,6 +1,6 @@
 {
   "name": "@qonsoll/react-design",
-  "version": "2.2.18",
+  "version": "2.2.19",
   "description": "React-components and design system for enterprise-level products.",
   "author": "qonsoll",
   "license": "MIT",
@@ -47,7 +47,7 @@
   },
   "peerDependencies": {
     "prop-types": "15.7.2",
-    "react": "17.0.2"
+    "react": ">=17"
   },
   "devDependencies": {
     "@babel/cli": "7.15.4",
